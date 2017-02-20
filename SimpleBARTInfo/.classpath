@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/android_database"/>
+	<classpathentry kind="lib" path="/android_database/bin/classes.jar"/>
+	<classpathentry kind="lib" path="/android_database/bin/classes" sourcepath="/android_database/src"/>
+	<classpathentry kind="lib" path="/android_ui_libs/bin/classes.jar"/>
+	<classpathentry kind="lib" path="/android_ui_libs/bin/classes" sourcepath="/android_ui_libs/src"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/android_ui_libs"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+	<classpathentry kind="var" path="ANDROID_SDK_ROOT"/>
+	<classpathentry kind="lib" path="/public/android-sdk-linux_x86/platforms/android-7/android.jar"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>

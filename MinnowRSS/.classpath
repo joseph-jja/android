@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="lib" path="/public/android-sdk-linux_x86/platforms/android-7/android.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/android_database"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/android_ui_libs"/>
+	<classpathentry kind="lib" path="/android_database/bin/classes.jar"/>
+	<classpathentry kind="lib" path="/android_ui_libs/bin/classes.jar"/>
+	<classpathentry kind="lib" path="/android_ui_libs/bin/classes"/>
+	<classpathentry kind="lib" path="/android_database/bin/classes"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

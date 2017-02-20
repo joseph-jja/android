@@ -1,0 +1,24 @@
+/home/joea/workspace/MinnowRSS/gen/com/ja/minnow/R.java \
+/home/joea/workspace/MinnowRSS/gen/com/ja/database/R.java \
+/home/joea/workspace/MinnowRSS/gen/com/ja/R.java \
+ : /home/joea/workspace/android_ui_libs/res/layout/main.xml \
+/home/joea/workspace/android_ui_libs/res/values/strings.xml \
+/home/joea/workspace/android_database/res/layout/main.xml \
+/home/joea/workspace/android_database/res/values/strings.xml \
+/home/joea/workspace/MinnowRSS/res/layout/feed_web_view.xml \
+/home/joea/workspace/MinnowRSS/res/layout/feeds.xml \
+/home/joea/workspace/MinnowRSS/res/layout/feeds_row.xml \
+/home/joea/workspace/MinnowRSS/res/layout/feed_data_list.xml \
+/home/joea/workspace/MinnowRSS/res/layout/feed_text_view.xml \
+/home/joea/workspace/MinnowRSS/res/layout/main.xml \
+/home/joea/workspace/MinnowRSS/res/layout/feed_data_list_row.xml \
+/home/joea/workspace/MinnowRSS/res/layout/add_feed.xml \
+/home/joea/workspace/MinnowRSS/res/values/strings.xml \
+/home/joea/workspace/MinnowRSS/res/values/ui_styles.xml \
+/home/joea/workspace/MinnowRSS/res/drawable/icon.png \
+/home/joea/workspace/MinnowRSS/res/drawable/default_feed_icon.png \
+/home/joea/workspace/MinnowRSS/res/drawable/splash.png \
+/home/joea/workspace/MinnowRSS/res/menu/context.xml \
+/home/joea/workspace/MinnowRSS/res/menu/settings.xml \
+/home/joea/workspace/MinnowRSS/res/menu/textviewer.xml \
+/home/joea/workspace/MinnowRSS/AndroidManifest.xml \
