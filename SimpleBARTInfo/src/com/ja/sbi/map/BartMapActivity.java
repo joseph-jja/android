@@ -14,6 +14,7 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
+import android.webkit.WebSettings;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
@@ -93,57 +94,58 @@ public class BartMapActivity extends BaseActivity {
 		
 		final Activity webActivity = activity;
 		final WebView web = webView;
+		final WebSettings webViewSettings = webView.getSettings();
 		final ImageView image = imageView;
 		
-		final View zoomControls = web.getZoomControls();
-		final ArrayList<View> touchables = web.getZoomControls().getTouchables();
-		if ( touchables != null ) {
-			final int tsize = touchables.size();
-			if ( tsize >= 1 ) { 
-				final View zoomOut = touchables.get(0);
-				if ( zoomOut != null ) {
-					zoomOut.setOnClickListener(new View.OnClickListener() {
-						public void onClick(View view) {
-							zoomFactor -=1;
-							zoomFactor = ( zoomFactor >= -1 ) ? zoomFactor : -1;
-							int dimension = image.getWidth() - Math.abs(250 * zoomFactor);
-							dimension = ( dimension >= BartMapActivity.MIN_DIMENSIONS ) ? dimension : BartMapActivity.MIN_DIMENSIONS;
-							resizeImage(webActivity, web, image, dimension, dimension);
-						}
-					});
-				}
-			}
-			if ( tsize >= 2 ) {
-				final View zoomIn = touchables.get(1);
-				if ( zoomIn != null ) {
-					zoomIn.setOnClickListener(new View.OnClickListener() {
-						public void onClick(View view) {
-							zoomFactor +=1;
-							zoomFactor = ( zoomFactor <= 2 ) ? zoomFactor : 2;
-							int dimension = image.getWidth() + Math.abs(250 * zoomFactor);
-							dimension = ( dimension <= BartMapActivity.MAX_DIMENSIONS ) ? dimension : BartMapActivity.MAX_DIMENSIONS;
-							resizeImage(webActivity, web, image, dimension, dimension);
-						}
-					});
-				}
-			}
-			if ( tsize >= 3 ) {
-				final View zoomView = touchables.get(2); 
-				if ( zoomView != null ) { 
-					zoomView.setOnClickListener(new View.OnClickListener() {
-						public void onClick(View view) {
-							zoomFactor = 0;
-							setWebView(web, image);
-							final Display display = webActivity.getWindowManager().getDefaultDisplay(); 
-							int dimension = ( display.getWidth() <= display.getHeight() ) ? display.getWidth() : display.getHeight(); 
-							resizeImage(webActivity, web, image, dimension, dimension);
-						}
-					});
-				}
-			}
-		}
+		webViewSettings.setDisplayZoomControls(true);
+		
+//		if ( touchables != null ) {
+//			final int tsize = touchables.size();
+//			if ( tsize >= 1 ) { 
+//				final View zoomOut = touchables.get(0);
+//				if ( zoomOut != null ) {
+//					zoomOut.setOnClickListener(new View.OnClickListener() {
+//						public void onClick(View view) {
+//							zoomFactor -=1;
+//							zoomFactor = ( zoomFactor >= -1 ) ? zoomFactor : -1;
+//							int dimension = image.getWidth() - Math.abs(250 * zoomFactor);
+//							dimension = ( dimension >= BartMapActivity.MIN_DIMENSIONS ) ? dimension : BartMapActivity.MIN_DIMENSIONS;
+//							resizeImage(webActivity, web, image, dimension, dimension);
+//						}
+//					});
+//				}
+//			}
+//			if ( tsize >= 2 ) {
+//				final View zoomIn = touchables.get(1);
+//				if ( zoomIn != null ) {
+//					zoomIn.setOnClickListener(new View.OnClickListener() {
+//						public void onClick(View view) {
+//							zoomFactor +=1;
+//							zoomFactor = ( zoomFactor <= 2 ) ? zoomFactor : 2;
+//							int dimension = image.getWidth() + Math.abs(250 * zoomFactor);
+//							dimension = ( dimension <= BartMapActivity.MAX_DIMENSIONS ) ? dimension : BartMapActivity.MAX_DIMENSIONS;
+//							resizeImage(webActivity, web, image, dimension, dimension);
+//						}
+//					});
+//				}
+//			}
+//			if ( tsize >= 3 ) {
+//				final View zoomView = touchables.get(2); 
+//				if ( zoomView != null ) { 
+//					zoomView.setOnClickListener(new View.OnClickListener() {
+//						public void onClick(View view) {
+//							zoomFactor = 0;
+//							setWebView(web, image);
+//							final Display display = webActivity.getWindowManager().getDefaultDisplay(); 
+//							int dimension = ( display.getWidth() <= display.getHeight() ) ? display.getWidth() : display.getHeight(); 
+//							resizeImage(webActivity, web, image, dimension, dimension);
+//						}
+//					});
+//				}
+//			}
+//		}
 
 		final FrameLayout mContentView = (FrameLayout) activity.getWindow().getDecorView().findViewById(android.R.id.content);
-		mContentView.addView(zoomControls, BartMapActivity.ZOOM_PARAMS);
+		//mContentView.addView(zoomControls, BartMapActivity.ZOOM_PARAMS);
 	}
 }

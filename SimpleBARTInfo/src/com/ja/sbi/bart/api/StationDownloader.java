@@ -23,6 +23,7 @@ public class StationDownloader extends BaseDownloader {
 	
 	private static String getAllStationsXML() throws IOException {
     	if ( StationDownloader.allStationsXML.equals("") ) { 
+    		//Log.v("StationDownloader", "Calling downloader");
            	// get all the stations once and then let the user figure out how they want to display them
            	StationDownloader.allStationsXML = BaseDownloader.retriever.downloadURL(APIConstants.GET_STATION_LIST_API);
     	}

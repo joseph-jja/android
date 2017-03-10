@@ -99,6 +99,8 @@ public class ContentRetriever {
 			return null;
 		}
 		
+		Log.v(CR_TAG, "In the dowloader!");
+		
 		if ( nurl.startsWith("https:") ) {
 			final HttpsURLConnection urlConnection = (HttpsURLConnection)furl.openConnection();
 			urlConnection.setInstanceFollowRedirects(true);

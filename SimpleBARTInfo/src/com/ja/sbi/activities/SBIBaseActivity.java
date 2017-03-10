@@ -10,6 +10,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.view.View;
 
 import com.ja.activity.BaseActivity;
 import com.ja.database.DatabaseAdapter;
@@ -99,7 +100,7 @@ public abstract class SBIBaseActivity extends BaseActivity {
 		Log.d(LOG_NAME, "Configuration change " + this.isViewStations() + " - " + this.selectedStationShortName + " - " + this.stations.size() );
 		if ( ! this.isViewStations() && this.selectedStationShortName != null ) { 
 			setContentView(R.layout.main);
-			StationListener.setTrainView(selectedStationShortName, this);
+			StationListener.setTrainView(this);
 		} else {	
 			this.setupView();
 		}
@@ -123,6 +124,7 @@ public abstract class SBIBaseActivity extends BaseActivity {
     	}
     	showLoadingSpinner();
     	
+    	Log.d(LOG_NAME, "Launched spinner!");
     	final SBIBaseActivity sbiThread = this;
     	final Thread refresh = new Thread() {
     		public void run() {
@@ -157,7 +159,7 @@ public abstract class SBIBaseActivity extends BaseActivity {
 			
 			Log.d(LOG_NAME, "Where are we? " + sbiThread.isViewStations());
 			if ( ! sbiThread.isViewStations() ) {
-				StationListener.setTrainView(sbiThread.selectedStationShortName, sbiThread);
+				StationListener.setTrainView(sbiThread);
 			} else {	
 				sbiThread.setupView();
 			}
