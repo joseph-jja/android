@@ -3,16 +3,9 @@ package com.ja.net;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
+import javax.net.ssl.HttpsURLConnection;
 import java.net.URL;
-
-import org.apache.http.Header;
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
-import org.apache.http.HttpStatus;
-import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.util.EntityUtils;
+import java.io.BufferedInputStream;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -29,10 +22,39 @@ public class ContentRetriever {
 	private final Class<?> _self = getClass();
 	private final String CR_TAG = _self.getName();
 	
+	private final String CRLF = "\r\n";
+	
 	private int recursionCount = 0;
 	private static final int MAX_RECURSION = 5;
 	
 	private int transactionStatus = -1;
+	
+	private String readStream(BufferedInputStream in) throws IOException {
+		
+		StringBuilder results = new StringBuilder();
+		boolean hasData = true;
+
+		int pos = 0;
+		
+		while ( hasData ) {
+			
+			int len = in.available();
+			byte data[] = new byte[len + 1];
+
+			int count = in.read(data, pos, len);
+
+			results.append(data);
+			if (count > -1) {
+				pos += count;
+			}
+			if ( results.toString().endsWith(CRLF + "." + CRLF)) {
+				hasData = false;
+			}
+	
+		}
+		
+		return results.toString();
+	}
 	
 	/**
 	 * simple method to get data from a url and return a 
@@ -41,51 +63,49 @@ public class ContentRetriever {
 	 * @param url
 	 * @return
 	 */
-	public String downloadURL(String url) throws IOException, ClientProtocolException {
+	public String downloadURL(String url) throws IOException {
 		
 		String nurl = url;
-		if ( url == null ) { return null; }
+		if ( url == null ) { 
+			return null; 
+		}
+		
 		if ( ! url.startsWith("http://") ) {
 			nurl = "http://" + url;
-		}
+		} 
 		
-		this.transactionStatus = -1;  /// initialize status to something http does not return
+		final URL furl = new URL(url);
+		String result = null;
 		
-		final DefaultHttpClient httpClient = new DefaultHttpClient();		
-		final HttpGet httpGet = new HttpGet(nurl);
+		if ( nurl.startsWith("https:") ) {
+			HttpsURLConnection.setFollowRedirects(true);
+			final HttpsURLConnection urlConnection = (HttpsURLConnection)furl.openConnection();
+			urlConnection.setInstanceFollowRedirects(true);
+			try {
+				final BufferedInputStream in = new BufferedInputStream(urlConnection.getInputStream());
+				result = readStream(in);
+			} catch(Exception e) {
 
-		final HttpResponse response = httpClient.execute(httpGet);
-		this.transactionStatus = response.getStatusLine().getStatusCode();
-		// handle redirects like 301, 302 and other codes
-		if ( this.transactionStatus == HttpStatus.SC_OK ) {
-			final HttpEntity urlData = response.getEntity();
-			if ( urlData != null ) {
-				final byte[] results = EntityUtils.toByteArray(urlData);
-				Log.v(CR_TAG, "Http data returned is = " +  new String(results));
-				return new String(results);	
+				
+			} finally { 
+				urlConnection.disconnect();
 			}
-		} else if ( this.transactionStatus == HttpStatus.SC_MOVED_PERMANENTLY 
-				|| this.transactionStatus == HttpStatus.SC_MOVED_TEMPORARILY ) {
-			
-			Log.d(CR_TAG, "Got status 301/302 and recursing " + this.recursionCount);
-			// we'll try 5 times to download a redirect
-			this.recursionCount += 1;
-			if ( this.recursionCount < MAX_RECURSION ) {
-				final Header headers[] = response.getAllHeaders();
-				nurl = "";
-				for ( Header hdr : headers ) {
-					if ( hdr.getName().equalsIgnoreCase("location") ) {
-						nurl = hdr.getValue();
-						break;
-					}
-				}
-				if ( ! nurl.equalsIgnoreCase("") ) {
-					return downloadURL(nurl);
-				}
+		} else {
+			HttpURLConnection.setFollowRedirects(true);
+			final HttpURLConnection urlConnection = (HttpURLConnection)furl.openConnection();
+			urlConnection.setInstanceFollowRedirects(true);
+			try {
+				final BufferedInputStream in = new BufferedInputStream(urlConnection.getInputStream());
+				result = readStream(in);
+			} catch(Exception e) {
+				Log.e(CR_TAG, e.getMessage());
+			} finally { 
+				urlConnection.disconnect();
 			}
-		}
+		}		
+				   
 		Log.e(CR_TAG, "No results found!");
-		return null;
+		return result;
 	}
 	
 	public Bitmap downloadImage(String imageURL) throws IOException  {
