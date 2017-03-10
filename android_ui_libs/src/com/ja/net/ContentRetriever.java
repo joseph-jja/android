@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import javax.net.ssl.HttpsURLConnection;
+
 import java.net.URL;
 import java.io.BufferedInputStream;
 
@@ -19,8 +20,7 @@ import android.util.Log;
  */
 public class ContentRetriever {
 
-	private final Class<?> _self = getClass();
-	private final String CR_TAG = _self.getName();
+	private final String CR_TAG = this.getClass().getName();
 	
 	private final String CRLF = "\r\n";
 	
@@ -28,32 +28,47 @@ public class ContentRetriever {
 	private static final int MAX_RECURSION = 5;
 	
 	private int transactionStatus = -1;
-	
-	private String readStream(BufferedInputStream in) throws IOException {
+
+	//public static void main(String args[]) throws Exception {
+		
+	//	ContentRetriever c = new ContentRetriever();
+		
+	//	c.downloadURL("http://slashdot.org");
+	//}
+
+	private String readStream(InputStream in) throws IOException {
 		
 		StringBuilder results = new StringBuilder();
-		boolean hasData = true;
 
-		int pos = 0;
+		int i; 
 		
-		while ( hasData ) {
+		//System.out.println(in);
+		while ( ( i = in.read() ) > -1 ) {
 			
-			int len = in.available();
-			byte data[] = new byte[len + 1];
-
-			int count = in.read(data, pos, len);
-
-			results.append(data);
-			if (count > -1) {
-				pos += count;
-			}
-			if ( results.toString().endsWith(CRLF + "." + CRLF)) {
-				hasData = false;
-			}
-	
+			char c = (char)i;
+			results.append(c);
 		}
-		
+		//System.out.println(results.toString());
 		return results.toString();
+	}
+	
+	private boolean checkStatus(int status) { 
+		
+		boolean redirect = false;
+		
+		if (status != HttpURLConnection.HTTP_OK
+				|| status == HttpURLConnection.HTTP_MOVED_TEMP
+				|| status == HttpURLConnection.HTTP_MOVED_PERM
+				|| status == HttpURLConnection.HTTP_SEE_OTHER) {
+			redirect = true;
+		} else if (status != HttpsURLConnection.HTTP_OK
+				|| status == HttpsURLConnection.HTTP_MOVED_TEMP
+				|| status == HttpsURLConnection.HTTP_MOVED_PERM
+				|| status == HttpsURLConnection.HTTP_SEE_OTHER) {
+			redirect = true;
+		}
+
+		return redirect;
 	}
 	
 	/**
@@ -77,25 +92,41 @@ public class ContentRetriever {
 		final URL furl = new URL(url);
 		String result = null;
 		
+		recursionCount++;
+		
+		if ( recursionCount > 5 ) { 
+			
+			return null;
+		}
+		
 		if ( nurl.startsWith("https:") ) {
-			HttpsURLConnection.setFollowRedirects(true);
 			final HttpsURLConnection urlConnection = (HttpsURLConnection)furl.openConnection();
 			urlConnection.setInstanceFollowRedirects(true);
+			HttpsURLConnection.setFollowRedirects(true);
+			if ( checkStatus(urlConnection.getResponseCode()) ) { 
+				// get redirect url from "location" header field
+				String newUrl = urlConnection.getHeaderField("Location");
+				return downloadURL(newUrl);	
+			}
 			try {
-				final BufferedInputStream in = new BufferedInputStream(urlConnection.getInputStream());
+				final InputStream in = new BufferedInputStream(urlConnection.getInputStream());
 				result = readStream(in);
 			} catch(Exception e) {
-
-				
+				Log.e(CR_TAG, e.getMessage());				
 			} finally { 
 				urlConnection.disconnect();
 			}
 		} else {
-			HttpURLConnection.setFollowRedirects(true);
 			final HttpURLConnection urlConnection = (HttpURLConnection)furl.openConnection();
 			urlConnection.setInstanceFollowRedirects(true);
+			HttpURLConnection.setFollowRedirects(true);
+			if ( checkStatus(urlConnection.getResponseCode()) ) { 
+				// get redirect url from "location" header field
+				String newUrl = urlConnection.getHeaderField("Location");
+				return downloadURL(newUrl);	
+			}
 			try {
-				final BufferedInputStream in = new BufferedInputStream(urlConnection.getInputStream());
+				final InputStream in = new BufferedInputStream(urlConnection.getInputStream());
 				result = readStream(in);
 			} catch(Exception e) {
 				Log.e(CR_TAG, e.getMessage());
