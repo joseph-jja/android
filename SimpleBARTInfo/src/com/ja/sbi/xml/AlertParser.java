@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.lang.StringBuilder;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
@@ -32,7 +33,7 @@ public class AlertParser extends DefaultHandler {
 	private boolean inStationTag = false; 
 	private boolean inDescriptionTag = false; 
 	
-	private String xmlData = "";  // feed string data
+	private StringBuilder xmlData = new StringBuilder();  // feed string data
 	
 	// the storage of the feed in a map for the database insert
 	private Map<String, String> storage = new HashMap<String, String>();
@@ -40,37 +41,37 @@ public class AlertParser extends DefaultHandler {
 	
 	public void startElement(String uri, String name, String qName, Attributes atts) {
 		
-		if (name.trim().equals("bsa")) {
-            storage.clear();
-            xmlData = "";
-		}
+	    if (name.trim().equals("bsa")) {
+                inBSATag = true;
+		this.storage.clear();	
+		xmlData = xmlData = new StringBuilder();
+	    }
 	}
 	
 	public void endElement(String uri, String name, String qName) throws SAXException {
 	
 		if ( inBSATag ) { 
 			if (name.trim().equals("station") ) {
-				storage.put("station", xmlData);
+				storage.put("station", xmlData.toString());
 			} else if ( name.trim().equals("description")) {
-				storage.put("description", xmlData);
+				storage.put("description", xmlData.toString());
 			} else if ( name.trim().equals("bsa") ) {
 				results.add(storage);
 				inBSATag = false;
 			}
-			xmlData = "";
+			xmlData = new StringBuilder();
 		}		
 	}
 	 
 	public void characters(char ch[], int start, int length) {
 	
-		xmlData = xmlData + String.valueOf(ch).substring(start, start+length);
-		
+		this.xmlData.append(String.valueOf(ch).substring(start, start+length));		
 	}	
 	 
 	public List<Map<String, String>> parseDocument(String urlContent) 
 		throws IOException, SAXException, ParserConfigurationException {
 
-		this.xmlData = "";
+		this.xmlData = new StringBuilder();
 
 		this.inBSATag = false;
 
