@@ -1,0 +1,4 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/context_add"
+          android:title="Add Favorite" />
+</menu>

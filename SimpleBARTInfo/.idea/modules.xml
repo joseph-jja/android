@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/SimpleBARTInfo.iml" filepath="$PROJECT_DIR$/SimpleBARTInfo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/database-debug/database-debug.iml" filepath="$PROJECT_DIR$/database-debug/database-debug.iml" />
+      <module fileurl="file://$PROJECT_DIR$/simpleBARTInfo/simpleBARTInfo.iml" filepath="$PROJECT_DIR$/simpleBARTInfo/simpleBARTInfo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ui-libs-debug/ui-libs-debug.iml" filepath="$PROJECT_DIR$/ui-libs-debug/ui-libs-debug.iml" />
+    </modules>
+  </component>
+</project>

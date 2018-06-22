@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/build/intermediates/res/merged/release/menu/add_favorite.xml",
+        "source": "/home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/res/menu/add_favorite.xml"
+    },
+    {
+        "merged": "/home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/build/intermediates/res/merged/release/menu/options.xml",
+        "source": "/home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/res/menu/options.xml"
+    },
+    {
+        "merged": "/home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/build/intermediates/res/merged/release/menu/remove_favorite.xml",
+        "source": "/home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/res/menu/remove_favorite.xml"
+    }
+]

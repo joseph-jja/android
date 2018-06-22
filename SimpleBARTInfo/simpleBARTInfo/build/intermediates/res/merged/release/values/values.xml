@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about_app">A simple BART application \nBy \nJoseph Acosta</string>
+    <string name="app_name">SimpleBARTInfo</string>
+    <string name="fareTitle">Fair Estimator</string>
+    <style name="NameText">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="TimeText">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#fff</item>
+    </style>
+</resources>

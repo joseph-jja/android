@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "/home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/build/intermediates/res/merged/release/drawable-mdpi/ic_tab_trains_unselected.png",
+        "source": "/home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/res/drawable-mdpi/ic_tab_trains_unselected.png"
+    },
+    {
+        "merged": "/home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/build/intermediates/res/merged/release/drawable-mdpi/ic_launcher.png",
+        "source": "/home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/res/drawable-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/build/intermediates/res/merged/release/drawable-mdpi/ic_tab_map_unselected.png",
+        "source": "/home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/res/drawable-mdpi/ic_tab_map_unselected.png"
+    },
+    {
+        "merged": "/home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/build/intermediates/res/merged/release/drawable-mdpi/ic_tab_trains_selected.png",
+        "source": "/home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/res/drawable-mdpi/ic_tab_trains_selected.png"
+    },
+    {
+        "merged": "/home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/build/intermediates/res/merged/release/drawable-mdpi/ic_tab_map_selected.png",
+        "source": "/home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/res/drawable-mdpi/ic_tab_map_selected.png"
+    }
+]
