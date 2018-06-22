@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+android:id="@+id/widget28"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+android:orientation="vertical"
+xmlns:android="http://schemas.android.com/apk/res/android"
+>
+<TextView
+android:id="@+id/feed_web_view_title"
+android:textAppearance="@style/DefaultText"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+android:layout_marginTop="5px"
+android:layout_marginBottom="5px"
+android:layout_marginLeft="10px"
+android:layout_marginRight="10px"
+android:text="Minnow RSS"
+>
+</TextView>
+<WebView
+android:id="@+id/feed_web_view_link"
+android:textAppearance="@style/DefaultText"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+android:layout_marginTop="5px"
+android:layout_marginBottom="5px"
+>
+</WebView>
+<WebView  
+android:id="@+id/feed_web_view_web_page"
+android:layout_width="fill_parent" 
+android:layout_height="fill_parent" 
+android:layout_weight="1.0"   
+/>
+</LinearLayout>

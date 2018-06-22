@@ -123,12 +123,11 @@ public class FeedListAdapter {
 			final String minutes = ( now.get(Calendar.MINUTE) < 10 ) 
 					? "0" + Integer.valueOf(now.get(Calendar.MINUTE)).toString() 
 							: Integer.valueOf(now.get(Calendar.MINUTE)).toString();
-			String formattedDate = (now.get(Calendar.MONTH) + 1) + "/"
+			holder.lastTimeView.setText((now.get(Calendar.MARCH) + 1) + "/" 
 					+ now.get(Calendar.DAY_OF_MONTH) + "/"
 					+ now.get(Calendar.YEAR) + " "
 					+ hour + ":" + minutes 
-					+ " " + ( ( now.get(Calendar.AM_PM) == Calendar.AM ) ? "AM" : "PM" );
-			holder.lastTimeView.setText(formattedDate);
+					+ " " + ( ( now.get(Calendar.AM_PM) == Calendar.AM ) ? "AM" : "PM" ) );
 			holder.idView.setText(Integer.toString(table.getId()));
 			
 			if ( image == null ) { 

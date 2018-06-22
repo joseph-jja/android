@@ -6,6 +6,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.http.client.ClientProtocolException;
+
 import android.util.Log;
 
 import com.ja.database.DatabaseAdapter;
@@ -29,8 +31,8 @@ public class FeedDataService {
 	private static final List<Integer> feedItemIds = new ArrayList<Integer>();
 	public  static final int MAX_IMAGE_WIDTH = 25;
 	public static final int MAX_IMAGE_HEIGHT = 25;
-
-	public String downloadRSSFeedData(DatabaseAdapter db, int dbFeedId) throws IOException {
+	
+	public String downloadRSSFeedData(DatabaseAdapter db, int dbFeedId) throws ClientProtocolException, IOException {
 		if ( ! db.isDbIsOpen() ) {
 			db.open();
 		}

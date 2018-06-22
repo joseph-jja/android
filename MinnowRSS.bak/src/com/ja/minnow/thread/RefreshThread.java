@@ -139,16 +139,15 @@ public class RefreshThread implements Runnable {
 			CharSequence cseq = msgs.subSequence(0, msgs.length());
 			//Log.v("STUFF", "Got stuff " + msgs);
 			
+			final int icon = R.drawable.icon;
 			final long when = System.currentTimeMillis();
-			final Notification notification = new Notification.Builder(activity)
-					.setContentTitle(contentTitle)
-					.setContentText("")
-					.setSmallIcon(R.drawable.icon)
-					.build();
+			final Notification notification = new Notification(icon, cseq, when);
 			
 			final Intent notificationIntent = new Intent(activity, MinnowRSS.class);
 			final PendingIntent contentIntent = PendingIntent.getActivity(activity, 0, notificationIntent, 0);
 
+			notification.setLatestEventInfo(activity, contentTitle, cseq, contentIntent);
+			
 			notifManager.notify(RefreshThread.REFRESG_THREAD_ID, notification);
 		}
 	};

@@ -1,5 +1,8 @@
 package com.ja.minnow;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
@@ -8,17 +11,17 @@ import android.os.Bundle;
 import android.os.Message;
 import android.util.Log;
 import android.view.ContextMenu;
-import android.view.ContextMenu.ContextMenuInfo;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.SubMenu;
 import android.view.View;
-import android.widget.AdapterView.AdapterContextMenuInfo;
+import android.view.ContextMenu.ContextMenuInfo;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.AdapterView.AdapterContextMenuInfo;
 
 import com.ja.activity.ActivityHandler;
 import com.ja.activity.BaseActivity;
@@ -35,9 +38,6 @@ import com.ja.minnow.tables.FeedsManager;
 import com.ja.minnow.tables.FeedsTableData;
 import com.ja.minnow.tables.SettingsManager;
 import com.ja.minnow.thread.RefreshThread;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class MinnowRSS extends BaseActivity {
 	
@@ -455,8 +455,7 @@ public class MinnowRSS extends BaseActivity {
 			try { 
 				// find view by id throws exception if it cannot find the view
 				// so this will just blow up if it cannot find the views
-				View view = ((MinnowRSS)activity).getCurrentFocus();
-				//view.findViewById(R.layout.feeds);
+				activity.findViewById(R.layout.feeds);
 				Constants.getFeedlistadapter().updateFeedList((MinnowRSS)activity, results);
 			//	Toast.makeText(this.activity, "Feed update completed.", Toast.LENGTH_LONG).show();
 			} catch (Exception ex) { 
