@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="4" by="lint 2.3.0">
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` *without specifying an explicit locale* is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is *not* `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="   createTable.append(&quot; &quot; + column.getKey() + &quot; &quot; + column.getValue().toLowerCase() + &quot; &quot;);"
+        errorLine2="                                                                      ~~~~~~~~~~~">
+        <location
+            file="/home/joea/workspace/android/database/app/src/main/java/com/ja/database/TableManager.java"
+            line="87"
+            column="71"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.layout.main` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="&lt;LinearLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2="^"
+        quickfix="studio">
+        <location
+            file="/home/joea/workspace/android/database/app/src/main/res/layout/main.xml"
+            line="2"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;Hello World, ACTIVITY_ENTRY_NAME&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="    android:text=&quot;Hello World, ACTIVITY_ENTRY_NAME&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/joea/workspace/android/database/app/src/main/res/layout/main.xml"
+            line="10"
+            column="5"/>
+    </issue>
+
+</issues>
