@@ -1,2 +1,4 @@
 */gen/**
 */bin/**
+database/build/**
+ui_libs/build/**
