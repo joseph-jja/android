@@ -70,7 +70,8 @@ public class AlertActivity extends BaseActivity {
 			public void run() {
 				try {
 					results.clear();
-					final List<Map<String, String>> data = AlertDownloader.getAlerts();
+					final String bartData = AlertDownloader.getAlertData();
+					final List<Map<String, String>> data = AlertDownloader.parseAlerts(bartData);
 					results.addAll(data);
 					Log.v(LOG_NAME, "XML result count: " + results.size());
 				} catch (Exception e) {
