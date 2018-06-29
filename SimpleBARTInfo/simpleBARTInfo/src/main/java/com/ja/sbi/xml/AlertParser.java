@@ -39,8 +39,6 @@ public class AlertParser extends DefaultHandler {
     private boolean inExpiresTag = false;
     private boolean inBSATag = false;
 
-    private String xmlData = "";  // feed string data
-
     public void startElement(String uri, String name, String qName, Attributes atts) {
 
         if (name.trim().equals("bsa")) {
@@ -91,7 +89,7 @@ public class AlertParser extends DefaultHandler {
 
     public void characters(char ch[], int start, int length) {
 
-        xmlData = xmlData + String.valueOf(ch).substring(start, start + length);
+        String xmlData = String.valueOf(ch).substring(start, start + length);
 
         if (this.inBSATag && xmlData != null) {
             final int size = alertItems.size();
@@ -115,7 +113,10 @@ public class AlertParser extends DefaultHandler {
     public List<Alerts> parseDocument(String urlContent)
             throws IOException, SAXException, ParserConfigurationException {
 
-        this.xmlData = "";
+        if ( ! isValidRSS(urlContent) ) {
+            throw new IOException("Not valid XML data!");
+        }
+
         alertItems = new ArrayList<Alerts>();
 
         inStationTag = false;
@@ -135,8 +136,8 @@ public class AlertParser extends DefaultHandler {
         return alertItems;
     }
 
-    public static final boolean isValidRSS(String feedURL) {
-        if (feedURL == null || feedURL.trim().indexOf("<?xml") != 0 || feedURL.indexOf("<bsa") == -1) {
+    private boolean isValidRSS(String feedData) {
+        if (feedData == null || feedData.trim().indexOf("<?xml") != 0 || feedData.indexOf("<bsa") == -1) {
             return false;
         }
         return true;

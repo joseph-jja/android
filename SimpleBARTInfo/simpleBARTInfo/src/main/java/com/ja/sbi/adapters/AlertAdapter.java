@@ -74,8 +74,9 @@ public class AlertAdapter extends ArrayAdapter<Alerts> {
                 holder = (AlertViewHolder)rView.getTag();
             }
 
-            Log.d(LOG_NAME, "Got holder " + holder);
-            Log.d(LOG_NAME, "Got holder name field " + holder.station);
+            Log.d(LOG_NAME, "Got station " + station);
+            Log.d(LOG_NAME, "Got description " + description);
+            //Log.d(LOG_NAME, "Got holder name field " + holder.station);
 
             holder.station.setText(station);
             holder.alertType.setText(alertType);

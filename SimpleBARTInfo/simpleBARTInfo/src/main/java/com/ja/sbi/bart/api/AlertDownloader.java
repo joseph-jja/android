@@ -25,10 +25,6 @@ public class AlertDownloader extends BaseDownloader {
 
 	public static List<Alerts> parseAlerts(String bartXMLData) throws Exception {
 		
-		if ( ! AlertParser.isValidRSS(bartXMLData) ) {
-			Log.v("AlertDownloader", "Invalid XML data!");
-		}
-
 		// parse data
 		Log.v("AlertDownloader", "Parsing XML data!");
 		final List<Alerts> data = parser.parseDocument(bartXMLData);

@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ListView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/alert_list_rows"
+<LinearLayout
+    android:id="@+id/alerts_widget"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent" >
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
 
     <ListView
         android:id="@+id/alerts_list_rows"
@@ -11,4 +14,4 @@
         >
     </ListView>
 
-</ListView>
+</LinearLayout>

@@ -33,8 +33,6 @@ public class StationsParser extends DefaultHandler {
 	private boolean inNameTag = false;
 	private boolean inAbbr = false;
 
-	private String xmlData;  // feed string data
-	
 	// the storage of the feed in a map for the database insert
 	private List<Station> stations = new ArrayList<Station>();
 	
@@ -64,7 +62,7 @@ public class StationsParser extends DefaultHandler {
 	 
 	public void characters(char ch[], int start, int length) {
 	
-		xmlData = String.valueOf(ch).substring(start, start+length);
+		final String xmlData = String.valueOf(ch).substring(start, start+length);
 		
 		if ( this.inStationTag && xmlData != null ) {
 			// get the station we are working on
@@ -89,11 +87,7 @@ public class StationsParser extends DefaultHandler {
 	public List<Station> parseDocument(String urlContent) 
 		throws IOException, SAXException, ParserConfigurationException {
 
-		// initialize 
-		this.xmlData = urlContent;
-		
-		
-		if ( ! isValidRSS() ) { 
+		if ( ! isValidRSS(urlContent) ) {
 			throw new IOException("Not valid XML data!");
 		}
 		
@@ -107,13 +101,13 @@ public class StationsParser extends DefaultHandler {
 		final SAXParser saxParser = saxFactory.newSAXParser();
 		final XMLReader reader = saxParser.getXMLReader();
 		reader.setContentHandler(this);
-		reader.parse(new InputSource(new StringReader(this.xmlData)));
+		reader.parse(new InputSource(new StringReader(urlContent)));
 		
 		return this.stations;
 	}
 	
-	private boolean isValidRSS() { 
-		if ( this.xmlData == null || this.xmlData.trim().indexOf("<?xml") != 0 || this.xmlData.indexOf("<stations") == -1 ) {
+	private boolean isValidRSS(String xmlData) {
+		if ( xmlData == null || xmlData.trim().indexOf("<?xml") != 0 || xmlData.indexOf("<stations") == -1 ) {
 			return false;
 		}
 		return true;

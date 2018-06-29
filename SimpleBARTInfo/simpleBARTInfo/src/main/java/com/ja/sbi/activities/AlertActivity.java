@@ -101,11 +101,7 @@ public class AlertActivity extends BaseActivity {
             AlertActivity sbiThread = (AlertActivity) msg.obj;
 
             // render view
-            final ListView lv = (ListView) sbiThread.findViewById(R.id.alert_list_rows);
-
-
-            final String displayFields[] = new String[]{"station", "description"};
-            final int displayViews[] = new int[]{R.id.st_name, R.id.station_short_name};
+            final ListView lv = (ListView) sbiThread.findViewById(R.id.alerts_list_rows);
 
             lv.setAdapter(new AlertAdapter(sbiThread, R.layout.alert_row, sbiThread.alertItems));
 
