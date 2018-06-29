@@ -61,29 +61,29 @@ public class AlertAdapter extends ArrayAdapter<Alerts> {
             Log.d(LOG_NAME, "Station name = " + station + " description " + description);
 
             AlertViewHolder holder = null;
-            if ( rView.getTag() == null ) {
+            if (rView.getTag() == null) {
                 holder = new AlertViewHolder();
-                holder.station = ((TextView)rView.findViewById(R.id.stationName));
-                holder.alertType = ((TextView)rView.findViewById(R.id.alertType));
-                holder.description = ((TextView)rView.findViewById(R.id.description));
-                holder.expires = ((TextView)rView.findViewById(R.id.expires));
-                holder.posted = ((TextView)rView.findViewById(R.id.posted));
-                holder.smsText = ((TextView)rView.findViewById(R.id.smsText));
+                holder.station = ((TextView) rView.findViewById(R.id.stationName));
+                holder.alertType = ((TextView) rView.findViewById(R.id.alertType));
+                holder.description = ((TextView) rView.findViewById(R.id.description));
+                holder.expires = ((TextView) rView.findViewById(R.id.expires));
+                holder.posted = ((TextView) rView.findViewById(R.id.posted));
+                holder.smsText = ((TextView) rView.findViewById(R.id.smsText));
                 rView.setTag(holder);
             } else {
-                holder = (AlertViewHolder)rView.getTag();
+                holder = (AlertViewHolder) rView.getTag();
             }
 
             Log.d(LOG_NAME, "Got station " + station);
             Log.d(LOG_NAME, "Got description " + description);
             //Log.d(LOG_NAME, "Got holder name field " + holder.station);
 
-            holder.station.setText(station);
-            holder.alertType.setText(alertType);
-            holder.description.setText(description);
-            holder.smsText.setText(smsText);
-            holder.posted.setText(posted);
-            holder.expires.setText(expires);
+            holder.station.setText("Station: " + station);
+            holder.alertType.setText("Type: " + alertType);
+            holder.description.setText("Description: " + description);
+            holder.smsText.setText("SMS Text: " + smsText);
+            holder.posted.setText("Posted: " + posted);
+            holder.expires.setText("Expires: " + expires);
         }
         return rView;
     }
