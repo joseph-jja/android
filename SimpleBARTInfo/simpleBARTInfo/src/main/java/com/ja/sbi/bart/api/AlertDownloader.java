@@ -6,6 +6,7 @@ import java.util.Map;
 
 import android.util.Log;
 
+import com.ja.sbi.trains.beans.Alerts;
 import com.ja.sbi.xml.AlertParser;
 
 public class AlertDownloader extends BaseDownloader {
@@ -22,7 +23,7 @@ public class AlertDownloader extends BaseDownloader {
 		return bartXMLData;
 	}
 
-	public static List<Map<String, String>> parseAlerts(String bartXMLData) throws Exception {
+	public static List<Alerts> parseAlerts(String bartXMLData) throws Exception {
 		
 		if ( ! AlertParser.isValidRSS(bartXMLData) ) {
 			Log.v("AlertDownloader", "Invalid XML data!");
@@ -30,15 +31,9 @@ public class AlertDownloader extends BaseDownloader {
 
 		// parse data
 		Log.v("AlertDownloader", "Parsing XML data!");
-		final List<Map<String, String>> data = parser.parseDocument(bartXMLData);
+		final List<Alerts> data = parser.parseDocument(bartXMLData);
 		Log.v("AlertDownloader", "XML result count: " + data.size());
 
-		// DEBUGGING
-		final Map<String, String> originalXML = new HashMap<String, String>();
-		originalXML.put("Original Response", bartXMLData);
-
-		data.add(originalXML);
-
-		return data;		
+		return data;
 	}
 }
