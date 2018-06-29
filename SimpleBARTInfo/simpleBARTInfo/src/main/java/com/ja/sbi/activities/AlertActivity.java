@@ -6,8 +6,10 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
+import android.view.View;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.TextView;
 
 import com.ja.activity.BaseActivity;
 import com.ja.sbi.R;
@@ -99,6 +101,15 @@ public class AlertActivity extends BaseActivity {
 
         public void handleMessage(Message msg) {
             AlertActivity sbiThread = (AlertActivity) msg.obj;
+
+            final View view = sbiThread.findViewById(R.id.bart_alert_title);
+            if ( view == null ) {
+                Log.d(LOG_NAME, "Guess we did not find the view?");
+                return;
+            }
+
+            TextView tview = (TextView)view;
+            tview.setText("Alerts");
 
             // render view
             final ListView lv = (ListView) sbiThread.findViewById(R.id.alerts_list_rows);
