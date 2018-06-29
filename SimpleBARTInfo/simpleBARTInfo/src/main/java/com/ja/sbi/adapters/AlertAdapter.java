@@ -52,12 +52,12 @@ public class AlertAdapter extends ArrayAdapter<Alerts> {
         final Alerts alerts = alertItems.get(position);
         Log.d(LOG_NAME, "Got an alert!");
         if (alerts != null && rView != null) {
-            final String station = alerts.getStation();
-            final String description = alerts.getDescription();
-            final String alertType = alerts.getAlertType();
-            final String expires = alerts.getExpires();
-            final String posted = alerts.getPosted();
-            final String smsText = alerts.getSmsText();
+            final String station = (alerts.getStation() != null ? alerts.getStation() : "");
+            final String description = (alerts.getDescription() != null ? alerts.getDescription() : "");
+            final String alertType = (alerts.getAlertType() != null ? alerts.getAlertType() : "");
+            final String expires = (alerts.getExpires() != null ? alerts.getExpires() : "");
+            final String posted = (alerts.getPosted() != null ? alerts.getPosted() : "");
+            final String smsText = (alerts.getSmsText() != null ? alerts.getSmsText() : "");
             Log.d(LOG_NAME, "Station name = " + station + " description " + description);
 
             AlertViewHolder holder = null;
