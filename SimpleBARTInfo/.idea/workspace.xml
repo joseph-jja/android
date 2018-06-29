@@ -32,8 +32,8 @@
       <file leaf-file-name="AlertActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/activities/AlertActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="104" column="39" lean-forward="false" selection-start-line="104" selection-start-column="39" selection-end-line="104" selection-end-column="39" />
+            <state relative-caret-position="468">
+              <caret line="114" column="18" lean-forward="true" selection-start-line="114" selection-start-column="18" selection-end-line="114" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2784#2785#0" expanded="true" />
@@ -47,24 +47,21 @@
         <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/activities/StationsActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
-              <caret line="76" column="43" lean-forward="false" selection-start-line="76" selection-start-column="43" selection-end-line="76" selection-end-column="43" />
+              <caret line="76" column="31" lean-forward="false" selection-start-line="76" selection-start-column="31" selection-end-line="76" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AlertAdapter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/adapters/AlertAdapter.java">
+      <file leaf-file-name="alert_row.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/res/layout/alert_row.xml">
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="97" column="28" lean-forward="false" selection-start-line="97" selection-start-column="28" selection-end-line="97" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#873#874#0" expanded="true" />
-                <element signature="e#950#951#0" expanded="true" />
-                <element signature="e#996#997#0" expanded="true" />
-                <element signature="e#1034#1035#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="293">
+              <caret line="31" column="13" lean-forward="true" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -2278,7 +2275,6 @@
         <option value="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/map/BartMapActivity.java" />
         <option value="$PROJECT_DIR$/simpleBARTInfo/src/main/res/layout/data_row.xml" />
         <option value="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/trains/beans/Alerts.java" />
-        <option value="$PROJECT_DIR$/simpleBARTInfo/src/main/res/layout/alert_row.xml" />
         <option value="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/adapters/AlertAdapter.java" />
         <option value="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/xml/StationsParser.java" />
         <option value="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/xml/TrainsAtStationParser.java" />
@@ -2287,12 +2283,13 @@
         <option value="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/bart/api/AlertDownloader.java" />
         <option value="$PROJECT_DIR$/simpleBARTInfo/src/main/res/layout/alerts.xml" />
         <option value="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/activities/AlertActivity.java" />
+        <option value="$PROJECT_DIR$/simpleBARTInfo/src/main/res/layout/alert_row.xml" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="520" />
-    <option name="y" value="99" />
+    <option name="x" value="541" />
+    <option name="y" value="98" />
     <option name="width" value="1279" />
     <option name="height" value="916" />
   </component>
@@ -2647,7 +2644,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="520" y="99" width="1279" height="916" extended-state="0" />
+    <frame x="541" y="98" width="1279" height="916" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2666,7 +2663,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2133009" sideWeight="0.4924812" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Build" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="WINDOWED" visible="true" show_stripe_button="true" weight="0.32912987" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" x="444" y="178" width="1387" height="713" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="WINDOWED" visible="false" show_stripe_button="true" weight="0.32912987" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" x="439" y="195" width="1397" height="701" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -2695,7 +2692,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="WINDOWED" visible="false" show_stripe_button="true" weight="0.32912987" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" x="449" y="161" width="1377" height="725" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="WINDOWED" visible="false" show_stripe_button="true" weight="0.32912987" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" x="439" y="195" width="1397" height="701" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -2982,16 +2979,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/res/layout/alert_row.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="42" column="32" lean-forward="false" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/simpleBARTInfo/build/generated/source/r/debug/com/ja/R.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
@@ -3061,39 +3048,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/adapters/AlertAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="97" column="28" lean-forward="false" selection-start-line="97" selection-start-column="28" selection-end-line="97" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#873#874#0" expanded="true" />
-            <element signature="e#950#951#0" expanded="true" />
-            <element signature="e#996#997#0" expanded="true" />
-            <element signature="e#1034#1035#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/res/layout/data_row.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-122">
-          <caret line="35" column="9" lean-forward="true" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/adapters/StationListAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="54" column="41" lean-forward="false" selection-start-line="54" selection-start-column="39" selection-end-line="54" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/res/layout/stations.xml">
       <provider editor-type-id="android-designer2">
         <state />
@@ -3101,14 +3055,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="14" column="10" lean-forward="true" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/activities/StationsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="76" column="43" lean-forward="false" selection-start-line="76" selection-start-column="43" selection-end-line="76" selection-end-column="43" />
           <folding />
         </state>
       </provider>
@@ -3124,10 +3070,62 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/adapters/StationListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="54" column="41" lean-forward="false" selection-start-line="54" selection-start-column="39" selection-end-line="54" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/adapters/AlertAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="97" column="28" lean-forward="false" selection-start-line="97" selection-start-column="28" selection-end-line="97" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#873#874#0" expanded="false" />
+            <element signature="e#950#951#0" expanded="false" />
+            <element signature="e#996#997#0" expanded="false" />
+            <element signature="e#1034#1035#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/activities/StationsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="76" column="31" lean-forward="false" selection-start-line="76" selection-start-column="31" selection-end-line="76" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/res/layout/data_row.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="21" column="7" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="22" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/res/layout/alert_row.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="31" column="13" lean-forward="true" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/activities/AlertActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="104" column="39" lean-forward="false" selection-start-line="104" selection-start-column="39" selection-end-line="104" selection-end-column="39" />
+        <state relative-caret-position="468">
+          <caret line="114" column="18" lean-forward="true" selection-start-line="114" selection-start-column="18" selection-end-line="114" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2784#2785#0" expanded="true" />

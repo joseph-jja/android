@@ -19,29 +19,29 @@
 
     <TextView
         android:id="@+id/alertType"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
         >
     </TextView>
 
     <TextView
         android:id="@+id/description"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
         />
     <TextView
         android:id="@+id/expires"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
         />
     <TextView
         android:id="@+id/posted"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
         />
     <TextView
         android:id="@+id/smsText"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
         />
 </LinearLayout>
