@@ -50,5 +50,12 @@ android:layout_gravity="left"
 android:textAppearance="@style/TimeText"
 >
 </TextView>
+  
+  <CheckBox android:id="@+id/checkbox_meat"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="left"
+        android:text="Favorite"
+        android:onClick="onCheckboxClicked"/>
 
 </LinearLayout>
