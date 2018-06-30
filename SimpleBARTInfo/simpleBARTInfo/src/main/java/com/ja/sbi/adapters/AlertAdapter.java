@@ -55,9 +55,9 @@ public class AlertAdapter extends ArrayAdapter<Alerts> {
             final String station = (alerts.getStation() != null ? alerts.getStation() : "");
             final String description = (alerts.getDescription() != null ? alerts.getDescription() : "");
             final String alertType = (alerts.getAlertType() != null ? alerts.getAlertType() : "");
-            final String expires = (alerts.getExpires() != null ? alerts.getExpires() : "");
+            //final String expires = (alerts.getExpires() != null ? alerts.getExpires() : "");
             final String posted = (alerts.getPosted() != null ? alerts.getPosted() : "");
-            final String smsText = (alerts.getSmsText() != null ? alerts.getSmsText() : "");
+            //final String smsText = (alerts.getSmsText() != null ? alerts.getSmsText() : "");
             Log.d(LOG_NAME, "Station name = " + station + " description " + description);
 
             AlertViewHolder holder = null;
@@ -66,9 +66,7 @@ public class AlertAdapter extends ArrayAdapter<Alerts> {
                 holder.station = ((TextView) rView.findViewById(R.id.stationName));
                 holder.alertType = ((TextView) rView.findViewById(R.id.alertType));
                 holder.description = ((TextView) rView.findViewById(R.id.description));
-                holder.expires = ((TextView) rView.findViewById(R.id.expires));
                 holder.posted = ((TextView) rView.findViewById(R.id.posted));
-                holder.smsText = ((TextView) rView.findViewById(R.id.smsText));
                 rView.setTag(holder);
             } else {
                 holder = (AlertViewHolder) rView.getTag();
@@ -81,9 +79,7 @@ public class AlertAdapter extends ArrayAdapter<Alerts> {
             holder.station.setText("Station: " + station);
             holder.alertType.setText("Type: " + alertType);
             holder.description.setText("Description: " + description);
-            holder.smsText.setText("SMS Text: " + smsText);
             holder.posted.setText("Posted: " + posted);
-            holder.expires.setText("Expires: " + expires);
         }
         return rView;
     }
@@ -93,8 +89,6 @@ public class AlertAdapter extends ArrayAdapter<Alerts> {
         public TextView station;
         public TextView description;
         public TextView alertType;
-        public TextView expires;
         public TextView posted;
-        public TextView smsText;
     }
 }
