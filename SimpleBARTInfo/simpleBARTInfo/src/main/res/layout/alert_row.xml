@@ -28,17 +28,7 @@
         android:layout_height="wrap_content"
         />
     <TextView
-        android:id="@+id/expires"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        />
-    <TextView
         android:id="@+id/posted"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        />
-    <TextView
-        android:id="@+id/smsText"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         />
