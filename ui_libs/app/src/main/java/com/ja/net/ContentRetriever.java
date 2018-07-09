@@ -85,8 +85,9 @@ public class ContentRetriever {
 			return null; 
 		}
 		
-		if ( ! url.startsWith("http://") ) {
-			nurl = "http://" + url;
+		// default to https
+		if ( ! url.startsWith("http://") && ! url.startsWith("https://") ) {
+			nurl = "https://" + url;
 		} 
 		
 		final URL furl = new URL(url);
@@ -144,10 +145,15 @@ public class ContentRetriever {
 	public Bitmap downloadImage(String imageURL) throws IOException  {
 		
 		String nurl = imageURL;
-		if ( imageURL == null ) { return null; }
-		if ( ! imageURL.startsWith("http://") ) {
-			nurl = "http://" + imageURL;
+		if ( imageURL == null ) { 
+			return null; 
+		}
+
+		// default to https
+		if ( ! imageURL.startsWith("http://") && ! imageURL.startsWith("https://") ) {
+			nurl = "https://" + url;
 		}		
+		
 		final URL imageFileURL = new URL(nurl);
 		
 		HttpURLConnection conn= (HttpURLConnection)imageFileURL.openConnection();
