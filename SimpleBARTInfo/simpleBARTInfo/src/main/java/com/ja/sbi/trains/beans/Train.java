@@ -6,6 +6,7 @@ public class Train {
 	private String trainTime;
 	private String length; 
 	private String platform;
+	private String direction;
 	
 	public String getLength() {
 		return length;
@@ -43,4 +44,17 @@ public class Train {
 	public String getTrainTime() {
 		return trainTime;
 	}
+		/**
+	 * @param direction the direction to set
+	 */
+	public void setDirection(String direction) {
+		this.direction = direction;
+	}
+	/**
+	 * @return the direction
+	 */
+	public String getDirection() {
+		return direction;
+	}
+
 }
