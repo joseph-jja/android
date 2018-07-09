@@ -55,6 +55,7 @@ public class TrainListAdapter  extends ArrayAdapter<Train> {
 			final String time = xTrains.getTrainTime();
 			final String length = xTrains.getLength();
 			final String platform = xTrains.getPlatform();
+			final String direction = xTrains.getDirection();
 			Log.d(LOG_NAME, "Station name = " + name);
 
 			TrainViewHolder holder = null;
@@ -64,12 +65,14 @@ public class TrainListAdapter  extends ArrayAdapter<Train> {
 				holder.time = ((TextView)rView.findViewById(R.id.st_time));
 				holder.length = ((TextView)rView.findViewById(R.id.train_length));
 				holder.platform = ((TextView)rView.findViewById(R.id.station_platform));				
+				holder.direction = ((TextView)rView.findViewById(R.id.train_direction));				
 				rView.setTag(holder);
 			} else {
 				holder = (TrainViewHolder)rView.getTag();
 			}
 			holder.length.setLayoutParams(holder.time.getLayoutParams());
 			holder.platform.setLayoutParams(holder.time.getLayoutParams());
+			holder.direction.setLayoutParams(holder.time.getLayoutParams());
 			Log.v(LOG_NAME, "Got holder " + holder);
 			Log.v(LOG_NAME, "Got holder name field " + holder.name);
 			
@@ -77,6 +80,7 @@ public class TrainListAdapter  extends ArrayAdapter<Train> {
 			holder.time.setText("Times: " + time);
 			holder.length.setText("Train Lengths: " + length);
 			holder.platform.setText("Platforms: " + platform);
+			holder.direction.setText("Direction: " + direction);
 		}
 		return rView;
 	}
@@ -86,7 +90,8 @@ public class TrainListAdapter  extends ArrayAdapter<Train> {
 		public TextView name;
 		public TextView time;
 		public TextView length; 
-		public TextView platform;
+		public TextView platform
+		public TextView direction;
 	}
 
 }
