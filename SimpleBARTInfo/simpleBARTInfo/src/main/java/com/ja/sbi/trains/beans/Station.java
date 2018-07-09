@@ -9,6 +9,8 @@ public class Station {
 	private String stationName;
 	private String stationTime;
 	private List<Train> trains;
+	private String direction;
+	
 	/**
 	 * @param stationName the stationName to set
 	 */
@@ -57,5 +59,16 @@ public class Station {
 	public String getShortName() {
 		return shortName;
 	}
-	
+	/**
+	 * @param direction the direction to set
+	 */
+	public void setDirection(String direction) {
+		this.direction = direction;
+	}
+	/**
+	 * @return the direction
+	 */
+	public String getDirection() {
+		return direction;
+	}
 }
