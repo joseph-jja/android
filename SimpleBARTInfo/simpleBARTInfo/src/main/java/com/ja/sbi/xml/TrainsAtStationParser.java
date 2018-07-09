@@ -39,6 +39,7 @@ public class TrainsAtStationParser extends DefaultHandler {
 	private boolean inMinutes = false;
 	private boolean inPlatform = false;
 	private boolean inLength = false;
+	private boolean inDirection = false;
 
 	// the storage of the feed in a map for the database insert
 	private List<Station> stations = new ArrayList<Station>();
@@ -76,6 +77,8 @@ public class TrainsAtStationParser extends DefaultHandler {
 			inPlatform = true;
 		} else if ( name.trim().equals("length") ) { 
 			inLength = true;
+		} else if ( name.trim().equals("direction") ) {
+			inDirection = true;	
 		}
 	}
 	
@@ -97,6 +100,8 @@ public class TrainsAtStationParser extends DefaultHandler {
 			inPlatform = false;
 		} else if ( name.trim().equals("length") ) { 
 			inLength = false;
+		} else if ( name.trim().equals("direction") ) {
+			inDirection = false;	
 		}
 	}
 	 
@@ -123,6 +128,8 @@ public class TrainsAtStationParser extends DefaultHandler {
 						xTrain.setPlatform( append(xTrain.getPlatform(), xmlData, true) );
 					} else if ( this.inLength ) {
 						xTrain.setLength( append(xTrain.getLength(), xmlData, true) );
+					} else if ( this.inDirection ) {
+						xTrain.setDirection( append(xTrain.getDirection(), xmlData, true) );
 					}
 				}
 				if ( trains.remove(tSize - 1) != null ) { 
@@ -161,6 +168,7 @@ public class TrainsAtStationParser extends DefaultHandler {
 		this.inEstimateTag = false; 
 		this.inMinutes = false;
 		this.inLength = false;
+		this.inDirection = false;
 		
 		this.stations = new ArrayList<Station>();
 		
