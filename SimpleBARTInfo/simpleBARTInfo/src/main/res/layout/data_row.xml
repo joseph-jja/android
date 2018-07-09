@@ -50,7 +50,16 @@ android:layout_gravity="left"
 android:textAppearance="@style/TimeText"
 >
 </TextView>
-  
+
+<TextView
+android:id="@+id/train_direction"
+android:layout_width="0dp"
+android:layout_height="0dp"
+android:layout_gravity="left"
+android:textAppearance="@style/TimeText"
+>
+</TextView>
+
   <CheckBox android:id="@+id/checkbox_favorite"
         android:layout_width="0dp"
         android:layout_height="0dp"
