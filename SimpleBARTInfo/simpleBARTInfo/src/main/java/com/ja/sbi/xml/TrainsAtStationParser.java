@@ -1,8 +1,13 @@
 package com.ja.sbi.xml;
 
+import android.annotation.TargetApi;
+import android.os.Build;
+import java.util.Collections;
+
 import java.io.IOException;
 import java.io.StringReader;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 import javax.xml.parsers.ParserConfigurationException;
@@ -152,7 +157,8 @@ public class TrainsAtStationParser extends DefaultHandler {
 		}
 		return xmlData;		
 	}
-	 
+
+    @TargetApi(Build.VERSION_CODES.N)
 	public List<Station> parseDocument(String urlContent) 
 		throws IOException, SAXException, ParserConfigurationException {
 
@@ -177,8 +183,22 @@ public class TrainsAtStationParser extends DefaultHandler {
 		final XMLReader reader = saxParser.getXMLReader();
 		reader.setContentHandler(this);
 		reader.parse(new InputSource(new StringReader(urlContent)));
+
+		List<Station> resultStations = new ArrayList<Station>();
+        for ( Station currentStation: this.stations) {
+		    List<Train> resultTrains = new ArrayList<Train>();
+			for ( Train currentTrain : currentStation.getTrains()) {
+                final String direction = currentTrain.getDirection();
+                final String[] oneDirection = direction.split(",");
+                currentTrain.setDirection(oneDirection[0].trim());
+                resultTrains.add(currentTrain);
+			}
+			Collections.sort(resultTrains, new Train());
+            currentStation.setTrains(resultTrains);
+            resultStations.add(currentStation);
+		}
 		
-		return this.stations;
+		return resultStations;
 	}
 	
 	private boolean isValidRSS(String xmlData) {
