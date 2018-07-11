@@ -106,18 +106,6 @@ public abstract class SBIBaseActivity extends BaseActivity {
 			this.setupView();
 		}
 	}
-	
-	public void onCheckboxClicked(View view) {
-		// Is the view now checked?
-		boolean checked = ((CheckBox) view).isChecked();
-		if ( ! checked ) { 
-			return;
-		}
-		
-		//if (view.getId() == R.id??? checkbox) {
-				
-		//}
-	}
 
 	private void showLoadingSpinner() { 
 		
