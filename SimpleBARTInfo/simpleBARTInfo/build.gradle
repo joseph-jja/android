@@ -18,6 +18,6 @@ android {
 }
 
 dependencies {
-    compile project(':database-debug')
-    compile project(':ui-libs-debug')
+    api project(':database-debug')
+    api project(':ui-libs-debug')
 }
