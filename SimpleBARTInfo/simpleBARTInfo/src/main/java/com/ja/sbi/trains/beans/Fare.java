@@ -4,7 +4,25 @@ public class Fare {
 
 	private String fare;
 	private String clipperDiscount;
-	
+	private String seniorDisabledClipper;
+	private String youthClipper;
+
+	public String getSeniorDisabledClipper() {
+		return seniorDisabledClipper;
+	}
+
+	public void setSeniorDisabledClipper(String seniorDisabledClipper) {
+		this.seniorDisabledClipper = seniorDisabledClipper;
+	}
+
+	public String getYouthClipper() {
+		return youthClipper;
+	}
+
+	public void setYouthClipper(String youthClipper) {
+		this.youthClipper = youthClipper;
+	}
+
 	public String getFare() {
 		return fare;
 	}

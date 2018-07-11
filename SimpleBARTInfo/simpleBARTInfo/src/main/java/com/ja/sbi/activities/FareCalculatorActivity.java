@@ -130,7 +130,8 @@ public class FareCalculatorActivity extends BaseActivity {
 			
 			((TextView)this.findViewById(R.id.fareValue)).setText("Fare: " + currentFare.getFare());
 			((TextView)this.findViewById(R.id.clipperFare)).setText("Clipper Card Fare: " + currentFare.getClipperDiscount());
-			
+			((TextView)this.findViewById(R.id.seniorDisabledClipper)).setText("Senior/Disabled Clipper Fare: " + currentFare.getSeniorDisabledClipper());
+
 			Log.d(LOG_NAME, currentFare.getFare());
 			Log.d(LOG_NAME, currentFare.getClipperDiscount());
 			
