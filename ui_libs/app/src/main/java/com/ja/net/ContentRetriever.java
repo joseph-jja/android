@@ -100,7 +100,7 @@ public class ContentRetriever {
 			return null;
 		}
 		
-		Log.v(CR_TAG, "In the dowloader!");
+		Log.v(CR_TAG, "In the dowloader! " + nurl);
 		
 		if ( nurl.startsWith("https:") ) {
 			final HttpsURLConnection urlConnection = (HttpsURLConnection)furl.openConnection();
@@ -151,7 +151,7 @@ public class ContentRetriever {
 
 		// default to https
 		if ( ! imageURL.startsWith("http://") && ! imageURL.startsWith("https://") ) {
-			nurl = "https://" + url;
+			nurl = "https://" + imageURL;
 		}		
 		
 		final URL imageFileURL = new URL(nurl);
