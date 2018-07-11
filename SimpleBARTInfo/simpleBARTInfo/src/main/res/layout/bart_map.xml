@@ -16,7 +16,7 @@ android:layout_height="fill_parent"
 android:id="@+id/bart_map_image"
 android:layout_width="wrap_content"
 android:layout_height="wrap_content"
-android:src="@drawable/san_francisco_bart_map"
+android:src="@drawable/bart_cc_map"
 android:adjustViewBounds="true"
 android:layout_gravity="top|left|fill"
 />

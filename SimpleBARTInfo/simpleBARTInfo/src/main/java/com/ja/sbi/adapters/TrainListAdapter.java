@@ -90,7 +90,7 @@ public class TrainListAdapter  extends ArrayAdapter<Train> {
 		public TextView name;
 		public TextView time;
 		public TextView length; 
-		public TextView platform
+		public TextView platform;
 		public TextView direction;
 	}
 

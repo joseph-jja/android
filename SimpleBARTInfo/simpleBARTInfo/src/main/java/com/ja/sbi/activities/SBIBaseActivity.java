@@ -11,6 +11,7 @@ import android.os.Message;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
+import android.widget.CheckBox;
 
 import com.ja.activity.BaseActivity;
 import com.ja.database.DatabaseAdapter;

@@ -1,0 +1,87 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:2:1-21:12
+INJECTED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:2:1-21:12
+INJECTED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:2:1-21:12
+INJECTED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:2:1-21:12
+MERGED from [:database-debug] /home/joea/.gradle/caches/transforms-1/files-1.1/database-debug.aar/f93aab0f88e73096e94cfcd50a34f889/AndroidManifest.xml:2:1-19:12
+MERGED from [:ui-libs-debug] /home/joea/.gradle/caches/transforms-1/files-1.1/ui-libs-debug.aar/8c242831cf6aeca9434b6207ddb8467d/AndroidManifest.xml:2:1-19:12
+INJECTED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:2:1-21:12
+INJECTED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:2:1-21:12
+INJECTED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:2:1-21:12
+	package
+		ADDED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:3:7-27
+		INJECTED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml
+		INJECTED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml
+	android:versionName
+		ADDED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:5:7-32
+		INJECTED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml
+		INJECTED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:2:11-69
+	android:versionCode
+		ADDED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:4:7-30
+		INJECTED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml
+		INJECTED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml
+uses-permission#android.permission.INTERNET
+ADDED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:6:5-66
+	android:name
+		ADDED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:6:22-64
+application
+ADDED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:7:5-20:19
+MERGED from [:database-debug] /home/joea/.gradle/caches/transforms-1/files-1.1/database-debug.aar/f93aab0f88e73096e94cfcd50a34f889/AndroidManifest.xml:7:5-17:19
+MERGED from [:database-debug] /home/joea/.gradle/caches/transforms-1/files-1.1/database-debug.aar/f93aab0f88e73096e94cfcd50a34f889/AndroidManifest.xml:7:5-17:19
+MERGED from [:ui-libs-debug] /home/joea/.gradle/caches/transforms-1/files-1.1/ui-libs-debug.aar/8c242831cf6aeca9434b6207ddb8467d/AndroidManifest.xml:7:5-17:19
+MERGED from [:ui-libs-debug] /home/joea/.gradle/caches/transforms-1/files-1.1/ui-libs-debug.aar/8c242831cf6aeca9434b6207ddb8467d/AndroidManifest.xml:7:5-17:19
+	android:label
+		ADDED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:7:18-50
+	android:icon
+		ADDED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:7:51-80
+activity#com.ja.sbi.SimpleBARTInfo
+ADDED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:8:9-14:20
+	android:label
+		ADDED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:9:19-51
+	android:name
+		ADDED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:8:19-48
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:10:13-13:29
+action#android.intent.action.MAIN
+ADDED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:11:17-69
+	android:name
+		ADDED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:11:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:12:17-77
+	android:name
+		ADDED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:12:27-74
+activity#com.ja.sbi.activities.StationsActivity
+ADDED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:15:5-80
+	android:name
+		ADDED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:15:15-68
+activity#com.ja.sbi.activities.FavoritesActivity
+ADDED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:16:9-85
+	android:name
+		ADDED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:16:19-73
+activity#com.ja.sbi.map.BartMapActivity
+ADDED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:17:9-66
+	android:name
+		ADDED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:17:19-54
+activity#com.ja.sbi.activities.FareCalculatorActivity
+ADDED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:18:9-90
+	android:name
+		ADDED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:18:19-78
+activity#com.ja.sbi.activities.AlertActivity
+ADDED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:19:9-81
+	android:name
+		ADDED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:19:19-69
+activity#com.ja.database.ACTIVITY_ENTRY_NAME
+ADDED from [:database-debug] /home/joea/.gradle/caches/transforms-1/files-1.1/database-debug.aar/f93aab0f88e73096e94cfcd50a34f889/AndroidManifest.xml:8:9-16:20
+	android:label
+		ADDED from [:database-debug] /home/joea/.gradle/caches/transforms-1/files-1.1/database-debug.aar/f93aab0f88e73096e94cfcd50a34f889/AndroidManifest.xml:10:13-45
+	android:name
+		ADDED from [:database-debug] /home/joea/.gradle/caches/transforms-1/files-1.1/database-debug.aar/f93aab0f88e73096e94cfcd50a34f889/AndroidManifest.xml:9:13-63
+activity#com.ja.ACTIVITY_NAME
+ADDED from [:ui-libs-debug] /home/joea/.gradle/caches/transforms-1/files-1.1/ui-libs-debug.aar/8c242831cf6aeca9434b6207ddb8467d/AndroidManifest.xml:8:9-16:20
+	android:label
+		ADDED from [:ui-libs-debug] /home/joea/.gradle/caches/transforms-1/files-1.1/ui-libs-debug.aar/8c242831cf6aeca9434b6207ddb8467d/AndroidManifest.xml:10:13-45
+	android:name
+		ADDED from [:ui-libs-debug] /home/joea/.gradle/caches/transforms-1/files-1.1/ui-libs-debug.aar/8c242831cf6aeca9434b6207ddb8467d/AndroidManifest.xml:9:13-48
