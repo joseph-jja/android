@@ -3,6 +3,7 @@
       package="com.ja"
       android:versionCode="2"
       android:versionName="1.1">
+    <uses-sdk android:minSdkVersion="23" />
     <application android:label="@string/app_name">
         <activity android:name=".ACTIVITY_NAME"
                   android:label="@string/app_name">

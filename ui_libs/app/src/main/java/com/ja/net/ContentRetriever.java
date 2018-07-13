@@ -24,7 +24,6 @@ public class ContentRetriever {
 	
 	private final String CRLF = "\r\n";
 	
-	private int recursionCount = 0;
 	private static final int MAX_RECURSION = 5;
 	
 	private int transactionStatus = -1;
@@ -78,7 +77,7 @@ public class ContentRetriever {
 	 * @param url
 	 * @return
 	 */
-	public String downloadURL(String url) throws IOException {
+	public String downloadURL(String url, int recursionCount) throws IOException {
 		
 		String nurl = url;
 		if ( url == null ) { 
@@ -109,7 +108,7 @@ public class ContentRetriever {
 			if ( checkStatus(urlConnection.getResponseCode()) ) { 
 				// get redirect url from "location" header field
 				String newUrl = urlConnection.getHeaderField("Location");
-				return downloadURL(newUrl);	
+				return downloadURL(newUrl, recursionCount);
 			}
 			try {
 				final InputStream in = new BufferedInputStream(urlConnection.getInputStream());
@@ -126,7 +125,7 @@ public class ContentRetriever {
 			if ( checkStatus(urlConnection.getResponseCode()) ) { 
 				// get redirect url from "location" header field
 				String newUrl = urlConnection.getHeaderField("Location");
-				return downloadURL(newUrl);	
+				return downloadURL(newUrl, recursionCount);
 			}
 			try {
 				final InputStream in = new BufferedInputStream(urlConnection.getInputStream());
@@ -167,19 +166,5 @@ public class ContentRetriever {
 	 */
 	public int getTransactionStatus() {
 		return transactionStatus;
-	}
-
-	/**
-	 * @param recursionCount the recursionCount to set
-	 */
-	public void setRecursionCount(int recursionCount) {
-		this.recursionCount = recursionCount;
-	}
-
-	/**
-	 * @return the recursionCount
-	 */
-	public int getRecursionCount() {
-		return recursionCount;
 	}
 }
