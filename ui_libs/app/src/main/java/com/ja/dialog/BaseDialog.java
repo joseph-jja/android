@@ -14,7 +14,7 @@ public class BaseDialog {
 		AlertDialog dialog = new AlertDialog.Builder(activity).create();
 		dialog.setTitle(title);
 		dialog.setMessage(message);
-		dialog.setButton(0, "Ok", new DialogInterface.OnClickListener() {
+		dialog.setButton( DialogInterface.BUTTON_NEUTRAL, "Ok", new DialogInterface.OnClickListener() {
              public void onClick(DialogInterface dialog, int which) { 
             	 dialog.dismiss();
             	 return;
