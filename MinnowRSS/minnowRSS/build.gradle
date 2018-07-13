@@ -6,21 +6,16 @@ android {
     defaultConfig {
         setProperty("archivesBaseName", "MinnowRSS")
         applicationId "com.js.minnow"
-        minSdkVersion 24
-        targetSdkVersion 24
-        versionCode 1
-        versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
     }
 }
 
 dependencies {
-    compile project(':database-debug')
-    compile project(':ui-libs-debug')
+    api project(':database-debug')
+    api project(':ui-libs-debug')
 }
