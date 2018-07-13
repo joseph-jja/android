@@ -34,7 +34,7 @@ public class SimpleBARTInfo extends BaseActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.stations);
-        stations.initializeActivity(this);
+        stations.initializeActivity(this, true);
 
         Log.d(LOG_NAME, "Super called!");
     }
@@ -52,7 +52,7 @@ public class SimpleBARTInfo extends BaseActivity {
         Log.d(LOG_NAME, "In the key press event method " + keyCode);
         if (keyCode == 4) {
             setContentView(R.layout.stations);
-            stations.initializeActivity(this);
+            stations.initializeActivity(this, true);
             return true;
         }
         return super.onKeyDown(keyCode, event);
@@ -72,7 +72,7 @@ public class SimpleBARTInfo extends BaseActivity {
             case R.id.stations:
                 setContentView(R.layout.stations);
                 stations = new StationsHandler();
-                stations.initializeActivity(this);
+                stations.initializeActivity(this, true);
                 break;
             case R.id.check_fares:
                 setContentView(R.layout.fares);
@@ -92,6 +92,9 @@ public class SimpleBARTInfo extends BaseActivity {
                 BaseDialog.alert(this, "About", getResources().getString(R.string.about_app));
                 break;
             case R.id.refresh:
+                setContentView(R.layout.stations);
+                stations = new StationsHandler();
+                stations.initializeActivity(this, false);
             case R.id.view_map:
                 break;
             default:

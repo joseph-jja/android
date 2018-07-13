@@ -24,11 +24,15 @@ public abstract class SBIBaseHandler {
     private static ProgressDialog dialog = null;
     protected static SBIBaseHandler self = null;
 
-    public void initializeActivity(Context context) {
+    public void initializeActivity(Context context, boolean useStale) {
 
         self = this;
-
+        if (useStale && SBIBaseHandler.stations.size() > 0) {
+            self.setupView((SimpleBARTInfo)context);
+            return;
+        }
         downloadBARTFeed(context);
+
     }
 
     public void showLoadingSpinner(Context context) {
