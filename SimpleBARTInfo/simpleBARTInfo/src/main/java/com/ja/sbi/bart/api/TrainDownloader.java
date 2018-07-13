@@ -27,7 +27,7 @@ public class TrainDownloader extends BaseDownloader {
 
         selectedStationShortName = stationName;
         try {
-            String trainData = BaseDownloader.retriever.downloadURL(trainAPI);
+            String trainData = BaseDownloader.retriever.downloadURL(trainAPI, 0);
             Log.d("StationListener", "Got trains: " + trainData);
 
             trainStations = parser.parseDocument(trainData);

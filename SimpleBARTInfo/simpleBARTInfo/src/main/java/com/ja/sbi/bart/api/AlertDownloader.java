@@ -17,7 +17,7 @@ public class AlertDownloader extends BaseDownloader {
 
 		// get data
 		Log.v("AlertDownloader", "Getting XML data!");
-		String bartXMLData = BaseDownloader.retriever.downloadURL(APIConstants.ALERTS_API);
+		String bartXMLData = BaseDownloader.retriever.downloadURL(APIConstants.ALERTS_API, 0);
 		Log.v("AlertDownloader", "Got XML data = " + bartXMLData);
 
 		return bartXMLData;

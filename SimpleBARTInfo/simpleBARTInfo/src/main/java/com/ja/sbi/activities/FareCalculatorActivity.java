@@ -122,7 +122,7 @@ public class FareCalculatorActivity extends BaseActivity {
 
 		try { 
 			// TODO call api here
-			final String fairData = BaseDownloader.retriever.downloadURL(APIConstants.FAIR_API + this.sourceStation + APIConstants.FAIR_DEST + this.destinationStation + APIConstants.KEY_STRING_API);
+			final String fairData = BaseDownloader.retriever.downloadURL(APIConstants.FAIR_API + this.sourceStation + APIConstants.FAIR_DEST + this.destinationStation + APIConstants.KEY_STRING_API, 0);
 		
 			List<Fare> fares = parser.parseDocument(fairData);
 			

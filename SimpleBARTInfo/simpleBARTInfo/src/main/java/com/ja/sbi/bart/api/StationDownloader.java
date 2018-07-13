@@ -25,7 +25,7 @@ public class StationDownloader extends BaseDownloader {
     	if ( StationDownloader.allStationsXML.equals("") ) { 
     		//Log.v("StationDownloader", "Calling downloader");
            	// get all the stations once and then let the user figure out how they want to display them
-           	StationDownloader.allStationsXML = BaseDownloader.retriever.downloadURL(APIConstants.GET_STATION_LIST_API);
+           	StationDownloader.allStationsXML = BaseDownloader.retriever.downloadURL(APIConstants.GET_STATION_LIST_API, 0);
     	}
 		return StationDownloader.allStationsXML;
 	}
