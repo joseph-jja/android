@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/refresh"
-          android:title="Refresh Data" />   
-    <item android:id="@+id/about"
-          android:title="About" />   
+
+    <item
+        android:id="@+id/stations"
+        android:title="Stations List" />
+    <item
+        android:id="@+id/view_map"
+        android:title="View Map" />
+
+    <item
+        android:id="@+id/check_fares"
+        android:title="Check Fares" />
+
+    <item
+        android:id="@+id/check_alerts"
+        android:title="Check Alerts" />
+
+    <item
+        android:id="@+id/refresh"
+        android:title="Refresh Data" />
+
+    <item
+        android:id="@+id/about"
+        android:title="About" />
+
 </menu>

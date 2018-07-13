@@ -1,59 +1,32 @@
-package com.ja.sbi.activities;
+package com.ja.sbi.handlers;
 
 import android.app.ProgressDialog;
-import android.content.res.Configuration;
-import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
 import android.view.View;
 import android.widget.ListView;
-import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
-import com.ja.activity.BaseActivity;
 import com.ja.sbi.R;
 import com.ja.sbi.adapters.AlertAdapter;
 import com.ja.sbi.bart.api.AlertDownloader;
 import com.ja.sbi.trains.beans.Alerts;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
+import android.content.Context;
+import com.ja.sbi.SimpleBARTInfo;
 
-public class AlertActivity extends BaseActivity {
+public class AlertHandler {
 
     private final String LOG_NAME = this.getClass().getName();
-    private ProgressDialog dialog = null;
-    private List<Alerts> alertItems = new ArrayList<Alerts>();
-    private static AlertActivity self;
+    private static ProgressDialog dialog = null;
+    private static List<Alerts> alertItems = new ArrayList<Alerts>();
 
-    public void onCreate(Bundle savedInstanceState) {
+    public void showLoadingSpinner(Context context) {
 
-        Log.d(LOG_NAME, "Initializing!");
-        super.onCreate(savedInstanceState);
-
-        this.setContentView(R.layout.alerts);
-
-        self = this;
-
-        initializeActivity();
-    }
-
-    @Override
-    public void initializeActivity() {
-
-        downloadAlerts();
-    }
-
-    public void onConfigurationChanged(Configuration newConfig) {
-        downloadAlerts();
-    }
-
-    private void showLoadingSpinner() {
-
-        dialog = new ProgressDialog(this);
+        dialog = new ProgressDialog(context);
         dialog.setCancelable(false);
         dialog.setMessage("Loading BART Alerts...");
         // change to progress bar
@@ -61,15 +34,10 @@ public class AlertActivity extends BaseActivity {
         dialog.show();
     }
 
-    public void downloadAlerts() {
+    public void downloadAlerts(Context context) {
 
-        final int currentView = getCurrentContentView();
-        if (currentView != R.layout.alerts) {
-            setContentView(R.layout.alerts);
-        }
-        showLoadingSpinner();
+        final Context contextCopy = context;
 
-        final AlertActivity sbiThread = this;
         final Thread refresh = new Thread() {
             public void run() {
                 try {
@@ -83,7 +51,7 @@ public class AlertActivity extends BaseActivity {
                     e.printStackTrace();
                 }
                 Message msg = updateHandler.obtainMessage();
-                msg.obj = sbiThread;
+                msg.obj = contextCopy;
                 updateHandler.sendMessage(msg);
 
                 Log.d(LOG_NAME, "Should be seeing something now?");
@@ -93,14 +61,11 @@ public class AlertActivity extends BaseActivity {
 
     }
 
-    public static AlertActivity getSelf() {
-        return self;
-    }
-
     private final Handler updateHandler = new Handler() {
 
         public void handleMessage(Message msg) {
-            AlertActivity sbiThread = (AlertActivity) msg.obj;
+
+            SimpleBARTInfo sbiThread = (SimpleBARTInfo) msg.obj;
 
             final View view = sbiThread.findViewById(R.id.bart_alert_title);
             if ( view == null ) {
@@ -114,10 +79,10 @@ public class AlertActivity extends BaseActivity {
             // render view
             final ListView lv = (ListView) sbiThread.findViewById(R.id.alerts_list_rows);
 
-            lv.setAdapter(new AlertAdapter(sbiThread, R.layout.alert_row, sbiThread.alertItems));
+            lv.setAdapter(new AlertAdapter(sbiThread, R.layout.alert_row, AlertHandler.alertItems));
 
             Log.d(LOG_NAME, "Got something.");
-            sbiThread.dialog.dismiss();
+            AlertHandler.dialog.dismiss();
         }
     };
 }

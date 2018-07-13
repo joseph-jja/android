@@ -2,7 +2,6 @@ package com.ja.sbi.map;
 
 import java.util.ArrayList;
 
-import android.annotation.TargetApi;
 import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -34,8 +33,8 @@ public class BartMapActivity extends BaseActivity {
     public static final int MIN_DIMENSIONS = 250;
     private int zoomFactor = 0;
 
-    public static final FrameLayout.LayoutParams ZOOM_PARAMS = new FrameLayout.LayoutParams(
-            ViewGroup.LayoutParams.FILL_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT, Gravity.BOTTOM);
+    //public static final FrameLayout.LayoutParams ZOOM_PARAMS = new FrameLayout.LayoutParams(
+     //       ViewGroup.LayoutParams.FILL_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT, Gravity.BOTTOM);
 
     /**
      * Called when the activity is first created.
@@ -51,7 +50,7 @@ public class BartMapActivity extends BaseActivity {
         initializeActivity();
     }
 
-    @TargetApi(Build.VERSION_CODES.CUPCAKE)
+
     public void initializeActivity() {
 
         // get image view
@@ -61,14 +60,14 @@ public class BartMapActivity extends BaseActivity {
         final WebView web = (WebView) this.findViewById(R.id.bart_map_web);
 
         // iniailize the web view
-        setWebView(web, image);
+        /*setWebView(web, image);
 
         // zoom
         web.getSettings().setSupportZoom(true);
         web.getSettings().setBuiltInZoomControls(true);
-        setupZoomControls(this, web, image);
+        setupZoomControls(this, web, image);*/
     }
-
+/*
     public void resizeImage(Activity activity, WebView web, ImageView image, int width, int height) {
 
         image.layout(0, 0, width, height);
@@ -153,5 +152,5 @@ public class BartMapActivity extends BaseActivity {
 
         //final FrameLayout mContentView = (FrameLayout) activity.getWindow().getDecorView().findViewById(android.R.id.content);
         //mContentView.addView(zoomControls, BartMapActivity.ZOOM_PARAMS);
-    }
+    }*/
 }
