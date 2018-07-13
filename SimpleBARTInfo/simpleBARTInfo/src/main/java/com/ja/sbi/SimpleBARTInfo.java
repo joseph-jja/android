@@ -7,16 +7,9 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.ListView;
-
-import java.util.List;
-import java.util.ArrayList;
-
-import android.widget.TextView;
-import android.widget.ArrayAdapter;
 
 import com.ja.dialog.BaseDialog;
-import com.ja.sbi.activities.StationsActivity;
+import com.ja.sbi.handlers.StationsHandler;
 import com.ja.sbi.handlers.AlertHandler;
 import com.ja.sbi.handlers.FareCalculatorHandler;
 
@@ -39,7 +32,7 @@ public class SimpleBARTInfo extends BaseActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.stations);
-        StationsActivity stations = new StationsActivity();
+        StationsHandler stations = new StationsHandler();
         stations.initializeActivity(this);
 
         Log.d(LOG_NAME, "Super called!");
@@ -63,7 +56,7 @@ public class SimpleBARTInfo extends BaseActivity {
         switch (item.getItemId()) {
             case R.id.stations:
                 setContentView(R.layout.stations);
-                StationsActivity stations = new StationsActivity();
+                StationsHandler stations = new StationsHandler();
                 stations.initializeActivity(this);
                 break;
             case R.id.check_fares:

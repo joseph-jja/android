@@ -17,7 +17,5 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.ja.sbi.activities.StationsActivity"></activity>
-        <activity android:name=".map.BartMapActivity"></activity>
     </application>
 </manifest> 

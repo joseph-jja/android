@@ -1,32 +1,22 @@
-package com.ja.sbi.activities;
+package com.ja.sbi.handlers;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import android.app.ProgressDialog;
-import android.content.res.Configuration;
-import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
-import android.view.KeyEvent;
-import android.view.View;
-import android.widget.CheckBox;
 
-import com.ja.activity.BaseActivity;
-import com.ja.database.DatabaseAdapter;
-import com.ja.database.DatabaseAdapterException;
 import com.ja.database.TableManager;
-import com.ja.sbi.R;
 import com.ja.sbi.SimpleBARTInfo;
 import com.ja.sbi.bart.api.StationDownloader;
-import com.ja.sbi.listeners.StationListener;
 import com.ja.sbi.table.DataManager;
 import com.ja.sbi.trains.beans.Station;
 
 import android.content.Context;
 
-public abstract class SBIBaseActivity {
+public abstract class SBIBaseHandler {
 
     private final String LOG_NAME = this.getClass().getName();
     protected static List<Station> stations = new ArrayList<Station>();
@@ -35,7 +25,7 @@ public abstract class SBIBaseActivity {
     protected String selectedStationName = null;
     protected String selectedStationShortName = null;
     private static ProgressDialog dialog = null;
-    protected static SBIBaseActivity self = null;
+    protected static SBIBaseHandler self = null;
 
     public void initializeActivity(Context context) {
 
@@ -101,7 +91,7 @@ public abstract class SBIBaseActivity {
             public void run() {
                 try {
 
-                    SBIBaseActivity.stations = StationDownloader.getStationList();
+                    SBIBaseHandler.stations = StationDownloader.getStationList();
 
                 } catch (Exception e) {
                     // TODO Auto-generated catch block
@@ -118,7 +108,7 @@ public abstract class SBIBaseActivity {
     }
 
     public boolean hasStations() {
-        return (SBIBaseActivity.stations != null && SBIBaseActivity.stations.size() > 0);
+        return (SBIBaseHandler.stations != null && SBIBaseHandler.stations.size() > 0);
     }
 
     public abstract void setupView(SimpleBARTInfo context);
@@ -134,7 +124,7 @@ public abstract class SBIBaseActivity {
             //} else {
             self.setupView(sbiThread);
             //}
-            SBIBaseActivity.dialog.dismiss();
+            SBIBaseHandler.dialog.dismiss();
         }
     };
 
