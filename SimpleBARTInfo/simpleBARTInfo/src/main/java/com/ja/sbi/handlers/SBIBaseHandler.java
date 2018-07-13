@@ -1,20 +1,17 @@
 package com.ja.sbi.handlers;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
 
-import com.ja.database.TableManager;
 import com.ja.sbi.SimpleBARTInfo;
 import com.ja.sbi.bart.api.StationDownloader;
-import com.ja.sbi.table.DataManager;
 import com.ja.sbi.trains.beans.Station;
 
-import android.content.Context;
+import java.util.ArrayList;
+import java.util.List;
 
 public abstract class SBIBaseHandler {
 
@@ -32,44 +29,7 @@ public abstract class SBIBaseHandler {
         self = this;
 
         downloadBARTFeed(context);
-
-        final List<TableManager> composite = new ArrayList<TableManager>(1);
-        composite.add(new DataManager().getManager());
-
-        // create the database thing and it will do the rest
-        Log.d(LOG_NAME, "Initializing Database Adapter.");
-        //dbAdapter = new DatabaseAdapter(this, composite, SimpleBARTInfo.DATABASE_NAME, SimpleBARTInfo.DATABASE_VERSION);
-        //if ( dbAdapter == null ) {
-        //	throw new DatabaseAdapterException("Adapter is null, cannot continue!");
-        //}
-        //dbAdapter.open();
-        Log.d(LOG_NAME, "Database Created.");
     }
-
-    //public void onDestroy() {
-    //if ( this.dbAdapter.isDbIsOpen() ) {
-    //	this.dbAdapter.close();
-    //}
-    //super.onDestroy();
-    //}
-
-    /**
-     * tracking the back key
-     */
-    /*public boolean onKeyDown(int keyCode, KeyEvent event) {
-		
-		Log.d(LOG_NAME, "In the key press event method " + keyCode);
-		if ( keyCode == 4 ) {
-			// go back to feed list
-			if ( this.isViewStations() ) { 
-				this.finish();
-			} else {
-				this.setupView();
-			}
-			return true;
-		} 
-		return super.onKeyDown(keyCode, event);	
-	}*/
 
     public void showLoadingSpinner(Context context) {
 
@@ -118,12 +78,7 @@ public abstract class SBIBaseHandler {
         public void handleMessage(Message msg) {
             SimpleBARTInfo sbiThread = (SimpleBARTInfo) msg.obj;
 
-            //Log.d(LOG_NAME, "Where are we? " + sbiThread.isViewStations());
-            //if ( ! self.isViewStations() ) {
-            //	StationListener.setTrainView(sbiThread);
-            //} else {
             self.setupView(sbiThread);
-            //}
             SBIBaseHandler.dialog.dismiss();
         }
     };

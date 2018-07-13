@@ -1,13 +1,11 @@
 package com.ja.sbi.bart.api;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 import android.util.Log;
 
 import com.ja.sbi.trains.beans.Alerts;
 import com.ja.sbi.xml.AlertParser;
+
+import java.util.List;
 
 public class AlertDownloader extends BaseDownloader {
 

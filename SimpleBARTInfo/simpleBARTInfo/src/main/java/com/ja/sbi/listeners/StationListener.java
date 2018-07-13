@@ -1,7 +1,5 @@
 package com.ja.sbi.listeners;
 
-import java.util.List;
-
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.Handler;
@@ -18,6 +16,8 @@ import com.ja.sbi.adapters.TrainListAdapter;
 import com.ja.sbi.bart.api.TrainDownloader;
 import com.ja.sbi.trains.beans.Station;
 import com.ja.sbi.trains.beans.Train;
+
+import java.util.List;
 
 public class StationListener implements AdapterView.OnItemClickListener {
 

@@ -1,6 +1,7 @@
 package com.ja.sbi.handlers;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
@@ -9,14 +10,13 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.ja.sbi.R;
+import com.ja.sbi.SimpleBARTInfo;
 import com.ja.sbi.adapters.AlertAdapter;
 import com.ja.sbi.bart.api.AlertDownloader;
 import com.ja.sbi.trains.beans.Alerts;
 
 import java.util.ArrayList;
 import java.util.List;
-import android.content.Context;
-import com.ja.sbi.SimpleBARTInfo;
 
 public class AlertHandler {
 

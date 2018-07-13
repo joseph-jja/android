@@ -1,7 +1,5 @@
 package com.ja.sbi.adapters;
 
-import java.util.List;
-
 import android.content.Context;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -12,6 +10,8 @@ import android.widget.TextView;
 
 import com.ja.sbi.R;
 import com.ja.sbi.trains.beans.Station;
+
+import java.util.List;
 
 public class StationListAdapter extends ArrayAdapter<Station> {
 

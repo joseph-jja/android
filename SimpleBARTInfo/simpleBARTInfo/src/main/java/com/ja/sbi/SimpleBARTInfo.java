@@ -1,17 +1,17 @@
 package com.ja.sbi;
 
-import com.ja.activity.BaseActivity;
-
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
+import com.ja.activity.BaseActivity;
 import com.ja.dialog.BaseDialog;
-import com.ja.sbi.handlers.StationsHandler;
 import com.ja.sbi.handlers.AlertHandler;
 import com.ja.sbi.handlers.FareCalculatorHandler;
+import com.ja.sbi.handlers.StationsHandler;
 
 public class SimpleBARTInfo extends BaseActivity {
     public static final String DATABASE_NAME = "SimpleBARTInfo";
@@ -20,6 +20,8 @@ public class SimpleBARTInfo extends BaseActivity {
     public static final String DATA_KEY = "intent_key";
     public static final String FAVORITES = "favorites";
     public static final String ALL_STATIONS = "stations";
+
+    private StationsHandler stations = new StationsHandler();
 
     private final String LOG_NAME = this.getClass().getName();
 
@@ -32,7 +34,6 @@ public class SimpleBARTInfo extends BaseActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.stations);
-        StationsHandler stations = new StationsHandler();
         stations.initializeActivity(this);
 
         Log.d(LOG_NAME, "Super called!");
@@ -40,9 +41,23 @@ public class SimpleBARTInfo extends BaseActivity {
 
     @Override
     public void initializeActivity() {
-
-
     }
+
+
+    /**
+     * tracking the back key
+     */
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+
+        Log.d(LOG_NAME, "In the key press event method " + keyCode);
+        if (keyCode == 4) {
+            setContentView(R.layout.stations);
+            stations.initializeActivity(this);
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
+
 
     public boolean onCreateOptionsMenu(Menu menu) {
         final MenuInflater inflater = getMenuInflater();
@@ -56,7 +71,7 @@ public class SimpleBARTInfo extends BaseActivity {
         switch (item.getItemId()) {
             case R.id.stations:
                 setContentView(R.layout.stations);
-                StationsHandler stations = new StationsHandler();
+                stations = new StationsHandler();
                 stations.initializeActivity(this);
                 break;
             case R.id.check_fares:

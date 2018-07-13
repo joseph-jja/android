@@ -1,12 +1,11 @@
 package com.ja.sbi.bart.api;
 
-import java.util.Comparator;
-import java.util.List;
-
 import android.util.Log;
-import com.ja.sbi.trains.beans.Train;
+
 import com.ja.sbi.trains.beans.Station;
 import com.ja.sbi.xml.TrainsAtStationParser;
+
+import java.util.List;
 
 /**
  * given a station it will download and parse the list of trains

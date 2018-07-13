@@ -1,14 +1,14 @@
 package com.ja.sbi.bart.api;
 
-import java.io.IOException;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
-
 import android.util.Log;
 
 import com.ja.sbi.trains.beans.Station;
 import com.ja.sbi.xml.StationsParser;
+
+import java.io.IOException;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 
 /**
  * download and parse the list of stations
