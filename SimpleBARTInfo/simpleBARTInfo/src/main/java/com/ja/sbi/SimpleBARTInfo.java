@@ -12,6 +12,7 @@ import com.ja.dialog.BaseDialog;
 import com.ja.sbi.handlers.AlertHandler;
 import com.ja.sbi.handlers.FareCalculatorHandler;
 import com.ja.sbi.handlers.StationsHandler;
+import com.ja.sbi.map.BartMapManager;
 
 public class SimpleBARTInfo extends BaseActivity {
     public static final String DATABASE_NAME = "SimpleBARTInfo";
@@ -71,7 +72,6 @@ public class SimpleBARTInfo extends BaseActivity {
         switch (item.getItemId()) {
             case R.id.stations:
                 setContentView(R.layout.stations);
-                stations = new StationsHandler();
                 stations.initializeActivity(this, true);
                 break;
             case R.id.check_fares:
@@ -93,9 +93,11 @@ public class SimpleBARTInfo extends BaseActivity {
                 break;
             case R.id.refresh:
                 setContentView(R.layout.stations);
-                stations = new StationsHandler();
                 stations.initializeActivity(this, false);
             case R.id.view_map:
+                setContentView(R.layout.bart_map);
+                BartMapManager map = new BartMapManager();
+                map.initializeActivity(this);
                 break;
             default:
                 break;
