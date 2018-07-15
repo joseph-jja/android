@@ -83,7 +83,7 @@ public class SimpleBARTInfo extends BaseActivity {
             case R.id.check_fares:
                 setContentView(R.layout.fares);
                 FareCalculatorHandler fares = new FareCalculatorHandler();
-                fares.initializeActivity(this);
+                fares.initializeActivity(this, stationData);
                 break;
             case R.id.check_alerts:
                 final int currentView = getCurrentContentView();
