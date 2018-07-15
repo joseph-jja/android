@@ -15,6 +15,14 @@ public class TripLeg {
     //private String destinationTime;
     //private String destinationDate;
 
+    public String getTrainHeadStation() {
+      return this.trainHeadStation;
+    }
+
+    public void setTrainHeadStation(String trainHeadStation) {
+      this.trainHeadStation = trainHeadStation;
+    }
+
     public void setRouteLine(String routeLine) {
       this.routeLine = routeLine;
     }
