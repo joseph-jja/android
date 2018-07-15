@@ -58,7 +58,7 @@ public class FareCalculatorHandler {
         final Thread refresh = new Thread() {
             public void run() {
                 try {
-                    loadTrainData();
+                    loadTrainData(stationsData);
                 } catch (Exception e) {
                     Log.d(LOG_NAME, e.getMessage());
                 }
@@ -196,10 +196,10 @@ public class FareCalculatorHandler {
         }
     };
 
-    private void loadTrainData() {
+    private void loadTrainData(List<Station> stationsData) {
 
         try {
-            final List<Station> stations = StationDownloader.getStationList();
+            final List<Station> stations = ((stationsData != null && stationsData.size() > 0) ? stationsData: StationDownloader.getStationList());
             trainStops.clear();
             for (Station s : stations) {
                 StationData sd = new StationData();
