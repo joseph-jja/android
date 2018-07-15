@@ -100,4 +100,15 @@ public abstract class SBIBaseHandler {
     public boolean isViewStations() {
         return viewStations;
     }
+    
+    public List<Station> getStations() {
+        return this.stations;   
+    }
+
+    public void setStations(List<Station> stationsList) {
+        if ( this.stations.length() > ) ) { 
+            return;
+        }
+        this.stationsa.addAll(stationsList);   
+    }
 }
