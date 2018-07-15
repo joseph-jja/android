@@ -1,4 +1,4 @@
-
+package com.ja.sbi.trains.beans;
 
 public class TripLeg {
 
