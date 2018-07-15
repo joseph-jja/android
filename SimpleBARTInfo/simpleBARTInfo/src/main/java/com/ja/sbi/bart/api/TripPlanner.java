@@ -4,6 +4,8 @@ import android.util.Log;
 
 import java.util.List;
 
+import com.ja.sbi.trains.beans.Trip;
+
 /**
  * plan a trip
  *
@@ -16,9 +18,10 @@ public class TripPlanner extends BaseDownloader {
     private static String selectedStationShortName = null;
     private static String selectedStationName = null;
     
-    private static final List<String> callTripAPI(String tripAPI) {
+    private static final List<Trip> callTripAPI(String tripAPI) {
 
-      List<String> trips = null;
+      List<Trip> trips = null;
+        
       try {
             String tripData = BaseDownloader.retriever.downloadURL(tripAPI, 0);
             Log.d("TripPlanner", "Got trips: " + tripData);
@@ -36,7 +39,7 @@ public class TripPlanner extends BaseDownloader {
     }
     
     // TODO create Trip bean
-    public static final List<String> getDepartTrips(String origin, String dest, String departTime) {
+    public static final List<Trip> getDepartTrips(String origin, String dest, String departTime) {
 
         final String tripAPI = APIConstants.SCHEDULE_DEPART + orig 
           + SCHEDULE_DEST + dest + SCHEDULE_DATE = departTime + APIConstants.KEY_STRING_API;
@@ -45,7 +48,7 @@ public class TripPlanner extends BaseDownloader {
     }
     
     // TODO create Trip bean
-    public static final List<String> getArrivalTrips(String origin, String dest, String arriveTime) {
+    public static final List<Trip> getArrivalTrips(String origin, String dest, String arriveTime) {
 
         final String tripAPI = APIConstants.SCHEDULE_ARRIVE + orig 
           + SCHEDULE_DEST + dest + SCHEDULE_DATE = arriveTime + APIConstants.KEY_STRING_API;
