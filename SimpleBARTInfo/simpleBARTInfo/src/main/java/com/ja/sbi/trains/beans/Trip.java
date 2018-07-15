@@ -11,7 +11,7 @@ public class Trip {
     private String origin;
     private String destination;
     
-    private List<String> legs;
+    private List<TripLeg> legs;
     
     private Fare fareDetails;
 }
