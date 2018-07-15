@@ -38,7 +38,7 @@ public class SimpleBARTInfo extends BaseActivity {
 
         setContentView(R.layout.stations);
         stations.initializeActivity(this, true);
-        stationData = stations.getStations();
+        stationsData = stations.getStations();
 
         Log.d(LOG_NAME, "Super called!");
     }
@@ -75,15 +75,15 @@ public class SimpleBARTInfo extends BaseActivity {
         switch (item.getItemId()) {
             case R.id.stations:
                 setContentView(R.layout.stations);
-                if (stationData! = null) {
-                    stations.setStations(stationData);
+                if (stationsData != null) {
+                    stations.setStations(stationsData);
                 } 
                 stations.initializeActivity(this, true);
                 break;
             case R.id.check_fares:
                 setContentView(R.layout.fares);
                 FareCalculatorHandler fares = new FareCalculatorHandler();
-                fares.initializeActivity(this, stationData);
+                fares.initializeActivity(this, stationsData);
                 break;
             case R.id.check_alerts:
                 final int currentView = getCurrentContentView();
@@ -99,7 +99,8 @@ public class SimpleBARTInfo extends BaseActivity {
                 break;
             case R.id.refresh:
                 setContentView(R.layout.stations);
-                stations.setStations(new ArrayList<Station>()) ;
+                stationsData = null;
+                stations.setStations(new ArrayList<Station>());
                 stations.initializeActivity(this, false);
             case R.id.view_map:
                 setContentView(R.layout.bart_map);
