@@ -6,7 +6,8 @@ import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-
+import java.util.List;
+import java.util.ArrayList;
 import com.ja.activity.BaseActivity;
 import com.ja.dialog.BaseDialog;
 import com.ja.sbi.handlers.AlertHandler;
@@ -23,6 +24,7 @@ public class SimpleBARTInfo extends BaseActivity {
     public static final String ALL_STATIONS = "stations";
 
     private StationsHandler stations = new StationsHandler();
+    private List<Station> stationsData;
 
     private final String LOG_NAME = this.getClass().getName();
 
@@ -36,6 +38,7 @@ public class SimpleBARTInfo extends BaseActivity {
 
         setContentView(R.layout.stations);
         stations.initializeActivity(this, true);
+        stationData = stations.getStations();
 
         Log.d(LOG_NAME, "Super called!");
     }
@@ -72,6 +75,9 @@ public class SimpleBARTInfo extends BaseActivity {
         switch (item.getItemId()) {
             case R.id.stations:
                 setContentView(R.layout.stations);
+                if (stationData! = null) {
+                    stations.setStations(stationData);
+                } 
                 stations.initializeActivity(this, true);
                 break;
             case R.id.check_fares:
@@ -93,6 +99,7 @@ public class SimpleBARTInfo extends BaseActivity {
                 break;
             case R.id.refresh:
                 setContentView(R.layout.stations);
+                stations.setStations(new ArrayList<Station>()) ;
                 stations.initializeActivity(this, false);
             case R.id.view_map:
                 setContentView(R.layout.bart_map);
