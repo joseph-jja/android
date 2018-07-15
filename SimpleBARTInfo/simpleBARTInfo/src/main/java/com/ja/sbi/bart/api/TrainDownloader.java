@@ -27,29 +27,29 @@ public class TrainDownloader extends BaseDownloader {
         selectedStationShortName = stationName;
         try {
             String trainData = BaseDownloader.retriever.downloadURL(trainAPI, 0);
-            Log.d("StationListener", "Got trains: " + trainData);
+            Log.d("TrainDownloader", "Got trains: " + trainData);
 
             trainStations = parser.parseDocument(trainData);
 
-            Log.d("StationListener", "Stations size: " + trainStations.size());
+            Log.d("TrainDownloader", "Stations size: " + trainStations.size());
 
         } catch (Exception ex) {
-            Log.d("StationListener", ex.getMessage());
+            Log.d("TrainDownloader", ex.getMessage());
             return null;
         }
         return trainStations;
     }
 
     public static void setSelectedStationName(String stationSelected) {
-        selectedStationName = stationSelected;
+        TrainDownloader.selectedStationName = stationSelected;
     }
 
     public static String getSelectedStationName() {
-        return selectedStationName;
+        return TrainDownloader.selectedStationName;
     }
 
     public static String getSelectedStationShortName() {
-        return selectedStationShortName;
+        return TrainDownloader.selectedStationShortName;
     }
 
     public static void setSelectedStationShortName(String selectedStationShortName) {
