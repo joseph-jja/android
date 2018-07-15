@@ -49,7 +49,7 @@ public class FareCalculatorHandler {
         dialog.show();
     }
 
-    public void initializeActivity(Context context) {
+    public void initializeActivity(Context context, List<Station> stationsData) {
 
         final SimpleBARTInfo bartInfoActivity = (SimpleBARTInfo) context;
 
