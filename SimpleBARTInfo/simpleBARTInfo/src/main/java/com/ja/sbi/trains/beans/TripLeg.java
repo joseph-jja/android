@@ -10,10 +10,18 @@ public class TripLeg {
     private String trainHeadStation;
 
     // times
-    private String originTime;
-    private String originDate;
-    private String destinationTime;
-    private String destinationDate;
+    //private String originTime;
+    //private String originDate;
+    //private String destinationTime;
+    //private String destinationDate;
+
+    public void setRouteLine(String routeLine) {
+      this.routeLine = routeLine;
+    }
+
+    public String getRouteLine() {
+      return this.routeLine;
+    }
 
     public String getDestination() {
       return this.destination;
