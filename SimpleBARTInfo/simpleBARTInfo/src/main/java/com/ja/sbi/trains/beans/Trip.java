@@ -1,3 +1,4 @@
+package com.ja.sbi.trains.beans;
 
 import java.util.List;
 
@@ -14,8 +15,40 @@ public class Trip {
     private List<TripLeg> legs;
     
     private Fare fareDetails;
-    
-        public String getDestinationDate() {
+
+    public Fare getFareDetails() {
+      return this.fareDetails;
+    }
+
+    public void setFareDetails(Fare fareDetails) {
+      this.fareDetails = fareDetails;
+    }
+
+    public List<TripLeg> getLegs() {
+      return this.legs;
+    }
+
+    public void setLegs(List<TripLeg> legs) {
+      this.legs = legs;
+    }
+
+    public String getDestination() {
+      return this.destination;
+    }
+
+    public void setDestination(String destination) {
+      this.destination = destination;
+    }
+
+    public String getOrigin() {
+      return this.origin;
+    }
+
+    public void setOrigin(String origin) {
+      this.origin = origin;
+    }
+
+    public String getDestinationDate() {
       return this.destinationDate;
     }
 
