@@ -79,7 +79,16 @@ public class TripParser {
       
       this.trips = new ArrayList<Trip>();
       
+	if (!isValidRSS(urlContent)) {
+            throw new IOException("Not valid XML data!");
+        }
 
+	final SAXParserFactory saxFactory = SAXParserFactory.newInstance();
+        final SAXParser saxParser = saxFactory.newSAXParser();
+        final XMLReader reader = saxParser.getXMLReader();
+        reader.setContentHandler(this);
+        reader.parse(new InputSource(new StringReader(urlContent)));
+	
       return this.trips;
     }
     
