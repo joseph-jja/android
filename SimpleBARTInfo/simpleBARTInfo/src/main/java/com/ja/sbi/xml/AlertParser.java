@@ -17,6 +17,8 @@ import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 
+import com.ja.sbi.xml.XMLUtils;
+
 /**
  * simple rss feed parser that puts data into a table
  *
@@ -77,14 +79,6 @@ public class AlertParser extends DefaultHandler {
         }
     }
 
-    private String append(String initialString, String xmlData) {
-
-        if (initialString != null && initialString.length() > 0) {
-            return initialString + xmlData;
-        }
-        return xmlData;
-    }
-
     public void characters(char ch[], int start, int length) {
 
         String xmlData = String.valueOf(ch).substring(start, start + length);
@@ -93,17 +87,17 @@ public class AlertParser extends DefaultHandler {
             final int size = alertItems.size();
             Alerts currentAlert = alertItems.get(size - 1);
             if (this.inStationTag) {
-                currentAlert.setStation(append(currentAlert.getStation(), xmlData));
+                currentAlert.setStation(XMLUtils.append(currentAlert.getStation(), xmlData));
             } else if (this.inAlertTypeTag) {
-                currentAlert.setAlertType(append(currentAlert.getAlertType(), xmlData));
+                currentAlert.setAlertType(XMLUtils.append(currentAlert.getAlertType(), xmlData));
             } else if (this.inDescriptionTag) {
-                currentAlert.setDescription(append(currentAlert.getDescription(), xmlData));
+                currentAlert.setDescription(XMLUtils.append(currentAlert.getDescription(), xmlData));
             } else if (this.insmsTextTag) {
-                currentAlert.setSmsText(append(currentAlert.getSmsText(), xmlData));
+                currentAlert.setSmsText(XMLUtils.append(currentAlert.getSmsText(), xmlData));
             } else if (this.inPostedTag) {
-                currentAlert.setPosted(append(currentAlert.getPosted(), xmlData));
+                currentAlert.setPosted(XMLUtils.append(currentAlert.getPosted(), xmlData));
             } else if (this.inExpiresTag) {
-                currentAlert.setExpires(append(currentAlert.getExpires(), xmlData));
+                currentAlert.setExpires(XMLUtils.append(currentAlert.getExpires(), xmlData));
             }
         }
     }
