@@ -41,6 +41,24 @@ public class TripParser {
 		    tripItem.setOrigin( atts.setDestinationDate("destTimeDate") );	
 		}
 		trips.add(tripItem);
+	    } else if ( inTrip && name.trim().equals("fare")) {
+		Trip tripItem = trips.get(trips.size() - 1);
+		Fare = fareItem = tripItem.getFareDetails();
+		    
+		String amount = atts.getValue("amount");
+            	String fareClass = atts.getValue("class");
+            	if (fareClass.equals("cash")) {
+                	fareItem.setFare(amount);
+            	} else if (fareClass.equals("clipper")) {
+                	fareItem.setClipperDiscount(amount);
+            	} else if (fareClass.equals("rtcclipper")) {
+                	fareItem.setSeniorDisabledClipper(amount);
+            	} else if (fareClass.equals("student")) {
+                	fareItem.setYouthClipper(amount);
+            	}
+		tripItem.setFareDetails(fareItem);
+		trips.remove(0);
+            	trips.add(tripItem);
 	    }
     }
 
@@ -53,7 +71,7 @@ public class TripParser {
     
     public void characters(char ch[], int start, int length) {
 	
-		final String xmlData = String.valueOf(ch).substring(start, start+length);
+	final String xmlData = String.valueOf(ch).substring(start, start+length);
 		
     }
 
