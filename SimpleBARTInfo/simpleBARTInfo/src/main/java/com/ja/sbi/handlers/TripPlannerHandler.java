@@ -27,10 +27,14 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-
 public class TripPlannerHandler {
 
   private final String LOG_NAME = this.getClass().getName();
 
+  public TripPlannerHandler(Context context, List<Station> stations) {
+    
+      final SimpleBARTInfo bartInfoActivity = (SimpleBARTInfo) context;
+    
+  }
 
 }
