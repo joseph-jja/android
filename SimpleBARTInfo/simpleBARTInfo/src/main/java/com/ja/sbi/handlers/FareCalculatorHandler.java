@@ -50,7 +50,14 @@ public class FareCalculatorHandler {
         final Thread refresh = new Thread() {
             public void run() {
                 try {
-                    loadTrainData(stationsData);
+                    final List<Station> stations = ((stationsData != null && stationsData.size() > 0) ? stationsData: StationDownloader.getStationList());
+                    trainStops.clear();
+                    for (Station s : stations) {
+                    StationData sd = new StationData();
+                    Log.d(LOG_NAME, s.getStationName());
+                    sd.setStationName(s.getStationName());
+                    sd.setStationCode(s.getShortName());
+                    trainStops.add(sd);
                 } catch (Exception e) {
                     Log.d(LOG_NAME, e.getMessage());
                 }
@@ -187,23 +194,6 @@ public class FareCalculatorHandler {
             FareCalculatorHandler.dialog.dismiss();
         }
     };
-
-    private void loadTrainData(List<Station> stationsData) {
-
-        try {
-            final List<Station> stations = ((stationsData != null && stationsData.size() > 0) ? stationsData: StationDownloader.getStationList());
-            trainStops.clear();
-            for (Station s : stations) {
-                StationData sd = new StationData();
-                Log.d(LOG_NAME, s.getStationName());
-                sd.setStationName(s.getStationName());
-                sd.setStationCode(s.getShortName());
-                trainStops.add(sd);
-            }
-        } catch (Exception e) {
-            Log.d(LOG_NAME, e.getMessage());
-        }
-    }
 
     public static final class StationDataSorter implements Comparator<StationData> {
 
