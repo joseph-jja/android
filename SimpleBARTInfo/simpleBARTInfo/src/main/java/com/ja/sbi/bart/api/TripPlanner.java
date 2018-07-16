@@ -41,8 +41,8 @@ public class TripPlanner extends BaseDownloader {
     // TODO create Trip bean
     public static final List<Trip> getDepartTrips(String origin, String dest, String departTime) {
 
-        // show 1 trips AFTER and 1 trip before
-        final String tripAPI = APIConstants.SCHEDULE_DEPART + orig + "b=1&a=1"
+        // basically what we want is 3 trips
+        final String tripAPI = APIConstants.SCHEDULE_DEPART + orig + "b=1&a=2"
           + SCHEDULE_DEST + dest + SCHEDULE_DATE = departTime + APIConstants.KEY_STRING_API;
 
         return callTripAPI(tripAPI);
@@ -51,8 +51,8 @@ public class TripPlanner extends BaseDownloader {
     // TODO create Trip bean
     public static final List<Trip> getArrivalTrips(String origin, String dest, String arriveTime) {
 
-        // show 1 trips AFTER and 1 trip before
-        final String tripAPI = APIConstants.SCHEDULE_ARRIVE + orig + "b=1&a=1"
+        // basically what we want is 3 trips
+        final String tripAPI = APIConstants.SCHEDULE_ARRIVE + orig + "b=2&a=1"
           + SCHEDULE_DEST + dest + SCHEDULE_DATE = arriveTime + APIConstants.KEY_STRING_API;
 
         return callTripAPI(tripAPI);
