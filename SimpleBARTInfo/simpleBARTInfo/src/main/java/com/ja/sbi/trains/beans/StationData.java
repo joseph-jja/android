@@ -1,6 +1,6 @@
 package com.ja.sbi.trains.beans;
 
-public static class StationData {
+public class StationData {
 
         private String stationName;
         private String stationCode;
