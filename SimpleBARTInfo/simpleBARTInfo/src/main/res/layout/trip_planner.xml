@@ -73,6 +73,10 @@ android:text="@string/fareTitle">
         android:layout_marginRight="10px"
         android:textAppearance="@style/TimeText" />
         -->
-        
+
+    <ListView
+        android:id="@+id/trip_planner_results"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"></ListView>
         
 </LinearLayout>
