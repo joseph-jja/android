@@ -31,12 +31,12 @@ public class StationsHandler {
     protected String selectedStationName = null;
     protected String selectedStationShortName = null;
     private static ProgressDialog dialog = null;
-    protected static SBIBaseHandler self = null;
+    protected static StationsHandler self = null;
 
     public void initializeActivity(Context context, boolean useStale) {
 
         self = this;
-        if (useStale && SBIBaseHandler.stations.size() > 0) {
+        if (useStale && StationsHandler.stations.size() > 0) {
             self.setupView((SimpleBARTInfo)context);
             return;
         }
@@ -64,7 +64,7 @@ public class StationsHandler {
             public void run() {
                 try {
 
-                    SBIBaseHandler.stations = StationDownloader.getStationList();
+                    StationsHandler.stations = StationDownloader.getStationList();
 
                 } catch (Exception e) {
                     // TODO Auto-generated catch block
@@ -81,7 +81,7 @@ public class StationsHandler {
     }
 
     public boolean hasStations() {
-        return (SBIBaseHandler.stations != null && SBIBaseHandler.stations.size() > 0);
+        return (StationsHandler.stations != null && StationsHandler.stations.size() > 0);
     }
 
     public void setupView(SimpleBARTInfo context) {
@@ -110,7 +110,7 @@ public class StationsHandler {
             SimpleBARTInfo sbiThread = (SimpleBARTInfo) msg.obj;
 
             self.setupView(sbiThread);
-            SBIBaseHandler.dialog.dismiss();
+            StationsHandler.dialog.dismiss();
         }
     };
 
