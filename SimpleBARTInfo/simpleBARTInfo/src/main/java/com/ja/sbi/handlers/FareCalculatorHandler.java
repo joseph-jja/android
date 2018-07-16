@@ -41,7 +41,7 @@ public class FareCalculatorHandler {
 
     private static Fare currentFare;
 
-    public void initializeActivity(Context context, List<Station> stations) {
+    public FareCalculatorHandler(Context context, List<Station> stations) {
 
         final SimpleBARTInfo bartInfoActivity = (SimpleBARTInfo) context;
 
