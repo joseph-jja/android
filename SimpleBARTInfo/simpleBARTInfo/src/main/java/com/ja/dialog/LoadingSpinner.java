@@ -1,4 +1,4 @@
-package com.ja.sbi.dialog;
+package com.ja.dialog;
 
 import android.app.ProgressDialog;
 
