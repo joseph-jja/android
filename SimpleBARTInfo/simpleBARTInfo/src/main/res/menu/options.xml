@@ -13,6 +13,10 @@
         android:title="Check Fares" />
 
     <item
+        android:id="@+id/plan_a_trip"
+        android:title="Plan Trip" />
+
+    <item
         android:id="@+id/check_alerts"
         android:title="Check Alerts" />
 
