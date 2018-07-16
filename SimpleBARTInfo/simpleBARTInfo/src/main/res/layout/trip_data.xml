@@ -17,4 +17,76 @@ android:textAppearance="@style/NameText"
 >
 </TextView>
 
+<TextView
+android:id="@+id/trip_origin_name"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+android:layout_gravity="left"
+android:textAppearance="@style/NameText"
+>
+</TextView>
+<TextView
+android:id="@+id/trip_destination_name"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+android:layout_gravity="left"
+android:textAppearance="@style/NameText"
+>
+</TextView>
+
+<TextView
+android:id="@+id/trip_estimated_leave_time"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+android:layout_gravity="left"
+android:textAppearance="@style/NameText"
+>
+</TextView>
+<TextView
+android:id="@+id/trip_estimate_arrival_time"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+android:layout_gravity="left"
+android:textAppearance="@style/NameText"
+>
+</TextView>
+
+<TextView android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5px"
+        android:layout_marginLeft="10px"
+        android:layout_marginRight="10px"
+        android:textAppearance="@style/TimeText" 
+        android:id="@+id/trip_fare_value"></TextView>
+
+    <TextView
+        android:id="@+id/trip_clipper_fare_value"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5px"
+        android:layout_marginLeft="10px"
+        android:layout_marginRight="10px"
+        android:textAppearance="@style/TimeText" />
+
+    <TextView
+        android:id="@+id/trip_senior_disabled_clipper_value"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5px"
+        android:layout_marginLeft="10px"
+        android:layout_marginRight="10px"
+        android:textAppearance="@style/TimeText" />
+
+    <!--
+    <TextView
+        android:id="@+id/trip_youth_clipper_value"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5px"
+        android:layout_marginLeft="10px"
+        android:layout_marginRight="10px"
+        android:textAppearance="@style/TimeText" />
+        --> 
+
+  
 </LinearLayout>
