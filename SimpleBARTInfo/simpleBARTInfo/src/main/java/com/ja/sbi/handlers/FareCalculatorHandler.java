@@ -35,7 +35,8 @@ public class FareCalculatorHandler {
 
     private static ProgressDialog dialog = null;
 
-    private static final String SELECT_STATION_TEXT = "Please Select Station";
+    private static final String SELECT_DEPARTURE_TEXT = "Please Select Departue Station";
+    private static final String SELECT_ARRIVAL_TEXT = "Please Select Arrival Station";
 
     private static Fare currentFare;
 
@@ -86,8 +87,8 @@ public class FareCalculatorHandler {
 
                 final List<String> stationData = new ArrayList<String>();
                 final List<String> stationCodes = new ArrayList<String>();
-                stationData.add(SELECT_STATION_TEXT);
-                stationCodes.add(SELECT_STATION_TEXT);
+                stationData.add(SELECT_DEPARTURE_TEXT);
+                stationCodes.add(SELECT_ARRIVAL_TEXT);
 
                 int i = 0;
                 for (StationData data : trainStops) {
