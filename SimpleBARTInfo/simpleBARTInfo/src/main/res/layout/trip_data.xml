@@ -17,6 +17,7 @@ android:textAppearance="@style/NameText"
 >
 </TextView>
 
+        <!-- source and destinaion -->
 <TextView
 android:id="@+id/trip_origin_name"
 android:layout_width="fill_parent"
@@ -34,6 +35,7 @@ android:textAppearance="@style/NameText"
 >
 </TextView>
 
+<!-- trip times -->
 <TextView
 android:id="@+id/trip_estimated_leave_time"
 android:layout_width="fill_parent"
@@ -51,6 +53,7 @@ android:textAppearance="@style/NameText"
 >
 </TextView>
 
+<!-- fares amounts -->
 <TextView android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="5px"
@@ -88,5 +91,9 @@ android:textAppearance="@style/NameText"
         android:textAppearance="@style/TimeText" />
         --> 
 
+<ListView
+        android:id="@+id/trip_planner_leg_rows"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"></ListView>
   
 </LinearLayout>
