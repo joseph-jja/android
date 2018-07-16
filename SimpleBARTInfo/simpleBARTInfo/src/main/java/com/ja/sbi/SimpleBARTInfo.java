@@ -80,6 +80,9 @@ public class SimpleBARTInfo extends BaseActivity {
                 } 
                 stations.initializeActivity(this, true);
                 break;
+            case R.id.plan_a_trip:
+                setContentView(R.layout.trip_planner);
+                break;
             case R.id.check_fares:
                 setContentView(R.layout.fares);
                 FareCalculatorHandler fares = new FareCalculatorHandler();
