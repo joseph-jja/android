@@ -41,7 +41,7 @@ public class FareCalculatorHandler {
 
     private static Fare currentFare;
 
-    public void initializeActivity(Context context, List<Station> stationsData) {
+    public void initializeActivity(Context context, List<Station> stations) {
 
         final SimpleBARTInfo bartInfoActivity = (SimpleBARTInfo) context;
 
@@ -50,9 +50,9 @@ public class FareCalculatorHandler {
         final Thread refresh = new Thread() {
             public void run() {
                 try {
-                    final List<Station> stations = ((stationsData != null && stationsData.size() > 0) ? stationsData: StationDownloader.getStationList());
+                    final List<Station> stationList = ((stations != null && stations.size() > 0) ? stations: StationDownloader.getStationList());
                     trainStops.clear();
-                    for (Station s : stations) {
+                    for (Station s : stationList) {
                         StationData sd = new StationData();
                         Log.d(LOG_NAME, s.getStationName());
                         sd.setStationName(s.getStationName());
