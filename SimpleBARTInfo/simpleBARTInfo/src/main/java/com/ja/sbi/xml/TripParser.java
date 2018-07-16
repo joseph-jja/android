@@ -22,13 +22,33 @@ import javax.xml.parsers.SAXParserFactory;
 public class TripParser {
 
     private List<Trip> trips = new ArrayList<Trip>();
+	
+	private boolean inTrip = false;
 
     public void startElement(String uri, String name, String qName, Attributes atts) {
 
+	    if (name.trim().equals("trip")) {
+		Trip tripItem = new Trip();
+		tripItem.setFareDetails( new Fare() );    
+		tripItem.setLegs( new ArrayList<TripLeg>() );
+		inTrip = true;   
+		if ( atts != null ) {
+		    tripItem.setOrigin( atts.getValue("origin") );	
+		    tripItem.setDestination( atts.getValue("destination") );	
+		    tripItem.setOrigin( atts.setOriginDate("origTimeMin") );	
+		    tripItem.setOrigin( atts.setOriginDate("origTimeDate") );	
+		    tripItem.setOrigin( atts.setDestinationTime("destTimeMin") );	
+		    tripItem.setOrigin( atts.setDestinationDate("destTimeDate") );	
+		}
+		trips.add(tripItem);
+	    }
     }
 
     public void endElement(String uri, String name, String qName) throws SAXException {
 
+	   if (name.trim().equals("trip")) {
+		inTrip = false;    
+	   }
     }
     
     public void characters(char ch[], int start, int length) {
