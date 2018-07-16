@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+android:id="@+id/widget1"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical">
+
+<TextView
+android:id="@+id/trip_planner_title"
+android:layout_height="wrap_content"
+android:layout_width="fill_parent"
+android:layout_marginBottom="5px"
+android:layout_marginLeft="10px"
+android:layout_marginRight="10px"
+android:textAppearance="@style/PageTitleText"
+android:text="@string/fareTitle">
+</TextView>
+
+<Spinner android:layout_height="wrap_content" 
+         android:layout_width="fill_parent" 
+         android:id="@+id/tpStationOriginList"></Spinner>
+
+<Spinner android:layout_height="wrap_content" 
+         android:layout_width="fill_parent" 
+         android:id="@+id/tpStationDestList"></Spinner>
+    
+<Spinner android:layout_height="wrap_content" 
+         android:layout_width="fill_parent" 
+         android:id="@+id/tripTime"></Spinner>
+
+<Spinner android:layout_height="wrap_content" 
+         android:layout_width="fill_parent" 
+         android:id="@+id/tripData"></Spinner>
+
+<CheckBox android:layout_height="wrap_content" 
+         android:layout_width="fill_parent" 
+         android:id="@+id/trip_depart_arrive"/>
+
+
+    <TextView android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5px"
+        android:layout_marginLeft="10px"
+        android:layout_marginRight="10px"
+        android:textAppearance="@style/TimeText" 
+        android:id="@+id/tpFareValue"></TextView>
+
+    <TextView
+        android:id="@+id/tpClipperFare"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5px"
+        android:layout_marginLeft="10px"
+        android:layout_marginRight="10px"
+        android:textAppearance="@style/TimeText" />
+
+    <TextView
+        android:id="@+id/tpSeniorDisabledClipper"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5px"
+        android:layout_marginLeft="10px"
+        android:layout_marginRight="10px"
+        android:textAppearance="@style/TimeText" />
+
+    <!--
+    <TextView
+        android:id="@+id/youthClipper"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5px"
+        android:layout_marginLeft="10px"
+        android:layout_marginRight="10px"
+        android:textAppearance="@style/TimeText" />
+        -->
+        
+        
+</LinearLayout>
