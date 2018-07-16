@@ -1,6 +1,5 @@
 package com.ja.sbi.handlers;
 
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.Handler;
 import android.os.Message;
@@ -20,6 +19,7 @@ import com.ja.sbi.trains.beans.Fare;
 import com.ja.sbi.trains.beans.Station;
 import com.ja.sbi.xml.FairParser;
 import com.ja.sbi.trains.beans.StationData;
+import com.ja.dialog.LoadingSpinner;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -34,28 +34,18 @@ public class FareCalculatorHandler {
     private static String sourceStation = null;
     private static String destinationStation = null;
 
-    private static ProgressDialog dialog = null;
+    private static LoadingSpinner dialog = null;
 
     private static final String SELECT_DEPARTURE_TEXT = "Please Select Departue Station";
     private static final String SELECT_ARRIVAL_TEXT = "Please Select Arrival Station";
 
     private static Fare currentFare;
 
-    public void showLoadingSpinner(Context context) {
-
-        dialog = new ProgressDialog(context);
-        dialog.setCancelable(false);
-        dialog.setMessage("Loading BART Alerts...");
-        // change to progress bar
-        dialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-        dialog.show();
-    }
-
     public void initializeActivity(Context context, List<Station> stationsData) {
 
         final SimpleBARTInfo bartInfoActivity = (SimpleBARTInfo) context;
 
-        showLoadingSpinner(context);
+        dialog = new LoadingSpinner(context, "Loading BART Fares...");
 
         final Thread refresh = new Thread() {
             public void run() {
