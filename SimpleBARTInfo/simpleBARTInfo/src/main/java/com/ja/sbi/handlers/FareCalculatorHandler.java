@@ -53,11 +53,12 @@ public class FareCalculatorHandler {
                     final List<Station> stations = ((stationsData != null && stationsData.size() > 0) ? stationsData: StationDownloader.getStationList());
                     trainStops.clear();
                     for (Station s : stations) {
-                    StationData sd = new StationData();
-                    Log.d(LOG_NAME, s.getStationName());
-                    sd.setStationName(s.getStationName());
-                    sd.setStationCode(s.getShortName());
-                    trainStops.add(sd);
+                        StationData sd = new StationData();
+                        Log.d(LOG_NAME, s.getStationName());
+                        sd.setStationName(s.getStationName());
+                        sd.setStationCode(s.getShortName());
+                        trainStops.add(sd);
+                    }
                 } catch (Exception e) {
                     Log.d(LOG_NAME, e.getMessage());
                 }
