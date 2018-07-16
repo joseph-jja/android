@@ -149,11 +149,11 @@ public class FareCalculatorHandler {
         if (FareCalculatorHandler.sourceStation == null || FareCalculatorHandler.destinationStation == null) {
             return;
         }
-        if (FareCalculatorHandler.sourceStation.equals(SELECT_STATION_TEXT) || FareCalculatorHandler.destinationStation.equals(SELECT_STATION_TEXT)) {
+        if (FareCalculatorHandler.sourceStation.equals(SELECT_DEPARTURE_TEXT) || FareCalculatorHandler.destinationStation.equals(SELECT_ARRIVAL_TEXT)) {
             return;
         }
 
-        showLoadingSpinner(sbi);
+        dialog = new LoadingSpinner(sbi, "Loading BART Fares...");
 
         final Thread refresh = new Thread() {
 
