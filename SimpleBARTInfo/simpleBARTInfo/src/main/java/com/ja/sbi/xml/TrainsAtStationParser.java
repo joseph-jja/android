@@ -22,6 +22,8 @@ import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 
+import com.ja.sbi.xml.XMLUtils;
+
 /**
  * simple rss feed parser that puts data into a table
  *
@@ -115,22 +117,22 @@ public class TrainsAtStationParser extends DefaultHandler {
             final int size = stations.size();
             Station xStation = stations.get(size - 1);
             if (this.inNameTag) {
-                xStation.setStationName(append(xStation.getStationName(), xmlData, false));
+                xStation.setStationName(XMLUtils.append(xStation.getStationName(), xmlData, false));
             } else if (this.inETATag) {
                 List<Train> trains = xStation.getTrains();
                 final int tSize = trains.size();
                 Train xTrain = trains.get(tSize - 1);
                 if (this.inDestinationTrainTag) {
-                    xTrain.setTrainName(append(xTrain.getTrainName(), xmlData, false));
+                    xTrain.setTrainName(XMLUtils.append(xTrain.getTrainName(), xmlData, false));
                 } else if (this.inEstimateTag) {
                     if (this.inMinutes) {
-                        xTrain.setTrainTime(append(xTrain.getTrainTime(), xmlData, true));
+                        xTrain.setTrainTime(XMLUtils.append(xTrain.getTrainTime(), xmlData, true));
                     } else if (this.inPlatform) {
-                        xTrain.setPlatform(append(xTrain.getPlatform(), xmlData, true));
+                        xTrain.setPlatform(XMLUtils.append(xTrain.getPlatform(), xmlData, true));
                     } else if (this.inLength) {
-                        xTrain.setLength(append(xTrain.getLength(), xmlData, true));
+                        xTrain.setLength(XMLUtils.append(xTrain.getLength(), xmlData, true));
                     } else if (this.inDirection) {
-                        xTrain.setDirection(append(xTrain.getDirection(), xmlData, true));
+                        xTrain.setDirection(XMLUtils.append(xTrain.getDirection(), xmlData, true));
                     }
                 }
                 if (trains.remove(tSize - 1) != null) {
@@ -141,17 +143,6 @@ public class TrainsAtStationParser extends DefaultHandler {
                 stations.add(xStation);
             }
         }
-    }
-
-    private String append(String initialString, String xmlData, boolean addComma) {
-
-        if (initialString != null && initialString.length() > 0) {
-            if (addComma) {
-                return initialString + ", " + xmlData;
-            }
-            return initialString + xmlData;
-        }
-        return xmlData;
     }
 
     @TargetApi(Build.VERSION_CODES.N)
