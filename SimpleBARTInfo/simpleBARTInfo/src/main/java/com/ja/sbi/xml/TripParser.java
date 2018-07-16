@@ -28,38 +28,58 @@ public class TripParser {
     public void startElement(String uri, String name, String qName, Attributes atts) {
 
 	    if (name.trim().equals("trip")) {
-		Trip tripItem = new Trip();
-		tripItem.setFareDetails( new Fare() );    
-		tripItem.setLegs( new ArrayList<TripLeg>() );
-		inTrip = true;   
-		if ( atts != null ) {
-		    tripItem.setOrigin( atts.getValue("origin") );	
-		    tripItem.setDestination( atts.getValue("destination") );	
-		    tripItem.setOrigin( atts.setOriginDate("origTimeMin") );	
-		    tripItem.setOrigin( atts.setOriginDate("origTimeDate") );	
-		    tripItem.setOrigin( atts.setDestinationTime("destTimeMin") );	
-		    tripItem.setOrigin( atts.setDestinationDate("destTimeDate") );	
-		}
-		trips.add(tripItem);
-	    } else if ( inTrip && name.trim().equals("fare")) {
-		Trip tripItem = trips.get(trips.size() - 1);
-		Fare = fareItem = tripItem.getFareDetails();
+		
+		    Trip tripItem = new Trip();
+		    tripItem.setFareDetails( new Fare() );    
+		    tripItem.setLegs( new ArrayList<TripLeg>() );
 		    
-		String amount = atts.getValue("amount");
-            	String fareClass = atts.getValue("class");
-            	if (fareClass.equals("cash")) {
-                	fareItem.setFare(amount);
-            	} else if (fareClass.equals("clipper")) {
-                	fareItem.setClipperDiscount(amount);
-            	} else if (fareClass.equals("rtcclipper")) {
-                	fareItem.setSeniorDisabledClipper(amount);
-            	} else if (fareClass.equals("student")) {
-                	fareItem.setYouthClipper(amount);
-            	}
-		tripItem.setFareDetails(fareItem);
-		trips.remove(0);
-            	trips.add(tripItem);
-	    }
+            inTrip = true;   
+            if ( atts != null ) {
+                tripItem.setOrigin( atts.getValue("origin") );	
+                tripItem.setDestination( atts.getValue("destination") );	
+                tripItem.setOriginDate( atts.getValue("origTimeMin") );	
+                tripItem.setOriginDate( atts.getValue("origTimeDate") );	
+                tripItem.setDestinationTime( atts.getValue("destTimeMin") );	
+                tripItem.setDestinationDate( atts.getValue("destTimeDate") );	
+            }
+            trips.add(tripItem);
+        } else if ( inTrip && name.trim().equals("fare")) {
+            Trip tripItem = trips.get(trips.size() - 1);
+            Fare = fareItem = tripItem.getFareDetails();
+
+            String amount = atts.getValue("amount");
+            String fareClass = atts.getValue("class");
+                    if (fareClass.equals("cash")) {
+                        fareItem.setFare(amount);
+                    } else if (fareClass.equals("clipper")) {
+                        fareItem.setClipperDiscount(amount);
+                    } else if (fareClass.equals("rtcclipper")) {
+                        fareItem.setSeniorDisabledClipper(amount);
+                    } else if (fareClass.equals("student")) {
+                        fareItem.setYouthClipper(amount);
+                    }
+            tripItem.setFareDetails(fareItem);
+            trips.remove( trips.size() - 1 );
+            trips.add(tripItem);
+        } else if ( inTrip && name.trim().equals("leg")) {
+            Trip tripItem = trips.get(trips.size() - 1);
+            TripLeg currentLeg = new TripLeg();
+            
+            currentLeg.setOrder( atts.getValue("order") );	
+            currentLeg.setTransferCode( atts.getValue("transferCode") );	
+            currentLeg.setRouteLine( atts.getValue("routeLine") );	
+            currentLeg.setTrainHeadStation( atts.getValue("trainHeadStation") );
+            currentLeg.setOrigin( atts.getValue("origin") );	
+            currentLeg.setDestination( atts.getValue("destination") );
+            currentLeg.setOriginDate( atts.getValue("origTimeMin") );	
+            currentLeg.setOriginDate( atts.getValue("origTimeDate") );	
+            currentLeg.setDestinationTime( atts.getValue("destTimeMin") );	
+            currentLeg.setDestinationDate( atts.getValue("destTimeDate") );	
+ 
+            tripItem.setLegs(currentLeg);
+            trips.remove( trips.size() - 1 );
+            trips.add(tripItem);
+        }
     }
 
     public void endElement(String uri, String name, String qName) throws SAXException {
@@ -71,7 +91,7 @@ public class TripParser {
     
     public void characters(char ch[], int start, int length) {
 	
-	final String xmlData = String.valueOf(ch).substring(start, start+length);
+	    final String xmlData = String.valueOf(ch).substring(start, start+length);
 		
     }
 
