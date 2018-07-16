@@ -2,5 +2,6 @@
 <resources>
     <string name="app_name">SimpleBARTInfo</string>
     <string name="fareTitle">Fair Estimator</string>
+    <string name="tripPlannerTitpe">Trip Plan Estimator</string>
     <string name="about_app">A simple BART application \nBy \nJoseph Acosta</string>
 </resources>
