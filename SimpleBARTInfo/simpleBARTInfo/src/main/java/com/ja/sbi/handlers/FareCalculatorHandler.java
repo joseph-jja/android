@@ -59,6 +59,8 @@ public class FareCalculatorHandler {
                         sd.setStationCode(s.getShortName());
                         trainStops.add(sd);
                     }
+                    // sort 
+                    Collections.sort(trainStops, new StationDataSorter());
                 } catch (Exception e) {
                     Log.d(LOG_NAME, e.getMessage());
                 }
@@ -80,7 +82,6 @@ public class FareCalculatorHandler {
             FareCalculatorHandler.dialog.dismiss();
 
             if (trainStops != null && trainStops.size() > 0) {
-                Collections.sort(trainStops, new StationDataSorter());
                 Spinner sourceStop = (Spinner) sbiThread.findViewById(R.id.stationInList);
                 Spinner destinationStop = (Spinner) sbiThread.findViewById(R.id.stationsAvailable);
 
