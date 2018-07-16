@@ -13,7 +13,7 @@ android:layout_marginBottom="5px"
 android:layout_marginLeft="10px"
 android:layout_marginRight="10px"
 android:textAppearance="@style/PageTitleText"
-android:text="@string/fareTitle">
+android:text="@string/tripPlannerTitpe">
 </TextView>
 
 <Spinner android:layout_height="wrap_content" 
@@ -23,56 +23,41 @@ android:text="@string/fareTitle">
 <Spinner android:layout_height="wrap_content" 
          android:layout_width="fill_parent" 
          android:id="@+id/tpStationDestList"></Spinner>
-    
-<Spinner android:layout_height="wrap_content" 
-         android:layout_width="fill_parent" 
-         android:id="@+id/tripTime"></Spinner>
 
+         <!-- MM DD YYYY -->
 <Spinner android:layout_height="wrap_content" 
-         android:layout_width="fill_parent" 
+         android:layout_width="wrap_content" 
+         android:id="@+id/tripMonth"></Spinner>
+<Spinner android:layout_height="wrap_content" 
+         android:layout_width="wrap_content" 
+         android:id="@+id/tripDay"></Spinner>
+<Spinner android:layout_height="wrap_content" 
+         android:layout_width="wrap_content" 
+         android:id="@+id/tripFullYear"></Spinner>
+
+         <!-- HH Minutes -->
+<Spinner android:layout_height="wrap_content" 
+         android:layout_width="wrap_content" 
+         android:id="@+id/tripData"></Spinner>
+<Spinner android:layout_height="wrap_content" 
+         android:layout_width="wrap_content" 
          android:id="@+id/tripData"></Spinner>
 
-<CheckBox android:layout_height="wrap_content" 
-         android:layout_width="fill_parent" 
-         android:id="@+id/trip_depart_arrive"/>
-
-
-    <TextView android:layout_width="fill_parent"
+<RadioButtonGroup
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <RadioButton android:id="@+id/trap_arrival_time"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="5px"
-        android:layout_marginLeft="10px"
-        android:layout_marginRight="10px"
-        android:textAppearance="@style/TimeText" 
-        android:id="@+id/tpFareValue"></TextView>
-
-    <TextView
-        android:id="@+id/tpClipperFare"
-        android:layout_width="fill_parent"
+        android:text="@string/trip_arrival"
+        android:onClick="onRadioButtonClicked"/>
+    <RadioButton android:id="@+id/trip_departure_time"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="5px"
-        android:layout_marginLeft="10px"
-        android:layout_marginRight="10px"
-        android:textAppearance="@style/TimeText" />
-
-    <TextView
-        android:id="@+id/tpSeniorDisabledClipper"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5px"
-        android:layout_marginLeft="10px"
-        android:layout_marginRight="10px"
-        android:textAppearance="@style/TimeText" />
-
-    <!--
-    <TextView
-        android:id="@+id/youthClipper"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5px"
-        android:layout_marginLeft="10px"
-        android:layout_marginRight="10px"
-        android:textAppearance="@style/TimeText" />
-        -->
+        android:text="@string/trip_departure"
+        android:onClick="onRadioButtonClicked"/>
+</RadioButtonGroup>
 
     <ListView
         android:id="@+id/trip_planner_results"
