@@ -17,6 +17,8 @@ import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 
+import com.ja.sbi.xml.XMLUtils;
+
 /**
  * simple rss feed parser that puts data into a table
  * 
@@ -66,21 +68,13 @@ public class StationsParser extends DefaultHandler {
 			final int size = stations.size();
 			Station xStation = stations.get(size - 1);
 			if ( this.inNameTag ) {
-				xStation.setStationName( append(xStation.getStationName(), xmlData) );
+				xStation.setStationName( XMLUtils.append(xStation.getStationName(), xmlData) );
 			} else if ( this.inAbbr ) {
-				xStation.setShortName( append(xStation.getShortName(), xmlData) );
+				xStation.setShortName( XMLUtils.append(xStation.getShortName(), xmlData) );
 			}
 		}
 	}	
-	
-	private String append(String initialString, String xmlData) { 
-		
-		if ( initialString != null && initialString.length() > 0 ) {
-			return initialString + xmlData;
-		}
-		return xmlData;		
-	}
-	 
+
 	public List<Station> parseDocument(String urlContent) 
 		throws IOException, SAXException, ParserConfigurationException {
 
