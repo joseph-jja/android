@@ -9,9 +9,6 @@
         android:id="@+id/fare_title"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="5dp"
         android:text="@string/fareTitle"
         android:textAppearance="@style/PageTitleText"></TextView>
 
@@ -31,27 +28,18 @@
         android:id="@+id/fareValue"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
         android:textAppearance="@style/TimeText"></TextView>
 
     <TextView
         android:id="@+id/clipperFare"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
         android:textAppearance="@style/TimeText" />
 
     <TextView
         android:id="@+id/seniorDisabledClipper"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
         android:textAppearance="@style/TimeText" />
 
     <!--
@@ -59,9 +47,6 @@
         android:id="@+id/youthClipper"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
         android:textAppearance="@style/TimeText" />
         -->
 </LinearLayout>
