@@ -97,8 +97,15 @@ public class FareCalculatorHandler {
                     stationCodes.add(data.getStationCode());
                     i += 1;
                 }
-                sourceStop.setAdapter(new ArrayAdapter<String>(sbiThread, android.R.layout.simple_spinner_item, stationData));
-                destinationStop.setAdapter(new ArrayAdapter<String>(sbiThread, android.R.layout.simple_spinner_item, stationData));
+                ArrayAdapter sourceAdapter = new ArrayAdapter<String>(sbiThread, android.R.layout.simple_spinner_item, stationData);
+                sourceAdapter.setDropDownViewResource(R.layout.spinner_item);
+                sourceStop.setAdapter(sourceAdapter);
+
+                ArrayAdapter destinationAdapter = new ArrayAdapter<String>(sbiThread, android.R.layout.simple_spinner_item, stationData);
+                destinationAdapter.setDropDownViewResource(R.layout.spinner_item);
+                destinationStop.setAdapter(destinationAdapter);
+
+                // ArrayAdapter.createFromResource(this, R.layout.simple_spinner_item, R.layout.spinner_item)
 
                 sourceStop.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 

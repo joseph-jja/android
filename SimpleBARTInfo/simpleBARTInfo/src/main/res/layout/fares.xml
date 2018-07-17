@@ -9,44 +9,54 @@
         android:id="@+id/fare_title"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
         android:text="@string/fareTitle"
         android:textAppearance="@style/PageTitleText"></TextView>
 
-    <Spinner
-        android:id="@+id/stationInList"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="@style/DefaultText"></Spinner>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical">
 
-    <Spinner
-        android:id="@+id/stationsAvailable"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="@style/DefaultText"></Spinner>
+        <Spinner
+            android:id="@+id/stationInList"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"></Spinner>
 
-    <TextView
-        android:id="@+id/fareValue"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="@style/DefaultText"></TextView>
+        <Spinner
+            android:id="@+id/stationsAvailable"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"></Spinner>
 
-    <TextView
-        android:id="@+id/clipperFare"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="@style/DefaultText" />
+        <TextView
+            android:id="@+id/fareValue"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/DefaultText"></TextView>
 
-    <TextView
-        android:id="@+id/seniorDisabledClipper"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="@style/DefaultText" />
+        <TextView
+            android:id="@+id/clipperFare"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/DefaultText" />
 
-    <!--
-    <TextView
-        android:id="@+id/youthClipper"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="@style/TimeText" />
-        -->
+        <TextView
+            android:id="@+id/seniorDisabledClipper"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/DefaultText" />
+
+        <!--
+        <TextView
+            android:id="@+id/youthClipper"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TimeText" />
+            -->
+    </LinearLayout>
 </LinearLayout>
