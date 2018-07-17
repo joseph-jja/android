@@ -21,7 +21,7 @@ import javax.xml.parsers.SAXParserFactory;
 
 import com.ja.sbi.trains.beans.Fare;
 
-public class TripParser {
+public class TripParser extends DefaultHandler {
 
     private List<Trip> trips = new ArrayList<Trip>();
 
@@ -102,7 +102,8 @@ public class TripParser {
 
     }
 
-    public List<Trip> parseDocument(String urlContent) {
+    public List<Trip> parseDocument(String urlContent)
+            throws IOException, SAXException, ParserConfigurationException {
 
         this.trips = new ArrayList<Trip>();
 
