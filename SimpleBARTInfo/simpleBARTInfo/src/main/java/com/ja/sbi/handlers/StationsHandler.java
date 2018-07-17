@@ -133,7 +133,7 @@ public class StationsHandler {
     }
 
     public void setStations(List<Station> stationsList) {
-        if ( this.stations.length() > 0 ) {
+        if ( this.stations.size() > 0 ) {
             return;
         }
         this.stations.addAll(stationsList);

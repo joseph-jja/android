@@ -15,6 +15,8 @@ import com.ja.sbi.handlers.FareCalculatorHandler;
 import com.ja.sbi.handlers.StationsHandler;
 import com.ja.sbi.map.BartMapManager;
 
+import com.ja.sbi.trains.beans.Station;
+
 public class SimpleBARTInfo extends BaseActivity {
     public static final String DATABASE_NAME = "SimpleBARTInfo";
     public static final int DATABASE_VERSION = 1;

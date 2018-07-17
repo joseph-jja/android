@@ -19,6 +19,8 @@ import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 
+import com.ja.sbi.trains.beans.Fare;
+
 public class TripParser {
 
     private List<Trip> trips = new ArrayList<Trip>();

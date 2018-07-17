@@ -42,7 +42,7 @@ public class TripPlanner extends BaseDownloader {
     public static final List<Trip> getDepartTrips(String origin, String dest, String departTime) {
 
         // basically what we want is 3 trips
-        final String tripAPI = APIConstants.SCHEDULE_DEPART + orig + "b=1&a=2"
+        final String tripAPI = APIConstants.SCHEDULE_DEPART + origin + "b=1&a=2"
           + SCHEDULE_DEST + dest + SCHEDULE_DATE = departTime + APIConstants.KEY_STRING_API;
 
         return callTripAPI(tripAPI);

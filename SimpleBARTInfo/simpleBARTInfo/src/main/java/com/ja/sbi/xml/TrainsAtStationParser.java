@@ -117,22 +117,22 @@ public class TrainsAtStationParser extends DefaultHandler {
             final int size = stations.size();
             Station xStation = stations.get(size - 1);
             if (this.inNameTag) {
-                xStation.setStationName(XMLUtils.append(xStation.getStationName(), xmlData, false));
+                xStation.setStationName(XMLUtils.append(xStation.getStationName(), xmlData));
             } else if (this.inETATag) {
                 List<Train> trains = xStation.getTrains();
                 final int tSize = trains.size();
                 Train xTrain = trains.get(tSize - 1);
                 if (this.inDestinationTrainTag) {
-                    xTrain.setTrainName(XMLUtils.append(xTrain.getTrainName(), xmlData, false));
+                    xTrain.setTrainName(XMLUtils.append(xTrain.getTrainName(), xmlData));
                 } else if (this.inEstimateTag) {
                     if (this.inMinutes) {
-                        xTrain.setTrainTime(XMLUtils.append(xTrain.getTrainTime(), xmlData, true));
+                        xTrain.setTrainTime(XMLUtils.append(xTrain.getTrainTime(), xmlData));
                     } else if (this.inPlatform) {
-                        xTrain.setPlatform(XMLUtils.append(xTrain.getPlatform(), xmlData, true));
+                        xTrain.setPlatform(XMLUtils.append(xTrain.getPlatform(), xmlData));
                     } else if (this.inLength) {
-                        xTrain.setLength(XMLUtils.append(xTrain.getLength(), xmlData, true));
+                        xTrain.setLength(XMLUtils.append(xTrain.getLength(), xmlData));
                     } else if (this.inDirection) {
-                        xTrain.setDirection(XMLUtils.append(xTrain.getDirection(), xmlData, true));
+                        xTrain.setDirection(XMLUtils.append(xTrain.getDirection(), xmlData));
                     }
                 }
                 if (trains.remove(tSize - 1) != null) {
