@@ -10,9 +10,6 @@
         android:id="@+id/bart_alert_title"
         android:layout_height="wrap_content"
         android:layout_width="fill_parent"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
-        android:layout_marginLeft="15dp"
         android:textAppearance="@style/PageTitleText"/>
 
     <ListView
