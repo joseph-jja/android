@@ -10,7 +10,7 @@
         android:id="@+id/stationName"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="@style/TimeText"
+        android:textAppearance="@style/DefaultText"
         >
     </TextView>
 
@@ -18,7 +18,7 @@
         android:id="@+id/alertType"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="@style/TimeText"
+        android:textAppearance="@style/DefaultText"
         >
     </TextView>
 
@@ -26,12 +26,12 @@
         android:id="@+id/description"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="@style/TimeText"
+        android:textAppearance="@style/DefaultText"
         />
     <TextView
         android:id="@+id/posted"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="@style/TimeText"
+        android:textAppearance="@style/DefaultText"
         />
 </LinearLayout>

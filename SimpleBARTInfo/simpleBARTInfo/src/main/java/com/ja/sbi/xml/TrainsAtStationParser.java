@@ -108,6 +108,13 @@ public class TrainsAtStationParser extends DefaultHandler {
         }
     }
 
+    private String appendData(String initial, String addTo) {
+        if ( initial != null ) {
+            return XMLUtils.append(initial + ", ", addTo);
+        }
+        return XMLUtils.append(initial, addTo);
+    }
+
     public void characters(char ch[], int start, int length) {
 
         String xmlData = String.valueOf(ch).substring(start, start + length);
@@ -126,13 +133,13 @@ public class TrainsAtStationParser extends DefaultHandler {
                     xTrain.setTrainName(XMLUtils.append(xTrain.getTrainName(), xmlData));
                 } else if (this.inEstimateTag) {
                     if (this.inMinutes) {
-                        xTrain.setTrainTime(XMLUtils.append(xTrain.getTrainTime(), xmlData));
+                        xTrain.setTrainTime(appendData(xTrain.getTrainTime(), xmlData));
                     } else if (this.inPlatform) {
-                        xTrain.setPlatform(XMLUtils.append(xTrain.getPlatform(), xmlData));
+                        xTrain.setPlatform(appendData(xTrain.getPlatform(), xmlData));
                     } else if (this.inLength) {
-                        xTrain.setLength(XMLUtils.append(xTrain.getLength(), xmlData));
+                        xTrain.setLength(appendData(xTrain.getLength(), xmlData));
                     } else if (this.inDirection) {
-                        xTrain.setDirection(XMLUtils.append(xTrain.getDirection(), xmlData));
+                        xTrain.setDirection(appendData(xTrain.getDirection(), xmlData));
                     }
                 }
                 if (trains.remove(tSize - 1) != null) {

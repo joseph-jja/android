@@ -16,31 +16,31 @@
         android:id="@+id/stationInList"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="@style/TimeText"></Spinner>
+        android:textAppearance="@style/DefaultText"></Spinner>
 
     <Spinner
         android:id="@+id/stationsAvailable"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="@style/TimeText"></Spinner>
+        android:textAppearance="@style/DefaultText"></Spinner>
 
     <TextView
         android:id="@+id/fareValue"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="@style/TimeText"></TextView>
+        android:textAppearance="@style/DefaultText"></TextView>
 
     <TextView
         android:id="@+id/clipperFare"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="@style/TimeText" />
+        android:textAppearance="@style/DefaultText" />
 
     <TextView
         android:id="@+id/seniorDisabledClipper"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="@style/TimeText" />
+        android:textAppearance="@style/DefaultText" />
 
     <!--
     <TextView

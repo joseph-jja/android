@@ -9,11 +9,13 @@
         android:id="@+id/simple_bart_info_title"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
         android:textAppearance="@style/PageTitleText"></TextView>
 
     <ListView
         android:id="@+id/st_list_rows"
         android:layout_width="fill_parent"
+        android:layout_marginLeft="20dp"
         android:layout_height="fill_parent"></ListView>
 
 </LinearLayout>

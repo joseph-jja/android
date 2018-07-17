@@ -70,9 +70,15 @@ public class TrainListAdapter  extends ArrayAdapter<Train> {
 			} else {
 				holder = (TrainViewHolder)rView.getTag();
 			}
-			holder.length.setLayoutParams(holder.time.getLayoutParams());
-			holder.platform.setLayoutParams(holder.time.getLayoutParams());
-			holder.direction.setLayoutParams(holder.time.getLayoutParams());
+			ViewGroup.LayoutParams layoutParams = holder.name.getLayoutParams();
+			ViewGroup.MarginLayoutParams marginLayoutParams = (ViewGroup.MarginLayoutParams)layoutParams;
+			marginLayoutParams.bottomMargin = 0;
+			marginLayoutParams.topMargin = 0;
+			holder.time.setLayoutParams(layoutParams);
+			holder.length.setLayoutParams(layoutParams);
+			holder.platform.setLayoutParams(layoutParams);
+			holder.direction.setLayoutParams(layoutParams);
+
 			Log.v(LOG_NAME, "Got holder " + holder);
 			Log.v(LOG_NAME, "Got holder name field " + holder.name);
 			
