@@ -3,8 +3,10 @@ package com.ja.sbi.handlers;
 import android.content.Context;
 import android.os.Handler;
 import android.os.Message;
+import android.text.Layout;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
@@ -97,6 +99,7 @@ public class FareCalculatorHandler {
                     stationCodes.add(data.getStationCode());
                     i += 1;
                 }
+
                 ArrayAdapter sourceAdapter = new ArrayAdapter<String>(sbiThread, android.R.layout.simple_spinner_item, stationData);
                 sourceAdapter.setDropDownViewResource(R.layout.spinner_item);
                 sourceStop.setAdapter(sourceAdapter);
@@ -104,8 +107,6 @@ public class FareCalculatorHandler {
                 ArrayAdapter destinationAdapter = new ArrayAdapter<String>(sbiThread, android.R.layout.simple_spinner_item, stationData);
                 destinationAdapter.setDropDownViewResource(R.layout.spinner_item);
                 destinationStop.setAdapter(destinationAdapter);
-
-                // ArrayAdapter.createFromResource(this, R.layout.simple_spinner_item, R.layout.spinner_item)
 
                 sourceStop.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 

@@ -1,22 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/alerts_widget"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    >
+    android:orientation="vertical">
+
     <TextView
         android:id="@+id/bart_alert_title"
-        android:layout_height="wrap_content"
         android:layout_width="fill_parent"
-        android:textAppearance="@style/PageTitleText"/>
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:textAppearance="@style/PageTitleText" />
 
     <ListView
         android:id="@+id/alerts_list_rows"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        >
-    </ListView>
+        android:layout_marginLeft="20dp"></ListView>
 
 </LinearLayout>
