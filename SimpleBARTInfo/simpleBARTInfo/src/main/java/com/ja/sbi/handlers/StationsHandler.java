@@ -133,9 +133,9 @@ public class StationsHandler {
     }
 
     public void setStations(List<Station> stationsList) {
-        if ( this.stations.length() > ) ) { 
+        if ( this.stations.length() > 0 ) {
             return;
         }
-        this.stationsa.addAll(stationsList);   
+        this.stations.addAll(stationsList);
     }
 }

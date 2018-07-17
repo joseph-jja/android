@@ -22,96 +22,96 @@ import javax.xml.parsers.SAXParserFactory;
 public class TripParser {
 
     private List<Trip> trips = new ArrayList<Trip>();
-	
-	private boolean inTrip = false;
+
+    private boolean inTrip = false;
 
     public void startElement(String uri, String name, String qName, Attributes atts) {
 
-	    if (name.trim().equals("trip")) {
-		
-		    Trip tripItem = new Trip();
-		    tripItem.setFareDetails( new Fare() );    
-		    tripItem.setLegs( new ArrayList<TripLeg>() );
-		    
-            inTrip = true;   
-            if ( atts != null ) {
-                tripItem.setOrigin( atts.getValue("origin") );	
-                tripItem.setDestination( atts.getValue("destination") );	
-                tripItem.setOriginDate( atts.getValue("origTimeMin") );	
-                tripItem.setOriginDate( atts.getValue("origTimeDate") );	
-                tripItem.setDestinationTime( atts.getValue("destTimeMin") );	
-                tripItem.setDestinationDate( atts.getValue("destTimeDate") );	
+        if (name.trim().equals("trip")) {
+
+            Trip tripItem = new Trip();
+            tripItem.setFareDetails(new Fare());
+            tripItem.setLegs(new ArrayList<TripLeg>());
+
+            inTrip = true;
+            if (atts != null) {
+                tripItem.setOrigin(atts.getValue("origin"));
+                tripItem.setDestination(atts.getValue("destination"));
+                tripItem.setOriginDate(atts.getValue("origTimeMin"));
+                tripItem.setOriginDate(atts.getValue("origTimeDate"));
+                tripItem.setDestinationTime(atts.getValue("destTimeMin"));
+                tripItem.setDestinationDate(atts.getValue("destTimeDate"));
             }
             trips.add(tripItem);
-        } else if ( inTrip && name.trim().equals("fare")) {
+        } else if (inTrip && name.trim().equals("fare")) {
             Trip tripItem = trips.get(trips.size() - 1);
             Fare = fareItem = tripItem.getFareDetails();
 
             String amount = atts.getValue("amount");
             String fareClass = atts.getValue("class");
-                    if (fareClass.equals("cash")) {
-                        fareItem.setFare(amount);
-                    } else if (fareClass.equals("clipper")) {
-                        fareItem.setClipperDiscount(amount);
-                    } else if (fareClass.equals("rtcclipper")) {
-                        fareItem.setSeniorDisabledClipper(amount);
-                    } else if (fareClass.equals("student")) {
-                        fareItem.setYouthClipper(amount);
-                    }
+            if (fareClass.equals("cash")) {
+                fareItem.setFare(amount);
+            } else if (fareClass.equals("clipper")) {
+                fareItem.setClipperDiscount(amount);
+            } else if (fareClass.equals("rtcclipper")) {
+                fareItem.setSeniorDisabledClipper(amount);
+            } else if (fareClass.equals("student")) {
+                fareItem.setYouthClipper(amount);
+            }
             tripItem.setFareDetails(fareItem);
-            trips.remove( trips.size() - 1 );
+            trips.remove(trips.size() - 1);
             trips.add(tripItem);
-        } else if ( inTrip && name.trim().equals("leg")) {
+        } else if (inTrip && name.trim().equals("leg")) {
             Trip tripItem = trips.get(trips.size() - 1);
             TripLeg currentLeg = new TripLeg();
-            
-            currentLeg.setOrder( atts.getValue("order") );	
-            currentLeg.setTransferCode( atts.getValue("transferCode") );	
-            currentLeg.setRouteLine( atts.getValue("routeLine") );	
-            currentLeg.setTrainHeadStation( atts.getValue("trainHeadStation") );
-            currentLeg.setOrigin( atts.getValue("origin") );	
-            currentLeg.setDestination( atts.getValue("destination") );
-            currentLeg.setOriginDate( atts.getValue("origTimeMin") );	
-            currentLeg.setOriginDate( atts.getValue("origTimeDate") );	
-            currentLeg.setDestinationTime( atts.getValue("destTimeMin") );	
-            currentLeg.setDestinationDate( atts.getValue("destTimeDate") );	
- 
+
+            currentLeg.setOrder(atts.getValue("order"));
+            currentLeg.setTransferCode(atts.getValue("transferCode"));
+            currentLeg.setRouteLine(atts.getValue("routeLine"));
+            currentLeg.setTrainHeadStation(atts.getValue("trainHeadStation"));
+            currentLeg.setOrigin(atts.getValue("origin"));
+            currentLeg.setDestination(atts.getValue("destination"));
+            currentLeg.setOriginDate(atts.getValue("origTimeMin"));
+            currentLeg.setOriginDate(atts.getValue("origTimeDate"));
+            currentLeg.setDestinationTime(atts.getValue("destTimeMin"));
+            currentLeg.setDestinationDate(atts.getValue("destTimeDate"));
+
             tripItem.setLegs(currentLeg);
-            trips.remove( trips.size() - 1 );
+            trips.remove(trips.size() - 1);
             trips.add(tripItem);
         }
     }
 
     public void endElement(String uri, String name, String qName) throws SAXException {
 
-	   if (name.trim().equals("trip")) {
-		inTrip = false;    
-	   }
-    }
-    
-    public void characters(char ch[], int start, int length) {
-	
-	    final String xmlData = String.valueOf(ch).substring(start, start+length);
-		
+        if (name.trim().equals("trip")) {
+            inTrip = false;
+        }
     }
 
-    public List<Trip> parseDocument(String urlContent)
-      
-      this.trips = new ArrayList<Trip>();
-      
-	if (!isValidRSS(urlContent)) {
+    public void characters(char ch[], int start, int length) {
+
+        final String xmlData = String.valueOf(ch).substring(start, start + length);
+
+    }
+
+    public List<Trip> parseDocument(String urlContent) {
+
+        this.trips = new ArrayList<Trip>();
+
+        if (!isValidRSS(urlContent)) {
             throw new IOException("Not valid XML data!");
         }
 
-	final SAXParserFactory saxFactory = SAXParserFactory.newInstance();
+        final SAXParserFactory saxFactory = SAXParserFactory.newInstance();
         final SAXParser saxParser = saxFactory.newSAXParser();
         final XMLReader reader = saxParser.getXMLReader();
         reader.setContentHandler(this);
         reader.parse(new InputSource(new StringReader(urlContent)));
-	
-      return this.trips;
+
+        return this.trips;
     }
-    
+
     private boolean isValidRSS(String xmlData) {
         if (xmlData == null || xmlData.trim().indexOf("<?xml") != 0 || xmlData.indexOf("<trip") == -1) {
             return false;

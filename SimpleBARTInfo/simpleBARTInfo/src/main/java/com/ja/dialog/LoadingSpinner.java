@@ -1,6 +1,7 @@
 package com.ja.dialog;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 
 // simplify ProgressDialog
 public class LoadingSpinner {
