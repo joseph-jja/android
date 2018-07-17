@@ -17,12 +17,12 @@ public class TripPlanner extends BaseDownloader {
 
     private static String selectedStationShortName = null;
     private static String selectedStationName = null;
-    
+
     private static final List<Trip> callTripAPI(String tripAPI) {
 
-      List<Trip> trips = null;
-        
-      try {
+        List<Trip> trips = null;
+
+        try {
             String tripData = BaseDownloader.retriever.downloadURL(tripAPI, 0);
             Log.d("TripPlanner", "Got trips: " + tripData);
 
@@ -37,23 +37,25 @@ public class TripPlanner extends BaseDownloader {
         }
         return trips;
     }
-    
+
     // TODO create Trip bean
     public static final List<Trip> getDepartTrips(String origin, String dest, String departTime) {
 
         // basically what we want is 3 trips
         final String tripAPI = APIConstants.SCHEDULE_DEPART + origin + "b=1&a=2"
-          + SCHEDULE_DEST + dest + SCHEDULE_DATE = departTime + APIConstants.KEY_STRING_API;
+                + APIConstants.SCHEDULE_DEST + dest
+                + APIConstants.SCHEDULE_DATE + departTime + APIConstants.KEY_STRING_API;
 
         return callTripAPI(tripAPI);
     }
-    
+
     // TODO create Trip bean
     public static final List<Trip> getArrivalTrips(String origin, String dest, String arriveTime) {
 
         // basically what we want is 3 trips
-        final String tripAPI = APIConstants.SCHEDULE_ARRIVE + orig + "b=2&a=1"
-          + SCHEDULE_DEST + dest + SCHEDULE_DATE = arriveTime + APIConstants.KEY_STRING_API;
+        final String tripAPI = APIConstants.SCHEDULE_ARRIVE + origin + "b=2&a=1"
+                + APIConstants.SCHEDULE_DEST + dest
+                + APIConstants.SCHEDULE_DATE + arriveTime + APIConstants.KEY_STRING_API;
 
         return callTripAPI(tripAPI);
     }
