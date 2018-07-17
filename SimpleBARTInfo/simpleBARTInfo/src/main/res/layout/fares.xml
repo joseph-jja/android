@@ -1,53 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-android:id="@+id/widget1"
-android:layout_width="fill_parent"
-android:layout_height="fill_parent"
-xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
 
-<TextView
-android:id="@+id/fare_title"
-android:layout_height="wrap_content"
-android:layout_width="fill_parent"
-android:layout_marginBottom="5px"
-android:layout_marginLeft="10px"
-android:layout_marginRight="10px"
-android:textAppearance="@style/PageTitleText"
-android:text="@string/fareTitle">
-</TextView>
-
-<Spinner android:layout_height="wrap_content" 
-         android:layout_width="fill_parent" 
-         android:id="@+id/stationInList"></Spinner>
-    
-<Spinner android:layout_height="wrap_content" 
-         android:layout_width="fill_parent" 
-         android:id="@+id/stationsAvailable"></Spinner>
-
-    <TextView android:layout_width="fill_parent"
+    <TextView
+        android:id="@+id/fare_title"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="5px"
-        android:layout_marginLeft="10px"
-        android:layout_marginRight="10px"
-        android:textAppearance="@style/TimeText" 
-        android:id="@+id/fareValue"></TextView>
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/fareTitle"
+        android:textAppearance="@style/PageTitleText"></TextView>
+
+    <Spinner
+        android:id="@+id/stationInList"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TimeText"></Spinner>
+
+    <Spinner
+        android:id="@+id/stationsAvailable"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TimeText"></Spinner>
+
+    <TextView
+        android:id="@+id/fareValue"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textAppearance="@style/TimeText"></TextView>
 
     <TextView
         android:id="@+id/clipperFare"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="5px"
-        android:layout_marginLeft="10px"
-        android:layout_marginRight="10px"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:textAppearance="@style/TimeText" />
 
     <TextView
         android:id="@+id/seniorDisabledClipper"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="5px"
-        android:layout_marginLeft="10px"
-        android:layout_marginRight="10px"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:textAppearance="@style/TimeText" />
 
     <!--
@@ -55,9 +59,9 @@ android:text="@string/fareTitle">
         android:id="@+id/youthClipper"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="5px"
-        android:layout_marginLeft="10px"
-        android:layout_marginRight="10px"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:textAppearance="@style/TimeText" />
         -->
 </LinearLayout>
