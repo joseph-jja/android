@@ -47,7 +47,7 @@ public class TripParser {
             trips.add(tripItem);
         } else if (inTrip && name.trim().equals("fare")) {
             Trip tripItem = trips.get(trips.size() - 1);
-            Fare = fareItem = tripItem.getFareDetails();
+            Fare fareItem = tripItem.getFareDetails();
 
             String amount = atts.getValue("amount");
             String fareClass = atts.getValue("class");
@@ -65,6 +65,10 @@ public class TripParser {
             trips.add(tripItem);
         } else if (inTrip && name.trim().equals("leg")) {
             Trip tripItem = trips.get(trips.size() - 1);
+            List<TripLeg> tripLegs = tripItem.getLegs();
+            if ( tripLegs == null ) {
+                tripLegs = new ArrayList<TripLeg>();
+            }
             TripLeg currentLeg = new TripLeg();
 
             currentLeg.setOrder(atts.getValue("order"));
@@ -78,7 +82,8 @@ public class TripParser {
             currentLeg.setDestinationTime(atts.getValue("destTimeMin"));
             currentLeg.setDestinationDate(atts.getValue("destTimeDate"));
 
-            tripItem.setLegs(currentLeg);
+            tripLegs.add(currentLeg);
+            tripItem.setLegs(tripLegs);
             trips.remove(trips.size() - 1);
             trips.add(tripItem);
         }

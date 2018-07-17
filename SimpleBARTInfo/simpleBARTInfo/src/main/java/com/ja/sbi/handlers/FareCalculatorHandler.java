@@ -44,13 +44,14 @@ public class FareCalculatorHandler {
     public FareCalculatorHandler(Context context, List<Station> stations) {
 
         final SimpleBARTInfo bartInfoActivity = (SimpleBARTInfo) context;
+        final List<Station> localStationCopy = stations;
 
         dialog = new LoadingSpinner(context, "Loading BART Fares...");
 
         final Thread refresh = new Thread() {
             public void run() {
                 try {
-                    final List<Station> stationList = ((stations != null && stations.size() > 0) ? stations: StationDownloader.getStationList());
+                    final List<Station> stationList = ((localStationCopy != null && localStationCopy.size() > 0) ? localStationCopy: StationDownloader.getStationList());
                     trainStops.clear();
                     for (Station s : stationList) {
                         StationData sd = new StationData();
