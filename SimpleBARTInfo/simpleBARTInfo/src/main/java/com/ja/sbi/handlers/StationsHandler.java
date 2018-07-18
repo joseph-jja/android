@@ -1,26 +1,23 @@
 package com.ja.sbi.handlers;
 
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
-
-import com.ja.dialog.LoadingSpinner;
-import com.ja.sbi.R;
-import com.ja.sbi.SimpleBARTInfo;
-import com.ja.sbi.bart.api.StationDownloader;
-import com.ja.sbi.beans.Station;
-import com.ja.sbi.adapters.StationListAdapter;
-import com.ja.sbi.listeners.StationListener;
-
-import java.util.ArrayList;
-import java.util.List;
-
 import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.ja.dialog.LoadingSpinner;
+import com.ja.sbi.R;
+import com.ja.sbi.SimpleBARTInfo;
+import com.ja.sbi.adapters.StationListAdapter;
+import com.ja.sbi.bart.api.StationDownloader;
+import com.ja.sbi.beans.Station;
+import com.ja.sbi.listeners.StationListener;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class StationsHandler {
 

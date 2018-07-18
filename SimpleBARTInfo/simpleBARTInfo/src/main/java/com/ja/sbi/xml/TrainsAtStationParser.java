@@ -108,7 +108,7 @@ public class TrainsAtStationParser extends DefaultHandler {
     }
 
     private String appendData(String initial, String addTo) {
-        if ( initial != null ) {
+        if (initial != null) {
             return XMLUtils.append(initial + ", ", addTo);
         }
         return XMLUtils.append(initial, addTo);

@@ -10,8 +10,6 @@ import com.ja.sbi.R;
 import com.ja.sbi.SimpleBARTInfo;
 import com.ja.sbi.beans.Station;
 import com.ja.sbi.beans.StationData;
-import com.ja.sbi.utils.StationDataSorter;
-import com.ja.sbi.utils.StationListSpinnerIface;
 
 import java.util.ArrayList;
 import java.util.Collections;

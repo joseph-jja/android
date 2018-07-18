@@ -6,24 +6,21 @@ import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-
-import java.util.List;
-import java.util.ArrayList;
+import android.view.View;
+import android.widget.RadioButton;
 
 import com.ja.activity.BaseActivity;
 import com.ja.dialog.BaseDialog;
+import com.ja.sbi.beans.Station;
+import com.ja.sbi.beans.Trip;
 import com.ja.sbi.handlers.AlertHandler;
 import com.ja.sbi.handlers.FareCalculatorHandler;
 import com.ja.sbi.handlers.StationsHandler;
 import com.ja.sbi.handlers.TripPlannerHandler;
 import com.ja.sbi.map.BartMapManager;
 
-import android.widget.RadioButton;
-
-import com.ja.sbi.beans.Station;
-import com.ja.sbi.beans.Trip;
-
-import android.view.View;
+import java.util.ArrayList;
+import java.util.List;
 
 public class SimpleBARTInfo extends BaseActivity {
     public static final String DATABASE_NAME = "SimpleBARTInfo";
@@ -133,8 +130,8 @@ public class SimpleBARTInfo extends BaseActivity {
                 break;
             case R.id.view_map:
                 setContentView(R.layout.bart_map);
-                BartMapManager map = new BartMapManager();
-                map.initializeActivity(this);
+                BartMapManager map = new BartMapManager(this);
+                map.resizeImage(1);
                 break;
             default:
                 break;

@@ -2,10 +2,12 @@ package com.ja.sbi.map;
 
 import android.app.Activity;
 import android.content.Context;
-import android.graphics.drawable.Drawable;
 import android.util.Log;
-import android.webkit.WebView;
+import android.view.View;
+import android.widget.Button;
+import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
+import android.widget.ScrollView;
 
 import com.ja.sbi.R;
 import com.ja.sbi.SimpleBARTInfo;
@@ -14,22 +16,71 @@ public class BartMapManager {
 
     private final String LOG_NAME = this.getClass().getName();
 
-    private Drawable image;
-    private int zoomFactor = 0;
+    private static final int maxZoomSize = 8;
 
-    public void initializeActivity(Context context) {
+    private int zoomFactor = 1;
+    private int defaultImageWidth = 500;
+    private int defaultImageHeight = 500;
+
+    private static ScrollView vscroll;
+    private static HorizontalScrollView hscroll;
+    private static ImageView bartMapImage;
+    private static Button zoomIn;
+    private static Button zoomOut;
+
+    public BartMapManager(Context context) {
 
         final Activity activity = (Activity) context;
 
         // get image view
-        final ImageView image = (ImageView) ((SimpleBARTInfo) context).findViewById(R.id.bart_map_image);
+        BartMapManager.bartMapImage = (ImageView) ((SimpleBARTInfo) context).findViewById(R.id.bart_map_image);
+        BartMapManager.bartMapImage.setAdjustViewBounds(true);
+
+        BartMapManager.hscroll = (HorizontalScrollView)((SimpleBARTInfo)context).findViewById(R.id.bart_map_hscroll);
+        BartMapManager.vscroll = (ScrollView)((SimpleBARTInfo)context).findViewById(R.id.bart_map_vscroll);
+
+        BartMapManager.zoomIn = (Button) ((SimpleBARTInfo) context).findViewById(R.id.bart_map_zoom_in);
+        BartMapManager.zoomOut = (Button) ((SimpleBARTInfo) context).findViewById(R.id.bart_map_zoom_out);
+
+        BartMapManager.zoomIn.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Do something in response to button click
+                if ( zoomFactor >= BartMapManager.maxZoomSize ) {
+                    zoomFactor = BartMapManager.maxZoomSize;
+                    return;
+                }
+                zoomFactor++;
+                resizeImage(zoomFactor);
+            }
+        });
+
+        BartMapManager.zoomOut.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Do something in response to button click
+                if ( zoomFactor <= 1 ) {
+                    zoomFactor = 1;
+                    return;
+                }
+                zoomFactor--;
+                resizeImage(zoomFactor);
+            }
+        });
     }
 
-    public void resizeImage(Activity activity, WebView web, ImageView image, int width, int height) {
+    public void resizeImage(int zoomFactorLocal) {
 
-        image.layout(0, 0, width, height);
+        final int width = defaultImageWidth * zoomFactorLocal;
+        final int height = defaultImageHeight * zoomFactorLocal;
 
-        Log.d(LOG_NAME, "Resized image to " + image.getWidth() + "x" + image.getHeight());
+        BartMapManager.bartMapImage.layout(0, 0, width, height);
+
+        final int top = BartMapManager.hscroll.getTop();
+        final int vheight = BartMapManager.vscroll.getHeight();
+        //Log.d(LOG_NAME,  BartMapManager.hscroll.getWidth()+ " " +  BartMapManager.hscroll.getMeasuredWidth());
+        //BartMapManager.hscroll.layout(0, top, width, height);
+        //BartMapManager.vscroll.layout(0, top, width, vheight);
+        //Log.d(LOG_NAME,  BartMapManager.hscroll.getWidth()+ " " +  BartMapManager.hscroll.getMeasuredWidth());
+        //Log.d(LOG_NAME, "Resized image to " + BartMapManager.bartMapImage.getWidth() + "x" + BartMapManager.bartMapImage.getHeight());
     }
 
  }
