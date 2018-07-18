@@ -18,7 +18,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3610203d-8b97-4323-8aa6-8b7cb84390c1" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/adapters/TripPlannerAdapter.java" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/fileHashes.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/fileHashes.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.4.1/javaCompile/classAnalysis.bin" />
@@ -28,10 +27,9 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4.1/taskHistory/taskHistory.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/simpleBARTInfo/build/outputs/apk/debug/SimpleBARTInfo-debug.apk" afterPath="$PROJECT_DIR$/simpleBARTInfo/build/outputs/apk/debug/SimpleBARTInfo-debug.apk" />
+      <change beforePath="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/adapters/TripPlannerAdapter.java" afterPath="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/adapters/TripPlannerAdapter.java" />
       <change beforePath="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/handlers/TripPlannerHandler.java" afterPath="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/handlers/TripPlannerHandler.java" />
-      <change beforePath="$PROJECT_DIR$/simpleBARTInfo/src/main/res/layout/trip_data.xml" afterPath="$PROJECT_DIR$/simpleBARTInfo/src/main/res/layout/trip_data.xml" />
-      <change beforePath="$PROJECT_DIR$/simpleBARTInfo/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/simpleBARTInfo/src/main/res/values/strings.xml" />
+      <change beforePath="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/xml/TripParser.java" afterPath="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/xml/TripParser.java" />
     </list>
     <ignored path="$PROJECT_DIR$/build/classes/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -134,12 +132,14 @@
       <file leaf-file-name="TripPlannerAdapter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/adapters/TripPlannerAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="84" column="53" lean-forward="false" selection-start-line="84" selection-start-column="53" selection-end-line="84" selection-end-column="53" />
+            <state relative-caret-position="435">
+              <caret line="92" column="91" lean-forward="false" selection-start-line="92" selection-start-column="91" selection-end-line="92" selection-end-column="91" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#778#779#0" expanded="true" />
-                <element signature="e#837#838#0" expanded="true" />
+                <element signature="e#905#906#0" expanded="true" />
+                <element signature="e#964#965#0" expanded="true" />
+                <element signature="e#1029#1030#0" expanded="true" />
+                <element signature="e#1075#1076#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -148,24 +148,14 @@
       <file leaf-file-name="TripPlannerHandler.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/handlers/TripPlannerHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="422">
-              <caret line="253" column="64" lean-forward="true" selection-start-line="253" selection-start-column="64" selection-end-line="253" selection-end-column="64" />
+            <state relative-caret-position="188">
+              <caret line="226" column="56" lean-forward="false" selection-start-line="226" selection-start-column="43" selection-end-line="226" selection-end-column="56" />
               <folding>
                 <element signature="e#3012#8175#0" expanded="true" />
                 <element signature="e#8174#8175#0" expanded="true" />
-                <element signature="e#10120#10571#0" expanded="true" />
-                <element signature="e#10570#10571#0" expanded="true" />
+                <element signature="e#10120#10688#0" expanded="true" />
+                <element signature="e#10687#10688#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="APIConstants.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/bart/api/APIConstants.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="28" column="44" lean-forward="false" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="44" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -201,9 +191,9 @@
       <find>downloadBARTFeed</find>
       <find>new S</find>
       <find>StationDataSorter</find>
-      <find>trainStops</find>
       <find>viewId</find>
       <find>Adapter</find>
+      <find>trainStops</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -2713,14 +2703,15 @@
         <option value="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/handlers/FareCalculatorHandler.java" />
         <option value="$PROJECT_DIR$/simpleBARTInfo/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/simpleBARTInfo/src/main/res/layout/trip_data.xml" />
+        <option value="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/xml/TripParser.java" />
         <option value="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/adapters/TripPlannerAdapter.java" />
         <option value="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/handlers/TripPlannerHandler.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="421" />
-    <option name="y" value="76" />
+    <option name="x" value="419" />
+    <option name="y" value="133" />
     <option name="width" value="1279" />
     <option name="height" value="917" />
   </component>
@@ -3200,7 +3191,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="421" y="76" width="1279" height="917" extended-state="0" />
+    <frame x="419" y="133" width="1279" height="917" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -3278,14 +3269,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/handlers/TripPlannerHandler.java</url>
-          <line>253</line>
-          <properties />
-          <option name="timeStamp" value="41" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="42" />
     </breakpoint-manager>
     <watches-manager />
@@ -3561,26 +3544,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/trains/beans/StationData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/adapters/AlertAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-645">
           <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/xml/TripParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -3696,27 +3663,45 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/xml/TripParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="41" column="39" lean-forward="false" selection-start-line="41" selection-start-column="39" selection-end-line="41" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/trains/beans/StationData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/adapters/TripPlannerAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="84" column="53" lean-forward="false" selection-start-line="84" selection-start-column="53" selection-end-line="84" selection-end-column="53" />
+        <state relative-caret-position="435">
+          <caret line="92" column="91" lean-forward="false" selection-start-line="92" selection-start-column="91" selection-end-line="92" selection-end-column="91" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#778#779#0" expanded="true" />
-            <element signature="e#837#838#0" expanded="true" />
+            <element signature="e#905#906#0" expanded="true" />
+            <element signature="e#964#965#0" expanded="true" />
+            <element signature="e#1029#1030#0" expanded="true" />
+            <element signature="e#1075#1076#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/handlers/TripPlannerHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="253" column="64" lean-forward="true" selection-start-line="253" selection-start-column="64" selection-end-line="253" selection-end-column="64" />
+        <state relative-caret-position="188">
+          <caret line="226" column="56" lean-forward="false" selection-start-line="226" selection-start-column="43" selection-end-line="226" selection-end-column="56" />
           <folding>
             <element signature="e#3012#8175#0" expanded="true" />
             <element signature="e#8174#8175#0" expanded="true" />
-            <element signature="e#10120#10571#0" expanded="true" />
-            <element signature="e#10570#10571#0" expanded="true" />
+            <element signature="e#10120#10688#0" expanded="true" />
+            <element signature="e#10687#10688#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -9,6 +9,8 @@ import android.widget.TextView;
 
 import com.ja.sbi.R;
 import com.ja.sbi.trains.beans.Fare;
+import com.ja.sbi.trains.beans.Station;
+import com.ja.sbi.trains.beans.StationData;
 import com.ja.sbi.trains.beans.Trip;
 import com.ja.sbi.trains.beans.TripLeg;
 
@@ -19,6 +21,7 @@ public class TripPlannerAdapter extends ArrayAdapter<Trip> {
     private int viewId;
     private static List<Trip> tripsLocal;
     private LayoutInflater inflator;
+    private List<StationData> stationData;
 
     public TripPlannerAdapter(Context context, int resource, List<Trip> trips) {
         super(context, resource);
@@ -31,12 +34,29 @@ public class TripPlannerAdapter extends ArrayAdapter<Trip> {
         return TripPlannerAdapter.tripsLocal.size();
     }
 
+    public void setStationData(List<StationData> stationData) {
+        this.stationData = stationData;
+    }
+
     private LayoutInflater getInflator() {
 
         if (this.inflator == null) {
             this.inflator = (LayoutInflater) super.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         }
         return this.inflator;
+    }
+
+    private String findStationLongName( String stationShortName) {
+        if (this.stationData == null) {
+             return stationShortName;
+        }
+
+        for ( StationData item: this.stationData) {
+            if ( item.getStationCode( ).equals(stationShortName) ) {
+                return item.getStationName();
+            }
+        }
+        return stationShortName;
     }
 
     @Override
@@ -67,17 +87,18 @@ public class TripPlannerAdapter extends ArrayAdapter<Trip> {
                 tripHolder.originDateTime = (TextView) rView.findViewById(R.id.trip_estimated_leave_time);
                 tripHolder.destinationDateTime = (TextView) rView.findViewById(R.id.trip_estimate_arrival_time);
 
-                tripHolder.fare = (TextView) rView.findViewById(R.id.trip_destination_name);
-                tripHolder.clipperDiscount = (TextView) rView.findViewById(R.id.trip_destination_name);
-                tripHolder.seniorDisabledClipper = (TextView) rView.findViewById(R.id.trip_destination_name);
-                //tripHolder.youthClipper = (TextView) rView.findViewById(R.id.trip_destination_name);
+                tripHolder.fare = (TextView) rView.findViewById(R.id.trip_fare_value);
+                tripHolder.clipperDiscount = (TextView) rView.findViewById(R.id.trip_clipper_fare_value);
+                tripHolder.seniorDisabledClipper = (TextView) rView.findViewById(R.id.trip_senior_disabled_clipper_value);
+                //tripHolder.youthClipper = (TextView) rView.findViewById(R.id.trip.. youth);
 
             } else {
                 tripHolder = (TripPlannerViewHolder) rView.getTag();
             }
 
-            tripHolder.origin.setText(origin);
-            tripHolder.destination.setText(destination);
+
+            tripHolder.origin.setText(findStationLongName(origin));
+            tripHolder.destination.setText(findStationLongName(destination));
 
             tripHolder.originDateTime.setText(originTime + " " + originDate);
             tripHolder.destinationDateTime.setText(destinationTime + " " + destinationDate);

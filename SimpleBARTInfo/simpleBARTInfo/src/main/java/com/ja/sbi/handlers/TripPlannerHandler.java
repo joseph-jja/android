@@ -252,7 +252,9 @@ public class TripPlannerHandler {
             SimpleBARTInfo sbiThread = (SimpleBARTInfo) msg.obj;
 
             ListView results = (ListView) sbiThread.findViewById(R.id.trip_planner_results);
-            results.setAdapter(new TripPlannerAdapter(sbiThread, R.layout.trip_data, TripPlannerHandler.trips));
+            TripPlannerAdapter adapter = new TripPlannerAdapter(sbiThread, R.layout.trip_data, TripPlannerHandler.trips);
+            adapter.setStationData(TripPlannerHandler.trainStops);
+            results.setAdapter(adapter);
 
             Log.d(LOG_NAME, "Got something.");
             TripPlannerHandler.dialog.dismiss();

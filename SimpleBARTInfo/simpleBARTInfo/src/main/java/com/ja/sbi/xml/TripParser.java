@@ -39,7 +39,7 @@ public class TripParser extends DefaultHandler {
             if (atts != null) {
                 tripItem.setOrigin(atts.getValue("origin"));
                 tripItem.setDestination(atts.getValue("destination"));
-                tripItem.setOriginDate(atts.getValue("origTimeMin"));
+                tripItem.setOriginTime(atts.getValue("origTimeMin"));
                 tripItem.setOriginDate(atts.getValue("origTimeDate"));
                 tripItem.setDestinationTime(atts.getValue("destTimeMin"));
                 tripItem.setDestinationDate(atts.getValue("destTimeDate"));
