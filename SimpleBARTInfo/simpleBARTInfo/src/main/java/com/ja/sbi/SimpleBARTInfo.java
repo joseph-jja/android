@@ -121,6 +121,7 @@ public class SimpleBARTInfo extends BaseActivity {
                 stations.setStations(new ArrayList<Station>());
                 setContentView(R.layout.stations);
                 stations.initializeActivity(this, false);
+                break;
             case R.id.view_map:
                 setContentView(R.layout.bart_map);
                 BartMapManager map = new BartMapManager();

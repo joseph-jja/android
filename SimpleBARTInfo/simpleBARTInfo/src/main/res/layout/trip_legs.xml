@@ -18,7 +18,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_marginRight="10dp"
         android:textAppearance="@style/NameText"></TextView>
   <TextView
-        android:id="@+id/trip_leg_origin_name"
+        android:id="@+id/trip_leg_destination_name"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
@@ -26,7 +26,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_marginRight="10dp"
         android:textAppearance="@style/NameText"></TextView>
 
-  <!-- let times -->
+  <!-- leg times -->
   <TextView
         android:id="@+id/trip_leg_origin_time"
         android:layout_width="fill_parent"
@@ -36,7 +36,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_marginRight="10dp"
         android:textAppearance="@style/DefaultText"></TextView>
   <TextView
-        android:id="@+id/trip_leg_origin_time"
+        android:id="@+id/trip_leg_destination_time"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
@@ -53,5 +53,4 @@ xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:textAppearance="@style/NameText"></TextView>
-
 </LinearLayout>

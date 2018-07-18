@@ -77,7 +77,7 @@ public class TripParser extends DefaultHandler {
             currentLeg.setTrainHeadStation(atts.getValue("trainHeadStation"));
             currentLeg.setOrigin(atts.getValue("origin"));
             currentLeg.setDestination(atts.getValue("destination"));
-            currentLeg.setOriginDate(atts.getValue("origTimeMin"));
+            currentLeg.setOriginTime(atts.getValue("origTimeMin"));
             currentLeg.setOriginDate(atts.getValue("origTimeDate"));
             currentLeg.setDestinationTime(atts.getValue("destTimeMin"));
             currentLeg.setDestinationDate(atts.getValue("destTimeDate"));

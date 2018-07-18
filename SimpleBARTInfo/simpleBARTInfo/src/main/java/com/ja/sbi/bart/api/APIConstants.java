@@ -24,8 +24,8 @@ public class APIConstants {
 	public static final String ROUTE_INFO = BART_API_HOST + "/api/route.aspx?cmd=routeinfo&route=";
 	
 	// trip planning 
-	public static final String SCHEDULE_DEPART = BART_API_HOST + "/api/sched.aspx?cmd=depart&orig=";
-	public static final String SCHEDULE_ARRIVE = BART_API_HOST + "/api/sched.aspx?cmd=arrive&orig=";
+	public static final String SCHEDULE_DEPART = BART_API_HOST + "/api/sched.aspx?cmd=depart&b=0&a=3&orig=";
+	public static final String SCHEDULE_ARRIVE = BART_API_HOST + "/api/sched.aspx?cmd=arrive&b=2&a=1&orig=";
 	public static final String SCHEDULE_DEST = "&dest=";
 	public static final String SCHEDULE_DATE = "&date=";
 	

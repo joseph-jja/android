@@ -19,6 +19,7 @@ import com.ja.sbi.adapters.TripPlannerAdapter;
 import com.ja.sbi.bart.api.APIConstants;
 import com.ja.sbi.bart.api.BaseDownloader;
 import com.ja.sbi.bart.api.StationDownloader;
+import com.ja.sbi.listeners.TripDetailsListener;
 import com.ja.sbi.trains.beans.StationData;
 import com.ja.sbi.trains.beans.Trip;
 import com.ja.sbi.trains.beans.TripLeg;
@@ -156,6 +157,8 @@ public class TripPlannerHandler {
                 });
 
             }
+
+            // TODO implement all the times here to populate
             Spinner month = (Spinner) sbiThread.findViewById(R.id.tripMonth);
             Spinner day = (Spinner) sbiThread.findViewById(R.id.tripDay);
             Spinner year = (Spinner) sbiThread.findViewById(R.id.tripFullYear);
@@ -255,6 +258,10 @@ public class TripPlannerHandler {
             TripPlannerAdapter adapter = new TripPlannerAdapter(sbiThread, R.layout.trip_data, TripPlannerHandler.trips);
             adapter.setStationData(TripPlannerHandler.trainStops);
             results.setAdapter(adapter);
+
+            TripDetailsListener listener = new TripDetailsListener();
+            listener.setTripList(TripPlannerHandler.trips);
+            results.setOnItemClickListener(listener);
 
             Log.d(LOG_NAME, "Got something.");
             TripPlannerHandler.dialog.dismiss();

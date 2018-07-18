@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.ja.sbi.R;
@@ -22,11 +23,12 @@ public class TripPlannerAdapter extends ArrayAdapter<Trip> {
     private static List<Trip> tripsLocal;
     private LayoutInflater inflator;
     private List<StationData> stationData;
+    private Context selfContext;
 
     public TripPlannerAdapter(Context context, int resource, List<Trip> trips) {
         super(context, resource);
         this.viewId = resource;
-
+        selfContext = context;
         TripPlannerAdapter.tripsLocal = trips;
     }
 
@@ -96,16 +98,15 @@ public class TripPlannerAdapter extends ArrayAdapter<Trip> {
                 tripHolder = (TripPlannerViewHolder) rView.getTag();
             }
 
-
             tripHolder.origin.setText(findStationLongName(origin));
             tripHolder.destination.setText(findStationLongName(destination));
 
-            tripHolder.originDateTime.setText(originTime + " " + originDate);
-            tripHolder.destinationDateTime.setText(destinationTime + " " + destinationDate);
+            tripHolder.originDateTime.setText("Est Leave Time: " + originTime + " " + originDate);
+            tripHolder.destinationDateTime.setText("Est Arrive Time: " + destinationTime + " " + destinationDate);
 
-            tripHolder.fare.setText(fareDetails.getFare());
-            tripHolder.clipperDiscount.setText(fareDetails.getClipperDiscount());
-            tripHolder.seniorDisabledClipper.setText(fareDetails.getSeniorDisabledClipper());
+            tripHolder.fare.setText("Fare: " + fareDetails.getFare());
+            tripHolder.clipperDiscount.setText("Clipper: " + fareDetails.getClipperDiscount());
+            tripHolder.seniorDisabledClipper.setText("Senior/Disabled: " + fareDetails.getSeniorDisabledClipper());
             //tripHolder.youthClipper.setText(fareDetails.getYouthClipper());
         }
 
@@ -124,6 +125,5 @@ public class TripPlannerAdapter extends ArrayAdapter<Trip> {
         public TextView clipperDiscount;
         public TextView seniorDisabledClipper;
         //public TextView youthClipper;
-
     }
 }
