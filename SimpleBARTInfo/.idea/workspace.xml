@@ -22,14 +22,12 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/fileHashes.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.4.1/javaCompile/classAnalysis.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.4.1/javaCompile/javaCompile.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4.1/javaCompile/taskHistory.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4.1/taskHistory/taskHistory.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4.1/taskHistory/taskHistory.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/simpleBARTInfo/build/outputs/apk/debug/SimpleBARTInfo-debug.apk" afterPath="$PROJECT_DIR$/simpleBARTInfo/build/outputs/apk/debug/SimpleBARTInfo-debug.apk" />
       <change beforePath="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/handlers/TripPlannerHandler.java" afterPath="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/handlers/TripPlannerHandler.java" />
-      <change beforePath="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/utils/SimpleSpinner.java" afterPath="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/utils/SimpleSpinner.java" />
     </list>
     <ignored path="$PROJECT_DIR$/build/classes/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -56,22 +54,22 @@
       <file leaf-file-name="TripPlannerHandler.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/handlers/TripPlannerHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="144" column="0" lean-forward="false" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
+            <state relative-caret-position="360">
+              <caret line="139" column="113" lean-forward="false" selection-start-line="139" selection-start-column="113" selection-end-line="139" selection-end-column="113" />
               <folding>
                 <element signature="e#1133#1146#0" expanded="true" />
-                <element signature="e#1719#1727#0" expanded="true" />
-                <element signature="e#1792#1800#0" expanded="true" />
-                <element signature="e#3727#3728#0" expanded="true" />
-                <element signature="e#3774#3775#0" expanded="true" />
-                <element signature="e#4010#7650#0" expanded="true" />
-                <element signature="e#5300#5308#0" expanded="true" />
-                <element signature="e#5567#5575#0" expanded="true" />
-                <element signature="e#7649#7650#0" expanded="true" />
-                <element signature="e#8523#10420#0" expanded="true" />
-                <element signature="e#10419#10420#0" expanded="true" />
-                <element signature="e#11117#11404#0" expanded="true" />
-                <element signature="e#11403#11404#0" expanded="true" />
+                <element signature="e#1944#1952#0" expanded="true" />
+                <element signature="e#2017#2025#0" expanded="true" />
+                <element signature="e#3952#3953#0" expanded="true" />
+                <element signature="e#3999#4000#0" expanded="true" />
+                <element signature="e#4235#7925#0" expanded="true" />
+                <element signature="e#5569#5577#0" expanded="true" />
+                <element signature="e#5836#5844#0" expanded="true" />
+                <element signature="e#7924#7925#0" expanded="true" />
+                <element signature="e#8798#10717#0" expanded="true" />
+                <element signature="e#10716#10717#0" expanded="true" />
+                <element signature="e#11414#11701#0" expanded="true" />
+                <element signature="e#11700#11701#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -2636,8 +2634,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="549" />
-    <option name="y" value="46" />
+    <option name="x" value="468" />
+    <option name="y" value="37" />
     <option name="width" value="1279" />
     <option name="height" value="938" />
   </component>
@@ -3119,7 +3117,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="549" y="46" width="1279" height="938" extended-state="0" />
+    <frame x="468" y="37" width="1279" height="938" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -3143,7 +3142,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.44402516" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44402516" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -3196,14 +3195,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/handlers/TripPlannerHandler.java</url>
-          <line>144</line>
-          <properties />
-          <option name="timeStamp" value="61" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="62" />
     </breakpoint-manager>
     <watches-manager />
@@ -3620,22 +3611,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/handlers/TripPlannerHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="144" column="0" lean-forward="false" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
+        <state relative-caret-position="360">
+          <caret line="139" column="113" lean-forward="false" selection-start-line="139" selection-start-column="113" selection-end-line="139" selection-end-column="113" />
           <folding>
             <element signature="e#1133#1146#0" expanded="true" />
-            <element signature="e#1719#1727#0" expanded="true" />
-            <element signature="e#1792#1800#0" expanded="true" />
-            <element signature="e#3727#3728#0" expanded="true" />
-            <element signature="e#3774#3775#0" expanded="true" />
-            <element signature="e#4010#7650#0" expanded="true" />
-            <element signature="e#5300#5308#0" expanded="true" />
-            <element signature="e#5567#5575#0" expanded="true" />
-            <element signature="e#7649#7650#0" expanded="true" />
-            <element signature="e#8523#10420#0" expanded="true" />
-            <element signature="e#10419#10420#0" expanded="true" />
-            <element signature="e#11117#11404#0" expanded="true" />
-            <element signature="e#11403#11404#0" expanded="true" />
+            <element signature="e#1944#1952#0" expanded="true" />
+            <element signature="e#2017#2025#0" expanded="true" />
+            <element signature="e#3952#3953#0" expanded="true" />
+            <element signature="e#3999#4000#0" expanded="true" />
+            <element signature="e#4235#7925#0" expanded="true" />
+            <element signature="e#5569#5577#0" expanded="true" />
+            <element signature="e#5836#5844#0" expanded="true" />
+            <element signature="e#7924#7925#0" expanded="true" />
+            <element signature="e#8798#10717#0" expanded="true" />
+            <element signature="e#10716#10717#0" expanded="true" />
+            <element signature="e#11414#11701#0" expanded="true" />
+            <element signature="e#11700#11701#0" expanded="true" />
           </folding>
         </state>
       </provider>

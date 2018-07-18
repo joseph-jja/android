@@ -45,8 +45,12 @@ public class TripPlannerHandler implements StationListSpinnerIface {
 
     private static final TripParser tripParser = new TripParser();
 
-    private static final List<String> arrivingOrDeparting = Arrays.asList("Departing", "Arriving");
-    private static final List<String> ampm = Arrays.asList("AM", "PM");
+    private static final String DEPARTING_TEXT = "Departing";
+    private static final String AM_TEXT = "AM";
+    private static final String PM_TEXT = "PM";
+
+    private static final List<String> arrivingOrDeparting = Arrays.asList(TripPlannerHandler.DEPARTING_TEXT, "Arriving");
+    private static final List<String> ampm = Arrays.asList(TripPlannerHandler.AM_TEXT, TripPlannerHandler.PM_TEXT);
     private static final List<String> hours = new ArrayList<String>();
     private static final List<String> minutes = new ArrayList<String>();
 
@@ -133,7 +137,7 @@ public class TripPlannerHandler implements StationListSpinnerIface {
                 int currentYear = cal.get(Calendar.YEAR);
                 int currentHour = cal.get(Calendar.HOUR);
                 int currentMinute = cal.get(Calendar.MINUTE);
-                String useAMPM = (cal.get(Calendar.AM_PM) == 0 ? "AM" : "PM");
+                String useAMPM = (cal.get(Calendar.AM_PM) == 0 ? TripPlannerHandler.AM_TEXT : TripPlannerHandler.PM_TEXT);
 
                 List<String> days = new ArrayList<String>();
                 days.add(paddNumber(currentDay));
@@ -154,7 +158,7 @@ public class TripPlannerHandler implements StationListSpinnerIface {
                 if ((cal.get(Calendar.YEAR)) > currentYear) {
                     years.add(Integer.valueOf(cal.get(Calendar.YEAR)).toString());
                 }
-                
+
                 // mm/dd/yyyy
                 TripPlannerHandler.monthSpinner = new SimpleSpinner(sbiThread, R.id.tripMonth,
                         months,
@@ -181,7 +185,7 @@ public class TripPlannerHandler implements StationListSpinnerIface {
 
                 TripPlannerHandler.departArrive = new SimpleSpinner(sbiThread, R.id.tpDepartingOrArriving,
                         TripPlannerHandler.arrivingOrDeparting,
-                        "Departing", self);
+                        TripPlannerHandler.DEPARTING_TEXT, self);
             }
         }
     };
@@ -221,7 +225,7 @@ public class TripPlannerHandler implements StationListSpinnerIface {
                             + ":" + TripPlannerHandler.minuteSpinner.getSelectText()
                             + " " + TripPlannerHandler.ampmSpinner.getSelectText();
 
-                    final String baseURL = (departureOrArrivalTime.equals("Departing")) ? APIConstants.SCHEDULE_DEPART : APIConstants.SCHEDULE_ARRIVE;
+                    final String baseURL = (departureOrArrivalTime.equals(TripPlannerHandler.DEPARTING_TEXT)) ? APIConstants.SCHEDULE_DEPART : APIConstants.SCHEDULE_ARRIVE;
 
                     final String requestUrl = baseURL + TripPlannerHandler.sourceStation
                             + APIConstants.SCHEDULE_DEST + TripPlannerHandler.destinationStation
