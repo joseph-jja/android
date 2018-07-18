@@ -19,6 +19,7 @@ import com.ja.sbi.listeners.TripDetailsListener;
 import com.ja.sbi.beans.StationData;
 import com.ja.sbi.beans.Trip;
 import com.ja.sbi.beans.Station;
+import com.ja.sbi.utils.SimpleSpinner;
 import com.ja.sbi.utils.StationListSpinner;
 import com.ja.sbi.utils.StationListSpinnerIface;
 import com.ja.sbi.xml.TripParser;
@@ -51,6 +52,7 @@ public class TripPlannerHandler implements StationListSpinnerIface {
 
     private static StationListSpinner sourceStop;
     private static StationListSpinner destinationStop;
+    private static SimpleSpinner departArrive;
 
     public TripPlannerHandler(Context context, List<Station> stations) {
 
@@ -152,8 +154,8 @@ public class TripPlannerHandler implements StationListSpinnerIface {
                 Spinner tpTripAMPM = (Spinner) sbiThread.findViewById(R.id.tpTripAMPM);
                 tpTripAMPM.setAdapter(new ArrayAdapter<String>(sbiThread, android.R.layout.simple_spinner_item, ampm));
 
-                Spinner departArrive = (Spinner) sbiThread.findViewById(R.id.tpDepartingOrArriving);
-                departArrive.setAdapter(new ArrayAdapter<String>(sbiThread, android.R.layout.simple_spinner_item, arrivingOrDeparting));
+                TripPlannerHandler.departArrive = new SimpleSpinner(sbiThread, R.id.tpDepartingOrArriving,
+                        null, arrivingOrDeparting, self);
 
             }
         }
@@ -175,27 +177,25 @@ public class TripPlannerHandler implements StationListSpinnerIface {
             return;
         }
 
-        dialog = new LoadingSpinner(sbi, "Loading BART Fares...");
+        TripPlannerHandler.dialog = new LoadingSpinner(sbi, "Loading BART Fares...");
 
         final Thread refresh = new Thread() {
 
             public void run() {
                 try {
 
-                    final String departURL = APIConstants.SCHEDULE_DEPART + TripPlannerHandler.sourceStation
-                            + APIConstants.SCHEDULE_DEST + TripPlannerHandler.destinationStation
-                            + APIConstants.SCHEDULE_TIME + "now"
-                            + APIConstants.SCHEDULE_DATE + "now"
-                            + APIConstants.KEY_STRING_API;
+                    final String departureOrArrivalTime = TripPlannerHandler.departArrive.getSelectText();
 
-                    final String arriveURL = APIConstants.SCHEDULE_ARRIVE + TripPlannerHandler.sourceStation
+                    final String baseURL = (departureOrArrivalTime.equals("Departing") ) ? APIConstants.SCHEDULE_DEPART : APIConstants.SCHEDULE_ARRIVE;
+
+                    final String requestUrl = baseURL + TripPlannerHandler.sourceStation
                             + APIConstants.SCHEDULE_DEST + TripPlannerHandler.destinationStation
                             + APIConstants.SCHEDULE_TIME + "now"
                             + APIConstants.SCHEDULE_DATE + "now"
                             + APIConstants.KEY_STRING_API;
 
                     // call api here
-                    final String fairData = BaseDownloader.retriever.downloadURL(departURL, 0);
+                    final String fairData = BaseDownloader.retriever.downloadURL(requestUrl, 0);
 
                     TripPlannerHandler.trips = tripParser.parseDocument(fairData);
 
