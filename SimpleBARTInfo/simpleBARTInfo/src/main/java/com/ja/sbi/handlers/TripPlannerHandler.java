@@ -47,14 +47,32 @@ public class TripPlannerHandler implements StationListSpinnerIface {
 
     private static final List<String> arrivingOrDeparting = Arrays.asList("Departing", "Arriving");
     private static final List<String> ampm = Arrays.asList("AM", "PM");
+    private static final List<String> hours = new ArrayList<String>();
+    private static final List<String> minutes = new ArrayList<String>();
 
     final TripPlannerHandler self = this;
 
     private static StationListSpinner sourceStop;
     private static StationListSpinner destinationStop;
     private static SimpleSpinner departArrive;
+    private static SimpleSpinner monthSpinner;
+    private static SimpleSpinner daySpinner;
+    private static SimpleSpinner yearSpinner;
+    private static SimpleSpinner hourSpinner;
+    private static SimpleSpinner minuteSpinner;
+    private static SimpleSpinner ampmSpinner;
 
     public TripPlannerHandler(Context context, List<Station> stations) {
+
+        // initialize hours
+        for (int i = 1; i <= 12; i++) {
+            TripPlannerHandler.hours.add(paddNumber(i));
+        }
+
+        // initialize minutes
+        for (int i = 0; i < 60; i++) {
+            TripPlannerHandler.minutes.add(paddNumber(i));
+        }
 
         final SimpleBARTInfo bartInfoActivity = (SimpleBARTInfo) context;
         final List<Station> localStationCopy = stations;
@@ -65,9 +83,9 @@ public class TripPlannerHandler implements StationListSpinnerIface {
             public void run() {
                 try {
                     final List<Station> stationList = ((localStationCopy != null && localStationCopy.size() > 0) ? localStationCopy : StationDownloader.getStationList());
-                    trainStops.clear();
+                    TripPlannerHandler.trainStops.clear();
                     List<StationData> sortedTrainStops = StationListSpinner.convertStationsToStationData(stationList);
-                    trainStops.addAll(sortedTrainStops);
+                    TripPlannerHandler.trainStops.addAll(sortedTrainStops);
                 } catch (Exception e) {
                     Log.d(LOG_NAME, e.getMessage());
                 }
@@ -99,13 +117,13 @@ public class TripPlannerHandler implements StationListSpinnerIface {
 
             TripPlannerHandler.dialog.dismiss();
 
-            if (trainStops != null && trainStops.size() > 0) {
+            if (TripPlannerHandler.trainStops != null && TripPlannerHandler.trainStops.size() > 0) {
 
                 TripPlannerHandler.sourceStop = new StationListSpinner(sbiThread, R.id.tpStationOriginList);
-                TripPlannerHandler.sourceStop.initializeSpinnerLists(trainStops, self);
+                TripPlannerHandler.sourceStop.initializeSpinnerLists(TripPlannerHandler.trainStops, self);
 
                 TripPlannerHandler.destinationStop = new StationListSpinner(sbiThread, R.id.tpStationDestList);
-                TripPlannerHandler.destinationStop.initializeSpinnerLists(trainStops, self);
+                TripPlannerHandler.destinationStop.initializeSpinnerLists(TripPlannerHandler.trainStops, self);
 
                 // TODO implement all the times here to populate
 
@@ -116,46 +134,40 @@ public class TripPlannerHandler implements StationListSpinnerIface {
                 int currentHour = cal.get(Calendar.HOUR);
                 int currentMinute = cal.get(Calendar.MINUTE);
 
-                //cal.add(Calendar.DATE, 1);
-
-                Spinner month = (Spinner) sbiThread.findViewById(R.id.tripMonth);
-                Spinner day = (Spinner) sbiThread.findViewById(R.id.tripDay);
-                Spinner year = (Spinner) sbiThread.findViewById(R.id.tripFullYear);
-
                 List<String> months = new ArrayList<String>();
                 months.add(paddNumber(currentMonth));
-                month.setAdapter(new ArrayAdapter<String>(sbiThread, android.R.layout.simple_spinner_item, months));
 
                 List<String> days = new ArrayList<String>();
                 days.add(paddNumber(currentDay));
-                day.setAdapter(new ArrayAdapter<String>(sbiThread, android.R.layout.simple_spinner_item, days));
+
+                cal.add(Calendar.DATE, 1);
+                currentDay = cal.get(Calendar.DAY_OF_MONTH);
+                days.add(paddNumber(currentDay));
 
                 List<String> years = new ArrayList<String>();
                 years.add(Integer.valueOf(currentYear).toString());
                 years.add(Integer.valueOf(currentYear + 1).toString());
-                year.setAdapter(new ArrayAdapter<String>(sbiThread, android.R.layout.simple_spinner_item, years));
 
-                Spinner hour = (Spinner) sbiThread.findViewById(R.id.tpTripHours);
-                Spinner minute = (Spinner) sbiThread.findViewById(R.id.tpTripMinutes);
+                // mm/dd/yyyy
+                TripPlannerHandler.monthSpinner = new SimpleSpinner(sbiThread, R.id.tripMonth,
+                        null, months, self);
+                TripPlannerHandler.daySpinner = new SimpleSpinner(sbiThread, R.id.tripDay,
+                        null, days, self);
+                TripPlannerHandler.yearSpinner = new SimpleSpinner(sbiThread, R.id.tripFullYear,
+                        null, years, self);
 
-                List<String> hours = new ArrayList<String>();
-                for (int i = 1; i <= 12; i++) {
-                    hours.add(paddNumber(i));
-                }
-                hour.setAdapter(new ArrayAdapter<String>(sbiThread, android.R.layout.simple_spinner_item, hours));
+                // time
+                TripPlannerHandler.hourSpinner = new SimpleSpinner(sbiThread, R.id.tpTripHours,
+                        null, TripPlannerHandler.hours, self);
+                TripPlannerHandler.minuteSpinner = new SimpleSpinner(sbiThread, R.id.tpTripMinutes,
+                        null, TripPlannerHandler.minutes, self);
 
-                List<String> minutes = new ArrayList<String>();
-                for (int i = 0; i < 60; i++) {
-                    minutes.add(paddNumber(i));
-                }
-                minute.setAdapter(new ArrayAdapter<String>(sbiThread, android.R.layout.simple_spinner_item, minutes));
-
-
-                Spinner tpTripAMPM = (Spinner) sbiThread.findViewById(R.id.tpTripAMPM);
-                tpTripAMPM.setAdapter(new ArrayAdapter<String>(sbiThread, android.R.layout.simple_spinner_item, ampm));
+                // am pm
+                TripPlannerHandler.ampmSpinner = new SimpleSpinner(sbiThread, R.id.tpTripAMPM,
+                        null, TripPlannerHandler.ampm, self);
 
                 TripPlannerHandler.departArrive = new SimpleSpinner(sbiThread, R.id.tpDepartingOrArriving,
-                        null, arrivingOrDeparting, self);
+                        null, TripPlannerHandler.arrivingOrDeparting, self);
 
             }
         }
@@ -186,12 +198,22 @@ public class TripPlannerHandler implements StationListSpinnerIface {
 
                     final String departureOrArrivalTime = TripPlannerHandler.departArrive.getSelectText();
 
-                    final String baseURL = (departureOrArrivalTime.equals("Departing") ) ? APIConstants.SCHEDULE_DEPART : APIConstants.SCHEDULE_ARRIVE;
+                    final String ampmTime = TripPlannerHandler.ampmSpinner.getSelectText();
+
+                    final String selectedDate = TripPlannerHandler.monthSpinner.getSelectText()
+                            + "/" + TripPlannerHandler.daySpinner.getSelectText()
+                            + "/" + TripPlannerHandler.yearSpinner.getSelectText();
+
+                    final String selectedTime = TripPlannerHandler.hourSpinner.getSelectText()
+                            + ":" + TripPlannerHandler.minuteSpinner.getSelectText()
+                            + " " + TripPlannerHandler.ampmSpinner.getSelectText();
+
+                    final String baseURL = (departureOrArrivalTime.equals("Departing")) ? APIConstants.SCHEDULE_DEPART : APIConstants.SCHEDULE_ARRIVE;
 
                     final String requestUrl = baseURL + TripPlannerHandler.sourceStation
                             + APIConstants.SCHEDULE_DEST + TripPlannerHandler.destinationStation
-                            + APIConstants.SCHEDULE_TIME + "now"
-                            + APIConstants.SCHEDULE_DATE + "now"
+                            + APIConstants.SCHEDULE_TIME + selectedTime
+                            + APIConstants.SCHEDULE_DATE + selectedDate
                             + APIConstants.KEY_STRING_API;
 
                     // call api here
