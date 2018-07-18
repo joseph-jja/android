@@ -6,16 +6,23 @@ import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+
 import java.util.List;
 import java.util.ArrayList;
+
 import com.ja.activity.BaseActivity;
 import com.ja.dialog.BaseDialog;
 import com.ja.sbi.handlers.AlertHandler;
 import com.ja.sbi.handlers.FareCalculatorHandler;
 import com.ja.sbi.handlers.StationsHandler;
+import com.ja.sbi.handlers.TripPlannerHandler;
 import com.ja.sbi.map.BartMapManager;
 
+import android.widget.RadioButton;
+
 import com.ja.sbi.trains.beans.Station;
+
+import android.view.View;
 
 public class SimpleBARTInfo extends BaseActivity {
     public static final String DATABASE_NAME = "SimpleBARTInfo";
@@ -72,6 +79,13 @@ public class SimpleBARTInfo extends BaseActivity {
         return super.onCreateOptionsMenu(menu);
     }
 
+    public void onRadioButtonClicked(View view) {
+        // Is the button now checked?
+        boolean checked = ((RadioButton) view).isChecked();
+
+        return;
+    }
+
     public boolean onOptionsItemSelected(MenuItem item) {
 
         switch (item.getItemId()) {
@@ -79,11 +93,12 @@ public class SimpleBARTInfo extends BaseActivity {
                 setContentView(R.layout.stations);
                 if (stationsData != null) {
                     stations.setStations(stationsData);
-                } 
+                }
                 stations.initializeActivity(this, true);
                 break;
             case R.id.plan_a_trip:
                 setContentView(R.layout.trip_planner);
+                TripPlannerHandler trips = new TripPlannerHandler(this, stationsData);
                 break;
             case R.id.check_fares:
                 setContentView(R.layout.fares);
@@ -102,9 +117,9 @@ public class SimpleBARTInfo extends BaseActivity {
                 BaseDialog.alert(this, "About", getResources().getString(R.string.about_app));
                 break;
             case R.id.refresh:
-                setContentView(R.layout.stations);
                 stationsData = null;
                 stations.setStations(new ArrayList<Station>());
+                setContentView(R.layout.stations);
                 stations.initializeActivity(this, false);
             case R.id.view_map:
                 setContentView(R.layout.bart_map);

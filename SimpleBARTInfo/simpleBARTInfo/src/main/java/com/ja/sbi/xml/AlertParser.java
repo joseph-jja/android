@@ -60,7 +60,7 @@ public class AlertParser extends DefaultHandler {
         }
     }
 
-    public void endElement(String uri, String name, String qName) throws SAXException {
+    public void endElement(String uri, String name, String qName) {
 
         if (name.trim().equals("bsa")) {
             inBSATag = false;
@@ -129,9 +129,6 @@ public class AlertParser extends DefaultHandler {
     }
 
     private boolean isValidRSS(String feedData) {
-        if (feedData == null || feedData.trim().indexOf("<?xml") != 0 || feedData.indexOf("<bsa") == -1) {
-            return false;
-        }
-        return true;
+        return feedData != null && feedData.trim().indexOf("<?xml") == 0 && feedData.indexOf("<bsa") != -1;
     }
 }

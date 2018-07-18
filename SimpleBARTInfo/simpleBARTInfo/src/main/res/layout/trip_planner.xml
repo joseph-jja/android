@@ -38,27 +38,32 @@ android:text="@string/tripPlannerTitpe">
          <!-- HH Minutes -->
 <Spinner android:layout_height="wrap_content" 
          android:layout_width="wrap_content" 
-         android:id="@+id/tripData"></Spinner>
+         android:id="@+id/tpTripHours"></Spinner>
 <Spinner android:layout_height="wrap_content" 
          android:layout_width="wrap_content" 
-         android:id="@+id/tripData"></Spinner>
+         android:id="@+id/tpTripMinutes"></Spinner>
 
-<RadioButtonGroup
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
-    <RadioButton android:id="@+id/trap_arrival_time"
-        android:layout_width="wrap_content"
+     <!--
+    <RadioButtonGroup
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/trip_arrival"
-        android:onClick="onRadioButtonClicked"/>
-    <RadioButton android:id="@+id/trip_departure_time"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/trip_departure"
-        android:onClick="onRadioButtonClicked"/>
-</RadioButtonGroup>
+        android:orientation="vertical">
 
+        <RadioButton
+            android:id="@+id/trap_arrival_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="@string/trip_arrival" />
+
+        <RadioButton
+            android:id="@+id/trip_departure_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="@string/trip_departure" />
+    </RadioButtonGroup>
+    -->
     <ListView
         android:id="@+id/trip_planner_results"
         android:layout_width="fill_parent"

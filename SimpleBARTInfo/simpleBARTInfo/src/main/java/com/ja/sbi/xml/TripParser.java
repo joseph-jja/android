@@ -89,7 +89,7 @@ public class TripParser extends DefaultHandler {
         }
     }
 
-    public void endElement(String uri, String name, String qName) throws SAXException {
+    public void endElement(String uri, String name, String qName) {
 
         if (name.trim().equals("trip")) {
             inTrip = false;
@@ -121,9 +121,6 @@ public class TripParser extends DefaultHandler {
     }
 
     private boolean isValidRSS(String xmlData) {
-        if (xmlData == null || xmlData.trim().indexOf("<?xml") != 0 || xmlData.indexOf("<trip") == -1) {
-            return false;
-        }
-        return true;
+        return xmlData != null && xmlData.trim().indexOf("<?xml") == 0 && xmlData.indexOf("<trip") != -1;
     }
 }

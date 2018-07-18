@@ -25,16 +25,16 @@ public class AlertAdapter extends ArrayAdapter<Alerts> {
     public AlertAdapter(Context context, int resource, List<Alerts> alerts) {
         super(context, resource);
         this.viewId = resource;
-        this.alertItems = alerts;
+        alertItems = alerts;
         Log.d(LOG_NAME, "Constructor called of " + LOG_NAME);
     }
 
     public int getCount() {
-        return (this.alertItems != null ? this.alertItems.size() : 0);
+        return (alertItems != null ? alertItems.size() : 0);
     }
 
     public static List<Alerts> getAlerts() {
-        return self.alertItems;
+        return alertItems;
     }
 
     private LayoutInflater getInflator() {

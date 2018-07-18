@@ -129,13 +129,13 @@ public class StationsHandler {
     }
     
     public List<Station> getStations() {
-        return this.stations;   
+        return stations;
     }
 
     public void setStations(List<Station> stationsList) {
-        if ( this.stations.size() > 0 ) {
+        if ( stations.size() > 0 ) {
             return;
         }
-        this.stations.addAll(stationsList);
+        stations.addAll(stationsList);
     }
 }

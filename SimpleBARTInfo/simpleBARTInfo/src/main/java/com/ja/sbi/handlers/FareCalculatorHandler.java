@@ -38,8 +38,7 @@ public class FareCalculatorHandler {
 
     private static LoadingSpinner dialog = null;
 
-    private static final String SELECT_DEPARTURE_TEXT = "Please Select Departue Station";
-    private static final String SELECT_ARRIVAL_TEXT = "Please Select Arrival Station";
+    private static final String SELECT_STATION_TEXT = "Please Select Station";
 
     private static Fare currentFare;
 
@@ -90,8 +89,8 @@ public class FareCalculatorHandler {
 
                 final List<String> stationData = new ArrayList<String>();
                 final List<String> stationCodes = new ArrayList<String>();
-                stationData.add(SELECT_DEPARTURE_TEXT);
-                stationCodes.add(SELECT_ARRIVAL_TEXT);
+                stationData.add(SELECT_STATION_TEXT);
+                stationCodes.add(SELECT_STATION_TEXT);
 
                 int i = 0;
                 for (StationData data : trainStops) {
@@ -158,7 +157,7 @@ public class FareCalculatorHandler {
         if (FareCalculatorHandler.sourceStation == null || FareCalculatorHandler.destinationStation == null) {
             return;
         }
-        if (FareCalculatorHandler.sourceStation.equals(SELECT_DEPARTURE_TEXT) || FareCalculatorHandler.destinationStation.equals(SELECT_ARRIVAL_TEXT)) {
+        if (FareCalculatorHandler.sourceStation.equals(SELECT_STATION_TEXT) || FareCalculatorHandler.destinationStation.equals(SELECT_STATION_TEXT)) {
             return;
         }
 

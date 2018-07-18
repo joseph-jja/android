@@ -85,7 +85,7 @@ public class TrainsAtStationParser extends DefaultHandler {
         }
     }
 
-    public void endElement(String uri, String name, String qName) throws SAXException {
+    public void endElement(String uri, String name, String qName) {
 
         if (name.trim().equals("station")) {
             inStationTag = false;
@@ -196,10 +196,7 @@ public class TrainsAtStationParser extends DefaultHandler {
     }
 
     private boolean isValidRSS(String xmlData) {
-        if (xmlData == null || xmlData.trim().indexOf("<?xml") != 0 || xmlData.indexOf("<destination") == -1) {
-            return false;
-        }
-        return true;
+        return xmlData != null && xmlData.trim().indexOf("<?xml") == 0 && xmlData.indexOf("<destination") != -1;
     }
 
 }

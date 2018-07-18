@@ -25,17 +25,17 @@ public class StationListAdapter extends ArrayAdapter<Station> {
 	public StationListAdapter(Context context, int resource, List<Station> stations) {
 		super(context, resource);
 		this.viewId = resource;
-		this.stations = stations;
+		StationListAdapter.stations = stations;
 		Log.d(LOG_NAME, "Constructor called of " + LOG_NAME);
 		self = this;
 	}
 	
 	public int getCount() { 
-		return ( this.stations != null ) ? this.stations.size() : 0;
+		return ( stations != null ) ? stations.size() : 0;
 	}
 	
 	public static List<Station> getStationNames() { 
-		return self.stations;
+		return stations;
 	}
 	
 	private LayoutInflater getInflator() { 

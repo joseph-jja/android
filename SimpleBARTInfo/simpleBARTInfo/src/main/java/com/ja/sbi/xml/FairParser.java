@@ -77,10 +77,7 @@ public class FairParser extends DefaultHandler {
     }
 
     private boolean isValidRSS(String xmlData) {
-        if (xmlData == null || xmlData.trim().indexOf("<?xml") != 0 || xmlData.indexOf("<trip") == -1) {
-            return false;
-        }
-        return true;
+        return xmlData != null && xmlData.trim().indexOf("<?xml") == 0 && xmlData.indexOf("<trip") != -1;
     }
 
 }
