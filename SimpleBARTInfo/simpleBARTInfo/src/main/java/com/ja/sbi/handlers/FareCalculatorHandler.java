@@ -16,9 +16,9 @@ import com.ja.sbi.SimpleBARTInfo;
 import com.ja.sbi.bart.api.APIConstants;
 import com.ja.sbi.bart.api.BaseDownloader;
 import com.ja.sbi.bart.api.StationDownloader;
-import com.ja.sbi.trains.beans.Fare;
-import com.ja.sbi.trains.beans.Station;
-import com.ja.sbi.trains.beans.StationData;
+import com.ja.sbi.beans.Fare;
+import com.ja.sbi.beans.Station;
+import com.ja.sbi.beans.StationData;
 import com.ja.sbi.xml.FairParser;
 
 import java.util.ArrayList;

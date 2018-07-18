@@ -1,4 +1,4 @@
-package com.ja.sbi.trains.beans;
+package com.ja.sbi.beans;
 
 import java.util.Comparator;
 

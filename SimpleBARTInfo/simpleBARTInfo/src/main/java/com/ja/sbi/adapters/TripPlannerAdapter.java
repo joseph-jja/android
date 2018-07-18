@@ -5,15 +5,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import com.ja.sbi.R;
-import com.ja.sbi.trains.beans.Fare;
-import com.ja.sbi.trains.beans.Station;
-import com.ja.sbi.trains.beans.StationData;
-import com.ja.sbi.trains.beans.Trip;
-import com.ja.sbi.trains.beans.TripLeg;
+import com.ja.sbi.beans.Fare;
+import com.ja.sbi.beans.StationData;
+import com.ja.sbi.beans.Trip;
+import com.ja.sbi.beans.TripLeg;
 
 import java.util.List;
 

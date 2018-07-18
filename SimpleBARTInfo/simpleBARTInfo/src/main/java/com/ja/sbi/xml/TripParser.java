@@ -1,8 +1,8 @@
 package com.ja.sbi.xml;
 
-import com.ja.sbi.trains.beans.Fare;
-import com.ja.sbi.trains.beans.Trip;
-import com.ja.sbi.trains.beans.TripLeg;
+import com.ja.sbi.beans.Fare;
+import com.ja.sbi.beans.Trip;
+import com.ja.sbi.beans.TripLeg;
 
 import org.xml.sax.Attributes;
 import org.xml.sax.InputSource;
@@ -18,8 +18,6 @@ import java.util.List;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
-
-import com.ja.sbi.trains.beans.Fare;
 
 public class TripParser extends DefaultHandler {
 

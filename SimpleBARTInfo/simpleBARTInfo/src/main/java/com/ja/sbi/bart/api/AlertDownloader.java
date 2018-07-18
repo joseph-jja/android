@@ -2,7 +2,7 @@ package com.ja.sbi.bart.api;
 
 import android.util.Log;
 
-import com.ja.sbi.trains.beans.Alerts;
+import com.ja.sbi.beans.Alerts;
 import com.ja.sbi.xml.AlertParser;
 
 import java.util.List;

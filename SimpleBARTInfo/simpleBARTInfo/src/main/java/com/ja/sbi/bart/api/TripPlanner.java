@@ -4,7 +4,7 @@ import android.util.Log;
 
 import java.util.List;
 
-import com.ja.sbi.trains.beans.Trip;
+import com.ja.sbi.beans.Trip;
 
 /**
  * plan a trip

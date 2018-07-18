@@ -14,8 +14,8 @@ import com.ja.sbi.R;
 import com.ja.sbi.SimpleBARTInfo;
 import com.ja.sbi.adapters.TrainListAdapter;
 import com.ja.sbi.bart.api.TrainDownloader;
-import com.ja.sbi.trains.beans.Station;
-import com.ja.sbi.trains.beans.Train;
+import com.ja.sbi.beans.Station;
+import com.ja.sbi.beans.Train;
 
 import java.util.List;
 

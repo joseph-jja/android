@@ -9,14 +9,13 @@ import android.util.Log;
 import com.ja.sbi.R;
 import com.ja.sbi.SimpleBARTInfo;
 import com.ja.sbi.bart.api.StationDownloader;
-import com.ja.sbi.trains.beans.Station;
+import com.ja.sbi.beans.Station;
 import com.ja.sbi.adapters.StationListAdapter;
 import com.ja.sbi.listeners.StationListener;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import android.util.Log;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;

@@ -13,7 +13,7 @@ import com.ja.sbi.R;
 import com.ja.sbi.SimpleBARTInfo;
 import com.ja.sbi.adapters.AlertAdapter;
 import com.ja.sbi.bart.api.AlertDownloader;
-import com.ja.sbi.trains.beans.Alerts;
+import com.ja.sbi.beans.Alerts;
 
 import java.util.ArrayList;
 import java.util.List;

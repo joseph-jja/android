@@ -2,7 +2,7 @@ package com.ja.sbi.bart.api;
 
 import android.util.Log;
 
-import com.ja.sbi.trains.beans.Station;
+import com.ja.sbi.beans.Station;
 import com.ja.sbi.xml.StationsParser;
 
 import java.io.IOException;

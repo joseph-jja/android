@@ -20,8 +20,8 @@ import com.ja.sbi.map.BartMapManager;
 
 import android.widget.RadioButton;
 
-import com.ja.sbi.trains.beans.Station;
-import com.ja.sbi.trains.beans.Trip;
+import com.ja.sbi.beans.Station;
+import com.ja.sbi.beans.Trip;
 
 import android.view.View;
 

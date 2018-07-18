@@ -1,6 +1,5 @@
 package com.ja.sbi.listeners;
 
-import android.content.Context;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -8,8 +7,8 @@ import android.widget.ListView;
 import com.ja.sbi.R;
 import com.ja.sbi.SimpleBARTInfo;
 import com.ja.sbi.adapters.TripLegAdapter;
-import com.ja.sbi.trains.beans.StationData;
-import com.ja.sbi.trains.beans.Trip;
+import com.ja.sbi.beans.StationData;
+import com.ja.sbi.beans.Trip;
 
 import java.util.List;
 

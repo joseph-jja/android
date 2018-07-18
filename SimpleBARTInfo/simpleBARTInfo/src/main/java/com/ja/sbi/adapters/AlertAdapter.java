@@ -9,7 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import com.ja.sbi.R;
-import com.ja.sbi.trains.beans.Alerts;
+import com.ja.sbi.beans.Alerts;
 
 import java.util.List;
 

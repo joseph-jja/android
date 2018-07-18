@@ -1,7 +1,7 @@
 package com.ja.sbi.xml;
 
 import com.ja.sbi.bart.api.APIConstants;
-import com.ja.sbi.trains.beans.Fare;
+import com.ja.sbi.beans.Fare;
 
 import org.xml.sax.Attributes;
 import org.xml.sax.InputSource;

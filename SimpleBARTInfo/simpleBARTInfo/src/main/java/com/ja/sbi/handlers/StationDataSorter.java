@@ -1,6 +1,6 @@
 package com.ja.sbi.handlers;
 
-import com.ja.sbi.trains.beans.StationData;
+import com.ja.sbi.beans.StationData;
 
 import java.util.Comparator;
 

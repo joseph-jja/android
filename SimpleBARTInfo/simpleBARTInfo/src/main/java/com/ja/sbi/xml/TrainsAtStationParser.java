@@ -3,8 +3,8 @@ package com.ja.sbi.xml;
 import android.annotation.TargetApi;
 import android.os.Build;
 
-import com.ja.sbi.trains.beans.Station;
-import com.ja.sbi.trains.beans.Train;
+import com.ja.sbi.beans.Station;
+import com.ja.sbi.beans.Train;
 
 import org.xml.sax.Attributes;
 import org.xml.sax.InputSource;
@@ -21,8 +21,6 @@ import java.util.List;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
-
-import com.ja.sbi.xml.XMLUtils;
 
 /**
  * simple rss feed parser that puts data into a table
