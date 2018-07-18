@@ -86,6 +86,10 @@ public class TripPlannerHandler {
         refresh.start();
     }
 
+    public static List<Trip> getTrips() {
+        return TripPlannerHandler.trips;
+    }
+
     private final Handler initializeHandler = new Handler() {
 
         public void handleMessage(Message msg) {
@@ -248,20 +252,26 @@ public class TripPlannerHandler {
         refresh.start();
     }
 
+    public static void LoadInitialScreen(SimpleBARTInfo sbiThread) {
+
+        ListView results = (ListView) sbiThread.findViewById(R.id.trip_planner_results);
+        TripPlannerAdapter adapter = new TripPlannerAdapter(sbiThread, R.layout.trip_data, TripPlannerHandler.trips);
+        adapter.setStationData(TripPlannerHandler.trainStops);
+        results.setAdapter(adapter);
+
+        TripDetailsListener listener = new TripDetailsListener();
+        listener.setTripList(TripPlannerHandler.trips);
+        listener.setStationData(TripPlannerHandler.trainStops);
+        results.setOnItemClickListener(listener);
+    }
+
     private final Handler updateHandler = new Handler() {
 
         public void handleMessage(Message msg) {
 
             SimpleBARTInfo sbiThread = (SimpleBARTInfo) msg.obj;
 
-            ListView results = (ListView) sbiThread.findViewById(R.id.trip_planner_results);
-            TripPlannerAdapter adapter = new TripPlannerAdapter(sbiThread, R.layout.trip_data, TripPlannerHandler.trips);
-            adapter.setStationData(TripPlannerHandler.trainStops);
-            results.setAdapter(adapter);
-
-            TripDetailsListener listener = new TripDetailsListener();
-            listener.setTripList(TripPlannerHandler.trips);
-            results.setOnItemClickListener(listener);
+            LoadInitialScreen(sbiThread);
 
             Log.d(LOG_NAME, "Got something.");
             TripPlannerHandler.dialog.dismiss();

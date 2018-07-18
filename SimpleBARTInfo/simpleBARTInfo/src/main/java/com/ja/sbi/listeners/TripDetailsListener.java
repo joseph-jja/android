@@ -31,13 +31,11 @@ public class TripDetailsListener implements AdapterView.OnItemClickListener  {
         Trip currentTrip = this.trips.get(position);
         SimpleBARTInfo sbi = (SimpleBARTInfo) parent.getContext();
 
-        sbi.setContentView(R.layout.trip_details);
-
-        TripLegAdapter tripLeg = new TripLegAdapter(sbi, R.layout.trip_details, currentTrip.getLegs());
+        TripLegAdapter tripLeg = new TripLegAdapter(sbi, R.layout.trip_legs, currentTrip.getLegs());
         tripLeg.setStationData(this.stationData);
 
-        ListView list = (ListView)sbi.findViewById(R.id.trip_planner_leg_rows);
-        //list.setAdapter(tripLeg);
+        ListView list = (ListView)sbi.findViewById(R.id.trip_planner_results);
+        list.setAdapter(tripLeg);
     }
 
 }

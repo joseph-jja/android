@@ -21,6 +21,7 @@ import com.ja.sbi.map.BartMapManager;
 import android.widget.RadioButton;
 
 import com.ja.sbi.trains.beans.Station;
+import com.ja.sbi.trains.beans.Trip;
 
 import android.view.View;
 
@@ -64,6 +65,14 @@ public class SimpleBARTInfo extends BaseActivity {
 
         Log.d(LOG_NAME, "In the key press event method " + keyCode);
         if (keyCode == 4) {
+            View res = this.findViewById(R.id.trip_leg_origin_name);
+            if (res != null) {
+                final List<Trip> trips = TripPlannerHandler.getTrips();
+                if (trips.size() > 0) {
+                    TripPlannerHandler.LoadInitialScreen(this);
+                    return true;
+                }
+            }
             setContentView(R.layout.stations);
             stations.initializeActivity(this, true);
             return true;

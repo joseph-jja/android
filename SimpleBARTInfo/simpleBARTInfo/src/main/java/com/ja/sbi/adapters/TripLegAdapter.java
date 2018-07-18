@@ -85,13 +85,13 @@ public class TripLegAdapter extends ArrayAdapter<TripLeg> {
                 holder = (TripLegViewHolder) rView.getTag();
             }
 
-            holder.tripLegOriginName.setText(findStationLongName(origin));
-            holder.tripLegDestinationName.setText(findStationLongName(destination));
+            holder.tripLegOriginName.setText("Stop Name: " + findStationLongName(origin));
+            holder.tripLegDestinationName.setText("Stop Name: " + findStationLongName(destination));
 
-            holder.tripLegOriginDateTime.setText(tripLegStartTime);
-            holder.tripLegDestinationDateTime.setText(tripLegEndTime);
+            holder.tripLegOriginDateTime.setText("Est Leave Time: " + tripLegStartTime);
+            holder.tripLegDestinationDateTime.setText("Est Arrive Time: " + tripLegEndTime);
 
-            holder.trainEndStationName.setText(trainHeadStationName);
+            holder.trainEndStationName.setText("Train Name: " + findStationLongName(trainHeadStationName));
         }
         return rView;
     }
