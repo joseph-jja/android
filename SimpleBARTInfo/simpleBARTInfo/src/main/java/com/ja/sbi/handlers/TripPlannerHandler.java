@@ -25,6 +25,7 @@ import com.ja.sbi.trains.beans.Station;
 import com.ja.sbi.xml.TripParser;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -107,6 +108,18 @@ public class TripPlannerHandler {
                 destinationStop.setAdapter(destinationAdapter);
 
             }
+            Spinner month = (Spinner)sbiThread.findViewById(R.id.tripMonth);
+            Spinner day = (Spinner)sbiThread.findViewById(R.id.tripDay);
+            Spinner year = (Spinner)sbiThread.findViewById(R.id.tripFullYear);
+
+            Calendar cal = Calendar.getInstance();
+            int currentMonth = cal.get(Calendar.MONTH);
+
+            List<String> months = new ArrayList<String>();
+            months.add(Integer.valueOf(currentMonth).toString());
+
+            month.setAdapter(new ArrayAdapter<String>(sbiThread, android.R.layout.simple_spinner_item, months));
+
         }
 
     };

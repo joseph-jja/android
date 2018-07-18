@@ -1,72 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-android:id="@+id/widget1"
-android:layout_width="fill_parent"
-android:layout_height="fill_parent"
-xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
 
-<TextView
-android:id="@+id/trip_planner_title"
-android:layout_height="wrap_content"
-android:layout_width="fill_parent"
-android:layout_marginBottom="5px"
-android:layout_marginLeft="10px"
-android:layout_marginRight="10px"
-android:textAppearance="@style/PageTitleText"
-android:text="@string/tripPlannerTitpe">
-</TextView>
-
-<Spinner android:layout_height="wrap_content" 
-         android:layout_width="fill_parent" 
-         android:id="@+id/tpStationOriginList"></Spinner>
-
-<Spinner android:layout_height="wrap_content" 
-         android:layout_width="fill_parent" 
-         android:id="@+id/tpStationDestList"></Spinner>
-
-         <!-- MM DD YYYY -->
-<Spinner android:layout_height="wrap_content" 
-         android:layout_width="wrap_content" 
-         android:id="@+id/tripMonth"></Spinner>
-<Spinner android:layout_height="wrap_content" 
-         android:layout_width="wrap_content" 
-         android:id="@+id/tripDay"></Spinner>
-<Spinner android:layout_height="wrap_content" 
-         android:layout_width="wrap_content" 
-         android:id="@+id/tripFullYear"></Spinner>
-
-         <!-- HH Minutes -->
-<Spinner android:layout_height="wrap_content" 
-         android:layout_width="wrap_content" 
-         android:id="@+id/tpTripHours"></Spinner>
-<Spinner android:layout_height="wrap_content" 
-         android:layout_width="wrap_content" 
-         android:id="@+id/tpTripMinutes"></Spinner>
-
-     <!--
-    <RadioButtonGroup
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/trip_planner_title"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_marginBottom="5px"
+        android:layout_marginLeft="10px"
+        android:layout_marginRight="10px"
+        android:text="@string/tripPlannerTitpe"
+        android:textAppearance="@style/PageTitleText"></TextView>
 
-        <RadioButton
-            android:id="@+id/trap_arrival_time"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="onRadioButtonClicked"
-            android:text="@string/trip_arrival" />
+    <Spinner
+        android:id="@+id/tpStationOriginList"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"></Spinner>
 
-        <RadioButton
-            android:id="@+id/trip_departure_time"
+    <Spinner
+        android:id="@+id/tpStationDestList"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"></Spinner>
+
+    <!-- MM DD YYYY -->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/tripMonth"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="onRadioButtonClicked"
-            android:text="@string/trip_departure" />
-    </RadioButtonGroup>
-    -->
+            android:layout_height="wrap_content"></Spinner>
+
+        <Spinner
+            android:id="@+id/tripDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></Spinner>
+
+        <Spinner
+            android:id="@+id/tripFullYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></Spinner>
+    </LinearLayout>
+
+    <!-- HH Minutes -->
+    <Spinner
+        android:id="@+id/tpTripHours"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></Spinner>
+
+    <Spinner
+        android:id="@+id/tpTripMinutes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></Spinner>
+
+    <!--
+   <RadioButtonGroup
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical">
+
+       <RadioButton
+           android:id="@+id/trap_arrival_time"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:onClick="onRadioButtonClicked"
+           android:text="@string/trip_arrival" />
+
+       <RadioButton
+           android:id="@+id/trip_departure_time"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:onClick="onRadioButtonClicked"
+           android:text="@string/trip_departure" />
+   </RadioButtonGroup>
+   -->
     <ListView
         android:id="@+id/trip_planner_results"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"></ListView>
-        
+
 </LinearLayout>
