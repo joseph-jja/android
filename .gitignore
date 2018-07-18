@@ -7,3 +7,4 @@ database/build/**
 ui_libs/build/**
 SimpleBARTInfo/build/**
 MinnowRSS/build/**
+local.properties
