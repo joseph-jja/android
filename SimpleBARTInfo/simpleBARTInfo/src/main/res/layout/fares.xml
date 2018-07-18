@@ -38,18 +38,21 @@
             android:id="@+id/fareValue"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
             android:textAppearance="@style/DefaultText"></TextView>
 
         <TextView
             android:id="@+id/clipperFare"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
             android:textAppearance="@style/DefaultText" />
 
         <TextView
             android:id="@+id/seniorDisabledClipper"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
             android:textAppearance="@style/DefaultText" />
 
         <!--

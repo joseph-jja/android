@@ -7,8 +7,8 @@
 
     <ImageView
         android:id="@+id/bart_map_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
         android:layout_gravity="top|left|fill"
         android:adjustViewBounds="true"
         android:src="@drawable/bart_cc_map" />

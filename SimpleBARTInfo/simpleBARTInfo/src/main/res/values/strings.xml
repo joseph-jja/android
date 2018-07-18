@@ -4,6 +4,6 @@
     <string name="trip_departure">Departure Date/Time</string>
     <string name="trip_arrival">Arrival Date/Time</string>
     <string name="fareTitle">Fair Estimator</string>
-    <string name="tripPlannerTitpe">Trip Plan Estimator</string>
+    <string name="tripPlannerTitle">Trip Plan Estimator</string>
     <string name="about_app">A simple BART application \nBy \nJoseph Acosta</string>
 </resources>

@@ -38,6 +38,9 @@ public class TripPlannerHandler {
 
     private static final String SELECT_STATION_TEXT = "Please Select Station";
 
+    private static String sourceStation = null;
+    private static String destinationStation = null;
+
     private static LoadingSpinner dialog = null;
 
 
@@ -107,19 +110,82 @@ public class TripPlannerHandler {
                 destinationAdapter.setDropDownViewResource(R.layout.spinner_item);
                 destinationStop.setAdapter(destinationAdapter);
 
+                sourceStop.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+
+                    @Override
+                    public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id) {
+                        // TODO Auto-generated method stub
+                        Log.d(LOG_NAME, "Position is everything: " + position + " data = "
+                                + stationData.get(position) + " key = " + stationCodes.get(position));
+
+                        TripPlannerHandler.sourceStation = stationCodes.get(position);
+
+                        //getFare(sbiThread);
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> adapterView) {
+
+                    }
+                });
+
+                destinationStop.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+
+                    @Override
+                    public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id) {
+                        // TODO Auto-generated method stub
+                        Log.d(LOG_NAME, "Second position: " + position + " data = "
+                                + stationData.get(position) + " key = " + stationCodes.get(position));
+
+                        TripPlannerHandler.destinationStation = stationCodes.get(position);
+
+                        //getFare(sbiThread);
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> adapterView) {
+
+                    }
+                });
+
             }
             Spinner month = (Spinner)sbiThread.findViewById(R.id.tripMonth);
             Spinner day = (Spinner)sbiThread.findViewById(R.id.tripDay);
             Spinner year = (Spinner)sbiThread.findViewById(R.id.tripFullYear);
 
             Calendar cal = Calendar.getInstance();
-            int currentMonth = cal.get(Calendar.MONTH);
+            int currentMonth = cal.get(Calendar.MONTH)+ 1;
+            int currentDay = cal.get(Calendar.DAY_OF_MONTH);
+            int currentYear = cal.get(Calendar.YEAR);
 
             List<String> months = new ArrayList<String>();
             months.add(Integer.valueOf(currentMonth).toString());
-
             month.setAdapter(new ArrayAdapter<String>(sbiThread, android.R.layout.simple_spinner_item, months));
 
+            List<String> days = new ArrayList<String>();
+            days.add(Integer.valueOf(currentDay).toString());
+            day.setAdapter(new ArrayAdapter<String>(sbiThread, android.R.layout.simple_spinner_item, days));
+
+            List<String> years = new ArrayList<String>();
+            years.add(Integer.valueOf(currentYear).toString());
+            year.setAdapter(new ArrayAdapter<String>(sbiThread, android.R.layout.simple_spinner_item, years));
+
+            Spinner hour = (Spinner)sbiThread.findViewById(R.id.tpTripHours);
+            Spinner minute = (Spinner)sbiThread.findViewById(R.id.tpTripMinutes);
+            int currentHour = cal.get(Calendar.HOUR);
+            int currentMinute = cal.get(Calendar.MINUTE);
+
+            List<String> hours = new ArrayList<String>();
+            for ( int i =0 ; i < 24; i++ ) {
+                hours.add(Integer.valueOf(i).toString());
+            }
+            hour.setAdapter(new ArrayAdapter<String>(sbiThread, android.R.layout.simple_spinner_item, hours));
+
+            List<String> minutes = new ArrayList<String>();
+            for ( int i =0 ; i < 60; i++ ) {
+                minutes.add(Integer.valueOf(i).toString());
+            }
+            minute.setAdapter(new ArrayAdapter<String>(sbiThread, android.R.layout.simple_spinner_item, minutes));
         }
 
     };

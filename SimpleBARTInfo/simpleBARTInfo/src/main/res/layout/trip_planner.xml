@@ -12,7 +12,7 @@
         android:layout_marginBottom="5px"
         android:layout_marginLeft="10px"
         android:layout_marginRight="10px"
-        android:text="@string/tripPlannerTitpe"
+        android:text="@string/tripPlannerTitle"
         android:textAppearance="@style/PageTitleText"></TextView>
 
     <Spinner
@@ -26,37 +26,58 @@
         android:layout_height="wrap_content"></Spinner>
 
     <!-- MM DD YYYY -->
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5px"
+        android:layout_marginLeft="10px"
+        android:text="Select Date"
+        android:textAppearance="@style/NameText"/>
+
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <Spinner
             android:id="@+id/tripMonth"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"></Spinner>
+            android:layout_height="fill_parent"></Spinner>
 
         <Spinner
             android:id="@+id/tripDay"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"></Spinner>
+            android:layout_height="fill_parent"></Spinner>
 
         <Spinner
             android:id="@+id/tripFullYear"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"></Spinner>
+            android:layout_height="fill_parent"></Spinner>
     </LinearLayout>
 
     <!-- HH Minutes -->
-    <Spinner
-        android:id="@+id/tpTripHours"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"></Spinner>
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5px"
+        android:layout_marginLeft="10px"
+        android:text="Select Time"
+        android:textAppearance="@style/NameText"/>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
-    <Spinner
-        android:id="@+id/tpTripMinutes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"></Spinner>
+        <Spinner
+            android:id="@+id/tpTripHours"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"></Spinner>
+
+        <Spinner
+            android:id="@+id/tpTripMinutes"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"></Spinner>
+    </LinearLayout>
 
     <!--
    <RadioButtonGroup
