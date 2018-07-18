@@ -24,7 +24,7 @@ import com.ja.sbi.xml.FairParser;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FareCalculatorHandler {
+public class FareCalculatorHandler implements StationListSpinnerIface {
 
     private final String LOG_NAME = this.getClass().getName();
     private static final List<StationData> trainStops = new ArrayList<StationData>();
@@ -37,6 +37,10 @@ public class FareCalculatorHandler {
     private static final String SELECT_STATION_TEXT = "Please Select Station";
 
     private static Fare currentFare;
+    private final FareCalculatorHandler self = this;
+
+    private static StationListSpinnerHandler sourceStop;
+    private static StationListSpinnerHandler destinationStop;
 
     public FareCalculatorHandler(Context context, List<Station> stations) {
 
@@ -48,7 +52,7 @@ public class FareCalculatorHandler {
         final Thread refresh = new Thread() {
             public void run() {
                 try {
-                    final List<Station> stationList = ((localStationCopy != null && localStationCopy.size() > 0) ? localStationCopy: StationDownloader.getStationList());
+                    final List<Station> stationList = ((localStationCopy != null && localStationCopy.size() > 0) ? localStationCopy : StationDownloader.getStationList());
                     trainStops.clear();
                     List<StationData> sortedTrainStops = StationListSpinnerHandler.convertStationsToStationData(stationList);
                     trainStops.addAll(sortedTrainStops);
@@ -73,64 +77,13 @@ public class FareCalculatorHandler {
             FareCalculatorHandler.dialog.dismiss();
 
             if (trainStops != null && trainStops.size() > 0) {
-                Spinner sourceStop = (Spinner) sbiThread.findViewById(R.id.stationInList);
-                Spinner destinationStop = (Spinner) sbiThread.findViewById(R.id.stationsAvailable);
 
-                final List<String> stationData = new ArrayList<String>();
-                final List<String> stationCodes = new ArrayList<String>();
-                stationData.add(SELECT_STATION_TEXT);
-                stationCodes.add(SELECT_STATION_TEXT);
+                FareCalculatorHandler.sourceStop = new StationListSpinnerHandler(sbiThread, R.id.stationInList);
+                FareCalculatorHandler.sourceStop.initializeSpinnerLists(trainStops, self);
 
-                for (StationData data : trainStops) {
-                    stationData.add(data.getStationName());
-                    stationCodes.add(data.getStationCode());
-                }
+                FareCalculatorHandler.destinationStop = new StationListSpinnerHandler(sbiThread, R.id.stationsAvailable);
+                FareCalculatorHandler.destinationStop.initializeSpinnerLists(trainStops, self);
 
-                ArrayAdapter sourceAdapter = new ArrayAdapter<String>(sbiThread, android.R.layout.simple_spinner_item, stationData);
-                sourceAdapter.setDropDownViewResource(R.layout.spinner_item);
-                sourceStop.setAdapter(sourceAdapter);
-
-                ArrayAdapter destinationAdapter = new ArrayAdapter<String>(sbiThread, android.R.layout.simple_spinner_item, stationData);
-                destinationAdapter.setDropDownViewResource(R.layout.spinner_item);
-                destinationStop.setAdapter(destinationAdapter);
-
-                sourceStop.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-
-                    @Override
-                    public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id) {
-                        // TODO Auto-generated method stub
-                        Log.d(LOG_NAME, "Position is everything: " + position + " data = "
-                                + stationData.get(position) + " key = " + stationCodes.get(position));
-
-                        FareCalculatorHandler.sourceStation = stationCodes.get(position);
-
-                        processSpinnerListData(sbiThread);
-                    }
-
-                    @Override
-                    public void onNothingSelected(AdapterView<?> adapterView) {
-
-                    }
-                });
-
-                destinationStop.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-
-                    @Override
-                    public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id) {
-                        // TODO Auto-generated method stub
-                        Log.d(LOG_NAME, "Second position: " + position + " data = "
-                                + stationData.get(position) + " key = " + stationCodes.get(position));
-
-                        FareCalculatorHandler.destinationStation = stationCodes.get(position);
-
-                        processSpinnerListData(sbiThread);
-                    }
-
-                    @Override
-                    public void onNothingSelected(AdapterView<?> adapterView) {
-
-                    }
-                });
             }
         }
     };
@@ -138,6 +91,9 @@ public class FareCalculatorHandler {
     public void processSpinnerListData(SimpleBARTInfo sbi) {
 
         final SimpleBARTInfo bartInfoActivity = sbi;
+
+        FareCalculatorHandler.sourceStation = FareCalculatorHandler.sourceStop.getSelectStationText();
+        FareCalculatorHandler.destinationStation =FareCalculatorHandler.destinationStop.getSelectStationText();
 
         Log.d(LOG_NAME, "Codes: " + FareCalculatorHandler.sourceStation + " = " + FareCalculatorHandler.destinationStation);
 
@@ -154,7 +110,7 @@ public class FareCalculatorHandler {
 
             public void run() {
                 try {
-                    // call api here
+                    // call fare api here
                     final String fairData = BaseDownloader.retriever.downloadURL(APIConstants.FAIR_API + FareCalculatorHandler.sourceStation + APIConstants.FAIR_DEST + FareCalculatorHandler.destinationStation + APIConstants.KEY_STRING_API, 0);
 
                     List<Fare> fares = parser.parseDocument(fairData);
