@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<title>Project Sizing</title>
+<style type="text/css">
+body { font-size: 1em; }
+form, #sizeElement {
+    text-align: center; 
+    margin: 15px; 
+}
+button, #sizeElement span { 
+    font-size: 1.25em;
+}
+#sizeElement span {
+    border: black solid 2px; 
+    -webkit-border-radius: 15px; 
+    display: block; 
+    width: 70px;
+    padding: 5px; 
+    margin: 0 auto;
+}
+#sizeChart {
+    margin: 0 auto; 
+}
+#content { 
+    background-image: url('white_t_shirt.jpg');
+    background-repeat: no-repeat;
+    margin: 0 auto; 
+    padding-top: 65px;
+    height: 225px; 
+    width: 200px;
+}
+</style>
+</head>
+<body>
+<form onsubmit="return false;">
+	<button type="button" onclick="renderRandomSize();">
+	Guess<br>T-shirt<br>Size
+	</button>
+    <button type="button" onclick="showHideChart();">
+    Show/Hide<br>Size<br>Chart
+    </button>
+</form>
+<div id="sizeElement">
+<div id="content"></div>
+</div>
+<img id="sizeChart" src="treatment_size_chart.png" style="display:none;"/>
+<script type="text/javascript">
+function renderRandomSize() {
+	var sizes = ["XP", "Petite", "XXS", "XS", "S", "2S", "3S", "M", "2M", "3M", "4M", "L", "2L", "3L", "XL", "2XL", "3XL", "BIG"];
+	var mm = [ 1, 2, 4, 6, 10, 15, 20, 30, 40, 50, 60, 75, 90, 100, 125, 150, 200, 300 ];
+	var random = Math.random(mm.length*mm.length);
+	var round = Math.round(random * 1000) % 18;
+	var div = document.getElementById("content");
+	if ( div ) { 
+	    div.innerHTML =  "<span>Size is a " + sizes[round] + "<br> " + mm[round] + " man months</span>";
+	}
+}
+function showHideChart() {
+    var e = document.getElementById("sizeChart");
+    if ( ! e ) { return; }
+    if ( e.style.display === 'none' ) { 
+        e.style.display = 'block';
+    } else {
+        e.style.display = 'none';
+    }
+}
+window.addEventListener('DOMContentLoaded', renderRandomSize);
+</script>
+
+</body>
+</html>
