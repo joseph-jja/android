@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ScrollView;
 
 import com.ja.sbi.R;
@@ -22,6 +23,7 @@ public class BartMapManager {
     private int defaultImageWidth = 500;
     private int defaultImageHeight = 500;
 
+    private static LinearLayout parent;
     private static ScrollView vscroll;
     private static HorizontalScrollView hscroll;
     private static ImageView bartMapImage;
@@ -35,6 +37,8 @@ public class BartMapManager {
         // get image view
         BartMapManager.bartMapImage = (ImageView) ((SimpleBARTInfo) context).findViewById(R.id.bart_map_image);
         BartMapManager.bartMapImage.setAdjustViewBounds(true);
+
+        BartMapManager.parent = (LinearLayout)((SimpleBARTInfo)context).findViewById(R.id.bart_map_container);
 
         BartMapManager.hscroll = (HorizontalScrollView)((SimpleBARTInfo)context).findViewById(R.id.bart_map_hscroll);
         BartMapManager.vscroll = (ScrollView)((SimpleBARTInfo)context).findViewById(R.id.bart_map_vscroll);
@@ -76,6 +80,10 @@ public class BartMapManager {
 
         final int top = BartMapManager.hscroll.getTop();
         final int vheight = BartMapManager.vscroll.getHeight();
+
+        int pwidth = BartMapManager.parent.getWidth();
+        BartMapManager.hscroll.layout(0, top, pwidth, vheight);
+        //BartMapManager.vscroll.layout(0, top, pwidth, vheight);
         //Log.d(LOG_NAME,  BartMapManager.hscroll.getWidth()+ " " +  BartMapManager.hscroll.getMeasuredWidth());
         //BartMapManager.hscroll.layout(0, top, width, height);
         //BartMapManager.vscroll.layout(0, top, width, vheight);
