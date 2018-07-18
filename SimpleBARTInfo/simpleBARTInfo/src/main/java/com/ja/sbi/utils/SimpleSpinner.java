@@ -20,7 +20,8 @@ public class SimpleSpinner {
     private String selectedText;
 
     public SimpleSpinner(SimpleBARTInfo sbiContext, int spinnerID,
-                         String defaultText, final List<String> spinnerData,
+                         final List<String> spinnerData,
+                         String selectedValue,
                          final StationListSpinnerIface methodImpl) {
 
         dropdown = (Spinner) sbiContext.findViewById(spinnerID);
@@ -30,6 +31,8 @@ public class SimpleSpinner {
         ArrayAdapter sourceAdapter = new ArrayAdapter<String>(sbiContext, android.R.layout.simple_spinner_item, spinnerData);
         sourceAdapter.setDropDownViewResource(R.layout.spinner_item);
         this.dropdown.setAdapter(sourceAdapter);
+
+        this.dropdown.setSelection(sourceAdapter.getPosition(selectedValue));
 
         this.dropdown.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 

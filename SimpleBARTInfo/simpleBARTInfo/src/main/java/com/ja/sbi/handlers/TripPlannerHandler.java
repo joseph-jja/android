@@ -133,42 +133,55 @@ public class TripPlannerHandler implements StationListSpinnerIface {
                 int currentYear = cal.get(Calendar.YEAR);
                 int currentHour = cal.get(Calendar.HOUR);
                 int currentMinute = cal.get(Calendar.MINUTE);
-
-                List<String> months = new ArrayList<String>();
-                months.add(paddNumber(currentMonth));
+                String useAMPM = (cal.get(Calendar.AM_PM) == 0 ? "AM" : "PM");
 
                 List<String> days = new ArrayList<String>();
                 days.add(paddNumber(currentDay));
 
                 cal.add(Calendar.DATE, 1);
-                currentDay = cal.get(Calendar.DAY_OF_MONTH);
-                days.add(paddNumber(currentDay));
+                int nextDay = cal.get(Calendar.DAY_OF_MONTH);
+                days.add(paddNumber(nextDay));
+
+                List<String> months = new ArrayList<String>();
+                months.add(paddNumber(currentMonth));
+
+                if ((cal.get(Calendar.MONTH) + 1) > currentMonth) {
+                    months.add(paddNumber(cal.get(Calendar.MONTH) + 1));
+                }
 
                 List<String> years = new ArrayList<String>();
                 years.add(Integer.valueOf(currentYear).toString());
-                years.add(Integer.valueOf(currentYear + 1).toString());
-
+                if ((cal.get(Calendar.YEAR)) > currentYear) {
+                    years.add(Integer.valueOf(cal.get(Calendar.YEAR)).toString());
+                }
+                
                 // mm/dd/yyyy
                 TripPlannerHandler.monthSpinner = new SimpleSpinner(sbiThread, R.id.tripMonth,
-                        null, months, self);
+                        months,
+                        Integer.valueOf(currentMonth).toString(), self);
                 TripPlannerHandler.daySpinner = new SimpleSpinner(sbiThread, R.id.tripDay,
-                        null, days, self);
+                        days,
+                        Integer.valueOf(currentDay).toString(), self);
                 TripPlannerHandler.yearSpinner = new SimpleSpinner(sbiThread, R.id.tripFullYear,
-                        null, years, self);
+                        years,
+                        Integer.valueOf(currentYear).toString(), self);
 
                 // time
                 TripPlannerHandler.hourSpinner = new SimpleSpinner(sbiThread, R.id.tpTripHours,
-                        null, TripPlannerHandler.hours, self);
+                        TripPlannerHandler.hours,
+                        Integer.valueOf(currentHour).toString(), self);
                 TripPlannerHandler.minuteSpinner = new SimpleSpinner(sbiThread, R.id.tpTripMinutes,
-                        null, TripPlannerHandler.minutes, self);
+                        TripPlannerHandler.minutes,
+                        Integer.valueOf(currentMinute).toString(), self);
 
                 // am pm
                 TripPlannerHandler.ampmSpinner = new SimpleSpinner(sbiThread, R.id.tpTripAMPM,
-                        null, TripPlannerHandler.ampm, self);
+                        TripPlannerHandler.ampm,
+                        useAMPM, self);
 
                 TripPlannerHandler.departArrive = new SimpleSpinner(sbiThread, R.id.tpDepartingOrArriving,
-                        null, TripPlannerHandler.arrivingOrDeparting, self);
-
+                        TripPlannerHandler.arrivingOrDeparting,
+                        "Departing", self);
             }
         }
     };
