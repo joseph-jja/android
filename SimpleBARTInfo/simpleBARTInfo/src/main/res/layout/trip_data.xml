@@ -1,66 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-android:layout_width="fill_parent"
-android:layout_height="wrap_content"
-android:orientation="vertical"
-android:layout_marginTop="10px"
-android:layout_marginBottom="5px"
-xmlns:android="http://schemas.android.com/apk/res/android"
->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5px"
+    android:layout_marginTop="10px"
+    android:orientation="vertical">
 
-<TextView
-android:id="@+id/trip_details"
-android:layout_width="fill_parent"
-android:layout_height="wrap_content"
-android:layout_gravity="left"
-android:textAppearance="@style/NameText"
->
-</TextView>
+    <TextView
+        android:id="@+id/trip_details"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:text="@string/tripPlannerDetails"
+        android:textAppearance="@style/NameText"></TextView>
 
-        <!-- source and destinaion -->
-<TextView
-android:id="@+id/trip_origin_name"
-android:layout_width="fill_parent"
-android:layout_height="wrap_content"
-android:layout_gravity="left"
-android:textAppearance="@style/NameText"
->
-</TextView>
-<TextView
-android:id="@+id/trip_destination_name"
-android:layout_width="fill_parent"
-android:layout_height="wrap_content"
-android:layout_gravity="left"
-android:textAppearance="@style/NameText"
->
-</TextView>
+    <!-- source and destinaion -->
+    <TextView
+        android:id="@+id/trip_origin_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:textAppearance="@style/NameText"></TextView>
 
-<!-- trip times -->
-<TextView
-android:id="@+id/trip_estimated_leave_time"
-android:layout_width="fill_parent"
-android:layout_height="wrap_content"
-android:layout_gravity="left"
-android:textAppearance="@style/DefaultText"
->
-</TextView>
-<TextView
-android:id="@+id/trip_estimate_arrival_time"
-android:layout_width="fill_parent"
-android:layout_height="wrap_content"
-android:layout_gravity="left"
-android:textAppearance="@style/DefaultText"
->
-</TextView>
+    <TextView
+        android:id="@+id/trip_destination_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:textAppearance="@style/NameText"></TextView>
 
-<!-- fares amounts -->
-<TextView android:layout_width="fill_parent"
+    <!-- trip times -->
+    <TextView
+        android:id="@+id/trip_estimated_leave_time"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:textAppearance="@style/DefaultText"></TextView>
+
+    <TextView
+        android:id="@+id/trip_estimate_arrival_time"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:textAppearance="@style/DefaultText"></TextView>
+
+    <!-- fares amounts -->
+    <TextView
+        android:id="@+id/trip_fare_value"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="5px"
         android:layout_marginLeft="10px"
         android:layout_marginRight="10px"
-        android:textAppearance="@style/DefaultText"
-        android:id="@+id/trip_fare_value"></TextView>
+        android:textAppearance="@style/DefaultText"></TextView>
 
     <TextView
         android:id="@+id/trip_clipper_fare_value"
@@ -89,11 +81,11 @@ android:textAppearance="@style/DefaultText"
         android:layout_marginLeft="10px"
         android:layout_marginRight="10px"
         android:textAppearance="@style/DefaultText" />
-        --> 
+        -->
 
-<ListView
+    <ListView
         android:id="@+id/trip_planner_leg_rows"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"></ListView>
-  
+
 </LinearLayout>

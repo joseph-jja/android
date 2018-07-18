@@ -8,12 +8,14 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.ja.dialog.LoadingSpinner;
 import com.ja.sbi.R;
 import com.ja.sbi.SimpleBARTInfo;
+import com.ja.sbi.adapters.TripPlannerAdapter;
 import com.ja.sbi.bart.api.APIConstants;
 import com.ja.sbi.bart.api.BaseDownloader;
 import com.ja.sbi.bart.api.StationDownloader;
@@ -37,6 +39,7 @@ public class TripPlannerHandler {
     private final String LOG_NAME = this.getClass().getName();
 
     private static final List<StationData> trainStops = new ArrayList<StationData>();
+    private static List<Trip> trips;
 
     private static final String SELECT_STATION_TEXT = "Please Select Station";
 
@@ -44,6 +47,8 @@ public class TripPlannerHandler {
     private static String destinationStation = null;
 
     private static LoadingSpinner dialog = null;
+
+    private static final TripParser tripParser = new TripParser();
 
 
     public TripPlannerHandler(Context context, List<Station> stations) {
@@ -122,7 +127,7 @@ public class TripPlannerHandler {
 
                         TripPlannerHandler.sourceStation = stationCodes.get(position);
 
-                        //getFare(sbiThread);
+                        getRoutes(sbiThread);
                     }
 
                     @Override
@@ -141,7 +146,7 @@ public class TripPlannerHandler {
 
                         TripPlannerHandler.destinationStation = stationCodes.get(position);
 
-                        //getFare(sbiThread);
+                        getRoutes(sbiThread);
                     }
 
                     @Override
@@ -190,5 +195,67 @@ public class TripPlannerHandler {
             minute.setAdapter(new ArrayAdapter<String>(sbiThread, android.R.layout.simple_spinner_item, minutes));
         }
 
+    };
+
+
+    private void getRoutes(SimpleBARTInfo sbi) {
+
+        final SimpleBARTInfo bartInfoActivity = sbi;
+
+        Log.d(LOG_NAME, "Codes: " + TripPlannerHandler.sourceStation + " = " + TripPlannerHandler.destinationStation);
+
+        if (TripPlannerHandler.sourceStation == null || TripPlannerHandler.destinationStation == null) {
+            return;
+        }
+        if (TripPlannerHandler.sourceStation.equals(SELECT_STATION_TEXT) || TripPlannerHandler.destinationStation.equals(SELECT_STATION_TEXT)) {
+            return;
+        }
+
+        dialog = new LoadingSpinner(sbi, "Loading BART Fares...");
+
+        final Thread refresh = new Thread() {
+
+            public void run() {
+                try {
+
+                    final String departURL = APIConstants.SCHEDULE_DEPART + TripPlannerHandler.sourceStation
+                            + APIConstants.SCHEDULE_DEST + TripPlannerHandler.destinationStation
+                            + APIConstants.SCHEDULE_DATE + "now" + APIConstants.KEY_STRING_API;
+
+                    final String arriveURL = APIConstants.SCHEDULE_ARRIVE + TripPlannerHandler.sourceStation
+                            + APIConstants.SCHEDULE_DEST + TripPlannerHandler.destinationStation
+                            + APIConstants.SCHEDULE_DATE + "now" + APIConstants.KEY_STRING_API;
+
+                    // call api here
+                    final String fairData = BaseDownloader.retriever.downloadURL(departURL, 0);
+
+                    TripPlannerHandler.trips = tripParser.parseDocument(fairData);
+
+                    Log.d(LOG_NAME, fairData);
+
+                } catch (Exception e) {
+                    Log.d(LOG_NAME, e.getMessage());
+                }
+
+                Message msg = updateHandler.obtainMessage();
+                msg.obj = bartInfoActivity;
+                updateHandler.sendMessage(msg);
+            }
+        };
+        refresh.start();
+    }
+
+    private final Handler updateHandler = new Handler() {
+
+        public void handleMessage(Message msg) {
+
+            SimpleBARTInfo sbiThread = (SimpleBARTInfo) msg.obj;
+
+            ListView results = (ListView) sbiThread.findViewById(R.id.trip_planner_results);
+            results.setAdapter(new TripPlannerAdapter(sbiThread, R.layout.trip_data, TripPlannerHandler.trips));
+
+            Log.d(LOG_NAME, "Got something.");
+            TripPlannerHandler.dialog.dismiss();
+        }
     };
 }
