@@ -3,15 +3,14 @@ package com.ja.sbi.handlers;
 import android.content.Context;
 import android.os.Handler;
 import android.os.Message;
-import android.text.Layout;
 import android.util.Log;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.ja.dialog.LoadingSpinner;
 import com.ja.sbi.R;
 import com.ja.sbi.SimpleBARTInfo;
 import com.ja.sbi.bart.api.APIConstants;
@@ -19,13 +18,11 @@ import com.ja.sbi.bart.api.BaseDownloader;
 import com.ja.sbi.bart.api.StationDownloader;
 import com.ja.sbi.trains.beans.Fare;
 import com.ja.sbi.trains.beans.Station;
-import com.ja.sbi.xml.FairParser;
 import com.ja.sbi.trains.beans.StationData;
-import com.ja.dialog.LoadingSpinner;
+import com.ja.sbi.xml.FairParser;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 public class FareCalculatorHandler {
@@ -204,19 +201,4 @@ public class FareCalculatorHandler {
             FareCalculatorHandler.dialog.dismiss();
         }
     };
-
-    public static final class StationDataSorter implements Comparator<StationData> {
-
-        public int compare(StationData stationOne, StationData stationTwo) {
-
-            if (stationOne == null) {
-                return -1;
-            }
-            if (stationTwo == null) {
-                return 1;
-            }
-            return stationOne.getStationName().compareTo(stationTwo.getStationName());
-        }
-
-    }
 }

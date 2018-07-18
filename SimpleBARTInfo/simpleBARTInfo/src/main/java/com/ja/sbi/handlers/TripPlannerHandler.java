@@ -30,6 +30,8 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+import com.ja.sbi.handlers.StationDataSorter;
+
 public class TripPlannerHandler {
 
     private final String LOG_NAME = this.getClass().getName();
@@ -65,7 +67,7 @@ public class TripPlannerHandler {
                         trainStops.add(sd);
                     }
                     // sort
-                    Collections.sort(trainStops, new FareCalculatorHandler.StationDataSorter());
+                    Collections.sort(trainStops, new StationDataSorter());
                 } catch (Exception e) {
                     Log.d(LOG_NAME, e.getMessage());
                 }
@@ -149,12 +151,12 @@ public class TripPlannerHandler {
                 });
 
             }
-            Spinner month = (Spinner)sbiThread.findViewById(R.id.tripMonth);
-            Spinner day = (Spinner)sbiThread.findViewById(R.id.tripDay);
-            Spinner year = (Spinner)sbiThread.findViewById(R.id.tripFullYear);
+            Spinner month = (Spinner) sbiThread.findViewById(R.id.tripMonth);
+            Spinner day = (Spinner) sbiThread.findViewById(R.id.tripDay);
+            Spinner year = (Spinner) sbiThread.findViewById(R.id.tripFullYear);
 
             Calendar cal = Calendar.getInstance();
-            int currentMonth = cal.get(Calendar.MONTH)+ 1;
+            int currentMonth = cal.get(Calendar.MONTH) + 1;
             int currentDay = cal.get(Calendar.DAY_OF_MONTH);
             int currentYear = cal.get(Calendar.YEAR);
 
@@ -170,19 +172,19 @@ public class TripPlannerHandler {
             years.add(Integer.valueOf(currentYear).toString());
             year.setAdapter(new ArrayAdapter<String>(sbiThread, android.R.layout.simple_spinner_item, years));
 
-            Spinner hour = (Spinner)sbiThread.findViewById(R.id.tpTripHours);
-            Spinner minute = (Spinner)sbiThread.findViewById(R.id.tpTripMinutes);
+            Spinner hour = (Spinner) sbiThread.findViewById(R.id.tpTripHours);
+            Spinner minute = (Spinner) sbiThread.findViewById(R.id.tpTripMinutes);
             int currentHour = cal.get(Calendar.HOUR);
             int currentMinute = cal.get(Calendar.MINUTE);
 
             List<String> hours = new ArrayList<String>();
-            for ( int i =0 ; i < 24; i++ ) {
+            for (int i = 0; i < 24; i++) {
                 hours.add(Integer.valueOf(i).toString());
             }
             hour.setAdapter(new ArrayAdapter<String>(sbiThread, android.R.layout.simple_spinner_item, hours));
 
             List<String> minutes = new ArrayList<String>();
-            for ( int i =0 ; i < 60; i++ ) {
+            for (int i = 0; i < 60; i++) {
                 minutes.add(Integer.valueOf(i).toString());
             }
             minute.setAdapter(new ArrayAdapter<String>(sbiThread, android.R.layout.simple_spinner_item, minutes));
