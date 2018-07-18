@@ -27,7 +27,8 @@ public class APIConstants {
 	public static final String SCHEDULE_DEPART = BART_API_HOST + "/api/sched.aspx?cmd=depart&b=0&a=3&orig=";
 	public static final String SCHEDULE_ARRIVE = BART_API_HOST + "/api/sched.aspx?cmd=arrive&b=2&a=1&orig=";
 	public static final String SCHEDULE_DEST = "&dest=";
-	public static final String SCHEDULE_DATE = "&date=";
+	public static final String SCHEDULE_DATE = "&date=";  // mm/dd/yyyy
+	public static final String SCHEDULE_TIME = "&time=";  //h:mm+am/pm
 	
 	// alerts api
 	public static final String ALERTS_API = BART_API_HOST + "/api/bsa.aspx?cmd=bsa" + KEY_STRING_API;
