@@ -4,8 +4,6 @@ import android.content.Context;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
-import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Spinner;
@@ -21,12 +19,13 @@ import com.ja.sbi.listeners.TripDetailsListener;
 import com.ja.sbi.beans.StationData;
 import com.ja.sbi.beans.Trip;
 import com.ja.sbi.beans.Station;
+import com.ja.sbi.utils.StationListSpinner;
+import com.ja.sbi.utils.StationListSpinnerIface;
 import com.ja.sbi.xml.TripParser;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
-import java.util.Collections;
 import java.util.List;
 
 public class TripPlannerHandler implements StationListSpinnerIface {
@@ -50,8 +49,8 @@ public class TripPlannerHandler implements StationListSpinnerIface {
 
     final TripPlannerHandler self = this;
 
-    private static StationListSpinnerHandler sourceStop;
-    private static StationListSpinnerHandler destinationStop;
+    private static StationListSpinner sourceStop;
+    private static StationListSpinner destinationStop;
 
     public TripPlannerHandler(Context context, List<Station> stations) {
 
@@ -65,7 +64,7 @@ public class TripPlannerHandler implements StationListSpinnerIface {
                 try {
                     final List<Station> stationList = ((localStationCopy != null && localStationCopy.size() > 0) ? localStationCopy : StationDownloader.getStationList());
                     trainStops.clear();
-                    List<StationData> sortedTrainStops = StationListSpinnerHandler.convertStationsToStationData(stationList);
+                    List<StationData> sortedTrainStops = StationListSpinner.convertStationsToStationData(stationList);
                     trainStops.addAll(sortedTrainStops);
                 } catch (Exception e) {
                     Log.d(LOG_NAME, e.getMessage());
@@ -100,10 +99,10 @@ public class TripPlannerHandler implements StationListSpinnerIface {
 
             if (trainStops != null && trainStops.size() > 0) {
 
-                TripPlannerHandler.sourceStop = new StationListSpinnerHandler(sbiThread, R.id.tpStationOriginList);
+                TripPlannerHandler.sourceStop = new StationListSpinner(sbiThread, R.id.tpStationOriginList);
                 TripPlannerHandler.sourceStop.initializeSpinnerLists(trainStops, self);
 
-                TripPlannerHandler.destinationStop = new StationListSpinnerHandler(sbiThread, R.id.tpStationDestList);
+                TripPlannerHandler.destinationStop = new StationListSpinner(sbiThread, R.id.tpStationDestList);
                 TripPlannerHandler.destinationStop.initializeSpinnerLists(trainStops, self);
 
                 // TODO implement all the times here to populate

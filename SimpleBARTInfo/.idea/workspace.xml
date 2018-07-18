@@ -28,7 +28,17 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/simpleBARTInfo/build/outputs/apk/debug/SimpleBARTInfo-debug.apk" afterPath="$PROJECT_DIR$/simpleBARTInfo/build/outputs/apk/debug/SimpleBARTInfo-debug.apk" />
+      <change beforePath="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/handlers/AlertHandler.java" afterPath="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/handlers/AlertHandler.java" />
       <change beforePath="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/handlers/FareCalculatorHandler.java" afterPath="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/handlers/FareCalculatorHandler.java" />
+      <change beforePath="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/handlers/StationDataSorter.java" afterPath="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/utils/StationDataSorter.java" />
+      <change beforePath="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/handlers/StationListSpinnerHandler.java" afterPath="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/utils/StationListSpinner.java" />
+      <change beforePath="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/handlers/StationListSpinnerIface.java" afterPath="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/utils/StationListSpinnerIface.java" />
+      <change beforePath="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/handlers/StationsHandler.java" afterPath="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/handlers/StationsHandler.java" />
+      <change beforePath="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/handlers/TripPlannerHandler.java" afterPath="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/handlers/TripPlannerHandler.java" />
+      <change beforePath="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/xml/AlertParser.java" afterPath="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/xml/AlertParser.java" />
+      <change beforePath="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/xml/StationsParser.java" afterPath="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/xml/StationsParser.java" />
+      <change beforePath="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/xml/TrainsAtStationParser.java" afterPath="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/xml/TrainsAtStationParser.java" />
+      <change beforePath="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/xml/XMLUtils.java" afterPath="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/utils/XMLUtils.java" />
     </list>
     <ignored path="$PROJECT_DIR$/build/classes/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -72,11 +82,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TripLegAdapter.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TripLegAdapter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/adapters/TripLegAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="701">
-              <caret line="96" column="0" lean-forward="false" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+            <state relative-caret-position="161">
+              <caret line="66" column="65" lean-forward="false" selection-start-line="66" selection-start-column="65" selection-end-line="66" selection-end-column="65" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#837#838#0" expanded="true" />
@@ -92,27 +102,62 @@
         <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/handlers/TripPlannerHandler.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="342">
-              <caret line="58" column="56" lean-forward="false" selection-start-line="58" selection-start-column="56" selection-end-line="58" selection-end-column="56" />
+              <caret line="57" column="56" lean-forward="false" selection-start-line="57" selection-start-column="56" selection-end-line="57" selection-end-column="56" />
               <folding>
-                <element signature="e#2925#2926#0" expanded="true" />
-                <element signature="e#2972#2973#0" expanded="true" />
-                <element signature="e#3208#6613#0" expanded="true" />
-                <element signature="e#6612#6613#0" expanded="true" />
+                <element signature="e#2906#2907#0" expanded="true" />
+                <element signature="e#2953#2954#0" expanded="true" />
+                <element signature="e#3189#6580#0" expanded="true" />
+                <element signature="e#6579#6580#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StationListSpinnerHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/handlers/StationListSpinnerHandler.java">
+      <file leaf-file-name="StationListSpinner.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/utils/StationListSpinner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1248">
-              <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+            <state relative-caret-position="342">
+              <caret line="19" column="31" lean-forward="false" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2307#2308#0" expanded="true" />
-                <element signature="e#2345#2346#0" expanded="true" />
+                <element signature="e#2382#2383#0" expanded="true" />
+                <element signature="e#2420#2421#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AlertHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/handlers/AlertHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="317">
+              <caret line="29" column="71" lean-forward="false" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="71" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StationsHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/handlers/StationsHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="121">
+              <caret line="35" column="33" lean-forward="false" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
+              <folding>
+                <element signature="e#3099#3331#0" expanded="true" />
+                <element signature="e#3330#3331#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FareCalculatorHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/handlers/FareCalculatorHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="373">
+              <caret line="47" column="70" lean-forward="false" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="70" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -129,7 +174,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>StationViewHolder</find>
       <find>data</find>
       <find>alert_list_rows</find>
       <find>getView</find>
@@ -159,6 +203,7 @@
       <find>stationCodes</find>
       <find>selectedStation</find>
       <find>sourceStop</find>
+      <find>dialog</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -2621,8 +2666,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/trains/beans/Train.java" />
-        <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/simpleBARTInfo/src/main/res/layout/stations.xml" />
         <option value="$PROJECT_DIR$/simpleBARTInfo/src/main/res/layout/main.xml" />
         <option value="$PROJECT_DIR$/simpleBARTInfo/src/main/res/layout/activitylist.xml" />
@@ -2638,8 +2681,6 @@
         <option value="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/bart/api/AlertDownloader.java" />
         <option value="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/bart/api/StationDownloader.java" />
         <option value="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/bart/api/TrainDownloader.java" />
-        <option value="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/handlers/AlertHandler.java" />
-        <option value="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/handlers/StationsHandler.java" />
         <option value="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/listeners/StationListener.java" />
         <option value="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/trains/beans/Fare.java" />
         <option value="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/trains/beans/Station.java" />
@@ -2670,14 +2711,18 @@
         <option value="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/handlers/SpinnerHandler.java" />
         <option value="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/handlers/StationListSpinnerIface.java" />
         <option value="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/handlers/TripPlannerHandler.java" />
-        <option value="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/handlers/StationListSpinnerHandler.java" />
         <option value="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/handlers/FareCalculatorHandler.java" />
+        <option value="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/handlers/AlertHandler.java" />
+        <option value="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/handlers/StationsHandler.java" />
+        <option value="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/handlers/StationListSpinnerHandler.java" />
+        <option value="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/handlers/StationListSpinner.java" />
+        <option value="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/utils/StationListSpinner.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="541" />
-    <option name="y" value="28" />
+    <option name="y" value="30" />
     <option name="width" value="1279" />
     <option name="height" value="938" />
   </component>
@@ -2858,6 +2903,17 @@
               <item name="simpleBARTInfo" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ja" type="462c0819:PsiDirectoryNode" />
+              <item name="sbi" type="462c0819:PsiDirectoryNode" />
+              <item name="xml" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SimpleBARTInfo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SimpleBARTInfo" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="simpleBARTInfo" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="res" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -2906,6 +2962,7 @@
       <recent name="$PROJECT_DIR$/simpleBARTInfo/src/main" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.ja.sbi.utils" />
       <recent name="com.ja.sbi.beans" />
       <recent name="com.ja.sbi.handlers" />
     </key>
@@ -3158,8 +3215,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="541" y="28" width="1279" height="938" extended-state="0" />
-    <editor active="true" />
+    <frame x="541" y="30" width="1279" height="938" extended-state="0" />
     <layout>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -3176,7 +3232,7 @@
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31467965" sideWeight="0.4924812" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31467965" sideWeight="0.4924812" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="WINDOWED" visible="false" show_stripe_button="true" weight="0.32912987" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" x="85" y="613" width="1707" height="329" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34438777" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -3324,14 +3380,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/handlers/AlertHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/map/TouchImageView.java" />
     <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/map/BartMapManager.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -3380,16 +3428,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="14" column="7" lean-forward="false" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/handlers/StationDataSorter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="36" lean-forward="false" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3482,14 +3520,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="185">
           <caret line="1877" column="0" lean-forward="false" selection-start-line="1877" selection-start-column="0" selection-end-line="1877" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/handlers/StationsHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="106" column="39" lean-forward="false" selection-start-line="106" selection-start-column="26" selection-end-line="106" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3599,22 +3629,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/handlers/StationListSpinnerIface.java">
+    <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/adapters/TripLegAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="64" lean-forward="false" selection-start-line="6" selection-start-column="64" selection-end-line="6" selection-end-column="64" />
+        <state relative-caret-position="161">
+          <caret line="66" column="65" lean-forward="false" selection-start-line="66" selection-start-column="65" selection-end-line="66" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#837#838#0" expanded="true" />
+            <element signature="e#892#893#0" expanded="true" />
+            <element signature="e#957#958#0" expanded="true" />
+            <element signature="e#1003#1004#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/handlers/FareCalculatorHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="47" column="70" lean-forward="false" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="70" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/handlers/StationListSpinnerHandler.java">
+    <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/handlers/AlertHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1248">
-          <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+        <state relative-caret-position="317">
+          <caret line="29" column="71" lean-forward="false" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="71" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2307#2308#0" expanded="true" />
-            <element signature="e#2345#2346#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3622,34 +3664,51 @@
     <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/handlers/TripPlannerHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
-          <caret line="58" column="56" lean-forward="false" selection-start-line="58" selection-start-column="56" selection-end-line="58" selection-end-column="56" />
+          <caret line="57" column="56" lean-forward="false" selection-start-line="57" selection-start-column="56" selection-end-line="57" selection-end-column="56" />
           <folding>
-            <element signature="e#2925#2926#0" expanded="true" />
-            <element signature="e#2972#2973#0" expanded="true" />
-            <element signature="e#3208#6613#0" expanded="true" />
-            <element signature="e#6612#6613#0" expanded="true" />
+            <element signature="e#2906#2907#0" expanded="true" />
+            <element signature="e#2953#2954#0" expanded="true" />
+            <element signature="e#3189#6580#0" expanded="true" />
+            <element signature="e#6579#6580#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/handlers/FareCalculatorHandler.java">
+    <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/utils/StationListSpinnerIface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6">
-          <caret line="112" column="33" lean-forward="false" selection-start-line="112" selection-start-column="33" selection-end-line="112" selection-end-column="33" />
+        <state relative-caret-position="108">
+          <caret line="6" column="64" lean-forward="false" selection-start-line="6" selection-start-column="64" selection-end-line="6" selection-end-column="64" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/adapters/TripLegAdapter.java">
+    <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/utils/StationDataSorter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="701">
-          <caret line="96" column="0" lean-forward="false" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+        <state relative-caret-position="72">
+          <caret line="6" column="36" lean-forward="false" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/handlers/StationsHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="35" column="33" lean-forward="false" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
+          <folding>
+            <element signature="e#3099#3331#0" expanded="true" />
+            <element signature="e#3330#3331#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/utils/StationListSpinner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="31" lean-forward="false" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#837#838#0" expanded="true" />
-            <element signature="e#892#893#0" expanded="true" />
-            <element signature="e#957#958#0" expanded="true" />
-            <element signature="e#1003#1004#0" expanded="true" />
+            <element signature="e#2382#2383#0" expanded="true" />
+            <element signature="e#2420#2421#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -4,10 +4,6 @@ import android.content.Context;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.ja.dialog.LoadingSpinner;
@@ -19,6 +15,8 @@ import com.ja.sbi.bart.api.StationDownloader;
 import com.ja.sbi.beans.Fare;
 import com.ja.sbi.beans.Station;
 import com.ja.sbi.beans.StationData;
+import com.ja.sbi.utils.StationListSpinner;
+import com.ja.sbi.utils.StationListSpinnerIface;
 import com.ja.sbi.xml.FairParser;
 
 import java.util.ArrayList;
@@ -39,8 +37,8 @@ public class FareCalculatorHandler implements StationListSpinnerIface {
     private static Fare currentFare;
     private final FareCalculatorHandler self = this;
 
-    private static StationListSpinnerHandler sourceStop;
-    private static StationListSpinnerHandler destinationStop;
+    private static StationListSpinner sourceStop;
+    private static StationListSpinner destinationStop;
 
     public FareCalculatorHandler(Context context, List<Station> stations) {
 
@@ -54,7 +52,7 @@ public class FareCalculatorHandler implements StationListSpinnerIface {
                 try {
                     final List<Station> stationList = ((localStationCopy != null && localStationCopy.size() > 0) ? localStationCopy : StationDownloader.getStationList());
                     trainStops.clear();
-                    List<StationData> sortedTrainStops = StationListSpinnerHandler.convertStationsToStationData(stationList);
+                    List<StationData> sortedTrainStops = StationListSpinner.convertStationsToStationData(stationList);
                     trainStops.addAll(sortedTrainStops);
                 } catch (Exception e) {
                     Log.d(LOG_NAME, e.getMessage());
@@ -78,10 +76,10 @@ public class FareCalculatorHandler implements StationListSpinnerIface {
 
             if (trainStops != null && trainStops.size() > 0) {
 
-                FareCalculatorHandler.sourceStop = new StationListSpinnerHandler(sbiThread, R.id.stationInList);
+                FareCalculatorHandler.sourceStop = new StationListSpinner(sbiThread, R.id.stationInList);
                 FareCalculatorHandler.sourceStop.initializeSpinnerLists(trainStops, self);
 
-                FareCalculatorHandler.destinationStop = new StationListSpinnerHandler(sbiThread, R.id.stationsAvailable);
+                FareCalculatorHandler.destinationStop = new StationListSpinner(sbiThread, R.id.stationsAvailable);
                 FareCalculatorHandler.destinationStop.initializeSpinnerLists(trainStops, self);
 
             }

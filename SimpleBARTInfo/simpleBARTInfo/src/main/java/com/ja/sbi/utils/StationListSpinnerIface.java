@@ -1,4 +1,4 @@
-package com.ja.sbi.handlers;
+package com.ja.sbi.utils;
 
 import com.ja.sbi.SimpleBARTInfo;
 

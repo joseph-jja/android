@@ -5,6 +5,7 @@ import android.os.Build;
 
 import com.ja.sbi.beans.Station;
 import com.ja.sbi.beans.Train;
+import com.ja.sbi.utils.XMLUtils;
 
 import org.xml.sax.Attributes;
 import org.xml.sax.InputSource;

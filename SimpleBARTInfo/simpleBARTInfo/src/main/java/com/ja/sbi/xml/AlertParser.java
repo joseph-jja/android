@@ -1,6 +1,7 @@
 package com.ja.sbi.xml;
 
 import com.ja.sbi.beans.Alerts;
+import com.ja.sbi.utils.XMLUtils;
 
 import org.xml.sax.Attributes;
 import org.xml.sax.InputSource;

@@ -6,6 +6,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
 
+import com.ja.dialog.LoadingSpinner;
 import com.ja.sbi.R;
 import com.ja.sbi.SimpleBARTInfo;
 import com.ja.sbi.bart.api.StationDownloader;
@@ -29,7 +30,7 @@ public class StationsHandler {
     private boolean viewStations = true;
     protected String selectedStationName = null;
     protected String selectedStationShortName = null;
-    private static ProgressDialog dialog = null;
+    private static LoadingSpinner dialog = null;
     protected static StationsHandler self = null;
 
     public void initializeActivity(Context context, boolean useStale) {
@@ -45,12 +46,8 @@ public class StationsHandler {
 
     public void showLoadingSpinner(Context context) {
 
-        dialog = new ProgressDialog(context);
-        dialog.setCancelable(false);
-        dialog.setMessage("Loading BART Train Data!");
-        // change to progress bar
-        dialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-        dialog.show();
+        dialog = new LoadingSpinner(context, "Loading BART Train Data!");
+
     }
 
     public void downloadBARTFeed(Context context) {

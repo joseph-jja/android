@@ -1,4 +1,4 @@
-package com.ja.sbi.xml;
+package com.ja.sbi.utils;
 
 public class XMLUtils {
 

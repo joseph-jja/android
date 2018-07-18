@@ -1,4 +1,4 @@
-package com.ja.sbi.handlers;
+package com.ja.sbi.utils;
 
 import android.util.Log;
 import android.view.View;
@@ -10,12 +10,14 @@ import com.ja.sbi.R;
 import com.ja.sbi.SimpleBARTInfo;
 import com.ja.sbi.beans.Station;
 import com.ja.sbi.beans.StationData;
+import com.ja.sbi.utils.StationDataSorter;
+import com.ja.sbi.utils.StationListSpinnerIface;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class StationListSpinnerHandler {
+public class StationListSpinner {
 
     private final String LOG_NAME = this.getClass().getName();
     private static final String SELECT_STATION_TEXT = "Please Select Station";
@@ -27,7 +29,7 @@ public class StationListSpinnerHandler {
     private SimpleBARTInfo context;
     private String selectedStation;
 
-    public StationListSpinnerHandler(SimpleBARTInfo sbiContext, int spinnerID) {
+    public StationListSpinner(SimpleBARTInfo sbiContext, int spinnerID) {
 
         dropdown = (Spinner) sbiContext.findViewById(spinnerID);
 

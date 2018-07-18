@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.ja.dialog.LoadingSpinner;
 import com.ja.sbi.R;
 import com.ja.sbi.SimpleBARTInfo;
 import com.ja.sbi.adapters.AlertAdapter;
@@ -21,17 +22,13 @@ import java.util.List;
 public class AlertHandler {
 
     private final String LOG_NAME = this.getClass().getName();
-    private static ProgressDialog dialog = null;
+    private static LoadingSpinner dialog = null;
     private static List<Alerts> alertItems = new ArrayList<Alerts>();
 
     public void showLoadingSpinner(Context context) {
 
-        dialog = new ProgressDialog(context);
-        dialog.setCancelable(false);
-        dialog.setMessage("Loading BART Alerts...");
-        // change to progress bar
-        dialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-        dialog.show();
+        dialog = new LoadingSpinner(context, "Loading BART Alerts...");
+
     }
 
     public void downloadAlerts(Context context) {
