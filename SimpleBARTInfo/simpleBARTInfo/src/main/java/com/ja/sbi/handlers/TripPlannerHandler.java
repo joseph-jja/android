@@ -162,10 +162,10 @@ public class TripPlannerHandler implements StationListSpinnerIface {
                 // mm/dd/yyyy
                 TripPlannerHandler.monthSpinner = new SimpleSpinner(sbiThread, R.id.tripMonth,
                         months,
-                        Integer.valueOf(currentMonth).toString(), self);
+                        paddNumber(currentMonth), self);
                 TripPlannerHandler.daySpinner = new SimpleSpinner(sbiThread, R.id.tripDay,
                         days,
-                        Integer.valueOf(currentDay).toString(), self);
+                        paddNumber(currentDay), self);
                 TripPlannerHandler.yearSpinner = new SimpleSpinner(sbiThread, R.id.tripFullYear,
                         years,
                         Integer.valueOf(currentYear).toString(), self);
@@ -173,10 +173,10 @@ public class TripPlannerHandler implements StationListSpinnerIface {
                 // time
                 TripPlannerHandler.hourSpinner = new SimpleSpinner(sbiThread, R.id.tpTripHours,
                         TripPlannerHandler.hours,
-                        Integer.valueOf(currentHour).toString(), self);
+                        paddNumber(currentHour), self);
                 TripPlannerHandler.minuteSpinner = new SimpleSpinner(sbiThread, R.id.tpTripMinutes,
                         TripPlannerHandler.minutes,
-                        Integer.valueOf(currentMinute).toString(), self);
+                        paddNumber(currentMinute), self);
 
                 // am pm
                 TripPlannerHandler.ampmSpinner = new SimpleSpinner(sbiThread, R.id.tpTripAMPM,
