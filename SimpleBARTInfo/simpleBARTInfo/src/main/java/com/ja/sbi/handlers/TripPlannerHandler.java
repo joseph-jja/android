@@ -24,11 +24,12 @@ import com.ja.sbi.beans.Station;
 import com.ja.sbi.xml.TripParser;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Collections;
 import java.util.List;
 
-public class TripPlannerHandler {
+public class TripPlannerHandler implements StationListSpinnerIface {
 
     private final String LOG_NAME = this.getClass().getName();
 
@@ -44,19 +45,15 @@ public class TripPlannerHandler {
 
     private static final TripParser tripParser = new TripParser();
 
-    private static final List<String> arrivingOrDeparting = new ArrayList<String>();
+    private static final List<String> arrivingOrDeparting = Arrays.asList("Departing", "Arriving");
+    private static final List<String> ampm = Arrays.asList("AM", "PM");
 
+    final TripPlannerHandler self = this;
 
-    private static final List<String> ampm = new ArrayList<String>();
-
+    private static StationListSpinnerHandler sourceStop;
+    private static StationListSpinnerHandler destinationStop;
 
     public TripPlannerHandler(Context context, List<Station> stations) {
-
-        arrivingOrDeparting.add("Departing");
-        arrivingOrDeparting.add("Arriving");
-
-        ampm.add("AM");
-        ampm.add("PM");
 
         final SimpleBARTInfo bartInfoActivity = (SimpleBARTInfo) context;
         final List<Station> localStationCopy = stations;
@@ -68,15 +65,8 @@ public class TripPlannerHandler {
                 try {
                     final List<Station> stationList = ((localStationCopy != null && localStationCopy.size() > 0) ? localStationCopy : StationDownloader.getStationList());
                     trainStops.clear();
-                    for (Station s : stationList) {
-                        StationData sd = new StationData();
-                        Log.d(LOG_NAME, s.getStationName());
-                        sd.setStationName(s.getStationName());
-                        sd.setStationCode(s.getShortName());
-                        trainStops.add(sd);
-                    }
-                    // sort
-                    Collections.sort(trainStops, new StationDataSorter());
+                    List<StationData> sortedTrainStops = StationListSpinnerHandler.convertStationsToStationData(stationList);
+                    trainStops.addAll(sortedTrainStops);
                 } catch (Exception e) {
                     Log.d(LOG_NAME, e.getMessage());
                 }
@@ -109,128 +99,73 @@ public class TripPlannerHandler {
             TripPlannerHandler.dialog.dismiss();
 
             if (trainStops != null && trainStops.size() > 0) {
-                Spinner sourceStop = (Spinner) sbiThread.findViewById(R.id.tpStationOriginList);
-                Spinner destinationStop = (Spinner) sbiThread.findViewById(R.id.tpStationDestList);
 
-                final List<String> stationData = new ArrayList<String>();
-                final List<String> stationCodes = new ArrayList<String>();
-                stationData.add(SELECT_STATION_TEXT);
-                stationCodes.add(SELECT_STATION_TEXT);
+                TripPlannerHandler.sourceStop = new StationListSpinnerHandler(sbiThread, R.id.tpStationOriginList);
+                TripPlannerHandler.sourceStop.initializeSpinnerLists(trainStops, self);
 
-                int i = 0;
-                for (StationData data : trainStops) {
-                    stationData.add(data.getStationName());
-                    stationCodes.add(data.getStationCode());
-                    i += 1;
+                TripPlannerHandler.destinationStop = new StationListSpinnerHandler(sbiThread, R.id.tpStationDestList);
+                TripPlannerHandler.destinationStop.initializeSpinnerLists(trainStops, self);
+
+                // TODO implement all the times here to populate
+
+                Calendar cal = Calendar.getInstance();
+                int currentMonth = cal.get(Calendar.MONTH) + 1;
+                int currentDay = cal.get(Calendar.DAY_OF_MONTH);
+                int currentYear = cal.get(Calendar.YEAR);
+                int currentHour = cal.get(Calendar.HOUR);
+                int currentMinute = cal.get(Calendar.MINUTE);
+
+                //cal.add(Calendar.DATE, 1);
+
+                Spinner month = (Spinner) sbiThread.findViewById(R.id.tripMonth);
+                Spinner day = (Spinner) sbiThread.findViewById(R.id.tripDay);
+                Spinner year = (Spinner) sbiThread.findViewById(R.id.tripFullYear);
+
+                List<String> months = new ArrayList<String>();
+                months.add(paddNumber(currentMonth));
+                month.setAdapter(new ArrayAdapter<String>(sbiThread, android.R.layout.simple_spinner_item, months));
+
+                List<String> days = new ArrayList<String>();
+                days.add(paddNumber(currentDay));
+                day.setAdapter(new ArrayAdapter<String>(sbiThread, android.R.layout.simple_spinner_item, days));
+
+                List<String> years = new ArrayList<String>();
+                years.add(Integer.valueOf(currentYear).toString());
+                years.add(Integer.valueOf(currentYear + 1).toString());
+                year.setAdapter(new ArrayAdapter<String>(sbiThread, android.R.layout.simple_spinner_item, years));
+
+                Spinner hour = (Spinner) sbiThread.findViewById(R.id.tpTripHours);
+                Spinner minute = (Spinner) sbiThread.findViewById(R.id.tpTripMinutes);
+
+                List<String> hours = new ArrayList<String>();
+                for (int i = 1; i <= 12; i++) {
+                    hours.add(paddNumber(i));
                 }
+                hour.setAdapter(new ArrayAdapter<String>(sbiThread, android.R.layout.simple_spinner_item, hours));
 
-                ArrayAdapter sourceAdapter = new ArrayAdapter<String>(sbiThread, android.R.layout.simple_spinner_item, stationData);
-                sourceAdapter.setDropDownViewResource(R.layout.spinner_item);
-                sourceStop.setAdapter(sourceAdapter);
+                List<String> minutes = new ArrayList<String>();
+                for (int i = 0; i < 60; i++) {
+                    minutes.add(paddNumber(i));
+                }
+                minute.setAdapter(new ArrayAdapter<String>(sbiThread, android.R.layout.simple_spinner_item, minutes));
 
-                ArrayAdapter destinationAdapter = new ArrayAdapter<String>(sbiThread, android.R.layout.simple_spinner_item, stationData);
-                destinationAdapter.setDropDownViewResource(R.layout.spinner_item);
-                destinationStop.setAdapter(destinationAdapter);
 
-                sourceStop.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                Spinner tpTripAMPM = (Spinner) sbiThread.findViewById(R.id.tpTripAMPM);
+                tpTripAMPM.setAdapter(new ArrayAdapter<String>(sbiThread, android.R.layout.simple_spinner_item, ampm));
 
-                    @Override
-                    public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id) {
-                        // TODO Auto-generated method stub
-                        Log.d(LOG_NAME, "Position is everything: " + position + " data = "
-                                + stationData.get(position) + " key = " + stationCodes.get(position));
-
-                        TripPlannerHandler.sourceStation = stationCodes.get(position);
-
-                        getRoutes(sbiThread);
-                    }
-
-                    @Override
-                    public void onNothingSelected(AdapterView<?> adapterView) {
-
-                    }
-                });
-
-                destinationStop.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-
-                    @Override
-                    public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id) {
-                        // TODO Auto-generated method stub
-                        Log.d(LOG_NAME, "Second position: " + position + " data = "
-                                + stationData.get(position) + " key = " + stationCodes.get(position));
-
-                        TripPlannerHandler.destinationStation = stationCodes.get(position);
-
-                        getRoutes(sbiThread);
-                    }
-
-                    @Override
-                    public void onNothingSelected(AdapterView<?> adapterView) {
-
-                    }
-                });
+                Spinner departArrive = (Spinner) sbiThread.findViewById(R.id.tpDepartingOrArriving);
+                departArrive.setAdapter(new ArrayAdapter<String>(sbiThread, android.R.layout.simple_spinner_item, arrivingOrDeparting));
 
             }
-
-            // TODO implement all the times here to populate
-
-            Calendar cal = Calendar.getInstance();
-            int currentMonth = cal.get(Calendar.MONTH) + 1;
-            int currentDay = cal.get(Calendar.DAY_OF_MONTH);
-            int currentYear = cal.get(Calendar.YEAR);
-            int currentHour = cal.get(Calendar.HOUR);
-            int currentMinute = cal.get(Calendar.MINUTE);
-
-            //cal.add(Calendar.DATE, 1);
-
-            Spinner month = (Spinner) sbiThread.findViewById(R.id.tripMonth);
-            Spinner day = (Spinner) sbiThread.findViewById(R.id.tripDay);
-            Spinner year = (Spinner) sbiThread.findViewById(R.id.tripFullYear);
-
-            List<String> months = new ArrayList<String>();
-            months.add(paddNumber(currentMonth));
-            month.setAdapter(new ArrayAdapter<String>(sbiThread, android.R.layout.simple_spinner_item, months));
-
-            List<String> days = new ArrayList<String>();
-            days.add(paddNumber(currentDay));
-            day.setAdapter(new ArrayAdapter<String>(sbiThread, android.R.layout.simple_spinner_item, days));
-
-            List<String> years = new ArrayList<String>();
-            years.add(Integer.valueOf(currentYear).toString());
-            years.add(Integer.valueOf(currentYear + 1).toString());
-            year.setAdapter(new ArrayAdapter<String>(sbiThread, android.R.layout.simple_spinner_item, years));
-
-            Spinner hour = (Spinner) sbiThread.findViewById(R.id.tpTripHours);
-            Spinner minute = (Spinner) sbiThread.findViewById(R.id.tpTripMinutes);
-
-            List<String> hours = new ArrayList<String>();
-            for (int i = 1; i <= 12; i++) {
-                hours.add(paddNumber(i));
-            }
-            hour.setAdapter(new ArrayAdapter<String>(sbiThread, android.R.layout.simple_spinner_item, hours));
-
-            List<String> minutes = new ArrayList<String>();
-            for (int i = 0; i < 60; i++) {
-                minutes.add(paddNumber(i));
-            }
-            minute.setAdapter(new ArrayAdapter<String>(sbiThread, android.R.layout.simple_spinner_item, minutes));
-
-
-            Spinner tpTripAMPM = (Spinner) sbiThread.findViewById(R.id.tpTripAMPM);
-            tpTripAMPM.setAdapter(new ArrayAdapter<String>(sbiThread, android.R.layout.simple_spinner_item, ampm));
-
-            Spinner departArrive = (Spinner) sbiThread.findViewById(R.id.tpDepartingOrArriving);
-            departArrive.setAdapter(new ArrayAdapter<String>(sbiThread, android.R.layout.simple_spinner_item, arrivingOrDeparting));
-
-
         }
-
     };
 
-
-    private void getRoutes(SimpleBARTInfo sbi) {
+    public void processSpinnerListData(SimpleBARTInfo sbi) {
 
         final SimpleBARTInfo bartInfoActivity = sbi;
+
+        TripPlannerHandler.sourceStation = TripPlannerHandler.sourceStop.getSelectStationText();
+        TripPlannerHandler.destinationStation = TripPlannerHandler.destinationStop.getSelectStationText();
 
         Log.d(LOG_NAME, "Codes: " + TripPlannerHandler.sourceStation + " = " + TripPlannerHandler.destinationStation);
 

@@ -9,34 +9,40 @@
         android:id="@+id/trip_planner_title"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="5px"
-        android:layout_marginLeft="10px"
-        android:layout_marginRight="10px"
+        android:layout_marginLeft="15dp"
         android:text="@string/tripPlannerTitle"
         android:textAppearance="@style/PageTitleText"></TextView>
 
     <Spinner
         android:id="@+id/tpStationOriginList"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"></Spinner>
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp" />
 
     <Spinner
         android:id="@+id/tpStationDestList"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"></Spinner>
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp" />
+
+    <Spinner
+        android:id="@+id/tpDepartingOrArriving"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"></Spinner>
 
     <!-- MM DD YYYY -->
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="5px"
-        android:layout_marginLeft="10px"
+        android:layout_marginLeft="25dp"
         android:text="Select Date"
-        android:textAppearance="@style/NameText" />
+        android:textAppearance="@style/DefaultText" />
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
         android:orientation="horizontal">
 
         <Spinner
@@ -59,14 +65,14 @@
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="5px"
-        android:layout_marginLeft="10px"
+        android:layout_marginLeft="25dp"
         android:text="Select Time"
-        android:textAppearance="@style/NameText" />
+        android:textAppearance="@style/DefaultText" />
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
         android:orientation="horizontal">
 
         <Spinner
@@ -85,14 +91,10 @@
             android:layout_height="fill_parent"></Spinner>
     </LinearLayout>
 
-    <Spinner
-        android:id="@+id/tpDepartingOrArriving"
-        android:layout_width="wrap_content"
-        android:layout_height="fill_parent"></Spinner>
-
     <ListView
         android:id="@+id/trip_planner_results"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"></ListView>
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="20dp"></ListView>
 
 </LinearLayout>

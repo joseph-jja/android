@@ -22,7 +22,6 @@ import com.ja.sbi.beans.StationData;
 import com.ja.sbi.xml.FairParser;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class FareCalculatorHandler {
@@ -51,15 +50,8 @@ public class FareCalculatorHandler {
                 try {
                     final List<Station> stationList = ((localStationCopy != null && localStationCopy.size() > 0) ? localStationCopy: StationDownloader.getStationList());
                     trainStops.clear();
-                    for (Station s : stationList) {
-                        StationData sd = new StationData();
-                        Log.d(LOG_NAME, s.getStationName());
-                        sd.setStationName(s.getStationName());
-                        sd.setStationCode(s.getShortName());
-                        trainStops.add(sd);
-                    }
-                    // sort 
-                    Collections.sort(trainStops, new StationDataSorter());
+                    List<StationData> sortedTrainStops = StationListSpinnerHandler.convertStationsToStationData(stationList);
+                    trainStops.addAll(sortedTrainStops);
                 } catch (Exception e) {
                     Log.d(LOG_NAME, e.getMessage());
                 }
@@ -89,11 +81,9 @@ public class FareCalculatorHandler {
                 stationData.add(SELECT_STATION_TEXT);
                 stationCodes.add(SELECT_STATION_TEXT);
 
-                int i = 0;
                 for (StationData data : trainStops) {
                     stationData.add(data.getStationName());
                     stationCodes.add(data.getStationCode());
-                    i += 1;
                 }
 
                 ArrayAdapter sourceAdapter = new ArrayAdapter<String>(sbiThread, android.R.layout.simple_spinner_item, stationData);
@@ -114,7 +104,7 @@ public class FareCalculatorHandler {
 
                         FareCalculatorHandler.sourceStation = stationCodes.get(position);
 
-                        getFare(sbiThread);
+                        processSpinnerListData(sbiThread);
                     }
 
                     @Override
@@ -133,7 +123,7 @@ public class FareCalculatorHandler {
 
                         FareCalculatorHandler.destinationStation = stationCodes.get(position);
 
-                        getFare(sbiThread);
+                        processSpinnerListData(sbiThread);
                     }
 
                     @Override
@@ -145,7 +135,7 @@ public class FareCalculatorHandler {
         }
     };
 
-    private void getFare(SimpleBARTInfo sbi) {
+    public void processSpinnerListData(SimpleBARTInfo sbi) {
 
         final SimpleBARTInfo bartInfoActivity = sbi;
 

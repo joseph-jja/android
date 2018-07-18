@@ -19,11 +19,7 @@ public class APIConstants {
 	public static final String FAIR_API = BART_API_HOST + "/api/sched.aspx?cmd=fare&orig=";
 	public static final String FAIR_DEST = "&dest=";
 	
-	// route info 
-	public static final String ROUTES_LIST = BART_API_HOST + "/api/route.aspx?cmd=routes" + KEY_STRING_API;
-	public static final String ROUTE_INFO = BART_API_HOST + "/api/route.aspx?cmd=routeinfo&route=";
-	
-	// trip planning 
+	// trip planning
 	public static final String SCHEDULE_DEPART = BART_API_HOST + "/api/sched.aspx?cmd=depart&b=0&a=3&orig=";
 	public static final String SCHEDULE_ARRIVE = BART_API_HOST + "/api/sched.aspx?cmd=arrive&b=2&a=1&orig=";
 	public static final String SCHEDULE_DEST = "&dest=";
