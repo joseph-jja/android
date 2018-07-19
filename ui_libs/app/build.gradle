@@ -20,5 +20,5 @@ android {
 }
 
 dependencies {
-    compile project(':database-debug')
+    implementation project(':database-debug')
 }
