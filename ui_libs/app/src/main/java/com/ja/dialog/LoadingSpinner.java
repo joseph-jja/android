@@ -11,7 +11,7 @@ public class LoadingSpinner {
     public LoadingSpinner(Context context, String message) {
 
         // defaults for our loading spinner
-        // dialog = new ProgressDialog(context);
+        dialog = new ProgressDialog(context);
         dialog.setCancelable(false);
         dialog.setMessage(message);
 
