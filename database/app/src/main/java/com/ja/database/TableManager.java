@@ -68,6 +68,10 @@ public class TableManager {
 		return this.table;
 	}
 
+	public void dropIfExists() {
+		StringBuilder dropTable = new StringBuilder();
+	     	dropTable.append("DROP TABLE IF EXISTS ");
+	}
 	/* delete method is not needed as there is only delete by id */
 	/* findById method is not needed as it just needs the id */
 	/* find method is not needed as it just needs the column and value */
