@@ -5,7 +5,7 @@ INJECTED from /Users/jacosta1/sourcecode/android/SimpleBARTInfo/simpleBARTInfo/s
 INJECTED from /Users/jacosta1/sourcecode/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:2:1-21:12
 INJECTED from /Users/jacosta1/sourcecode/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:2:1-21:12
 MERGED from [:database-debug] /Users/jacosta1/.gradle/caches/transforms-1/files-1.1/database-debug.aar/0c465ba0667861a7954b5b7330f01bf7/AndroidManifest.xml:2:1-9:12
-MERGED from [:ui-libs-debug] /Users/jacosta1/.gradle/caches/transforms-1/files-1.1/ui-libs-debug.aar/e1327d1abfa829c06e4f91eb1e5cea16/AndroidManifest.xml:2:1-11:12
+MERGED from [:ui-libs-debug] /Users/jacosta1/.gradle/caches/transforms-1/files-1.1/ui-libs-debug.aar/9e6f586952f6e27ffa5fae42556c7dcf/AndroidManifest.xml:2:1-11:12
 INJECTED from /Users/jacosta1/sourcecode/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:2:1-21:12
 INJECTED from /Users/jacosta1/sourcecode/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:2:1-21:12
 INJECTED from /Users/jacosta1/sourcecode/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:2:1-21:12
@@ -25,8 +25,8 @@ INJECTED from /Users/jacosta1/sourcecode/android/SimpleBARTInfo/simpleBARTInfo/s
 		INJECTED from /Users/jacosta1/sourcecode/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml
 uses-sdk
 ADDED from /Users/jacosta1/sourcecode/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:7:5-44
-MERGED from [:ui-libs-debug] /Users/jacosta1/.gradle/caches/transforms-1/files-1.1/ui-libs-debug.aar/e1327d1abfa829c06e4f91eb1e5cea16/AndroidManifest.xml:7:5-44
-MERGED from [:ui-libs-debug] /Users/jacosta1/.gradle/caches/transforms-1/files-1.1/ui-libs-debug.aar/e1327d1abfa829c06e4f91eb1e5cea16/AndroidManifest.xml:7:5-44
+MERGED from [:ui-libs-debug] /Users/jacosta1/.gradle/caches/transforms-1/files-1.1/ui-libs-debug.aar/9e6f586952f6e27ffa5fae42556c7dcf/AndroidManifest.xml:7:5-44
+MERGED from [:ui-libs-debug] /Users/jacosta1/.gradle/caches/transforms-1/files-1.1/ui-libs-debug.aar/9e6f586952f6e27ffa5fae42556c7dcf/AndroidManifest.xml:7:5-44
 	android:minSdkVersion
 		ADDED from /Users/jacosta1/sourcecode/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:7:15-41
 uses-permission#android.permission.INTERNET
@@ -37,8 +37,8 @@ application
 ADDED from /Users/jacosta1/sourcecode/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:9:5-20:19
 MERGED from [:database-debug] /Users/jacosta1/.gradle/caches/transforms-1/files-1.1/database-debug.aar/0c465ba0667861a7954b5b7330f01bf7/AndroidManifest.xml:7:5-53
 MERGED from [:database-debug] /Users/jacosta1/.gradle/caches/transforms-1/files-1.1/database-debug.aar/0c465ba0667861a7954b5b7330f01bf7/AndroidManifest.xml:7:5-53
-MERGED from [:ui-libs-debug] /Users/jacosta1/.gradle/caches/transforms-1/files-1.1/ui-libs-debug.aar/e1327d1abfa829c06e4f91eb1e5cea16/AndroidManifest.xml:9:5-53
-MERGED from [:ui-libs-debug] /Users/jacosta1/.gradle/caches/transforms-1/files-1.1/ui-libs-debug.aar/e1327d1abfa829c06e4f91eb1e5cea16/AndroidManifest.xml:9:5-53
+MERGED from [:ui-libs-debug] /Users/jacosta1/.gradle/caches/transforms-1/files-1.1/ui-libs-debug.aar/9e6f586952f6e27ffa5fae42556c7dcf/AndroidManifest.xml:9:5-53
+MERGED from [:ui-libs-debug] /Users/jacosta1/.gradle/caches/transforms-1/files-1.1/ui-libs-debug.aar/9e6f586952f6e27ffa5fae42556c7dcf/AndroidManifest.xml:9:5-53
 	android:label
 		ADDED from /Users/jacosta1/sourcecode/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:11:9-41
 	android:icon
