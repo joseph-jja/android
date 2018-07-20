@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/widget28"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical">
@@ -9,23 +8,27 @@
         android:id="@+id/feed_text_view_title"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="5px"
-        android:layout_marginLeft="10px"
-        android:layout_marginRight="10px"
-        android:layout_marginTop="5px"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
         android:text="Minnow RSS"
-        android:textAppearance="@style/DefaultText"></TextView>
+        android:textAppearance="@style/SectionTitleText"></TextView>
 
     <WebView
         android:id="@+id/feed_text_view_link"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="5px"
-        android:layout_marginTop="5px"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
         android:textAppearance="@style/DefaultText"></WebView>
 
     <ScrollView
         android:id="@+id/feed_text_scroll_view"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
 
@@ -33,6 +36,7 @@
             android:id="@+id/feed_text_view_page"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
+            android:textAppearance="@style/DefaultText"
             android:layout_weight="1.0" />
     </ScrollView>
 </LinearLayout>

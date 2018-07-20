@@ -33,7 +33,6 @@
         android:id="@+id/add_name"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textIsSelectable="true"
         android:textAppearance="@style/SectionTitleText"></EditText>
 
     <TextView
@@ -46,7 +45,6 @@
         android:id="@+id/add_url"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textIsSelectable="true"
         android:textAppearance="@style/SectionTitleText"></EditText>
     </LinearLayout>
 

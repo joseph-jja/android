@@ -66,11 +66,11 @@ public class FeedDataWebViewListener implements AdapterView.OnItemClickListener 
 
 		if ( description.trim().startsWith("<") && ! forceTextView ) {
 			// for now we embed a web view, which does not always work
-			activity.setContentView(R.layout.feed_web_view);
+			activity.setContentView(R.layout.feed_item_web_view);
 			setWebViewData(activity, feedTitle, description, link);
 		} else {
 			// for now we embed a web view, which does not always work
-			activity.setContentView(R.layout.feed_text_view);
+			activity.setContentView(R.layout.feed_item_text_view);
 			setTextViewData(activity, feedTitle, description, link);
 		}
 	}

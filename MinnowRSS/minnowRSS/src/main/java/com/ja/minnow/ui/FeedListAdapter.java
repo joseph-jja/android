@@ -36,7 +36,7 @@ public class FeedListAdapter {
 
 		feedIds.clear();
 		final ListView feedList = (ListView)activity.findViewById(R.id.feeds_list_rows);
-		feedList.setAdapter( new FeedAdapter(activity, R.layout.feeds_row, feeds) );			
+		feedList.setAdapter( new FeedAdapter(activity, R.layout.feeds_list_row, feeds) );
 
 		activity.registerForContextMenu(feedList);
 		final int pos = Constants.getFeedsservice().getFeedsListPosition();

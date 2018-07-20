@@ -39,7 +39,7 @@ public class EditFeedListener extends ButtonEventListener implements View.OnClic
         		break;
         	case R.id.main_button:		
         	case R.id.cancel_feed_button:
-        		dialog = BaseDialog.spinnerDialog((BaseActivity)this.activity, "Gathering feeds, please wait.");
+        		dialog = BaseDialog.spinnerDialog((BaseActivity)this.activity, "Gathering feeds_list, please wait.");
         		saveFeed = false;
         		success = true;
         		new Thread(this).start();
@@ -75,7 +75,7 @@ public class EditFeedListener extends ButtonEventListener implements View.OnClic
 		public void handleMessage(Message msg) {
 			
 			if ( success ) { 
-				activity.setContentView(R.layout.feeds);
+				activity.setContentView(R.layout.feeds_list);
 				Constants.getFeeddataservice().setFeedID(-1);
                 Constants.getFeedlistadapter().updateFeedList((MinnowRSS)activity, results);
 				attachClickEventForView();

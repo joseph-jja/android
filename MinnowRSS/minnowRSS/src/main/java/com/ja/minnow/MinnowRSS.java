@@ -111,7 +111,7 @@ public class MinnowRSS extends BaseActivity {
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenuInfo menuInfo) {
 
         Log.d(TAG, "In create context menu + " + v.toString());
-        // only create this menu if the view is the feeds screen
+        // only create this menu if the view is the feeds_list screen
         final MenuInflater inflater = getMenuInflater();
         if (v.getId() == R.id.feeds_list_rows) {
             Log.d(TAG, "Got correct view.");
@@ -156,7 +156,7 @@ public class MinnowRSS extends BaseActivity {
         switch (item.getItemId()) {
             case R.id.context_delete:
                 if (localThread != null && localThread.isAlive()) {
-                    BaseDialog.alert(this, "Refresh in Progress", "Deleting feeds is not permitted, while refreshing database.");
+                    BaseDialog.alert(this, "Refresh in Progress", "Deleting feeds_list is not permitted, while refreshing database.");
                     break;
                 }
                 final AlertDialog alertDialog = new AlertDialog.Builder(this).create();
@@ -214,7 +214,7 @@ public class MinnowRSS extends BaseActivity {
                 break;
             case R.id.context_edit:
                 if (localThread != null && localThread.isAlive()) {
-                    BaseDialog.alert(this, "Refresh in Progress", "Editing feeds is not permitted, while refreshing database.");
+                    BaseDialog.alert(this, "Refresh in Progress", "Editing feeds_list is not permitted, while refreshing database.");
                     break;
                 }
                 this.setContentView(R.layout.add_feed);
@@ -251,15 +251,15 @@ public class MinnowRSS extends BaseActivity {
         Log.d(TAG, "In the key press event method " + keyCode);
         if (keyCode == 4) {
             // go back to feed list
-            if (this.getCurrentContentView() == R.layout.feed_web_view
-                    || this.getCurrentContentView() == R.layout.feed_text_view) {
+            if (this.getCurrentContentView() == R.layout.feed_item_web_view
+                    || this.getCurrentContentView() == R.layout.feed_item_text_view) {
 
                 Constants.getFeeddatalistadapter().processData(this);
                 Constants.getFeeddataservice().setFeedDataID(-1);
                 return true;
             } else if (this.getCurrentContentView() == R.layout.feed_data_list
                     || this.getCurrentContentView() == R.layout.add_feed) {
-                this.setContentView(R.layout.feeds);
+                this.setContentView(R.layout.feeds_list);
                 final EditFeedListener bev = new EditFeedListener(this);
                 bev.attachClickEventForView();
                 final List<Table> results = Constants.getFeedsservice().listFeeds((MinnowRSS) this);
@@ -359,13 +359,13 @@ public class MinnowRSS extends BaseActivity {
                 Constants.getSettingsservice().setUpdateDateTime(super.getDbAdapter(), 24);
                 break;
             //case R.id.setting_export:
-			/*	List<Table> feeds = FeedsEditor.getAllFeeds(this);
+			/*	List<Table> feeds_list = FeedsEditor.getAllFeeds(this);
 				final XMLExporter exporter = new XMLExporter();
 				Document xmlout = exporter.getXMLDocument();
 				if ( xmlout != null ) { 
 					Element root = xmlout.createElement("minnow_feeds");
 					xmlout.appendChild( root ); 
-					for ( Table feed: feeds ) {
+					for ( Table feed: feeds_list ) {
 						final FeedsTable feedTable = new FeedsTable(feed);
 						Element feedElement = xmlout.createElement("feed");
 						feedElement.setAttribute("name", feedTable.getName());
@@ -404,8 +404,8 @@ public class MinnowRSS extends BaseActivity {
                 }
                 bev.attachClickEventForView();
                 break;
-            case R.layout.feed_text_view:
-            case R.layout.feed_web_view:
+            case R.layout.feed_item_text_view:
+            case R.layout.feed_item_web_view:
                 final int wFeedID = Constants.getFeeddataservice().getFeedDataID();
                 final Table table = Constants.getFeeddataservice().getFeedData(this.dbAdapter, wFeedID);
                 Log.d(TAG, "Table = " + table.getColumnValue(FeedDataTableData.SUMMARY_COL));
@@ -414,7 +414,7 @@ public class MinnowRSS extends BaseActivity {
             case R.layout.feed_data_list:
                 Constants.getFeeddatalistadapter().processData(this);
                 break;
-            case R.layout.feeds:
+            case R.layout.feeds_list:
                 final List<Table> results = Constants.getFeedsservice().listFeeds((MinnowRSS) this);
                 Constants.getFeedlistadapter().updateFeedList((MinnowRSS) this, results);
                 bev.attachClickEventForView();
@@ -461,7 +461,7 @@ public class MinnowRSS extends BaseActivity {
                 // find view by id throws exception if it cannot find the view
                 // so this will just blow up if it cannot find the views
                 View view = ((MinnowRSS) activity).getCurrentFocus();
-                //view.findViewById(R.layout.feeds);
+                //view.findViewById(R.layout.feeds_list);
                 Constants.getFeedlistadapter().updateFeedList((MinnowRSS) activity, results);
                 //	Toast.makeText(this.activity, "Feed update completed.", Toast.LENGTH_LONG).show();
             } catch (Exception ex) {
