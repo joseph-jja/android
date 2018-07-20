@@ -3,6 +3,7 @@
     <uses-sdk android:minSdkVersion="23" />
     <application android:label="@string/app_name" android:icon="@drawable/icon">
         <activity android:name=".MinnowRSS"
+            android:theme="@style/MinnowRSSTheme"
             android:configChanges="orientation|keyboardHidden"
             android:label="@string/app_name">
             <intent-filter>

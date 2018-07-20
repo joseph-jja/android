@@ -1,9 +1,10 @@
 <resources>
+    <style name="MinnowRSSTheme" parent="android:Theme.Holo.Light">
+        <item name="android:textColor">#000</item>
+        <item name="android:background">#fff</item>
 
-    <!-- Base application theme. -->
-    <style name="AppTheme">
-        <!-- Customize your theme here. -->
+        <item name="android:divider">#000</item>
+        <item name="android:dividerHeight">1dp</item>
 
     </style>
-
 </resources>

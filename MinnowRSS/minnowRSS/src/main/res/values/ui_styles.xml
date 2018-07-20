@@ -2,43 +2,34 @@
 <resources>
     <style name="PageTitleText">
         <item name="android:textSize">20pt</item>
-        <item name="android:textColor">#fff</item>
     </style>
     <style name="BoldSectionTitleText">
         <item name="android:textSize">18sp</item>
-        <item name="android:textColor">#fff</item>
         <item name="android:textStyle">bold</item>
     </style>
     <style name="SectionTitleText">
         <item name="android:textSize">18sp</item>
-        <item name="android:textColor">#fff</item>
     </style>
     <style name="DefaultText">
         <item name="android:textSize">16sp</item>
-        <item name="android:textColor">#fff</item>
     </style>
     <style name="FeedsText">
         <item name="android:textSize">22sp</item>
-        <item name="android:textColor">#fff</item>
         <item name="android:textStyle">bold</item>
     </style>
     <style name="FeedsListTitleText">
         <item name="android:textSize">18sp</item>
-        <item name="android:textColor">#fff</item>
         <item name="android:textStyle">bold</item>
     </style>
     <style name="FeedsListSummaryText">
         <item name="android:textSize">16sp</item>
-        <item name="android:textColor">#fff</item>
     </style>
     <style name="GoButtonText">
         <item name="android:textSize">18sp</item>
-        <item name="android:textColor">#fff</item>
         <item name="android:textStyle">bold</item>
     </style>
     <style name="StopButtonText">
         <item name="android:textSize">18sp</item>
-        <item name="android:textColor">#fff</item>
         <item name="android:textStyle">bold</item>
     </style>
     <style name="SelectedListItem">
