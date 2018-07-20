@@ -1,87 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-android:layout_width="fill_parent"
-android:layout_height="fill_parent"
-xmlns:android="http://schemas.android.com/apk/res/android"
->
-<LinearLayout
-android:layout_width="fill_parent"
-android:layout_height="fill_parent"
-android:orientation="vertical"
->
-<TextView
-android:id="@+id/add_id"
-android:layout_width="0dp"
-android:layout_height="0dp"
->
-</TextView>
-<TextView
-android:textAppearance="@style/DefaultText"
-android:layout_width="fill_parent"
-android:layout_height="wrap_content"
-android:layout_marginBottom="10px"
-android:layout_marginLeft="10px"
-android:layout_marginRight="10px"
-android:text="Add Feed"
->
-</TextView>
-<TextView
-android:textAppearance="@style/DefaultText"
-android:layout_width="fill_parent"
-android:layout_height="wrap_content"
-android:layout_marginTop="10px"
-android:layout_marginBottom="10px"
-android:layout_marginLeft="10px"
-android:layout_marginRight="10px"
-android:text="Name:"
->
-</TextView>
-<EditText
-android:id="@+id/add_name"
-android:layout_width="fill_parent"
-android:layout_height="wrap_content"
-android:textSize="18sp"
->
-</EditText>
-<TextView
-android:textAppearance="@style/DefaultText"
-android:layout_width="fill_parent"
-android:layout_height="wrap_content"
-android:layout_marginTop="10px"
-android:layout_marginBottom="10px"
-android:layout_marginLeft="10px"
-android:layout_marginRight="10px"
-android:text="URL:"
->
-</TextView>
-<EditText
-android:id="@+id/add_url"
-android:layout_width="fill_parent"
-android:layout_height="wrap_content"
-android:textSize="18sp"
->
-</EditText>
-<LinearLayout
-android:layout_width="fill_parent"
-android:layout_height="wrap_content"
-android:gravity="right"
->
-<Button
-android:textAppearance="@style/ButtonText"
-android:id="@+id/save_feed_button"
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:text="   Save   "
->
-</Button>
-<Button
-android:textAppearance="@style/ButtonText"
-android:id="@+id/cancel_feed_button"
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:text="   Cancel   "
->
-</Button>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_marginLeft="15dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/add_id"
+        android:layout_width="0dp"
+        android:layout_height="0dp"></TextView>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:text="Add Feed"
+        android:textAppearance="@style/BoldSectionTitleText"></TextView>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Name:"
+        android:textAppearance="@style/SectionTitleText"></TextView>
+
+    <EditText
+        android:id="@+id/add_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textIsSelectable="true"
+        android:textAppearance="@style/SectionTitleText"></EditText>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="URL:"
+        android:textAppearance="@style/SectionTitleText"></TextView>
+
+    <EditText
+        android:id="@+id/add_url"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textIsSelectable="true"
+        android:textAppearance="@style/SectionTitleText"></EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginLeft="15dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right">
+
+        <Button
+            android:id="@+id/save_feed_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="   Save   "
+            android:textAppearance="@style/ButtonText"></Button>
+
+        <Button
+            android:id="@+id/cancel_feed_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="   Cancel   "
+            android:textAppearance="@style/ButtonText"></Button>
+    </LinearLayout>
 </LinearLayout>
-</LinearLayout>
-</ScrollView>
+
