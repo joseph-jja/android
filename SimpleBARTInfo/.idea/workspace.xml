@@ -18,42 +18,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3610203d-8b97-4323-8aa6-8b7cb84390c1" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/fileHashes.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/fileHashes.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.4.1/javaCompile/classAnalysis.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.4.1/javaCompile/javaCompile.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4.1/javaCompile/taskHistory.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4.1/taskHistory/taskHistory.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4.1/taskHistory/taskHistory.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
+      <change beforePath="$PROJECT_DIR$/../MinnowRSS/minnowRSS/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/../MinnowRSS/minnowRSS/src/main/AndroidManifest.xml" />
+      <change beforePath="$PROJECT_DIR$/../MinnowRSS/minnowRSS/src/main/java/com/ja/minnow/MinnowRSS.java" afterPath="$PROJECT_DIR$/../MinnowRSS/minnowRSS/src/main/java/com/ja/minnow/MinnowRSS.java" />
+      <change beforePath="$PROJECT_DIR$/../MinnowRSS/minnowRSS/src/main/java/com/ja/minnow/services/FeedDataService.java" afterPath="$PROJECT_DIR$/../MinnowRSS/minnowRSS/src/main/java/com/ja/minnow/services/FeedDataService.java" />
+      <change beforePath="$PROJECT_DIR$/../MinnowRSS/minnowRSS/src/main/java/com/ja/minnow/services/FeedsService.java" afterPath="$PROJECT_DIR$/../MinnowRSS/minnowRSS/src/main/java/com/ja/minnow/services/FeedsService.java" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/simpleBARTInfo/build/outputs/apk/debug/SimpleBARTInfo-debug.apk" afterPath="$PROJECT_DIR$/simpleBARTInfo/build/outputs/apk/debug/SimpleBARTInfo-debug.apk" />
-      <change beforePath="$PROJECT_DIR$/simpleBARTInfo/build/outputs/apk/debug/output.json" afterPath="$PROJECT_DIR$/simpleBARTInfo/build/outputs/apk/debug/output.json" />
-      <change beforePath="$PROJECT_DIR$/simpleBARTInfo/build/outputs/logs/manifest-merger-debug-report.txt" afterPath="$PROJECT_DIR$/simpleBARTInfo/build/outputs/logs/manifest-merger-debug-report.txt" />
-      <change beforePath="$PROJECT_DIR$/simpleBARTInfo/simpleBARTInfo.iml" afterPath="$PROJECT_DIR$/simpleBARTInfo/simpleBARTInfo.iml" />
-      <change beforePath="$PROJECT_DIR$/simpleBARTInfo/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/simpleBARTInfo/src/main/AndroidManifest.xml" />
-      <change beforePath="$PROJECT_DIR$/simpleBARTInfo/src/main/res/values/ui_styles.xml" afterPath="$PROJECT_DIR$/simpleBARTInfo/src/main/res/values/ui_styles.xml" />
-      <change beforePath="$PROJECT_DIR$/../database/.gradle/4.4.1/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/../database/.gradle/4.4.1/fileHashes/fileHashes.bin" />
-      <change beforePath="$PROJECT_DIR$/../database/.gradle/4.4.1/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/../database/.gradle/4.4.1/fileHashes/fileHashes.lock" />
-      <change beforePath="$PROJECT_DIR$/../database/.gradle/4.4.1/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/../database/.gradle/4.4.1/javaCompile/javaCompile.lock" />
-      <change beforePath="$PROJECT_DIR$/../database/.gradle/4.4.1/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/../database/.gradle/4.4.1/taskHistory/taskHistory.bin" />
-      <change beforePath="$PROJECT_DIR$/../database/.gradle/4.4.1/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/../database/.gradle/4.4.1/taskHistory/taskHistory.lock" />
-      <change beforePath="$PROJECT_DIR$/../database/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/../database/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
-      <change beforePath="$PROJECT_DIR$/../database/.gradle/buildOutputCleanup/outputFiles.bin" afterPath="$PROJECT_DIR$/../database/.gradle/buildOutputCleanup/outputFiles.bin" />
-      <change beforePath="$PROJECT_DIR$/../ui_libs/.gradle/4.4.1/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/../ui_libs/.gradle/4.4.1/fileHashes/fileHashes.bin" />
-      <change beforePath="$PROJECT_DIR$/../ui_libs/.gradle/4.4.1/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/../ui_libs/.gradle/4.4.1/fileHashes/fileHashes.lock" />
-      <change beforePath="$PROJECT_DIR$/../ui_libs/.gradle/4.4.1/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/../ui_libs/.gradle/4.4.1/javaCompile/javaCompile.lock" />
-      <change beforePath="$PROJECT_DIR$/../ui_libs/.gradle/4.4.1/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/../ui_libs/.gradle/4.4.1/javaCompile/taskHistory.bin" />
-      <change beforePath="$PROJECT_DIR$/../ui_libs/.gradle/4.4.1/javaCompile/taskJars.bin" afterPath="$PROJECT_DIR$/../ui_libs/.gradle/4.4.1/javaCompile/taskJars.bin" />
-      <change beforePath="$PROJECT_DIR$/../ui_libs/.gradle/4.4.1/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/../ui_libs/.gradle/4.4.1/taskHistory/taskHistory.bin" />
-      <change beforePath="$PROJECT_DIR$/../ui_libs/.gradle/4.4.1/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/../ui_libs/.gradle/4.4.1/taskHistory/taskHistory.lock" />
-      <change beforePath="$PROJECT_DIR$/../ui_libs/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/../ui_libs/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
-      <change beforePath="$PROJECT_DIR$/../ui_libs/.gradle/buildOutputCleanup/outputFiles.bin" afterPath="$PROJECT_DIR$/../ui_libs/.gradle/buildOutputCleanup/outputFiles.bin" />
-      <change beforePath="$PROJECT_DIR$/../ui_libs/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ui_libs/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../ui_libs/app/app.iml" afterPath="$PROJECT_DIR$/../ui_libs/app/app.iml" />
-      <change beforePath="$PROJECT_DIR$/../ui_libs/app/build.gradle" afterPath="$PROJECT_DIR$/../ui_libs/app/build.gradle" />
-      <change beforePath="$PROJECT_DIR$/../ui_libs/app/build/outputs/aar/ui-libs-debug.aar" afterPath="$PROJECT_DIR$/../ui_libs/app/build/outputs/aar/ui-libs-debug.aar" />
-      <change beforePath="$PROJECT_DIR$/../ui_libs/app/build/outputs/aar/ui-libs-release.aar" afterPath="$PROJECT_DIR$/../ui_libs/app/build/outputs/aar/ui-libs-release.aar" />
     </list>
     <ignored path="$PROJECT_DIR$/build/classes/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -80,7 +50,7 @@
       <file leaf-file-name="BartMapManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/map/BartMapManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="180">
               <caret line="23" column="28" lean-forward="false" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -89,7 +59,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ui_styles.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ui_styles.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/res/values/ui_styles.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="252">
@@ -102,7 +72,7 @@
       <file leaf-file-name="Theme Editor" pinned="false" current-in-tab="false">
         <entry file="android-dummy:///home/joea/workspace/android/SimpleBARTInfo//Theme Editor">
           <provider selected="true" editor-type-id="themeEditor">
-            <state theme-name="android:Theme.DeviceDefault.Light" module-name="simpleBARTInfo" proportion="0.67" />
+            <state module-name="simpleBARTInfo" proportion="0.67" />
           </provider>
         </entry>
       </file>
@@ -138,7 +108,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
+            <state relative-caret-position="486">
               <caret line="27" column="56" lean-forward="false" selection-start-line="27" selection-start-column="56" selection-end-line="27" selection-end-column="56" />
               <folding />
             </state>
@@ -184,11 +154,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SimpleBARTInfo.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SimpleBARTInfo.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/SimpleBARTInfo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2034">
-              <caret line="133" column="0" lean-forward="false" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
+            <state relative-caret-position="264">
+              <caret line="94" column="40" lean-forward="false" selection-start-line="94" selection-start-column="19" selection-end-line="94" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -2463,7 +2433,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="417" />
+    <option name="x" value="331" />
     <option name="y" value="43" />
     <option name="width" value="1279" />
     <option name="height" value="984" />
@@ -2486,6 +2456,22 @@
     <panes>
       <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="AndroidView">
+        <subPane>
+          <expand>
+            <path>
+              <item name="SimpleBARTInfo" type="1abcf292:AndroidViewProjectNode" />
+              <item name="simpleBARTInfo" type="feadf853:AndroidModuleNode" />
+            </path>
+            <path>
+              <item name="SimpleBARTInfo" type="1abcf292:AndroidViewProjectNode" />
+              <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -2568,22 +2554,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView">
-        <subPane>
-          <expand>
-            <path>
-              <item name="SimpleBARTInfo" type="1abcf292:AndroidViewProjectNode" />
-              <item name="simpleBARTInfo" type="feadf853:AndroidModuleNode" />
-            </path>
-            <path>
-              <item name="SimpleBARTInfo" type="1abcf292:AndroidViewProjectNode" />
-              <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2757,18 +2727,6 @@
       <module name="" />
       <envs />
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <module name="SimpleBARTInfo" />
-      <envs />
-    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -2832,6 +2790,18 @@
       <envs />
       <patterns />
     </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <module name="SimpleBARTInfo" />
+      <envs />
+    </configuration>
     <configuration name="&lt;template&gt;" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" default="true" selected="false">
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
     </configuration>
@@ -2862,17 +2832,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="417" y="43" width="1279" height="984" extended-state="0" />
+    <frame x="331" y="43" width="1279" height="984" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969034" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.32969034" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19759579" sideWeight="0.50751877" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32912987" sideWeight="0.5" order="13" side_tool="true" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17193836" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32830188" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32830188" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -2884,9 +2853,9 @@
       <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="WINDOWED" visible="false" show_stripe_button="true" weight="0.32912987" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" x="421" y="329" width="875" height="300" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2497979" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38287753" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38287753" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -2897,6 +2866,7 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32663316" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35917312" sideWeight="0.49067315" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17193836" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34438777" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -3090,7 +3060,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3112,7 +3081,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3134,7 +3102,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3142,7 +3109,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="1" column="51" lean-forward="false" selection-start-line="1" selection-start-column="51" selection-end-line="1" selection-end-column="51" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3152,16 +3118,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="277">
           <caret line="47" column="5" lean-forward="false" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/SimpleBARTInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2034">
-          <caret line="133" column="0" lean-forward="false" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3185,7 +3141,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/map/BartMapManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="180">
           <caret line="23" column="28" lean-forward="false" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -3198,7 +3154,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
+        <state relative-caret-position="486">
           <caret line="27" column="56" lean-forward="false" selection-start-line="27" selection-start-column="56" selection-end-line="27" selection-end-column="56" />
           <folding />
         </state>
@@ -3206,7 +3162,7 @@
     </entry>
     <entry file="android-dummy:///home/joea/workspace/android/SimpleBARTInfo//Theme Editor">
       <provider selected="true" editor-type-id="themeEditor">
-        <state theme-name="android:Theme.DeviceDefault.Light" module-name="simpleBARTInfo" proportion="0.67" />
+        <state module-name="simpleBARTInfo" proportion="0.67" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/res/layout/stations.xml">
@@ -3216,7 +3172,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="3" column="29" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3236,6 +3191,16 @@
         <state relative-caret-position="252">
           <caret line="14" column="35" lean-forward="false" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="36" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/SimpleBARTInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="94" column="40" lean-forward="false" selection-start-line="94" selection-start-column="19" selection-end-line="94" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -85,7 +85,7 @@ public class FeedsService {
 		try {
 			// get URL
 			final EditText urlText = (EditText)activity.findViewById(R.id.add_url);
-			final String rssFeed = Constants.getRetriever().downloadURL(urlText.getText().toString());
+			final String rssFeed = Constants.getRetriever().downloadURL(urlText.getText().toString(), 0);
 
 			// verify it's xml
 			if ( ! Constants.getParser().isValidRSS(rssFeed) ) { return false; }

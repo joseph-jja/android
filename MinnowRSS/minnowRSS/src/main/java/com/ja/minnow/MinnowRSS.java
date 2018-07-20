@@ -282,6 +282,9 @@ public class MinnowRSS extends BaseActivity {
 	public boolean onMenuOpened(int featureId, Menu menu) {
 		
 		final int dres = Math.abs(Constants.getSettingsservice().getUpdateDateTime(super.getDbAdapter()));
+		if ( menu == null ) {
+			return super.onMenuOpened(featureId, menu);
+		}
 	    final MenuItem item = menu.getItem(2);
 	    SubMenu subMenu = item.getSubMenu();
 	    final int slen = subMenu.size();

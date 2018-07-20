@@ -35,7 +35,7 @@ public class FeedDataService {
 			db.open();
 		}
 		final Table feed = db.findById("feeds", dbFeedId);
-		return Constants.getRetriever().downloadURL((String)feed.getColumnValue("url"));
+		return Constants.getRetriever().downloadURL((String)feed.getColumnValue("url"), 0);
 	}
 
 	public void deleteAllFeedData(DatabaseAdapter adapter, int dbFeedId) {
