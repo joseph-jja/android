@@ -23,25 +23,6 @@ public class BaseDialog {
 		dialog.show();
 	}
 	
-	/*public static final void okCancel(BaseActivity activity, String title , String message, String okText) {
-		
-		AlertDialog dialog = new AlertDialog.Builder(activity).create();
-		dialog.setTitle(title);
-		dialog.setMessage(message);
-		dialog.setButton(okText, new DialogInterface.OnClickListener() {
-             public void onClick(DialogInterface dialog, int which) { 
-            	 dialog.dismiss();
-            	 return;
-             }
-        }); 
-		dialog.setButton2("Cancel", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-           	 return;
-            }
-       }); 
-		dialog.show();
-	}*/
-	
 	public static final ProgressDialog spinnerDialog(Activity activity, String message ) { 
 
 		ProgressDialog dialog = new ProgressDialog(activity);

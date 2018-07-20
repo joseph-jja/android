@@ -131,7 +131,6 @@ public class SimpleBARTInfo extends BaseActivity {
             case R.id.view_map:
                 setContentView(R.layout.bart_map);
                 BartMapManager map = new BartMapManager(this);
-                map.resizeImage(1);
                 break;
             default:
                 break;

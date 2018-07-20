@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/bart_map_container"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical">
@@ -33,11 +32,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <ImageView
-                android:id="@+id/bart_map_image"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/bart_cc_map" />
+                <ImageView
+                    android:id="@+id/bart_map_image"
+                    android:layout_width="5000px"
+                    android:layout_height="4740px"
+                    android:src="@drawable/bart_cc_map" />
+
         </ScrollView>
     </HorizontalScrollView>
 </LinearLayout>
