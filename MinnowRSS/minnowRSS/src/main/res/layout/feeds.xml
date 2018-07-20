@@ -9,12 +9,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
-        android:textAppearance="@style/DefaultText"></TextView>
+        android:layout_marginRight="15dp"
+        android:textAppearance="@style/BoldSectionTitleText"></TextView>
 
     <ListView
         android:id="@+id/feeds_list_rows"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
+        android:layout_marginTop="10dp"
         android:layout_marginLeft="15dp"
         android:fastScrollEnabled="true"></ListView>
 </LinearLayout>
