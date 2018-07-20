@@ -288,8 +288,13 @@ public class MinnowRSS extends BaseActivity {
         if (menu == null) {
             return super.onMenuOpened(featureId, menu);
         }
+
         final MenuItem item = menu.getItem(2);
         SubMenu subMenu = item.getSubMenu();
+        if (subMenu == null ) {
+            return super.onMenuOpened(featureId, menu);
+        }
+
         final int slen = subMenu.size();
         MenuItem mitem;
         for (int i = 0; i < slen; i += 1) {

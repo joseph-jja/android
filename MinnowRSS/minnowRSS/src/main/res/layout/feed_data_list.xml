@@ -13,8 +13,8 @@
 
         <ImageView
             android:id="@+id/feeds_data_list_image"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_width="50px"
+            android:layout_height="50px"/>
 
         <TextView
             android:id="@+id/feed_data_list_title"
