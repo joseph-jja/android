@@ -3,6 +3,7 @@ package com.ja.sbi.map;
 import android.app.Activity;
 import android.content.Context;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.HorizontalScrollView;
@@ -18,7 +19,7 @@ public class BartMapManager {
 
     private final String LOG_NAME = this.getClass().getName();
 
-    private static final int maxZoomSize = 5;
+    private static final int maxZoomSize = 3;
 
     private int zoomFactor = 1;
     private int defaultImageWidth = 1000;
@@ -41,7 +42,15 @@ public class BartMapManager {
 
         // get image view
         BartMapManager.bartMapImage = (ImageView) ((SimpleBARTInfo) context).findViewById(R.id.bart_map_image);
-        BartMapManager.bartMapImage.setAdjustViewBounds(true);
+        //BartMapManager.bartMapImage.setAdjustViewBounds(true);
+
+        BartMapManager.hscroll = (HorizontalScrollView) ((SimpleBARTInfo) context).findViewById(R.id.bart_map_hscroll);
+        BartMapManager.vscroll = (ScrollView) ((SimpleBARTInfo) context).findViewById(R.id.bart_map_vscroll);
+
+        BartMapManager.zoomIn = (Button) ((SimpleBARTInfo) context).findViewById(R.id.bart_map_zoom_in);
+        BartMapManager.zoomOut = (Button) ((SimpleBARTInfo) context).findViewById(R.id.bart_map_zoom_out);
+
+        // attache some events below
         BartMapManager.bartMapImage.addOnLayoutChangeListener(new View.OnLayoutChangeListener() {
             @Override
             public void onLayoutChange(View v, int left, int top, int right, int bottom, int oldLeft, int oldTop, int oldRight, int oldBottom) {
@@ -53,11 +62,22 @@ public class BartMapManager {
             }
         });
 
-        BartMapManager.hscroll = (HorizontalScrollView) ((SimpleBARTInfo) context).findViewById(R.id.bart_map_hscroll);
-        BartMapManager.vscroll = (ScrollView) ((SimpleBARTInfo) context).findViewById(R.id.bart_map_vscroll);
+        BartMapManager.hscroll.setOnScrollChangeListener(new View.OnScrollChangeListener() {
+            @Override
+            public void onScrollChange(View v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
 
-        BartMapManager.zoomIn = (Button) ((SimpleBARTInfo) context).findViewById(R.id.bart_map_zoom_in);
-        BartMapManager.zoomOut = (Button) ((SimpleBARTInfo) context).findViewById(R.id.bart_map_zoom_out);
+                final int curentImageWidth = BartMapManager.bartMapImage.getWidth();
+
+                int maxScrollX = curentImageWidth - 1000;
+
+                //Log.i(LOG_NAME, Integer.valueOf(curentImageWidth).toString() + " " + Integer.valueOf(scrollX).toString() + " " + Integer.valueOf(oldScrollX).toString());
+                if ( zoomFactor == 1 ) {
+                    BartMapManager.hscroll.scrollTo(0,scrollY);
+                } else if ( scrollX > maxScrollX){
+                    BartMapManager.hscroll.scrollTo(maxScrollX,scrollY);
+                }
+            }
+        });
 
         BartMapManager.zoomIn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {

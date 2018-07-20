@@ -32,11 +32,11 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-                <ImageView
-                    android:id="@+id/bart_map_image"
-                    android:layout_width="5000px"
-                    android:layout_height="4740px"
-                    android:src="@drawable/bart_cc_map" />
+            <ImageView
+                android:id="@+id/bart_map_image"
+                android:layout_width="5000px"
+                android:layout_height="4740px"
+                android:src="@drawable/bart_cc_map" />
 
         </ScrollView>
     </HorizontalScrollView>
