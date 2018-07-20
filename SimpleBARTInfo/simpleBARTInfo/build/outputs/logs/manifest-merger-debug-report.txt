@@ -1,14 +1,14 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:2:1-21:12
-INJECTED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:2:1-21:12
-INJECTED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:2:1-21:12
-INJECTED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:2:1-21:12
+ADDED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:2:1-22:12
+INJECTED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:2:1-22:12
+INJECTED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:2:1-22:12
+INJECTED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:2:1-22:12
 MERGED from [:database-debug] /home/joea/.gradle/caches/transforms-1/files-1.1/database-debug.aar/21e4c5ccb912a9c0d94f2e462820c403/AndroidManifest.xml:2:1-9:12
 MERGED from [:ui-libs-debug] /home/joea/.gradle/caches/transforms-1/files-1.1/ui-libs-debug.aar/285c47a3a827844e27f47fe2051d8b0a/AndroidManifest.xml:2:1-11:12
-INJECTED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:2:1-21:12
-INJECTED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:2:1-21:12
-INJECTED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:2:1-21:12
+INJECTED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:2:1-22:12
+INJECTED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:2:1-22:12
+INJECTED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:2:1-22:12
 	package
 		ADDED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:3:5-25
 		INJECTED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml
@@ -34,7 +34,7 @@ ADDED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/A
 	android:name
 		ADDED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:8:22-64
 application
-ADDED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:9:5-20:19
+ADDED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:9:5-21:19
 MERGED from [:database-debug] /home/joea/.gradle/caches/transforms-1/files-1.1/database-debug.aar/21e4c5ccb912a9c0d94f2e462820c403/AndroidManifest.xml:7:5-53
 MERGED from [:database-debug] /home/joea/.gradle/caches/transforms-1/files-1.1/database-debug.aar/21e4c5ccb912a9c0d94f2e462820c403/AndroidManifest.xml:7:5-53
 MERGED from [:ui-libs-debug] /home/joea/.gradle/caches/transforms-1/files-1.1/ui-libs-debug.aar/285c47a3a827844e27f47fe2051d8b0a/AndroidManifest.xml:9:5-53
@@ -44,24 +44,26 @@ MERGED from [:ui-libs-debug] /home/joea/.gradle/caches/transforms-1/files-1.1/ui
 	android:icon
 		ADDED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:10:9-38
 activity#com.ja.sbi.SimpleBARTInfo
-ADDED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:12:9-19:20
+ADDED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:12:9-20:20
 	android:label
-		ADDED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:14:13-45
+		ADDED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:15:13-45
+	android:theme
+		ADDED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:13:13-69
 	android:name
-		ADDED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:13:13-42
+		ADDED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:14:13-42
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:15:13-18:29
+ADDED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:16:13-19:29
 action#android.intent.action.MAIN
-ADDED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:16:17-69
+ADDED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:17:17-69
 	android:name
-		ADDED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:16:25-66
+		ADDED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:17:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:17:17-77
+ADDED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:18:17-77
 	android:name
-		ADDED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:17:27-74
+		ADDED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:18:27-74
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-IMPLIED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:2:1-21:12 reason: com.ja.database has a targetSdkVersion < 4
+IMPLIED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:2:1-22:12 reason: com.ja.database has a targetSdkVersion < 4
 uses-permission#android.permission.READ_PHONE_STATE
-IMPLIED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:2:1-21:12 reason: com.ja.database has a targetSdkVersion < 4
+IMPLIED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:2:1-22:12 reason: com.ja.database has a targetSdkVersion < 4
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-IMPLIED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:2:1-21:12 reason: com.ja.database requested WRITE_EXTERNAL_STORAGE
+IMPLIED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:2:1-22:12 reason: com.ja.database requested WRITE_EXTERNAL_STORAGE
