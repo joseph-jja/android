@@ -23,8 +23,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:background="#09af00"
         android:text="   Ok   "
-        android:textAppearance="@style/ButtonText"></Button>
+        android:textAppearance="@style/GoButtonText"></Button>
 
     <ImageView
         android:layout_width="wrap_content"

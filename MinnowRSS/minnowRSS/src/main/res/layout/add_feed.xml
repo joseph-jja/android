@@ -6,6 +6,7 @@
 
     <LinearLayout
         android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -59,15 +60,19 @@
             android:id="@+id/save_feed_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginRight="25dp"
+            android:background="#09af00"
             android:text="   Save   "
-            android:textAppearance="@style/ButtonText"></Button>
+            android:textAppearance="@style/GoButtonText"></Button>
 
         <Button
             android:id="@+id/cancel_feed_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:background="#b1006a"
             android:text="   Cancel   "
-            android:textAppearance="@style/ButtonText"></Button>
+            android:textAppearance="@style/StopButtonText"></Button>
     </LinearLayout>
 </LinearLayout>
 
