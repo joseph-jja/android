@@ -9,12 +9,12 @@
 
 ## Requires Android API level 24 or Android 7
 
-Station List
+Station List<br>
 <img src="images/station-list.png" alt="Station List" width="150px">
 
-Fare Estimator
+Fare Estimator<br>
 <img src="images/fare-estimator.png" alt="Fare Estimator" width="150px">
 
-Trip Planner
+Trip Planner<br>
 <img src="images/trip-planner.png" alt="Trip Planner" width="150px">
 
