@@ -1,0 +1,71 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:1:1-19:12
+INJECTED from /Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:1:1-19:12
+INJECTED from /Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:1:1-19:12
+INJECTED from /Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:1:1-19:12
+MERGED from [:database-debug] /Users/jacosta1/.gradle/caches/transforms-1/files-1.1/database-debug.aar/3ee39276a37334204ce53ac0bfe3a7d2/AndroidManifest.xml:2:1-9:12
+MERGED from [:ui-libs-debug] /Users/jacosta1/.gradle/caches/transforms-1/files-1.1/ui-libs-debug.aar/78f56fac616ff673df4beeb1cdda61c4/AndroidManifest.xml:2:1-11:12
+INJECTED from /Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:1:1-19:12
+INJECTED from /Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:1:1-19:12
+INJECTED from /Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:1:1-19:12
+	package
+		ADDED from /Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:2:5-28
+		INJECTED from /Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml
+		INJECTED from /Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml
+	android:versionName
+		ADDED from /Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:4:5-30
+		INJECTED from /Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml
+		INJECTED from /Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:1:11-69
+	android:versionCode
+		ADDED from /Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:3:5-28
+		INJECTED from /Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml
+		INJECTED from /Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml
+uses-sdk
+ADDED from /Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:5:5-44
+MERGED from [:ui-libs-debug] /Users/jacosta1/.gradle/caches/transforms-1/files-1.1/ui-libs-debug.aar/78f56fac616ff673df4beeb1cdda61c4/AndroidManifest.xml:7:5-44
+MERGED from [:ui-libs-debug] /Users/jacosta1/.gradle/caches/transforms-1/files-1.1/ui-libs-debug.aar/78f56fac616ff673df4beeb1cdda61c4/AndroidManifest.xml:7:5-44
+	android:minSdkVersion
+		ADDED from /Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:5:15-41
+application
+ADDED from /Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:6:5-16:19
+MERGED from [:database-debug] /Users/jacosta1/.gradle/caches/transforms-1/files-1.1/database-debug.aar/3ee39276a37334204ce53ac0bfe3a7d2/AndroidManifest.xml:7:5-53
+MERGED from [:database-debug] /Users/jacosta1/.gradle/caches/transforms-1/files-1.1/database-debug.aar/3ee39276a37334204ce53ac0bfe3a7d2/AndroidManifest.xml:7:5-53
+MERGED from [:ui-libs-debug] /Users/jacosta1/.gradle/caches/transforms-1/files-1.1/ui-libs-debug.aar/78f56fac616ff673df4beeb1cdda61c4/AndroidManifest.xml:9:5-53
+MERGED from [:ui-libs-debug] /Users/jacosta1/.gradle/caches/transforms-1/files-1.1/ui-libs-debug.aar/78f56fac616ff673df4beeb1cdda61c4/AndroidManifest.xml:9:5-53
+	android:label
+		ADDED from /Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:6:18-50
+	android:icon
+		ADDED from /Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:6:51-80
+activity#com.ja.minnow.MinnowRSS
+ADDED from /Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:7:9-15:20
+	android:label
+		ADDED from /Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:10:13-45
+	android:configChanges
+		ADDED from /Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:9:13-63
+	android:theme
+		ADDED from /Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:8:13-50
+	android:name
+		ADDED from /Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:7:19-44
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:11:13-14:29
+action#android.intent.action.MAIN
+ADDED from /Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:12:17-69
+	android:name
+		ADDED from /Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:12:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:13:17-77
+	android:name
+		ADDED from /Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:13:27-74
+uses-permission#android.permission.INTERNET
+ADDED from /Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:18:5-66
+	android:name
+		ADDED from /Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:18:22-64
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+IMPLIED from /Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:1:1-19:12 reason: com.ja.database has a targetSdkVersion < 4
+uses-permission#android.permission.READ_PHONE_STATE
+IMPLIED from /Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:1:1-19:12 reason: com.ja.database has a targetSdkVersion < 4
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+IMPLIED from /Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:1:1-19:12 reason: com.ja.database requested WRITE_EXTERNAL_STORAGE

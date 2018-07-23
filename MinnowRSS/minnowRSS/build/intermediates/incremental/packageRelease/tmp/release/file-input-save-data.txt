@@ -1,0 +1,7 @@
+#Internal package file, do not edit.
+#Mon Jul 23 13:24:48 PDT 2018
+0.baseType=DIRECTORY
+0.base=/Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/build/intermediates/transforms/dexMerger/release/0
+0.path=classes.dex
+0.set=DEX
+count=1

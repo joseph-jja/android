@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="accent">#FF4081</color>
+    <color name="primary">#3F51B5</color>
+    <color name="primaryDark">#303F9F</color>
+    <string name="about_app">Minnow RSS\nReader\nBy \nJoseph Acosta</string>
+    <string name="app_name">Minnow RSS</string>
+    <style name="BoldSectionTitleText">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="DefaultText">
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="FeedsListSummaryText">
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="FeedsListTitleText">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="FeedsText">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="GoButtonText">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="MinnowRSSTheme" parent="android:Theme.Holo.Light">
+        <item name="android:textColor">#000</item>
+        <item name="android:background">#fff</item>
+
+        <item name="android:divider">#000</item>
+        <item name="android:dividerHeight">1dp</item>
+
+    </style>
+    <style name="PageTitleText">
+        <item name="android:textSize">20pt</item>
+    </style>
+    <style name="SectionTitleText">
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="SelectedListItem">
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="StopButtonText">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>
