@@ -363,6 +363,11 @@ public class MinnowRSS extends BaseActivity {
             case R.id.setting_set_refresh_age_24:
                 Constants.getSettingsservice().setUpdateDateTime(super.getDbAdapter(), 24);
                 break;
+            case R.id.setting_export:
+                // need thread?
+                List<Table> feeds_list = Constants.getFeedsservice().listFeeds(this);
+                break;
+            case R.id.setting_import:
             //case R.id.setting_export:
 			/*	List<Table> feeds_list = FeedsEditor.getAllFeeds(this);
 				final XMLExporter exporter = new XMLExporter();
