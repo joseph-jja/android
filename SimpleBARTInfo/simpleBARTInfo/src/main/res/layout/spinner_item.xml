@@ -3,6 +3,7 @@
     android:id="@+id/spinner_item"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
     android:paddingBottom="6dp"
     android:paddingTop="6dp"
     android:textAppearance="@style/DefaultText"/>
