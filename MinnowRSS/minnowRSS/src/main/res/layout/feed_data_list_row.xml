@@ -2,32 +2,38 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="5dp"
-    android:layout_marginLeft="15dp"
-    android:layout_marginRight="15dp"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/feed_data_list_row_feed_id"
-        android:layout_width="0dp"
-        android:layout_height="0px"></TextView>
-
-    <TextView
-        android:id="@+id/feed_data_list_row_id"
-        android:layout_width="0dp"
-        android:layout_height="0px"></TextView>
-
-    <TextView
-        android:id="@+id/feed_data_list_row_name"
+    <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="@style/SectionTitleText"></TextView>
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/feed_data_list_row_summary"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"
-        android:layout_marginBottom="5dp"
-        android:textAppearance="@style/DefaultText"></TextView>
+        <TextView
+            android:id="@+id/feed_data_list_row_feed_id"
+            android:layout_width="0dp"
+            android:layout_height="0px"></TextView>
+
+        <TextView
+            android:id="@+id/feed_data_list_row_id"
+            android:layout_width="0dp"
+            android:layout_height="0px"></TextView>
+
+        <TextView
+            android:id="@+id/feed_data_list_row_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/SectionTitleText"></TextView>
+
+        <TextView
+            android:id="@+id/feed_data_list_row_summary"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:textAppearance="@style/DefaultText"></TextView>
+    </LinearLayout>
 </LinearLayout>

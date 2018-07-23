@@ -2,52 +2,57 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="10dp"
-    android:layout_marginLeft="15dp"
-    android:layout_marginRight="15dp"
     android:orientation="horizontal">
 
-    <ImageView
-        android:id="@+id/feeds_image"
-        android:layout_width="50px"
-        android:layout_height="50px"/>
-
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/feeds_row_name"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:textAppearance="@style/SectionTitleText"></TextView>
+        <ImageView
+            android:id="@+id/feeds_image"
+            android:layout_width="50px"
+            android:layout_height="50px" />
 
         <LinearLayout
-            android:layout_width="fill_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
             <TextView
-                android:id="@+id/feeds_row_count_lud"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="@style/DefaultText"></TextView>
-
-            <TextView
-                android:id="@+id/feeds_row_count"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:textAppearance="@style/DefaultText"></TextView>
-
-            <TextView
-                android:id="@+id/feeds_row_id"
+                android:id="@+id/feeds_row_name"
                 android:layout_width="fill_parent"
-                android:layout_height="0px"></TextView>
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:textAppearance="@style/SectionTitleText"></TextView>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/feeds_row_count_lud"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/DefaultText"></TextView>
+
+                <TextView
+                    android:id="@+id/feeds_row_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:textAppearance="@style/DefaultText"></TextView>
+
+                <TextView
+                    android:id="@+id/feeds_row_id"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0px"></TextView>
+            </LinearLayout>
+
         </LinearLayout>
-
     </LinearLayout>
-
 </LinearLayout>
