@@ -2,76 +2,82 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="5dp"
-    android:layout_marginTop="5dp"
-    android:layout_marginLeft="20dp"
-    android:layout_marginRight="20dp"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/trip_details"
+    <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/tripPlannerDetails"
-        android:textAppearance="@style/NameText"></TextView>
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical">
 
-    <!-- source and destinaion -->
-    <TextView
-        android:id="@+id/trip_origin_name"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"
-        android:textAppearance="@style/NameText"></TextView>
+        <TextView
+            android:id="@+id/trip_details"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tripPlannerDetails"
+            android:textAppearance="@style/NameText"></TextView>
 
-    <TextView
-        android:id="@+id/trip_destination_name"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"
-        android:textAppearance="@style/NameText"></TextView>
+        <!-- source and destinaion -->
+        <TextView
+            android:id="@+id/trip_origin_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textAppearance="@style/NameText"></TextView>
 
-    <!-- trip times -->
-    <TextView
-        android:id="@+id/trip_estimated_leave_time"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:textAppearance="@style/DefaultText"></TextView>
+        <TextView
+            android:id="@+id/trip_destination_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textAppearance="@style/NameText"></TextView>
 
-    <TextView
-        android:id="@+id/trip_estimate_arrival_time"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:textAppearance="@style/DefaultText"></TextView>
+        <!-- trip times -->
+        <TextView
+            android:id="@+id/trip_estimated_leave_time"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:textAppearance="@style/DefaultText"></TextView>
 
-    <!-- fares amounts -->
-    <TextView
-        android:id="@+id/trip_fare_value"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:textAppearance="@style/DefaultText"></TextView>
+        <TextView
+            android:id="@+id/trip_estimate_arrival_time"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:textAppearance="@style/DefaultText"></TextView>
 
-    <TextView
-        android:id="@+id/trip_clipper_fare_value"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:textAppearance="@style/DefaultText" />
+        <!-- fares amounts -->
+        <TextView
+            android:id="@+id/trip_fare_value"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:textAppearance="@style/DefaultText"></TextView>
 
-    <TextView
-        android:id="@+id/trip_senior_disabled_clipper_value"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:textAppearance="@style/DefaultText" />
-    <!--
-    <TextView
-        android:id="@+id/trip_youth_clipper_value"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:textAppearance="@style/DefaultText" />
-        -->
+        <TextView
+            android:id="@+id/trip_clipper_fare_value"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:textAppearance="@style/DefaultText" />
+
+        <TextView
+            android:id="@+id/trip_senior_disabled_clipper_value"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:textAppearance="@style/DefaultText" />
+        <!--
+        <TextView
+            android:id="@+id/trip_youth_clipper_value"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:textAppearance="@style/DefaultText" />
+            -->
+    </LinearLayout>
 </LinearLayout>

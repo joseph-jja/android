@@ -2,54 +2,60 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="5dp"
-    android:layout_marginTop="5dp"
-    android:layout_marginLeft="20dp"
-    android:layout_marginRight="20dp"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/trip_leg_title"
+    <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Trip Details"
-        android:textAppearance="@style/NameText"></TextView>
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical">
 
-    <!-- leg list info -->
-    <TextView
-        android:id="@+id/trip_leg_origin_name"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"
-        android:textAppearance="@style/NameText"></TextView>
+        <TextView
+            android:id="@+id/trip_leg_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Trip Details"
+            android:textAppearance="@style/NameText"></TextView>
 
-    <TextView
-        android:id="@+id/trip_leg_destination_name"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"
-        android:textAppearance="@style/NameText"></TextView>
+        <!-- leg list info -->
+        <TextView
+            android:id="@+id/trip_leg_origin_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textAppearance="@style/NameText"></TextView>
 
-    <!-- leg times -->
-    <TextView
-        android:id="@+id/trip_leg_origin_time"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"
-        android:textAppearance="@style/DefaultText"></TextView>
+        <TextView
+            android:id="@+id/trip_leg_destination_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textAppearance="@style/NameText"></TextView>
 
-    <TextView
-        android:id="@+id/trip_leg_destination_time"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"
-        android:textAppearance="@style/DefaultText"></TextView>
+        <!-- leg times -->
+        <TextView
+            android:id="@+id/trip_leg_origin_time"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textAppearance="@style/DefaultText"></TextView>
 
-    <!-- this maps to trainHeadStation -->
-    <TextView
-        android:id="@+id/trip_leg_train_head_station_name"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"
-        android:textAppearance="@style/NameText"></TextView>
+        <TextView
+            android:id="@+id/trip_leg_destination_time"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textAppearance="@style/DefaultText"></TextView>
+
+        <!-- this maps to trainHeadStation -->
+        <TextView
+            android:id="@+id/trip_leg_train_head_station_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textAppearance="@style/NameText"></TextView>
+    </LinearLayout>
 </LinearLayout>
