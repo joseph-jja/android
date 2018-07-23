@@ -19,12 +19,7 @@
                     android:title="12 Hours"/>
               <item android:id="@+id/setting_set_refresh_age_24"
                     android:title="24 Hours"/>
-          </menu>
-    </item>
-    <!--
-    <item android:id="@+id/setting_export_import"
-          android:title="Export / Import">
-          
+          </menu>          
           <menu> 
               <item android:id="@+id/setting_export"
                     android:title="Export"/>
@@ -32,5 +27,4 @@
                     android:title="Import"/>
           </menu>
     </item>
-    -->
 </menu>
