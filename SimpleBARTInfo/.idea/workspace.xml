@@ -17,10 +17,7 @@
     <bookmark url="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/map/BartMapManager.java" line="147" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3610203d-8b97-4323-8aa6-8b7cb84390c1" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../MinnowRSS/minnowRSS/src/main/res/layout/feed_data_list_row.xml" afterPath="$PROJECT_DIR$/../MinnowRSS/minnowRSS/src/main/res/layout/feed_data_list_row.xml" />
-      <change beforePath="$PROJECT_DIR$/../MinnowRSS/minnowRSS/src/main/res/layout/feeds_list_row.xml" afterPath="$PROJECT_DIR$/../MinnowRSS/minnowRSS/src/main/res/layout/feeds_list_row.xml" />
-    </list>
+    <list default="true" id="3610203d-8b97-4323-8aa6-8b7cb84390c1" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/build/classes/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -3098,7 +3095,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="174" y="78" width="1218" height="725" extended-state="1" />
-    <editor active="true" />
     <layout>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969034" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
