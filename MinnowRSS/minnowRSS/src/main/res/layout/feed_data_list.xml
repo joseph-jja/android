@@ -35,8 +35,5 @@
         android:id="@+id/feed_data_list_rows"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
         android:fastScrollEnabled="true"></ListView>
 </LinearLayout>
