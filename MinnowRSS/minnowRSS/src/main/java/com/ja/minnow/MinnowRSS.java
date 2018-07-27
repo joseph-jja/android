@@ -29,6 +29,7 @@ import com.ja.database.TableManager;
 import com.ja.dialog.BaseDialog;
 import com.ja.minnow.listeners.EditFeedListener;
 import com.ja.minnow.listeners.FeedDataWebViewListener;
+import com.ja.minnow.listeners.ImportExportListener;
 import com.ja.minnow.tables.FeedDataManager;
 import com.ja.minnow.tables.FeedDataTableData;
 import com.ja.minnow.tables.FeedsManager;
@@ -284,41 +285,45 @@ public class MinnowRSS extends BaseActivity {
      */
     public boolean onMenuOpened(int featureId, Menu menu) {
 
-        final int dres = Math.abs(Constants.getSettingsservice().getUpdateDateTime(super.getDbAdapter()));
+        // do we have a menu?
         if (menu == null) {
             return super.onMenuOpened(featureId, menu);
         }
 
-        final MenuItem item = menu.getItem(2);
-        SubMenu subMenu = item.getSubMenu();
-        if (subMenu == null ) {
+        // get the size
+        int menuSize = menu.size();
+        MenuItem mitem = menu.getItem(0);
+
+        if (mitem == null) {
             return super.onMenuOpened(featureId, menu);
         }
 
-        final int slen = subMenu.size();
-        MenuItem mitem;
-        for (int i = 0; i < slen; i += 1) {
-            mitem = subMenu.getItem(i);
-            final String title = mitem.getTitle().toString().replace(" ***", "");
-            mitem.setTitle(title);
-        }
-        mitem = null;
-        switch (dres) {
-            case 6:
-                mitem = subMenu.getItem(3);
-                break;
-            case 12:
-                mitem = subMenu.getItem(4);
-                break;
-            case 24:
-                mitem = subMenu.getItem(5);
-                break;
-            default:
-                mitem = subMenu.getItem(dres - 1);
-                break;
-        }
-        if (mitem != null) {
-            mitem.setTitle(mitem.getTitle() + " ***");
+        // we are in the Set Max Age menu
+        if (mitem.getTitle().equals("1 Hour") && menuSize > 2) {
+            final int dres = Math.abs(Constants.getSettingsservice().getUpdateDateTime(super.getDbAdapter()));
+            for (int i = 0; i < menuSize; i += 1) {
+                mitem = menu.getItem(i);
+                final String title = mitem.getTitle().toString().replace(" ***", "");
+                mitem.setTitle(title);
+            }
+            mitem = null;
+            switch (dres) {
+                case 6:
+                    mitem = menu.getItem(3);
+                    break;
+                case 12:
+                    mitem = menu.getItem(4);
+                    break;
+                case 24:
+                    mitem = menu.getItem(5);
+                    break;
+                default:
+                    mitem = menu.getItem(dres - 1);
+                    break;
+            }
+            if (mitem != null) {
+                mitem.setTitle(mitem.getTitle() + " ***");
+            }
         }
 
         return super.onMenuOpened(featureId, menu);
@@ -365,10 +370,11 @@ public class MinnowRSS extends BaseActivity {
                 break;
             case R.id.setting_export:
                 // need thread?
-                List<Table> feeds_list = Constants.getFeedsservice().listFeeds(this);
+                ImportExportListener export = new ImportExportListener();
+                export.exportFeeds(this);
                 break;
             case R.id.setting_import:
-            //case R.id.setting_export:
+                //case R.id.setting_export:
 			/*	List<Table> feeds_list = FeedsEditor.getAllFeeds(this);
 				final XMLExporter exporter = new XMLExporter();
 				Document xmlout = exporter.getXMLDocument();
@@ -386,9 +392,9 @@ public class MinnowRSS extends BaseActivity {
 
 					Log.e(TAG, xmlDoc );
 				}*/
-            // TODO write the data out
-            //case R.id.setting_import:
-            // TODO read data in
+                // TODO write the data out
+                //case R.id.setting_import:
+                // TODO read data in
 
             default:
                 break;
