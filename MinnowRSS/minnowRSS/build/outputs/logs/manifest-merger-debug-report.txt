@@ -1,14 +1,14 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/joea/workspace/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:1:1-19:12
-INJECTED from /home/joea/workspace/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:1:1-19:12
-INJECTED from /home/joea/workspace/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:1:1-19:12
-INJECTED from /home/joea/workspace/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:1:1-19:12
+ADDED from /home/joea/workspace/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:1:1-20:12
+INJECTED from /home/joea/workspace/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:1:1-20:12
+INJECTED from /home/joea/workspace/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:1:1-20:12
+INJECTED from /home/joea/workspace/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:1:1-20:12
 MERGED from [:database-debug] /home/joea/.gradle/caches/transforms-1/files-1.1/database-debug.aar/a5646a9f300d84c6ce9e8a59c4550cf4/AndroidManifest.xml:2:1-9:12
 MERGED from [:ui-libs-debug] /home/joea/.gradle/caches/transforms-1/files-1.1/ui-libs-debug.aar/598f457786832aa08502aeb8c1df55df/AndroidManifest.xml:2:1-11:12
-INJECTED from /home/joea/workspace/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:1:1-19:12
-INJECTED from /home/joea/workspace/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:1:1-19:12
-INJECTED from /home/joea/workspace/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:1:1-19:12
+INJECTED from /home/joea/workspace/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:1:1-20:12
+INJECTED from /home/joea/workspace/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:1:1-20:12
+INJECTED from /home/joea/workspace/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:1:1-20:12
 	package
 		ADDED from /home/joea/workspace/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:2:5-28
 		INJECTED from /home/joea/workspace/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml
@@ -59,13 +59,15 @@ category#android.intent.category.LAUNCHER
 ADDED from /home/joea/workspace/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:13:17-77
 	android:name
 		ADDED from /home/joea/workspace/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:13:27-74
-uses-permission#android.permission.INTERNET
-ADDED from /home/joea/workspace/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:18:5-66
-	android:name
-		ADDED from /home/joea/workspace/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:18:22-64
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-IMPLIED from /home/joea/workspace/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:1:1-19:12 reason: com.ja.database has a targetSdkVersion < 4
+ADDED from /home/joea/workspace/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:18:5-80
+	android:name
+		ADDED from /home/joea/workspace/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:18:22-78
+uses-permission#android.permission.INTERNET
+ADDED from /home/joea/workspace/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:19:5-66
+	android:name
+		ADDED from /home/joea/workspace/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:19:22-64
 uses-permission#android.permission.READ_PHONE_STATE
-IMPLIED from /home/joea/workspace/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:1:1-19:12 reason: com.ja.database has a targetSdkVersion < 4
+IMPLIED from /home/joea/workspace/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:1:1-20:12 reason: com.ja.database has a targetSdkVersion < 4
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-IMPLIED from /home/joea/workspace/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:1:1-19:12 reason: com.ja.database requested WRITE_EXTERNAL_STORAGE
+IMPLIED from /home/joea/workspace/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:1:1-20:12 reason: com.ja.database requested WRITE_EXTERNAL_STORAGE

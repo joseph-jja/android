@@ -17,36 +17,7 @@
     <bookmark url="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/map/BartMapManager.java" line="152" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3610203d-8b97-4323-8aa6-8b7cb84390c1" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../MinnowRSS/minnowRSS/build/intermediates/classes/debug/com/ja/minnow/listeners/EditFeedListener.class" afterPath="$PROJECT_DIR$/../MinnowRSS/minnowRSS/build/intermediates/classes/debug/com/ja/minnow/listeners/EditFeedListener.class" />
-      <change beforePath="$PROJECT_DIR$/../MinnowRSS/minnowRSS/build/intermediates/classes/debug/com/ja/minnow/listeners/FeedDataListener.class" afterPath="$PROJECT_DIR$/../MinnowRSS/minnowRSS/build/intermediates/classes/debug/com/ja/minnow/listeners/FeedDataListener.class" />
-      <change beforePath="$PROJECT_DIR$/../MinnowRSS/minnowRSS/build/intermediates/classes/debug/com/ja/minnow/services/FeedDataService.class" afterPath="$PROJECT_DIR$/../MinnowRSS/minnowRSS/build/intermediates/classes/debug/com/ja/minnow/services/FeedDataService.class" />
-      <change beforePath="$PROJECT_DIR$/../MinnowRSS/minnowRSS/build/intermediates/classes/debug/com/ja/minnow/services/FeedsService.class" afterPath="$PROJECT_DIR$/../MinnowRSS/minnowRSS/build/intermediates/classes/debug/com/ja/minnow/services/FeedsService.class" />
-      <change beforePath="$PROJECT_DIR$/../MinnowRSS/minnowRSS/build/intermediates/classes/debug/com/ja/minnow/services/SettingsService.class" afterPath="$PROJECT_DIR$/../MinnowRSS/minnowRSS/build/intermediates/classes/debug/com/ja/minnow/services/SettingsService.class" />
-      <change beforePath="$PROJECT_DIR$/../MinnowRSS/minnowRSS/build/intermediates/classes/debug/com/ja/minnow/services/rss/RSSParser.class" afterPath="$PROJECT_DIR$/../MinnowRSS/minnowRSS/build/intermediates/classes/debug/com/ja/minnow/services/rss/RSSParser.class" />
-      <change beforePath="$PROJECT_DIR$/../MinnowRSS/minnowRSS/build/intermediates/incremental/debug-mergeJavaRes/merge-state" afterPath="$PROJECT_DIR$/../MinnowRSS/minnowRSS/build/intermediates/incremental/debug-mergeJavaRes/merge-state" />
-      <change beforePath="$PROJECT_DIR$/../MinnowRSS/minnowRSS/build/intermediates/incremental/debug-mergeJniLibs/merge-state" afterPath="$PROJECT_DIR$/../MinnowRSS/minnowRSS/build/intermediates/incremental/debug-mergeJniLibs/merge-state" />
-      <change beforePath="$PROJECT_DIR$/../MinnowRSS/minnowRSS/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/../MinnowRSS/minnowRSS/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" />
-      <change beforePath="$PROJECT_DIR$/../MinnowRSS/minnowRSS/build/intermediates/incremental/mergeDebugResources/merger.xml" afterPath="$PROJECT_DIR$/../MinnowRSS/minnowRSS/build/intermediates/incremental/mergeDebugResources/merger.xml" />
-      <change beforePath="$PROJECT_DIR$/../MinnowRSS/minnowRSS/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/../MinnowRSS/minnowRSS/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" />
-      <change beforePath="$PROJECT_DIR$/../MinnowRSS/minnowRSS/build/intermediates/incremental/packageDebug/tmp/debug/file-input-save-data.txt" afterPath="$PROJECT_DIR$/../MinnowRSS/minnowRSS/build/intermediates/incremental/packageDebug/tmp/debug/file-input-save-data.txt" />
-      <change beforePath="$PROJECT_DIR$/../MinnowRSS/minnowRSS/build/intermediates/manifests/full/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/../MinnowRSS/minnowRSS/build/intermediates/manifests/full/debug/AndroidManifest.xml" />
-      <change beforePath="$PROJECT_DIR$/../MinnowRSS/minnowRSS/build/intermediates/res/debug/resources-debug.ap_" afterPath="$PROJECT_DIR$/../MinnowRSS/minnowRSS/build/intermediates/res/debug/resources-debug.ap_" />
-      <change beforePath="$PROJECT_DIR$/../MinnowRSS/minnowRSS/build/intermediates/transforms/dexBuilder/debug/__content__.json" afterPath="$PROJECT_DIR$/../MinnowRSS/minnowRSS/build/intermediates/transforms/dexBuilder/debug/__content__.json" />
-      <change beforePath="$PROJECT_DIR$/../MinnowRSS/minnowRSS/build/intermediates/transforms/dexMerger/debug/__content__.json" afterPath="$PROJECT_DIR$/../MinnowRSS/minnowRSS/build/intermediates/transforms/dexMerger/debug/__content__.json" />
-      <change beforePath="$PROJECT_DIR$/../MinnowRSS/minnowRSS/build/intermediates/transforms/mergeJavaRes/debug/__content__.json" afterPath="$PROJECT_DIR$/../MinnowRSS/minnowRSS/build/intermediates/transforms/mergeJavaRes/debug/__content__.json" />
-      <change beforePath="$PROJECT_DIR$/../MinnowRSS/minnowRSS/build/intermediates/transforms/mergeJniLibs/debug/__content__.json" afterPath="$PROJECT_DIR$/../MinnowRSS/minnowRSS/build/intermediates/transforms/mergeJniLibs/debug/__content__.json" />
-      <change beforePath="$PROJECT_DIR$/../MinnowRSS/minnowRSS/build/outputs/logs/manifest-merger-debug-report.txt" afterPath="$PROJECT_DIR$/../MinnowRSS/minnowRSS/build/outputs/logs/manifest-merger-debug-report.txt" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/fileHashes.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/fileHashes.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/resourceHashesCache.bin" afterPath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/resourceHashesCache.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4.1/taskHistory/taskHistory.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4.1/taskHistory/taskHistory.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/simpleBARTInfo/build/outputs/apk/debug/SimpleBARTInfo-debug.apk" afterPath="$PROJECT_DIR$/simpleBARTInfo/build/outputs/apk/debug/SimpleBARTInfo-debug.apk" />
-      <change beforePath="$PROJECT_DIR$/simpleBARTInfo/build/outputs/logs/manifest-merger-debug-report.txt" afterPath="$PROJECT_DIR$/simpleBARTInfo/build/outputs/logs/manifest-merger-debug-report.txt" />
-    </list>
+    <list default="true" id="3610203d-8b97-4323-8aa6-8b7cb84390c1" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/build/classes/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -72,8 +43,8 @@
       <file leaf-file-name="BartMapManager.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/map/BartMapManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="373">
-              <caret line="67" column="61" lean-forward="false" selection-start-line="67" selection-start-column="61" selection-end-line="67" selection-end-column="61" />
+            <state relative-caret-position="139">
+              <caret line="54" column="21" lean-forward="true" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -2850,6 +2821,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="275" y="99" width="1317" height="903" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41842106" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -3325,8 +3297,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/map/BartMapManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="67" column="61" lean-forward="false" selection-start-line="67" selection-start-column="61" selection-end-line="67" selection-end-column="61" />
+        <state relative-caret-position="139">
+          <caret line="54" column="21" lean-forward="true" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
           <folding />
         </state>
       </provider>
