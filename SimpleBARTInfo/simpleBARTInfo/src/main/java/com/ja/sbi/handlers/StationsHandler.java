@@ -33,27 +33,20 @@ public class StationsHandler {
     public void initializeActivity(Context context, boolean useStale) {
 
         // only set this if it is not set
-        if (self == null) {
-            self = this;
+        if (StationsHandler.self == null) {
+            StationsHandler.self = this;
         }
 
         if (useStale && StationsHandler.stations.size() > 0) {
-            self.setupView((SimpleBARTInfo) context);
+            this.setupView((SimpleBARTInfo) context);
             return;
         }
         downloadBARTFeed(context);
-
-    }
-
-    public void showLoadingSpinner(Context context) {
-
-        dialog = new LoadingSpinner(context, "Loading BART Train Data!");
-
     }
 
     public void downloadBARTFeed(Context context) {
 
-        showLoadingSpinner(context);
+        dialog = new LoadingSpinner(context, "Loading BART Station Data!");
 
         Log.d(LOG_NAME, "Launched spinner!");
         final SimpleBARTInfo sbiThread = (SimpleBARTInfo) context;

@@ -191,6 +191,9 @@ public class TrainsAtStationParser extends DefaultHandler {
             resultStations.add(currentStation);
         }
 
+        // free this as we don't need it anymore
+        this.stations = null;
+
         return resultStations;
     }
 

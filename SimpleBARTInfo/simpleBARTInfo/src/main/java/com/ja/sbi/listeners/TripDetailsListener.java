@@ -27,19 +27,19 @@ public class TripDetailsListener implements AdapterView.OnItemClickListener  {
 
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-        SimpleBARTInfo sbi = (SimpleBARTInfo) parent.getContext();
+        final SimpleBARTInfo sbi = (SimpleBARTInfo) parent.getContext();
 
-        View onDetailsView = sbi.findViewById(R.id.trip_leg_title);
+        final View onDetailsView = sbi.findViewById(R.id.trip_leg_title);
         if ( onDetailsView != null ) {
             return;
         }
 
-        Trip currentTrip = this.trips.get(position);
+        final Trip currentTrip = this.trips.get(position);
 
-        TripLegAdapter tripLeg = new TripLegAdapter(sbi, R.layout.trip_legs, currentTrip.getLegs());
+        final TripLegAdapter tripLeg = new TripLegAdapter(sbi, R.layout.trip_legs, currentTrip.getLegs());
         tripLeg.setStationData(this.stationData);
 
-        ListView list = (ListView)sbi.findViewById(R.id.trip_planner_results);
+        final ListView list = (ListView)sbi.findViewById(R.id.trip_planner_results);
         list.setAdapter(tripLeg);
     }
 

@@ -21,8 +21,8 @@ public class TrainDownloader extends BaseDownloader {
 
     public static final List<Station> getTrains(String stationName) {
 
-        String trainAPI = APIConstants.GET_TRAIN_LIST_API + stationName + APIConstants.KEY_STRING_API;
-        List<Station> trainStations = null;
+        final String trainAPI = APIConstants.GET_TRAIN_LIST_API + stationName + APIConstants.KEY_STRING_API;
+        List<Station> trainStations;
 
         selectedStationShortName = stationName;
         try {

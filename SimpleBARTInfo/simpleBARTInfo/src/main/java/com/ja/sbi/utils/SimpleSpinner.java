@@ -32,7 +32,7 @@ public class SimpleSpinner {
 
         methodImplClass = methodImpl;
 
-        ArrayAdapter sourceAdapter = new ArrayAdapter<String>(sbiContext, android.R.layout.simple_spinner_item, spinnerData);
+        ArrayAdapter<String> sourceAdapter = new ArrayAdapter<String>(sbiContext, android.R.layout.simple_spinner_item, spinnerData);
         sourceAdapter.setDropDownViewResource(R.layout.spinner_item);
         this.dropdown.setAdapter(sourceAdapter);
 

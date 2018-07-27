@@ -70,8 +70,8 @@ public class TrainListAdapter  extends ArrayAdapter<Train> {
 			} else {
 				holder = (TrainViewHolder)rView.getTag();
 			}
-			ViewGroup.LayoutParams layoutParams = holder.name.getLayoutParams();
-			ViewGroup.MarginLayoutParams marginLayoutParams = (ViewGroup.MarginLayoutParams)layoutParams;
+			final ViewGroup.LayoutParams layoutParams = holder.name.getLayoutParams();
+			final ViewGroup.MarginLayoutParams marginLayoutParams = (ViewGroup.MarginLayoutParams)layoutParams;
 			marginLayoutParams.bottomMargin = 0;
 			marginLayoutParams.topMargin = 0;
 			holder.time.setLayoutParams(layoutParams);
