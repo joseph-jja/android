@@ -135,7 +135,7 @@ public class FareCalculatorHandler implements StationListSpinnerIface {
 
         public void handleMessage(Message msg) {
 
-            SimpleBARTInfo sbiThread = (SimpleBARTInfo) msg.obj;
+            final SimpleBARTInfo sbiThread = (SimpleBARTInfo) msg.obj;
 
             ((TextView) sbiThread.findViewById(R.id.fareValue)).setText("Fare: " + currentFare.getFare());
             ((TextView) sbiThread.findViewById(R.id.clipperFare)).setText("Clipper Card Fare: " + currentFare.getClipperDiscount());
@@ -143,6 +143,7 @@ public class FareCalculatorHandler implements StationListSpinnerIface {
 
             Log.d(LOG_NAME, "Got something.");
             FareCalculatorHandler.dialog.dismiss();
+            FareCalculatorHandler.dialog = null;
         }
     };
 }
