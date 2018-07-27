@@ -5,7 +5,7 @@ INJECTED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/mai
 INJECTED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:2:1-22:12
 INJECTED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:2:1-22:12
 MERGED from [:database-debug] /home/joea/.gradle/caches/transforms-1/files-1.1/database-debug.aar/21e4c5ccb912a9c0d94f2e462820c403/AndroidManifest.xml:2:1-9:12
-MERGED from [:ui-libs-debug] /home/joea/.gradle/caches/transforms-1/files-1.1/ui-libs-debug.aar/285c47a3a827844e27f47fe2051d8b0a/AndroidManifest.xml:2:1-11:12
+MERGED from [:ui-libs-debug] /home/joea/.gradle/caches/transforms-1/files-1.1/ui-libs-debug.aar/fa11a50464185224bed6942c242f14f7/AndroidManifest.xml:2:1-11:12
 INJECTED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:2:1-22:12
 INJECTED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:2:1-22:12
 INJECTED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:2:1-22:12
@@ -25,8 +25,8 @@ INJECTED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/mai
 		INJECTED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml
 uses-sdk
 ADDED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:7:5-44
-MERGED from [:ui-libs-debug] /home/joea/.gradle/caches/transforms-1/files-1.1/ui-libs-debug.aar/285c47a3a827844e27f47fe2051d8b0a/AndroidManifest.xml:7:5-44
-MERGED from [:ui-libs-debug] /home/joea/.gradle/caches/transforms-1/files-1.1/ui-libs-debug.aar/285c47a3a827844e27f47fe2051d8b0a/AndroidManifest.xml:7:5-44
+MERGED from [:ui-libs-debug] /home/joea/.gradle/caches/transforms-1/files-1.1/ui-libs-debug.aar/fa11a50464185224bed6942c242f14f7/AndroidManifest.xml:7:5-44
+MERGED from [:ui-libs-debug] /home/joea/.gradle/caches/transforms-1/files-1.1/ui-libs-debug.aar/fa11a50464185224bed6942c242f14f7/AndroidManifest.xml:7:5-44
 	android:minSdkVersion
 		ADDED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:7:15-41
 uses-permission#android.permission.INTERNET
@@ -37,8 +37,8 @@ application
 ADDED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:9:5-21:19
 MERGED from [:database-debug] /home/joea/.gradle/caches/transforms-1/files-1.1/database-debug.aar/21e4c5ccb912a9c0d94f2e462820c403/AndroidManifest.xml:7:5-53
 MERGED from [:database-debug] /home/joea/.gradle/caches/transforms-1/files-1.1/database-debug.aar/21e4c5ccb912a9c0d94f2e462820c403/AndroidManifest.xml:7:5-53
-MERGED from [:ui-libs-debug] /home/joea/.gradle/caches/transforms-1/files-1.1/ui-libs-debug.aar/285c47a3a827844e27f47fe2051d8b0a/AndroidManifest.xml:9:5-53
-MERGED from [:ui-libs-debug] /home/joea/.gradle/caches/transforms-1/files-1.1/ui-libs-debug.aar/285c47a3a827844e27f47fe2051d8b0a/AndroidManifest.xml:9:5-53
+MERGED from [:ui-libs-debug] /home/joea/.gradle/caches/transforms-1/files-1.1/ui-libs-debug.aar/fa11a50464185224bed6942c242f14f7/AndroidManifest.xml:9:5-53
+MERGED from [:ui-libs-debug] /home/joea/.gradle/caches/transforms-1/files-1.1/ui-libs-debug.aar/fa11a50464185224bed6942c242f14f7/AndroidManifest.xml:9:5-53
 	android:label
 		ADDED from /home/joea/workspace/android/SimpleBARTInfo/simpleBARTInfo/src/main/AndroidManifest.xml:11:9-41
 	android:icon

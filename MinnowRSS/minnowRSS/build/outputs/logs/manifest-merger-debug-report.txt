@@ -4,8 +4,8 @@ ADDED from /home/joea/workspace/android/MinnowRSS/minnowRSS/src/main/AndroidMani
 INJECTED from /home/joea/workspace/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:1:1-19:12
 INJECTED from /home/joea/workspace/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:1:1-19:12
 INJECTED from /home/joea/workspace/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:1:1-19:12
-MERGED from [:database-debug] /home/joea/.gradle/caches/transforms-1/files-1.1/database-debug.aar/17d9c370a561d6248be3ed9787e20e45/AndroidManifest.xml:2:1-9:12
-MERGED from [:ui-libs-debug] /home/joea/.gradle/caches/transforms-1/files-1.1/ui-libs-debug.aar/01b4c74a1bd3b394dc061ccb18e9b4be/AndroidManifest.xml:2:1-11:12
+MERGED from [:database-debug] /home/joea/.gradle/caches/transforms-1/files-1.1/database-debug.aar/a5646a9f300d84c6ce9e8a59c4550cf4/AndroidManifest.xml:2:1-9:12
+MERGED from [:ui-libs-debug] /home/joea/.gradle/caches/transforms-1/files-1.1/ui-libs-debug.aar/598f457786832aa08502aeb8c1df55df/AndroidManifest.xml:2:1-11:12
 INJECTED from /home/joea/workspace/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:1:1-19:12
 INJECTED from /home/joea/workspace/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:1:1-19:12
 INJECTED from /home/joea/workspace/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:1:1-19:12
@@ -25,16 +25,16 @@ INJECTED from /home/joea/workspace/android/MinnowRSS/minnowRSS/src/main/AndroidM
 		INJECTED from /home/joea/workspace/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml
 uses-sdk
 ADDED from /home/joea/workspace/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:5:5-44
-MERGED from [:ui-libs-debug] /home/joea/.gradle/caches/transforms-1/files-1.1/ui-libs-debug.aar/01b4c74a1bd3b394dc061ccb18e9b4be/AndroidManifest.xml:7:5-44
-MERGED from [:ui-libs-debug] /home/joea/.gradle/caches/transforms-1/files-1.1/ui-libs-debug.aar/01b4c74a1bd3b394dc061ccb18e9b4be/AndroidManifest.xml:7:5-44
+MERGED from [:ui-libs-debug] /home/joea/.gradle/caches/transforms-1/files-1.1/ui-libs-debug.aar/598f457786832aa08502aeb8c1df55df/AndroidManifest.xml:7:5-44
+MERGED from [:ui-libs-debug] /home/joea/.gradle/caches/transforms-1/files-1.1/ui-libs-debug.aar/598f457786832aa08502aeb8c1df55df/AndroidManifest.xml:7:5-44
 	android:minSdkVersion
 		ADDED from /home/joea/workspace/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:5:15-41
 application
 ADDED from /home/joea/workspace/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:6:5-16:19
-MERGED from [:database-debug] /home/joea/.gradle/caches/transforms-1/files-1.1/database-debug.aar/17d9c370a561d6248be3ed9787e20e45/AndroidManifest.xml:7:5-53
-MERGED from [:database-debug] /home/joea/.gradle/caches/transforms-1/files-1.1/database-debug.aar/17d9c370a561d6248be3ed9787e20e45/AndroidManifest.xml:7:5-53
-MERGED from [:ui-libs-debug] /home/joea/.gradle/caches/transforms-1/files-1.1/ui-libs-debug.aar/01b4c74a1bd3b394dc061ccb18e9b4be/AndroidManifest.xml:9:5-53
-MERGED from [:ui-libs-debug] /home/joea/.gradle/caches/transforms-1/files-1.1/ui-libs-debug.aar/01b4c74a1bd3b394dc061ccb18e9b4be/AndroidManifest.xml:9:5-53
+MERGED from [:database-debug] /home/joea/.gradle/caches/transforms-1/files-1.1/database-debug.aar/a5646a9f300d84c6ce9e8a59c4550cf4/AndroidManifest.xml:7:5-53
+MERGED from [:database-debug] /home/joea/.gradle/caches/transforms-1/files-1.1/database-debug.aar/a5646a9f300d84c6ce9e8a59c4550cf4/AndroidManifest.xml:7:5-53
+MERGED from [:ui-libs-debug] /home/joea/.gradle/caches/transforms-1/files-1.1/ui-libs-debug.aar/598f457786832aa08502aeb8c1df55df/AndroidManifest.xml:9:5-53
+MERGED from [:ui-libs-debug] /home/joea/.gradle/caches/transforms-1/files-1.1/ui-libs-debug.aar/598f457786832aa08502aeb8c1df55df/AndroidManifest.xml:9:5-53
 	android:label
 		ADDED from /home/joea/workspace/android/MinnowRSS/minnowRSS/src/main/AndroidManifest.xml:6:18-50
 	android:icon
