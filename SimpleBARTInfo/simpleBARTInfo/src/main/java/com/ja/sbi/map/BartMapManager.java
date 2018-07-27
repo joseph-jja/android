@@ -24,58 +24,67 @@ public class BartMapManager {
     private int initialHeightOfHScroll = 0;
     private int initialWidthOfVScroll = 0;
 
-    private static ScrollView vscroll;
-    private static HorizontalScrollView hscroll;
-    private static ImageView bartMapImage;
-    private static Button zoomIn;
-    private static Button zoomOut;
+    private ScrollView vscroll;
+    private HorizontalScrollView hscroll;
+    private ImageView bartMapImage;
+    private Button zoomIn;
+    private Button zoomOut;
+
+    private static Activity activity;
 
     private static boolean isInitialized = false;
 
     public BartMapManager(Context context) {
 
-        final Activity activity = (Activity) context;
+        if (activity == null) {
+            activity = (Activity) context;
+        }
 
         // get image view
-        BartMapManager.bartMapImage = (ImageView) ((SimpleBARTInfo) context).findViewById(R.id.bart_map_image);
+        this.bartMapImage = (ImageView) BartMapManager.activity.findViewById(R.id.bart_map_image);
         //BartMapManager.bartMapImage.setAdjustViewBounds(true);
 
-        BartMapManager.hscroll = (HorizontalScrollView) ((SimpleBARTInfo) context).findViewById(R.id.bart_map_hscroll);
-        BartMapManager.vscroll = (ScrollView) ((SimpleBARTInfo) context).findViewById(R.id.bart_map_vscroll);
+        this.hscroll = (HorizontalScrollView) BartMapManager.activity.findViewById(R.id.bart_map_hscroll);
+        this.vscroll = (ScrollView) BartMapManager.activity.findViewById(R.id.bart_map_vscroll);
 
-        BartMapManager.zoomIn = (Button) ((SimpleBARTInfo) context).findViewById(R.id.bart_map_zoom_in);
-        BartMapManager.zoomOut = (Button) ((SimpleBARTInfo) context).findViewById(R.id.bart_map_zoom_out);
+        this.zoomIn = (Button) BartMapManager.activity.findViewById(R.id.bart_map_zoom_in);
+        this.zoomOut = (Button) BartMapManager.activity.findViewById(R.id.bart_map_zoom_out);
 
         // attache some events below
-        BartMapManager.bartMapImage.addOnLayoutChangeListener(new View.OnLayoutChangeListener() {
+        this.bartMapImage.addOnLayoutChangeListener(new View.OnLayoutChangeListener() {
             @Override
             public void onLayoutChange(View v, int left, int top, int right, int bottom, int oldLeft, int oldTop, int oldRight, int oldBottom) {
                 // doing this allows us to override the size of the image
                 if (!isInitialized) {
-                    BartMapManager.bartMapImage.layout(0, 0, defaultImageWidth, defaultImageHeight);
+                    final ImageView imageMap = (ImageView) BartMapManager.activity.findViewById(R.id.bart_map_image);
+                    imageMap.layout(0, 0, defaultImageWidth, defaultImageHeight);
                     isInitialized = true;
                 }
             }
         });
 
-        BartMapManager.hscroll.setOnScrollChangeListener(new View.OnScrollChangeListener() {
+        this.hscroll.setOnScrollChangeListener(new View.OnScrollChangeListener() {
             @Override
             public void onScrollChange(View v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
 
-                final int curentImageWidth = BartMapManager.bartMapImage.getWidth();
+                final ImageView imageMap = (ImageView) BartMapManager.activity.findViewById(R.id.bart_map_image);
+
+                final int curentImageWidth = imageMap.getWidth();
 
                 int maxScrollX = curentImageWidth - 1000;
 
+                final HorizontalScrollView hscrollLocal = (HorizontalScrollView) BartMapManager.activity.findViewById(R.id.bart_map_hscroll);
+
                 //Log.i(LOG_NAME, Integer.valueOf(curentImageWidth).toString() + " " + Integer.valueOf(scrollX).toString() + " " + Integer.valueOf(oldScrollX).toString());
-                if ( zoomFactor == 1 ) {
-                    BartMapManager.hscroll.scrollTo(0,scrollY);
-                } else if ( scrollX > maxScrollX){
-                    BartMapManager.hscroll.scrollTo(maxScrollX,scrollY);
+                if (zoomFactor == 1) {
+                    hscrollLocal.scrollTo(0, scrollY);
+                } else if (scrollX > maxScrollX) {
+                    hscrollLocal.scrollTo(maxScrollX, scrollY);
                 }
             }
         });
 
-        BartMapManager.zoomIn.setOnClickListener(new View.OnClickListener() {
+        this.zoomIn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Do something in response to button click
                 if (zoomFactor >= BartMapManager.maxZoomSize) {
@@ -87,7 +96,7 @@ public class BartMapManager {
             }
         });
 
-        BartMapManager.zoomOut.setOnClickListener(new View.OnClickListener() {
+        this.zoomOut.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Do something in response to button click
                 if (zoomFactor <= 1) {
@@ -103,8 +112,8 @@ public class BartMapManager {
     public void resizeImage(int zoomFactorLocal) {
 
         // these are the size of the image at the time this is called
-        final int width = BartMapManager.bartMapImage.getWidth();
-        final int height = BartMapManager.bartMapImage.getHeight();
+        final int width = this.bartMapImage.getWidth();
+        final int height = this.bartMapImage.getHeight();
 
         // no height or width of the image then we do nothing
         // this is called when the image loads, and the sizes are 0
@@ -117,14 +126,14 @@ public class BartMapManager {
         final int xHeight = defaultImageHeight * zoomFactorLocal;
 
         // zoom the image
-        BartMapManager.bartMapImage.layout(0, 0, xWidth, xHeight);
+        this.bartMapImage.layout(0, 0, xWidth, xHeight);
 
         // figure out how big the horizontal scroll should be
         // and where
-        final int hTop = BartMapManager.hscroll.getTop();
-        final int hLeft = BartMapManager.hscroll.getLeft();
-        final int hHeight = BartMapManager.hscroll.getHeight();
-        final int hWidth = BartMapManager.hscroll.getWidth();
+        final int hTop = this.hscroll.getTop();
+        final int hLeft = this.hscroll.getLeft();
+        final int hHeight = this.hscroll.getHeight();
+        final int hWidth = this.hscroll.getWidth();
 
         // save initial value of the horizontal scroll
         if (initialHeightOfHScroll == 0) {
@@ -135,9 +144,9 @@ public class BartMapManager {
         // this sets the height of the horizontal scroll so that
         // the contained vertical scroll can scroll
         if (zoomFactorLocal == 1) {
-            BartMapManager.hscroll.layout(hLeft, hTop, hWidth, initialHeightOfHScroll);
+            this.hscroll.layout(hLeft, hTop, hWidth, initialHeightOfHScroll);
         } else {
-            BartMapManager.hscroll.layout(hLeft, hTop, hWidth, xHeight);
+            this.hscroll.layout(hLeft, hTop, hWidth, xHeight);
         }
     }
 }
