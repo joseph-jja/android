@@ -1,5 +1,6 @@
 package com.ja.sbi.utils;
 
+import android.content.Context;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -18,6 +19,7 @@ public class SimpleSpinner {
     private Spinner dropdown;
     private SimpleBARTInfo context;
     private String selectedText;
+    private StationListSpinnerIface methodImplClass;
 
     public SimpleSpinner(SimpleBARTInfo sbiContext, int spinnerID,
                          final List<String> spinnerData,
@@ -27,6 +29,8 @@ public class SimpleSpinner {
         dropdown = (Spinner) sbiContext.findViewById(spinnerID);
 
         context = sbiContext;
+
+        methodImplClass = methodImpl;
 
         ArrayAdapter sourceAdapter = new ArrayAdapter<String>(sbiContext, android.R.layout.simple_spinner_item, spinnerData);
         sourceAdapter.setDropDownViewResource(R.layout.spinner_item);
@@ -45,7 +49,7 @@ public class SimpleSpinner {
 
                 selectedText = spinnerData.get(position);
 
-                methodImpl.processSpinnerListData(context);
+                methodImplClass.processSpinnerListData(context);
             }
 
             @Override

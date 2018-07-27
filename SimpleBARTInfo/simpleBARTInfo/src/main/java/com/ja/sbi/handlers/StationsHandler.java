@@ -32,9 +32,13 @@ public class StationsHandler {
 
     public void initializeActivity(Context context, boolean useStale) {
 
-        self = this;
+        // only set this if it is not set
+        if (self == null) {
+            self = this;
+        }
+
         if (useStale && StationsHandler.stations.size() > 0) {
-            self.setupView((SimpleBARTInfo)context);
+            self.setupView((SimpleBARTInfo) context);
             return;
         }
         downloadBARTFeed(context);
@@ -78,25 +82,28 @@ public class StationsHandler {
     }
 
     public void setupView(SimpleBARTInfo context) {
-		
-		final View view = context.findViewById(R.id.simple_bart_info_title);
-		if ( view == null ) { 
-			Log.d(LOG_NAME, "Guess we did not find the view?");
-			return;
-		}
-    	
-    	TextView tview = (TextView)view;
-    	tview.setText("Stations");
-    	
-    	final ListView feedList = (ListView)context.findViewById(R.id.st_list_rows);
-    	Log.d(LOG_NAME, "Do we have any stations? " + stations);
-		feedList.setAdapter( new StationListAdapter(context, R.layout.data_row, stations) );
-		feedList.setOnItemClickListener( new StationListener() );
 
-		this.setViewStations(true);
-		selectedStationName = null;
-		selectedStationShortName = null;
-	}
+        final View view = context.findViewById(R.id.simple_bart_info_title);
+        if (view == null) {
+            Log.d(LOG_NAME, "Guess we did not find the view?");
+            return;
+        }
+
+        final TextView tview = (TextView) view;
+        tview.setText("Stations");
+
+        final ListView feedList = (ListView) context.findViewById(R.id.st_list_rows);
+        Log.d(LOG_NAME, "Do we have any stations? " + stations);
+
+        final StationListAdapter adapter = new StationListAdapter(context, R.layout.data_row, stations);
+        feedList.setAdapter(adapter);
+        feedList.setOnItemClickListener(new StationListener());
+
+        this.setViewStations(true);
+        selectedStationName = null;
+        selectedStationShortName = null;
+    }
+
     private final Handler updateHandler = new Handler() {
 
         public void handleMessage(Message msg) {
@@ -104,6 +111,7 @@ public class StationsHandler {
 
             self.setupView(sbiThread);
             StationsHandler.dialog.dismiss();
+            StationsHandler.dialog = null;
         }
     };
 
@@ -120,13 +128,13 @@ public class StationsHandler {
     public boolean isViewStations() {
         return viewStations;
     }
-    
+
     public List<Station> getStations() {
         return stations;
     }
 
     public void setStations(List<Station> stationsList) {
-        if ( stations.size() > 0 ) {
+        if (stations.size() > 0) {
             return;
         }
         stations.addAll(stationsList);
