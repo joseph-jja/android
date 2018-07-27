@@ -26,6 +26,26 @@ public class StationListSpinner {
 
     private SimpleBARTInfo context;
     private String selectedStation;
+    private StationListSpinnerIface methodImplClass;
+
+    private AdapterView.OnItemSelectedListener dropdownListener = new AdapterView.OnItemSelectedListener() {
+
+        @Override
+        public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id) {
+
+            Log.d(LOG_NAME, "Position is everything: " + position + " data = "
+                    + stationData.get(position) + " key = " + stationCodes.get(position));
+
+            selectedStation = stationCodes.get(position);
+
+            methodImplClass.processSpinnerListData(context);
+        }
+
+        @Override
+        public void onNothingSelected(AdapterView<?> adapterView) {
+
+        }
+    };
 
     public StationListSpinner(SimpleBARTInfo sbiContext, int spinnerID) {
 
@@ -39,32 +59,17 @@ public class StationListSpinner {
 
     public void initializeSpinnerLists(List<StationData> trainStops, final StationListSpinnerIface methodImpl) {
 
+        methodImplClass = methodImpl;
+
         for (StationData data : trainStops) {
             stationData.add(data.getStationName());
             stationCodes.add(data.getStationCode());
         }
-        ArrayAdapter sourceAdapter = new ArrayAdapter<String>(context, android.R.layout.simple_spinner_item, stationData);
+        final ArrayAdapter<String> sourceAdapter = new ArrayAdapter<String>(context, android.R.layout.simple_spinner_item, stationData);
         sourceAdapter.setDropDownViewResource(R.layout.spinner_item);
         this.dropdown.setAdapter(sourceAdapter);
 
-        this.dropdown.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id) {
-
-                Log.d(LOG_NAME, "Position is everything: " + position + " data = "
-                        + stationData.get(position) + " key = " + stationCodes.get(position));
-
-                selectedStation = stationCodes.get(position);
-
-                methodImpl.processSpinnerListData(context);
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-
-            }
-        });
+        this.dropdown.setOnItemSelectedListener(dropdownListener);
     }
 
     public String getSelectStationText() {
@@ -73,10 +78,10 @@ public class StationListSpinner {
 
     public static List<StationData> convertStationsToStationData(List<Station> stationList) {
 
-        List<StationData> trainStops = new ArrayList<StationData>();
+        final List<StationData> trainStops = new ArrayList<StationData>();
 
         for (Station s : stationList) {
-            StationData sd = new StationData();
+            final StationData sd = new StationData();
             sd.setStationName(s.getStationName());
             sd.setStationCode(s.getShortName());
             trainStops.add(sd);

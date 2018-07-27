@@ -20,6 +20,27 @@ public class SimpleSpinner {
     private SimpleBARTInfo context;
     private String selectedText;
     private StationListSpinnerIface methodImplClass;
+    private List<String> spinnerDataLocal;
+
+    private AdapterView.OnItemSelectedListener dropdownListener = new AdapterView.OnItemSelectedListener() {
+
+        @Override
+        public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id) {
+
+            Log.d(LOG_NAME, "Position is everything: "
+                    + position + " data = "
+                    + spinnerDataLocal.get(position));
+
+            selectedText = spinnerDataLocal.get(position);
+
+            methodImplClass.processSpinnerListData(context);
+        }
+
+        @Override
+        public void onNothingSelected(AdapterView<?> adapterView) {
+
+        }
+    };
 
     public SimpleSpinner(SimpleBARTInfo sbiContext, int spinnerID,
                          final List<String> spinnerData,
@@ -32,31 +53,15 @@ public class SimpleSpinner {
 
         methodImplClass = methodImpl;
 
-        ArrayAdapter<String> sourceAdapter = new ArrayAdapter<String>(sbiContext, android.R.layout.simple_spinner_item, spinnerData);
+        spinnerDataLocal = spinnerData;
+
+        final ArrayAdapter<String> sourceAdapter = new ArrayAdapter<String>(sbiContext, android.R.layout.simple_spinner_item, spinnerData);
         sourceAdapter.setDropDownViewResource(R.layout.spinner_item);
         this.dropdown.setAdapter(sourceAdapter);
 
         this.dropdown.setSelection(sourceAdapter.getPosition(selectedValue));
 
-        this.dropdown.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id) {
-
-                Log.d(LOG_NAME, "Position is everything: "
-                        + position + " data = "
-                        + spinnerData.get(position));
-
-                selectedText = spinnerData.get(position);
-
-                methodImplClass.processSpinnerListData(context);
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-
-            }
-        });
+        this.dropdown.setOnItemSelectedListener(dropdownListener);
     }
 
     public String getSelectText() {

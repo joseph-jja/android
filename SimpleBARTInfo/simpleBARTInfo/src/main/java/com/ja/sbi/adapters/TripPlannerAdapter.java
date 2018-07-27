@@ -46,17 +46,19 @@ public class TripPlannerAdapter extends ArrayAdapter<Trip> {
         return this.inflator;
     }
 
-    private String findStationLongName( String stationShortName) {
+    private String findStationLongName(String stationShortName) {
+        String result = stationShortName;
         if (this.stationData == null) {
-             return stationShortName;
+            return result;
         }
 
-        for ( StationData item: this.stationData) {
-            if ( item.getStationCode( ).equals(stationShortName) ) {
-                return item.getStationName();
+        for (StationData item : this.stationData) {
+            if (item.getStationCode().equals(stationShortName)) {
+                result = item.getStationName();
+                break;
             }
         }
-        return stationShortName;
+        return result;
     }
 
     @Override

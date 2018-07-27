@@ -45,16 +45,18 @@ public class TripLegAdapter extends ArrayAdapter<TripLeg> {
     }
 
     private String findStationLongName(String stationShortName) {
+        String result = stationShortName;
         if (this.stationData == null) {
-            return stationShortName;
+            return result;
         }
 
         for (StationData item : this.stationData) {
             if (item.getStationCode().equals(stationShortName)) {
-                return item.getStationName();
+                result = item.getStationName();
+                break;
             }
         }
-        return stationShortName;
+        return result;
     }
 
     public View getView(int position, View currentView, ViewGroup parent) {
@@ -63,13 +65,13 @@ public class TripLegAdapter extends ArrayAdapter<TripLeg> {
         final TripLeg currentTripLeg = TripLegAdapter.tripsLocal.get(position);
         if (currentTripLeg != null && rView != null) {
 
-            String origin = currentTripLeg.getOrigin();
-            String destination = currentTripLeg.getDestination();
+            final String origin = currentTripLeg.getOrigin();
+            final String destination = currentTripLeg.getDestination();
 
-            String tripLegStartTime = currentTripLeg.getOriginTime() + " " + currentTripLeg.getOriginDate();
-            String tripLegEndTime = currentTripLeg.getDestinationTime() + " " + currentTripLeg.getDestinationDate();
+            final String tripLegStartTime = currentTripLeg.getOriginTime() + " " + currentTripLeg.getOriginDate();
+            final String tripLegEndTime = currentTripLeg.getDestinationTime() + " " + currentTripLeg.getDestinationDate();
 
-            String trainHeadStationName = currentTripLeg.getTrainHeadStation();
+            final String trainHeadStationName = currentTripLeg.getTrainHeadStation();
 
             TripLegViewHolder holder = null;
             if (rView.getTag() == null) {

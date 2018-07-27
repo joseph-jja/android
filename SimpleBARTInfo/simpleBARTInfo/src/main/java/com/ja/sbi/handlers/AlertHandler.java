@@ -61,7 +61,7 @@ public class AlertHandler {
 
         public void handleMessage(Message msg) {
 
-            SimpleBARTInfo sbiThread = (SimpleBARTInfo) msg.obj;
+            final SimpleBARTInfo sbiThread = (SimpleBARTInfo) msg.obj;
 
             final View view = sbiThread.findViewById(R.id.bart_alert_title);
             if ( view == null ) {
@@ -69,7 +69,7 @@ public class AlertHandler {
                 return;
             }
 
-            TextView tview = (TextView)view;
+            final TextView tview = (TextView)view;
             tview.setText("Alerts");
 
             // render view
@@ -79,6 +79,7 @@ public class AlertHandler {
 
             Log.d(LOG_NAME, "Got something.");
             AlertHandler.dialog.dismiss();
+            AlertHandler.dialog = null;
         }
     };
 }
