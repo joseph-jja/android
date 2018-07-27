@@ -32,6 +32,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <!--<com.ja.sbi.map.TouchImageView-->
             <ImageView
                 android:id="@+id/bart_map_image"
                 android:layout_width="5000px"

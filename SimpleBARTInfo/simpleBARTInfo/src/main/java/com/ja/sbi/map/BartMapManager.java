@@ -2,15 +2,11 @@ package com.ja.sbi.map;
 
 import android.app.Activity;
 import android.content.Context;
-import android.util.Log;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.ScrollView;
-import android.widget.TableLayout;
 
 import com.ja.sbi.R;
 import com.ja.sbi.SimpleBARTInfo;
