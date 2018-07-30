@@ -1,10 +1,27 @@
 {
     "logs": [
         {
-            "outputFile": "/home/joea/workspace/android/MinnowRSS/minnowRSS/build/intermediates/res/merged/debug/values_values.arsc.flat",
+            "outputFile": "/Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/build/intermediates/res/merged/debug/values_values.arsc.flat",
             "map": [
                 {
-                    "source": "/home/joea/workspace/android/MinnowRSS/minnowRSS/src/main/res/values/styles.xml",
+                    "source": "/Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/src/main/res/values/strings.xml",
+                    "from": {
+                        "startLines": "3,2",
+                        "startColumns": "4,4",
+                        "startOffsets": "103,55",
+                        "endColumns": "76,47",
+                        "endOffsets": "175,98"
+                    },
+                    "to": {
+                        "startLines": "5,6",
+                        "startColumns": "4,4",
+                        "startOffsets": "184,261",
+                        "endColumns": "76,47",
+                        "endOffsets": "256,304"
+                    }
+                },
+                {
+                    "source": "/Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/src/main/res/values/styles.xml",
                     "from": {
                         "startLines": "1",
                         "startColumns": "4",
@@ -23,7 +40,7 @@
                     }
                 },
                 {
-                    "source": "/home/joea/workspace/android/MinnowRSS/minnowRSS/src/main/res/values/colors.xml",
+                    "source": "/Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/src/main/res/values/colors.xml",
                     "from": {
                         "startLines": "4,2,3",
                         "startColumns": "4,4,4",
@@ -40,7 +57,7 @@
                     }
                 },
                 {
-                    "source": "/home/joea/workspace/android/MinnowRSS/minnowRSS/src/main/res/values/ui_styles.xml",
+                    "source": "/Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/src/main/res/values/ui_styles.xml",
                     "from": {
                         "startLines": "5,12,23,19,15,26,2,9,34,30",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",
@@ -56,23 +73,6 @@
                         "endLines": "10,13,16,20,24,28,39,42,45,49",
                         "endColumns": "12,12,12,12,12,12,12,12,12,12",
                         "endOffsets": "458,552,655,807,950,1096,1481,1580,1680,1828"
-                    }
-                },
-                {
-                    "source": "/home/joea/workspace/android/MinnowRSS/minnowRSS/src/main/res/values/strings.xml",
-                    "from": {
-                        "startLines": "3,2",
-                        "startColumns": "4,4",
-                        "startOffsets": "103,55",
-                        "endColumns": "76,47",
-                        "endOffsets": "175,98"
-                    },
-                    "to": {
-                        "startLines": "5,6",
-                        "startColumns": "4,4",
-                        "startOffsets": "184,261",
-                        "endColumns": "76,47",
-                        "endOffsets": "256,304"
                     }
                 }
             ]

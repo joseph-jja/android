@@ -18,4 +18,5 @@ android {
 dependencies {
     api project(':database-debug')
     api project(':ui-libs-debug')
+    implementation 'com.android.support:support-v4:24.2.1'
 }

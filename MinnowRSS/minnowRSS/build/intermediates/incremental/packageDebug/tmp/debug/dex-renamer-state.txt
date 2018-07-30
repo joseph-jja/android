@@ -1,4 +1,4 @@
-#Fri Jul 27 15:49:55 PDT 2018
+#Mon Jul 30 16:00:48 PDT 2018
 path.1=classes.dex
 path.0=classes.dex
 renamed.5=classes6.dex
@@ -7,12 +7,12 @@ renamed.3=classes4.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
 renamed.0=classes.dex
-base.5=/home/joea/workspace/android/MinnowRSS/minnowRSS/build/intermediates/transforms/dexMerger/debug/54
-base.4=/home/joea/workspace/android/MinnowRSS/minnowRSS/build/intermediates/transforms/dexMerger/debug/55
-base.3=/home/joea/workspace/android/MinnowRSS/minnowRSS/build/intermediates/transforms/dexMerger/debug/52
-base.2=/home/joea/workspace/android/MinnowRSS/minnowRSS/build/intermediates/transforms/dexMerger/debug/53
-base.1=/home/joea/workspace/android/MinnowRSS/minnowRSS/build/intermediates/transforms/dexMerger/debug/50
-base.0=/home/joea/workspace/android/MinnowRSS/minnowRSS/build/intermediates/transforms/dexMerger/debug/51
+base.5=/Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/build/intermediates/transforms/dexMerger/debug/35
+base.4=/Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/build/intermediates/transforms/dexMerger/debug/33
+base.3=/Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/build/intermediates/transforms/dexMerger/debug/36
+base.2=/Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/build/intermediates/transforms/dexMerger/debug/31
+base.1=/Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/build/intermediates/transforms/dexMerger/debug/34
+base.0=/Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/build/intermediates/transforms/dexMerger/debug/32
 path.5=classes.dex
 path.4=classes.dex
 path.3=classes.dex
