@@ -43,10 +43,18 @@ public class ImportExportListener implements Runnable {
 
         ImportExportListener.context = activity;
         ImportExportListener.isExport = true;
+        
+        boolean weGotPermissions = false;
+        if (ContextCompat.checkSelfPermission(ImportExportListener.context, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
+             weGotPermissions = true;
+        }
 
-        dialog = new LoadingSpinner((Context) activity, "Collecting feeds, please wait.");
+        // only call this if we have permissions
+        if (weGotPermissions) {
+            dialog = new LoadingSpinner((Context) activity, "Collecting feeds, please wait.");
 
-        new Thread(this).start();
+            new Thread(this).start();
+        }
     }
 
     public void importFeeds(MinnowRSS activity) {
@@ -54,9 +62,17 @@ public class ImportExportListener implements Runnable {
         ImportExportListener.context = activity;
         ImportExportListener.isExport = false;
 
-        dialog = new LoadingSpinner((Context) activity, "Collecting feeds, please wait.");
+        boolean weGotPermissions = false;
+        if (ContextCompat.checkSelfPermission(ImportExportListener.context, Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
+             weGotPermissions = true;
+        }
+        
+        // only call this if we have permissions
+        if (weGotPermissions) {
+           dialog = new LoadingSpinner((Context) activity, "Collecting feeds, please wait.");
 
-        new Thread(this).start();
+            new Thread(this).start();
+        }
     }
 
     /* Checks if external storage is available for read and write */
@@ -94,9 +110,6 @@ public class ImportExportListener implements Runnable {
         try {
 
             if (ImportExportListener.isExport) {
-                boolean weGotPermissions = false;
-                if (ContextCompat.checkSelfPermission(ImportExportListener.context, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-
                     //if (ActivityCompat.shouldShowRequestPermissionRationale(ImportExportListener.context,
                     //        Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
 
@@ -105,9 +118,6 @@ public class ImportExportListener implements Runnable {
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
                             "In order to export data, we need to have write permissions enabled!");
                     //}
-
-                }
-
                 feedsList = Constants.getFeedsservice().listFeeds(ImportExportListener.context);
                 Log.d(TAG, "Got some data " + Integer.valueOf(feedsList.size()).toString());
 
