@@ -39,7 +39,7 @@ public class ImportExportListener implements Runnable {
     // default this to export
     private static boolean isExport = true;
     
-    private const MY_PERMISSIONS_REQUEST_WRITE_STORAGE = 1;
+    private final int MY_PERMISSIONS_REQUEST_WRITE_STORAGE = 1;
 
     public void exportFeeds(MinnowRSS activity) {
 
@@ -89,7 +89,7 @@ public class ImportExportListener implements Runnable {
         if (weGotPermissions) {
            dialog = new LoadingSpinner((Context) activity, "Collecting feeds, please wait.");
 
-            new Thread(this).start();
+           new Thread(this).start();
         }
     }
 
@@ -123,6 +123,26 @@ public class ImportExportListener implements Runnable {
         }
         return minnowRSSData.getAbsolutePath();
     }
+    
+    public void onRequestPermissionsResult(int requestCode,
+        String permissions[], int[] grantResults) {
+        
+        switch (requestCode) {
+            case MY_PERMISSIONS_REQUEST_WRITE_STORAGE: {
+                // If request is cancelled, the result arrays are empty.
+                if (grantResults.length > 0
+                    && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    // permission was granted, yay!
+                    // do export
+                    dialog = new LoadingSpinner((Context) activity, "Collecting feeds, please wait.");
+
+                    new Thread(this).start();
+                } else {
+                    // permission denied, boo! 
+                }
+                return;
+            }       }
+    }
 
     public void run() {
         try {
@@ -146,26 +166,20 @@ public class ImportExportListener implements Runnable {
                 if (datafile != null) {
                     Log.d(TAG, "We got a file name: " + datafile);
                 }
+
+            } else{
+                feedsList = new ArrayList<Table>();
+                // TODO read the data file in, if it exists and then add the tables in
+                // should compare data
             }
 
-        } else{
-            feedsList = new ArrayList<Table>();
-            // TODO read the data file in, if it exists and then add the tables in
-            // should compare data
+        } catch(Exception ex) {
+            ex.printStackTrace();
+        } finally {
+            loadingHandler.sendMessage(loadingHandler.obtainMessage());
         }
 
-    } catch(
-    Exception ex)
-
-    {
-        ex.printStackTrace();
-    } finally
-
-    {
-        loadingHandler.sendMessage(loadingHandler.obtainMessage());
     }
-
-}
 
     private final Handler loadingHandler = new Handler() {
         public void handleMessage(Message msg) {
