@@ -1,5 +1,7 @@
 package com.ja.minnow.tables;
 
+import com.ja.database.Table;
+
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -14,7 +16,7 @@ public class FeedsTableData {
   public static final String URL_COL = "url";
   public static final String LASTUPDATEDATE_COL = "lastUpdateDate";
 
-  public final Map<String, String> columns = new HashMap<String, String>(); 
+  public final Map<String, String> columns = new HashMap<String, String>();
   {
 	  columns.put(FeedsTableData.FEEDCOUNT_COL, "Integer");
 	  columns.put(FeedsTableData.NAME_COL, "String");
@@ -29,5 +31,4 @@ public class FeedsTableData {
 	  requiredFields.add(FeedsTableData.NAME_COL);
 	  requiredFields.add(FeedsTableData.URL_COL);
   };
-  
 }

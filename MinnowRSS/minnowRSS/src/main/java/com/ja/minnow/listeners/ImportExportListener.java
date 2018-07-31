@@ -6,24 +6,29 @@ import android.content.pm.PackageManager;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
-import android.provider.ContactsContract;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
 
-import com.ja.activity.BaseActivity;
+import com.ja.database.DatabaseAdapter;
 import com.ja.database.Table;
 import com.ja.dialog.BaseDialog;
+import com.ja.dialog.LoadingSpinner;
 import com.ja.minnow.Constants;
 import com.ja.minnow.MinnowRSS;
-import com.ja.dialog.LoadingSpinner;
-import com.ja.minnow.R;
+import com.ja.minnow.services.FeedsService;
 import com.ja.minnow.tables.FeedsTableData;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class ImportExportListener implements Runnable {
 
@@ -125,7 +130,7 @@ public class ImportExportListener implements Runnable {
         return false;
     }
 
-    private String makeExternalDirs() throws IOException {
+    private File makeExternalDirs(boolean createFile) throws IOException {
 
         if (!isExternalStorageWritable()) {
             Log.d(TAG, "Booo we cannot write!");
@@ -140,11 +145,11 @@ public class ImportExportListener implements Runnable {
 
         File minnowRSSData = new File(sd, backupFilename);
 
-        if (!minnowRSSData.createNewFile()) {
+        if (createFile && !minnowRSSData.exists() && !minnowRSSData.createNewFile()) {
             Log.d(TAG, "We tried to write the file, but no love!");
             return null;
         }
-        return minnowRSSData.getAbsolutePath();
+        return minnowRSSData;
     }
 
     public void run() {
@@ -157,21 +162,62 @@ public class ImportExportListener implements Runnable {
                 // need to convert the data into something useful
                 StringBuilder results = new StringBuilder();
                 for (Table tbl : feedsList) {
-                    final String feedName = "\"" + tbl.getColumnValue(FeedsTableData.NAME_COL).toString() + "\"";
-                    final String feedUrl = "\"" + tbl.getColumnValue(FeedsTableData.URL_COL).toString() + "\"";
+                    final String feedName = tbl.getColumnValue(FeedsTableData.NAME_COL).toString();
+                    final String feedUrl = tbl.getColumnValue(FeedsTableData.URL_COL).toString();
                     // write data in csv format
                     final String feedLine = feedName + "," + feedUrl + System.getProperty("line.separator");
                     results.append(feedLine);
                 }
 
-                // TODO actually write this out somewhere
-                final String datafile = makeExternalDirs();
+                // actually write this out somewhere
+                final File datafile = makeExternalDirs(true);
                 if (datafile != null) {
-                    Log.d(TAG, "We got a file name: " + datafile);
+                    Log.d(TAG, "We got a file name: " + datafile.getAbsolutePath());
+                    FileWriter ostream = new FileWriter(datafile);
+                    BufferedWriter bostream = new BufferedWriter(ostream);
+                    bostream.write(results.toString());
+                    bostream.flush();
+                    bostream.close();
+                    Log.d(TAG, "We should have written data: " + results.toString());
                 }
 
             } else {
                 feedsList = new ArrayList<Table>();
+
+                DatabaseAdapter adapter = ImportExportListener.context.getDbAdapter();
+                final FeedsService importService = new FeedsService();
+
+                // delete any feeds
+                List<Table> feeds = Constants.getFeedsservice().listFeeds(ImportExportListener.context);
+                for ( Table tbl: feeds) {
+                    Constants.getFeeddataservice().deleteAllFeedData(adapter, tbl.getId());
+                    adapter.deleteById(FeedsTableData.FEEDS_TABLE, tbl.getId());
+                }
+
+                // get the filename
+                final File datafile = makeExternalDirs(false);
+                if (datafile != null) {
+                    Log.d(TAG, "We got a file name: " + datafile.getAbsolutePath());
+                    FileReader oread = new FileReader(datafile);
+                    BufferedReader booread = new BufferedReader(oread);
+                    String data = booread.readLine();
+                    while ( data != null ) {
+                        final String line = data.trim();
+                        Log.d(TAG, "We got a line of data: " + line);
+                        if ( line.length() > 0 ) {
+                            final String parts[] = line.split(",");
+                            if ( parts.length > 1) {
+                                Map<String, String> row = new HashMap<String, String>();
+                                row.put(FeedsTableData.NAME_COL, parts[0]);
+                                row.put(FeedsTableData.URL_COL, parts[1].replace("\"", ""));
+                                importService.importRow(adapter, row);
+                            }
+                        }
+                        data = booread.readLine();
+                    }
+                    booread.close();
+                }
+
                 // TODO read the data file in, if it exists and then add the tables in
                 // should compare data
             }
