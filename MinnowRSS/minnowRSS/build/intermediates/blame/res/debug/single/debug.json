@@ -1,58 +1,58 @@
 [
     {
-        "merged": "/Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/build/intermediates/res/merged/debug/drawable_splash.png.flat",
-        "source": "/Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/src/main/res/drawable/splash.png"
+        "merged": "/home/joea/workspace/android/MinnowRSS/minnowRSS/build/intermediates/res/merged/debug/layout_main.xml.flat",
+        "source": "/home/joea/workspace/android/MinnowRSS/minnowRSS/src/main/res/layout/main.xml"
     },
     {
-        "merged": "/Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/build/intermediates/res/merged/debug/layout_feed_data_list.xml.flat",
-        "source": "/Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/src/main/res/layout/feed_data_list.xml"
+        "merged": "/home/joea/workspace/android/MinnowRSS/minnowRSS/build/intermediates/res/merged/debug/layout_feeds_list.xml.flat",
+        "source": "/home/joea/workspace/android/MinnowRSS/minnowRSS/src/main/res/layout/feeds_list.xml"
     },
     {
-        "merged": "/Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/build/intermediates/res/merged/debug/menu_textviewer.xml.flat",
-        "source": "/Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/src/main/res/menu/textviewer.xml"
+        "merged": "/home/joea/workspace/android/MinnowRSS/minnowRSS/build/intermediates/res/merged/debug/layout_feeds_list_row.xml.flat",
+        "source": "/home/joea/workspace/android/MinnowRSS/minnowRSS/src/main/res/layout/feeds_list_row.xml"
     },
     {
-        "merged": "/Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/build/intermediates/res/merged/debug/drawable_default_feed_icon.png.flat",
-        "source": "/Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/src/main/res/drawable/default_feed_icon.png"
+        "merged": "/home/joea/workspace/android/MinnowRSS/minnowRSS/build/intermediates/res/merged/debug/menu_context.xml.flat",
+        "source": "/home/joea/workspace/android/MinnowRSS/minnowRSS/src/main/res/menu/context.xml"
     },
     {
-        "merged": "/Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/build/intermediates/res/merged/debug/layout_feed_item_text_view.xml.flat",
-        "source": "/Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/src/main/res/layout/feed_item_text_view.xml"
+        "merged": "/home/joea/workspace/android/MinnowRSS/minnowRSS/build/intermediates/res/merged/debug/layout_feed_data_list_row.xml.flat",
+        "source": "/home/joea/workspace/android/MinnowRSS/minnowRSS/src/main/res/layout/feed_data_list_row.xml"
     },
     {
-        "merged": "/Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/build/intermediates/res/merged/debug/menu_settings.xml.flat",
-        "source": "/Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/src/main/res/menu/settings.xml"
+        "merged": "/home/joea/workspace/android/MinnowRSS/minnowRSS/build/intermediates/res/merged/debug/layout_feed_item_web_view.xml.flat",
+        "source": "/home/joea/workspace/android/MinnowRSS/minnowRSS/src/main/res/layout/feed_item_web_view.xml"
     },
     {
-        "merged": "/Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/build/intermediates/res/merged/debug/drawable_icon.png.flat",
-        "source": "/Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/src/main/res/drawable/icon.png"
+        "merged": "/home/joea/workspace/android/MinnowRSS/minnowRSS/build/intermediates/res/merged/debug/layout_add_feed.xml.flat",
+        "source": "/home/joea/workspace/android/MinnowRSS/minnowRSS/src/main/res/layout/add_feed.xml"
     },
     {
-        "merged": "/Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/build/intermediates/res/merged/debug/layout_add_feed.xml.flat",
-        "source": "/Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/src/main/res/layout/add_feed.xml"
+        "merged": "/home/joea/workspace/android/MinnowRSS/minnowRSS/build/intermediates/res/merged/debug/drawable_splash.png.flat",
+        "source": "/home/joea/workspace/android/MinnowRSS/minnowRSS/src/main/res/drawable/splash.png"
     },
     {
-        "merged": "/Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/build/intermediates/res/merged/debug/layout_feed_item_web_view.xml.flat",
-        "source": "/Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/src/main/res/layout/feed_item_web_view.xml"
+        "merged": "/home/joea/workspace/android/MinnowRSS/minnowRSS/build/intermediates/res/merged/debug/drawable_default_feed_icon.png.flat",
+        "source": "/home/joea/workspace/android/MinnowRSS/minnowRSS/src/main/res/drawable/default_feed_icon.png"
     },
     {
-        "merged": "/Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/build/intermediates/res/merged/debug/layout_main.xml.flat",
-        "source": "/Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/src/main/res/layout/main.xml"
+        "merged": "/home/joea/workspace/android/MinnowRSS/minnowRSS/build/intermediates/res/merged/debug/menu_textviewer.xml.flat",
+        "source": "/home/joea/workspace/android/MinnowRSS/minnowRSS/src/main/res/menu/textviewer.xml"
     },
     {
-        "merged": "/Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/build/intermediates/res/merged/debug/layout_feed_data_list_row.xml.flat",
-        "source": "/Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/src/main/res/layout/feed_data_list_row.xml"
+        "merged": "/home/joea/workspace/android/MinnowRSS/minnowRSS/build/intermediates/res/merged/debug/layout_feed_item_text_view.xml.flat",
+        "source": "/home/joea/workspace/android/MinnowRSS/minnowRSS/src/main/res/layout/feed_item_text_view.xml"
     },
     {
-        "merged": "/Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/build/intermediates/res/merged/debug/layout_feeds_list_row.xml.flat",
-        "source": "/Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/src/main/res/layout/feeds_list_row.xml"
+        "merged": "/home/joea/workspace/android/MinnowRSS/minnowRSS/build/intermediates/res/merged/debug/menu_settings.xml.flat",
+        "source": "/home/joea/workspace/android/MinnowRSS/minnowRSS/src/main/res/menu/settings.xml"
     },
     {
-        "merged": "/Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/build/intermediates/res/merged/debug/menu_context.xml.flat",
-        "source": "/Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/src/main/res/menu/context.xml"
+        "merged": "/home/joea/workspace/android/MinnowRSS/minnowRSS/build/intermediates/res/merged/debug/layout_feed_data_list.xml.flat",
+        "source": "/home/joea/workspace/android/MinnowRSS/minnowRSS/src/main/res/layout/feed_data_list.xml"
     },
     {
-        "merged": "/Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/build/intermediates/res/merged/debug/layout_feeds_list.xml.flat",
-        "source": "/Users/jacosta1/sourcecode/android/MinnowRSS/minnowRSS/src/main/res/layout/feeds_list.xml"
+        "merged": "/home/joea/workspace/android/MinnowRSS/minnowRSS/build/intermediates/res/merged/debug/drawable_icon.png.flat",
+        "source": "/home/joea/workspace/android/MinnowRSS/minnowRSS/src/main/res/drawable/icon.png"
     }
 ]

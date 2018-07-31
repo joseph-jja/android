@@ -2,7 +2,9 @@ package com.ja.minnow;
 
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
+import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.Message;
@@ -56,6 +58,8 @@ public class MinnowRSS extends BaseActivity {
 
     private Thread localThread = null;
     private RefreshThread refreshThread = null;
+
+    private ImportExportListener importerExporter;
 
     public void initializeActivity() {
 
@@ -369,33 +373,17 @@ public class MinnowRSS extends BaseActivity {
                 Constants.getSettingsservice().setUpdateDateTime(super.getDbAdapter(), 24);
                 break;
             case R.id.setting_export:
-                // need thread?
-                ImportExportListener export = new ImportExportListener();
-                export.exportFeeds(this);
+                if ( importerExporter == null ) {
+                    importerExporter = new ImportExportListener();
+                }
+                importerExporter.exportFeeds(this);
                 break;
             case R.id.setting_import:
-                //case R.id.setting_export:
-			/*	List<Table> feeds_list = FeedsEditor.getAllFeeds(this);
-				final XMLExporter exporter = new XMLExporter();
-				Document xmlout = exporter.getXMLDocument();
-				if ( xmlout != null ) { 
-					Element root = xmlout.createElement("minnow_feeds");
-					xmlout.appendChild( root ); 
-					for ( Table feed: feeds_list ) {
-						final FeedsTable feedTable = new FeedsTable(feed);
-						Element feedElement = xmlout.createElement("feed");
-						feedElement.setAttribute("name", feedTable.getName());
-						feedElement.setAttribute("url", feedTable.getUrl());
-						root.appendChild(feedElement);
-					}
-					final String xmlDoc  = exporter.getDocumetAsString(xmlout);
-
-					Log.e(TAG, xmlDoc );
-				}*/
-                // TODO write the data out
-                //case R.id.setting_import:
-                // TODO read data in
-
+                if ( importerExporter == null ) {
+                    importerExporter = new ImportExportListener();
+                }
+                importerExporter.importFeeds(this);
+                break;
             default:
                 break;
         }
@@ -444,6 +432,38 @@ public class MinnowRSS extends BaseActivity {
             this.refreshThread.setSleepThread(false);
         }
     }
+
+    public void onRequestPermissionsResult(int requestCode,
+                                           String permissions[], int[] grantResults) {
+
+        switch (requestCode) {
+            case ImportExportListener.MY_PERMISSIONS_REQUEST_WRITE_STORAGE:
+                // If request is cancelled, the result arrays are empty.
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    if ( importerExporter == null ) {
+                        importerExporter = new ImportExportListener();
+                    }
+                    importerExporter.execute(true);
+                } else {
+                    // permission denied, boo!
+                }
+                break;
+            case ImportExportListener.MY_PERMISSIONS_REQUEST_READ_STORAGE:
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    if (importerExporter == null) {
+                        importerExporter = new ImportExportListener();
+                    }
+                    importerExporter.execute(true);
+                } else {
+                    // do what?
+                }
+                break;
+
+        }
+    }
+
 
     /**
      * @return the webView
