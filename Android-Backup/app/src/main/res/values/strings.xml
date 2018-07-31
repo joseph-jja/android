@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="ErrorMessage">ErrorMessage</string>
+
+    <string name="app_name">Backup Restore</string>
+    <string name="SelectText">Select the data to backup</string>
+
+    <string name="Applications">Applications</string>
+    <string name="Bookmarks">Bookmarks</string>
+    <string name="Contacts">Contacts</string>
+    <string name="Sms">Sms</string>
+    <string name="Wallpaper">Wallpaper</string>
+    <string name="Settings">Settings</string>
+
+    <string name="ContactName">Name</string>
+    <string name="SmsView">SmsView</string>
+    <string name="title">title</string>
+    <string name="url">url</string>
+
+    <string name="Take_Backup">Backup</string>
+    <string name="Restore">Restore</string>
+    <string name="RestoreButtonHandler">RestoreClickHandler</string>
+    <string name="ButtonHandler">SubmitClickHandler</string>
+    
+    <color name="fgColor">#000000</color>
+    <color name="bgcolor">#ffffff</color>
+    <color name="redColor">#ff0000</color>
+    <string name="sdcard_mount_required">SD card mount is required to run this program.</string>
+    <string name="sdcard_read_write_mount_required">SD card mount is required to be mounted read/write to run this program.</string>
+    <string name="backup_restore_info_text">Check the boxes for what you want to backup or restore and then press backup or restore.</string>
+</resources>
