@@ -31,8 +31,6 @@
             androidLlabel="@string/app_name"></activity>
     </application>
 
-    <uses-sdk android:minSdkVersion="8" />
-
     <uses-permission android:name="android.permission.READ_SMS"/>
     <uses-permission android:name="android.permission.WRITE_SMS"/>
 
@@ -40,8 +38,5 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <uses-permission android:name="android.permission.SET_WALLPAPER" />
-    <!--  useless permission as it only gives you read permissions
-    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
-    -->
 
 </manifest> 
