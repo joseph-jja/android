@@ -10,7 +10,7 @@ public class WallpaperCheckBox extends BaseCheckBox implements BaseCheckBoxIface
 
     @Override
     public int getCheckBoxID() {
-        return R.id.CheckBox07;
+        return R.id.wallpaperCheckbox;
     }
 
     @Override

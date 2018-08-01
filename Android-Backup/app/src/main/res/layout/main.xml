@@ -1,59 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/scroll" android:layout_width="fill_parent"
+    android:id="@+id/scroll"
+    android:layout_width="fill_parent"
     android:layout_height="fill_parent">
 
-<LinearLayout 
-    android:orientation="vertical" android:layout_width="fill_parent"
-    android:layout_height="wrap_content" android:background="@color/bgcolor">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bgcolor"
+        android:orientation="vertical">
 
-    <TextView android:id="@+id/TextView01" android:text="@string/SelectText"
-        android:layout_width="fill_parent" android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp" android:layout_marginTop="20dp" 
-        android:textSize="15dp" android:textStyle="bold"
-        android:paddingLeft="5dp" android:paddingRight="5dp"
-        android:textColor="@color/fgColor">
-    </TextView>
+        <TextView
+            android:id="@+id/TextView01"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/SelectText"
+            android:textColor="@color/fgColor"
+            android:textSize="15dp"
+            android:textStyle="bold"></TextView>
 
-    <CheckBox android:id="@+id/CheckBox06" android:textColor="@color/fgColor"
-        android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:text="@string/Applications"></CheckBox>
-
-    <CheckBox android:id="@+id/CheckBox05" android:textColor="@color/fgColor"
-        android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:text="@string/Bookmarks"></CheckBox>
-
-    <CheckBox android:id="@+id/CheckBox01" android:textColor="@color/fgColor"
-        android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:text="@string/Contacts"></CheckBox>
-
-    <CheckBox android:id="@+id/CheckBox03" android:textColor="@color/fgColor"
-        android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:text="@string/Sms"></CheckBox>
-        
-    <CheckBox android:id="@+id/CheckBox07" android:textColor="@color/fgColor"
-        android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:text="@string/Wallpaper"></CheckBox>
-
-    <CheckBox android:id="@+id/CheckBox09" android:textColor="@color/fgColor"
-        android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:text="@string/Settings"></CheckBox>
-
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:orientation="horizontal" android:layout_width="fill_parent"
-        android:layout_height="fill_parent" android:background="@color/bgcolor">
-
-        <Button android:id="@+id/Button01" android:layout_height="wrap_content"
-            android:text="@string/Take_Backup" android:onClick="@string/ButtonHandler"
+        <CheckBox
+            android:id="@+id/applicationCheckbox"
             android:layout_width="wrap_content"
-            android:layout_marginLeft="100dp" android:layout_marginTop="25dp"></Button>
-        <Button android:id="@+id/Restore" android:layout_height="wrap_content"
-            android:text="@string/Restore" android:onClick="@string/RestoreButtonHandler"
+            android:layout_height="wrap_content"
+            android:text="@string/Applications"
+            android:textColor="@color/fgColor"></CheckBox>
+
+        <CheckBox
+            android:id="@+id/smsCheckbox"
             android:layout_width="wrap_content"
-            android:layout_marginLeft="10dp" android:layout_marginTop="25dp"></Button>
+            android:layout_height="wrap_content"
+            android:text="@string/Sms"
+            android:textColor="@color/fgColor"></CheckBox>
+
+        <CheckBox
+            android:id="@+id/wallpaperCheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Wallpaper"
+            android:textColor="@color/fgColor"></CheckBox>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/bgcolor"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/Button01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="25dp"
+                android:onClick="@string/ButtonHandler"
+                android:text="@string/Take_Backup"></Button>
+
+            <Button
+                android:id="@+id/Restore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="25dp"
+                android:onClick="@string/RestoreButtonHandler"
+                android:text="@string/Restore"></Button>
+        </LinearLayout>
+
     </LinearLayout>
-
-
-</LinearLayout>
 
 </ScrollView>

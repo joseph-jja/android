@@ -18,7 +18,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3610203d-8b97-4323-8aa6-8b7cb84390c1" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/../Android-Backup/.gradle/4.4.1/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/../Android-Backup/.gradle/4.4.1/fileHashes/fileHashes.bin" />
+      <change beforePath="$PROJECT_DIR$/../Android-Backup/.gradle/4.4.1/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/../Android-Backup/.gradle/4.4.1/fileHashes/fileHashes.lock" />
+      <change beforePath="$PROJECT_DIR$/../Android-Backup/.gradle/4.4.1/fileHashes/resourceHashesCache.bin" afterPath="$PROJECT_DIR$/../Android-Backup/.gradle/4.4.1/fileHashes/resourceHashesCache.bin" />
+      <change beforePath="$PROJECT_DIR$/../Android-Backup/.gradle/4.4.1/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/../Android-Backup/.gradle/4.4.1/javaCompile/classAnalysis.bin" />
+      <change beforePath="$PROJECT_DIR$/../Android-Backup/.gradle/4.4.1/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/../Android-Backup/.gradle/4.4.1/javaCompile/javaCompile.lock" />
+      <change beforePath="$PROJECT_DIR$/../Android-Backup/.gradle/4.4.1/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/../Android-Backup/.gradle/4.4.1/javaCompile/taskHistory.bin" />
+      <change beforePath="$PROJECT_DIR$/../Android-Backup/.gradle/4.4.1/javaCompile/taskJars.bin" afterPath="$PROJECT_DIR$/../Android-Backup/.gradle/4.4.1/javaCompile/taskJars.bin" />
+      <change beforePath="$PROJECT_DIR$/../Android-Backup/.gradle/4.4.1/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/../Android-Backup/.gradle/4.4.1/taskHistory/taskHistory.bin" />
+      <change beforePath="$PROJECT_DIR$/../Android-Backup/.gradle/4.4.1/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/../Android-Backup/.gradle/4.4.1/taskHistory/taskHistory.lock" />
+      <change beforePath="$PROJECT_DIR$/../Android-Backup/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/../Android-Backup/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
+      <change beforePath="$PROJECT_DIR$/../Android-Backup/.gradle/buildOutputCleanup/outputFiles.bin" afterPath="$PROJECT_DIR$/../Android-Backup/.gradle/buildOutputCleanup/outputFiles.bin" />
       <change beforePath="$PROJECT_DIR$/../Android-Backup/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Android-Backup/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/../Android-Backup/app/app.iml" afterPath="$PROJECT_DIR$/../Android-Backup/app/app.iml" />
+      <change beforePath="$PROJECT_DIR$/../Android-Backup/app/build.gradle" afterPath="$PROJECT_DIR$/../Android-Backup/app/build.gradle" />
+      <change beforePath="$PROJECT_DIR$/../Android-Backup/app/build/outputs/apk/debug/app-debug.apk" afterPath="$PROJECT_DIR$/../Android-Backup/app/build/outputs/apk/debug/app-debug.apk" />
+      <change beforePath="$PROJECT_DIR$/../Android-Backup/app/build/outputs/logs/manifest-merger-debug-report.txt" afterPath="$PROJECT_DIR$/../Android-Backup/app/build/outputs/logs/manifest-merger-debug-report.txt" />
+      <change beforePath="$PROJECT_DIR$/../Android-Backup/app/src/main/java/android/backup/checkbox/ApplicationCheckBox.java" afterPath="$PROJECT_DIR$/../Android-Backup/app/src/main/java/android/backup/checkbox/ApplicationCheckBox.java" />
+      <change beforePath="$PROJECT_DIR$/../Android-Backup/app/src/main/java/android/backup/checkbox/SmsCheckBox.java" afterPath="$PROJECT_DIR$/../Android-Backup/app/src/main/java/android/backup/checkbox/SmsCheckBox.java" />
+      <change beforePath="$PROJECT_DIR$/../Android-Backup/app/src/main/java/android/backup/checkbox/WallpaperCheckBox.java" afterPath="$PROJECT_DIR$/../Android-Backup/app/src/main/java/android/backup/checkbox/WallpaperCheckBox.java" />
+      <change beforePath="$PROJECT_DIR$/../Android-Backup/app/src/main/java/android/backup/screens/HomeScreen.java" afterPath="$PROJECT_DIR$/../Android-Backup/app/src/main/java/android/backup/screens/HomeScreen.java" />
+      <change beforePath="$PROJECT_DIR$/../Android-Backup/app/src/main/java/android/backup/screens/TabScreen.java" afterPath="$PROJECT_DIR$/../Android-Backup/app/src/main/java/android/backup/screens/TabScreen.java" />
+      <change beforePath="$PROJECT_DIR$/../Android-Backup/app/src/main/res/layout/applications.xml" afterPath="$PROJECT_DIR$/../Android-Backup/app/src/main/res/layout/applications.xml" />
+      <change beforePath="$PROJECT_DIR$/../Android-Backup/app/src/main/res/layout/bookmark.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../Android-Backup/app/src/main/res/layout/main.xml" afterPath="$PROJECT_DIR$/../Android-Backup/app/src/main/res/layout/main.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/simpleBARTInfo/simpleBARTInfo.iml" afterPath="$PROJECT_DIR$/simpleBARTInfo/simpleBARTInfo.iml" />
+      <change beforePath="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/SimpleBARTInfo.java" afterPath="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/SimpleBARTInfo.java" />
     </list>
     <ignored path="$PROJECT_DIR$/build/classes/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,7 +62,17 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
-        <projects_view />
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="SimpleBARTInfo" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
       </state>
     </system>
   </component>
@@ -45,17 +81,10 @@
       <file leaf-file-name="BartMapManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/map/BartMapManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
+            <state relative-caret-position="0">
               <caret line="54" column="21" lean-forward="false" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2314#2315#0" expanded="true" />
-                <element signature="e#2366#3338#0" expanded="true" />
-                <element signature="e#3337#3338#0" expanded="true" />
-                <element signature="e#3381#3777#0" expanded="true" />
-                <element signature="e#3776#3777#0" expanded="true" />
-                <element signature="e#3821#4167#0" expanded="true" />
-                <element signature="e#4166#4167#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -74,7 +103,7 @@
       <file leaf-file-name="SimpleSpinner.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/utils/SimpleSpinner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="915">
+            <state relative-caret-position="482">
               <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
               <folding>
                 <marker date="1532986539000" expanded="true" signature="2024:2032" ph="{...}" />
@@ -86,12 +115,25 @@
       <file leaf-file-name="SimpleBARTInfo.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/SimpleBARTInfo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="734">
-              <caret line="132" column="48" lean-forward="false" selection-start-line="132" selection-start-column="41" selection-end-line="132" selection-end-column="55" />
+            <state relative-caret-position="294">
+              <caret line="77" column="14" lean-forward="false" selection-start-line="77" selection-start-column="14" selection-end-line="77" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="stations.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/res/layout/stations.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="37" lean-forward="false" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2">
+            <state />
           </provider>
         </entry>
       </file>
@@ -108,11 +150,9 @@
       <file leaf-file-name="bart_map.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/res/layout/bart_map.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
+            <state relative-caret-position="525">
               <caret line="35" column="22" lean-forward="false" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
-              <folding>
-                <marker date="1532986539000" expanded="true" signature="1196:1392" ph="..." />
-              </folding>
+              <folding />
             </state>
           </provider>
           <provider editor-type-id="android-designer2">
@@ -2645,7 +2685,6 @@
         <option value="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/map/TouchImageView.java" />
         <option value="$PROJECT_DIR$/simpleBARTInfo/src/main/res/layout/bart_map.xml" />
         <option value="$PROJECT_DIR$/simpleBARTInfo/src/main/res/menu/options.xml" />
-        <option value="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/SimpleBARTInfo.java" />
         <option value="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/listeners/StationListener.java" />
         <option value="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/handlers/StationsHandler.java" />
         <option value="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/bart/api/TrainDownloader.java" />
@@ -2659,12 +2698,13 @@
         <option value="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/utils/StationListSpinner.java" />
         <option value="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/handlers/FareCalculatorHandler.java" />
         <option value="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/map/BartMapManager.java" />
+        <option value="$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/SimpleBARTInfo.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="120" />
-    <option name="y" value="83" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="255" />
+    <option name="y" value="126" />
     <option name="width" value="1068" />
     <option name="height" value="657" />
   </component>
@@ -2684,9 +2724,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -2788,6 +2827,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -3081,7 +3121,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="120" y="83" width="1068" height="657" extended-state="1" />
+    <frame x="255" y="126" width="1068" height="657" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.41842106" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -3091,6 +3131,7 @@
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19759579" sideWeight="0.50751877" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32912987" sideWeight="0.5" order="13" side_tool="true" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17193836" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32830188" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32830188" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -3098,9 +3139,9 @@
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24853802" sideWeight="0.4924812" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24853802" sideWeight="0.4924812" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="WINDOWED" visible="false" show_stripe_button="true" weight="0.32912987" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" x="282" y="473" width="1176" height="393" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294347" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2497979" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -3115,7 +3156,6 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32663316" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35917312" sideWeight="0.49067315" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17193836" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28815788" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -3159,14 +3199,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/SimpleBARTInfo.java</url>
-          <line>131</line>
-          <properties />
-          <option name="timeStamp" value="85" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="86" />
     </breakpoint-manager>
     <watches-manager />
@@ -3321,16 +3353,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/res/layout/data_row.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="33" lean-forward="false" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/res/layout/spinner_item.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -3346,16 +3368,6 @@
         <state relative-caret-position="252">
           <caret line="14" column="35" lean-forward="false" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/res/layout/stations.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="48" lean-forward="false" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/Android/Sdk/sources/android-24/android/os/Looper.java" />
@@ -3412,11 +3424,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/res/layout/bart_map.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
+        <state relative-caret-position="525">
           <caret line="35" column="22" lean-forward="false" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
-          <folding>
-            <marker date="1532986539000" expanded="true" signature="1196:1392" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -3509,16 +3519,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/utils/SimpleSpinner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="915">
-          <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-          <folding>
-            <marker date="1532986539000" expanded="true" signature="2024:2032" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/handlers/AlertHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -3529,25 +3529,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/map/BartMapManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
+        <state relative-caret-position="0">
           <caret line="54" column="21" lean-forward="false" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2314#2315#0" expanded="true" />
-            <element signature="e#2366#3338#0" expanded="true" />
-            <element signature="e#3337#3338#0" expanded="true" />
-            <element signature="e#3381#3777#0" expanded="true" />
-            <element signature="e#3776#3777#0" expanded="true" />
-            <element signature="e#3821#4167#0" expanded="true" />
-            <element signature="e#4166#4167#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/utils/SimpleSpinner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <folding>
+            <marker date="1532986539000" expanded="true" signature="2024:2032" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/res/layout/data_row.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-387">
+          <caret line="7" column="33" lean-forward="false" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/res/layout/stations.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="37" lean-forward="false" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/simpleBARTInfo/src/main/java/com/ja/sbi/SimpleBARTInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="734">
-          <caret line="132" column="48" lean-forward="false" selection-start-line="132" selection-start-column="41" selection-end-line="132" selection-end-column="55" />
+        <state relative-caret-position="294">
+          <caret line="77" column="14" lean-forward="false" selection-start-line="77" selection-start-column="14" selection-end-line="77" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

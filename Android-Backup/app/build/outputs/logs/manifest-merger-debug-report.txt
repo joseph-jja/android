@@ -4,6 +4,7 @@ ADDED from /Users/jacosta1/sourcecode/android/Android-Backup/app/src/main/Androi
 INJECTED from /Users/jacosta1/sourcecode/android/Android-Backup/app/src/main/AndroidManifest.xml:2:1-42:12
 INJECTED from /Users/jacosta1/sourcecode/android/Android-Backup/app/src/main/AndroidManifest.xml:2:1-42:12
 INJECTED from /Users/jacosta1/sourcecode/android/Android-Backup/app/src/main/AndroidManifest.xml:2:1-42:12
+MERGED from [com.android.support:cardview-v7:27.1.1] /Users/jacosta1/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.1.1.aar/18d4779d881b54d66de1b66349c6021b/AndroidManifest.xml:17:1-22:12
 INJECTED from /Users/jacosta1/sourcecode/android/Android-Backup/app/src/main/AndroidManifest.xml:2:1-42:12
 INJECTED from /Users/jacosta1/sourcecode/android/Android-Backup/app/src/main/AndroidManifest.xml:2:1-42:12
 INJECTED from /Users/jacosta1/sourcecode/android/Android-Backup/app/src/main/AndroidManifest.xml:2:1-42:12
@@ -93,6 +94,8 @@ uses-sdk
 INJECTED from /Users/jacosta1/sourcecode/android/Android-Backup/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/jacosta1/sourcecode/android/Android-Backup/app/src/main/AndroidManifest.xml
 INJECTED from /Users/jacosta1/sourcecode/android/Android-Backup/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:cardview-v7:27.1.1] /Users/jacosta1/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.1.1.aar/18d4779d881b54d66de1b66349c6021b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:27.1.1] /Users/jacosta1/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.1.1.aar/18d4779d881b54d66de1b66349c6021b/AndroidManifest.xml:20:5-44
 INJECTED from /Users/jacosta1/sourcecode/android/Android-Backup/app/src/main/AndroidManifest.xml
 INJECTED from /Users/jacosta1/sourcecode/android/Android-Backup/app/src/main/AndroidManifest.xml
 	android:targetSdkVersion

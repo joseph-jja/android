@@ -10,7 +10,7 @@ public class ApplicationCheckBox extends BaseCheckBox implements BaseCheckBoxIfa
 
     @Override
     public int getCheckBoxID() {
-        return R.id.CheckBox06;
+        return R.id.applicationCheckbox;
     }
 
     @Override

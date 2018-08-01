@@ -70,9 +70,12 @@ public class SimpleBARTInfo extends BaseActivity {
                     return true;
                 }
             }
-            setContentView(R.layout.stations);
-            stations.initializeActivity(this, true);
-            return true;
+            //int viewID = this.getCurrentContentView();
+            //if ( viewID != R.layout.stations) {
+                setContentView(R.layout.stations);
+                stations.initializeActivity(this, true);
+                return true;
+            //}
         }
         return super.onKeyDown(keyCode, event);
     }

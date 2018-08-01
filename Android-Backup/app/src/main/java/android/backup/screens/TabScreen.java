@@ -3,6 +3,7 @@ package android.backup.screens;
 import java.util.HashMap;
 import java.util.Map;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.app.TabActivity;
 import android.backup.checkbox.iface.BaseCheckBoxIface;
@@ -14,9 +15,9 @@ import android.os.Handler;
 import android.os.Message;
 import android.widget.TabHost;
 
-public class TabScreen extends TabActivity implements Runnable {
+public class TabScreen extends Activity implements Runnable {
 
-    private final TabActivity self = this;
+    private final Activity self = this;
     public static final XMLToMap readData = new XMLToMap();
     private static final BackupRestoreProgressDialog progressBar = new BackupRestoreProgressDialog();
     private static final Map<String, Object> resultData = new HashMap<String, Object>();
@@ -63,7 +64,7 @@ public class TabScreen extends TabActivity implements Runnable {
         msg.sendToTarget();
     }
     
-    private void decideWhatToShow(TabActivity self, TabHost tabHost) {
+    private void decideWhatToShow(Activity self, TabHost tabHost) {
         Bundle bundle = self.getIntent().getExtras();
         
         Intent intent;
@@ -107,7 +108,7 @@ public class TabScreen extends TabActivity implements Runnable {
             }
             if ( msg.obj != null ) {
                 TabScreen ts = (TabScreen)msg.obj;
-                ts.decideWhatToShow(ts, ts.getTabHost());
+                //ts.decideWhatToShow(ts, ts.getTabHost());
             }
         }
     };

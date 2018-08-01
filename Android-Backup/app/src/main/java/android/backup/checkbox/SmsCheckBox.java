@@ -10,7 +10,7 @@ public class SmsCheckBox extends BaseCheckBox implements BaseCheckBoxIface{
 
     @Override
     public int getCheckBoxID() {
-        return R.id.CheckBox03;
+        return R.id.smsCheckbox;
     }
 
     
