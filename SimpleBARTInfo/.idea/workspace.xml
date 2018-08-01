@@ -18,26 +18,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3610203d-8b97-4323-8aa6-8b7cb84390c1" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../Android-Backup/.gradle/4.4.1/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/../Android-Backup/.gradle/4.4.1/fileHashes/fileHashes.bin" />
-      <change beforePath="$PROJECT_DIR$/../Android-Backup/.gradle/4.4.1/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/../Android-Backup/.gradle/4.4.1/fileHashes/fileHashes.lock" />
-      <change beforePath="$PROJECT_DIR$/../Android-Backup/.gradle/4.4.1/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/../Android-Backup/.gradle/4.4.1/javaCompile/classAnalysis.bin" />
-      <change beforePath="$PROJECT_DIR$/../Android-Backup/.gradle/4.4.1/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/../Android-Backup/.gradle/4.4.1/javaCompile/javaCompile.lock" />
-      <change beforePath="$PROJECT_DIR$/../Android-Backup/.gradle/4.4.1/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/../Android-Backup/.gradle/4.4.1/javaCompile/taskHistory.bin" />
-      <change beforePath="$PROJECT_DIR$/../Android-Backup/.gradle/4.4.1/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/../Android-Backup/.gradle/4.4.1/taskHistory/taskHistory.bin" />
-      <change beforePath="$PROJECT_DIR$/../Android-Backup/.gradle/4.4.1/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/../Android-Backup/.gradle/4.4.1/taskHistory/taskHistory.lock" />
-      <change beforePath="$PROJECT_DIR$/../Android-Backup/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/../Android-Backup/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
       <change beforePath="$PROJECT_DIR$/../Android-Backup/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Android-Backup/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../Android-Backup/app/build/outputs/apk/debug/app-debug.apk" afterPath="$PROJECT_DIR$/../Android-Backup/app/build/outputs/apk/debug/app-debug.apk" />
-      <change beforePath="$PROJECT_DIR$/../Android-Backup/app/build/outputs/logs/manifest-merger-debug-report.txt" afterPath="$PROJECT_DIR$/../Android-Backup/app/build/outputs/logs/manifest-merger-debug-report.txt" />
-      <change beforePath="$PROJECT_DIR$/../Android-Backup/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/../Android-Backup/app/src/main/AndroidManifest.xml" />
-      <change beforePath="$PROJECT_DIR$/../Android-Backup/app/src/main/java/android/backup/br/ContactBackupRestore.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../Android-Backup/app/src/main/java/android/backup/br/SystemSettingsBackupRestore.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../Android-Backup/app/src/main/java/android/backup/checkbox/ContactCheckBox.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../Android-Backup/app/src/main/java/android/backup/checkbox/SettingsCheckBox.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../Android-Backup/app/src/main/java/android/backup/screens/ContactScreen.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../Android-Backup/app/src/main/java/android/backup/screens/HomeScreen.java" afterPath="$PROJECT_DIR$/../Android-Backup/app/src/main/java/android/backup/screens/HomeScreen.java" />
-      <change beforePath="$PROJECT_DIR$/../Android-Backup/app/src/main/java/android/backup/screens/SystemSettingsScreen.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/build/classes/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
