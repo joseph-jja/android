@@ -5,7 +5,6 @@ import java.util.List;
 
 import android.app.Activity;
 import android.backup.checkbox.ApplicationCheckBox;
-import android.backup.checkbox.BookmarkCheckBox;
 import android.backup.checkbox.ContactCheckBox;
 import android.backup.checkbox.SettingsCheckBox;
 import android.backup.checkbox.SmsCheckBox;
@@ -47,7 +46,6 @@ public class HomeScreen extends Activity {
         if ( enabled ) { 
             List<BaseCheckBoxIface> initialItems = new ArrayList<BaseCheckBoxIface>();
             initialItems.add(new ApplicationCheckBox());
-            initialItems.add(new BookmarkCheckBox());
             initialItems.add(new ContactCheckBox());
             initialItems.add(new SmsCheckBox());
             initialItems.add(new WallpaperCheckBox());
