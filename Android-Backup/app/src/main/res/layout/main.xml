@@ -16,33 +16,35 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
             android:paddingLeft="5dp"
             android:paddingRight="5dp"
             android:text="@string/SelectText"
-            android:textColor="@color/fgColor"
-            android:textSize="15dp"
-            android:textStyle="bold"></TextView>
+            android:textAppearance="@style/PageTitleText"></TextView>
 
         <CheckBox
             android:id="@+id/applicationCheckbox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
             android:text="@string/Applications"
-            android:textColor="@color/fgColor"></CheckBox>
+            android:textAppearance="@style/NameText"></CheckBox>
 
         <CheckBox
             android:id="@+id/smsCheckbox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
             android:text="@string/Sms"
-            android:textColor="@color/fgColor"></CheckBox>
+            android:textAppearance="@style/NameText"></CheckBox>
 
         <CheckBox
             android:id="@+id/wallpaperCheckbox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
             android:text="@string/Wallpaper"
-            android:textColor="@color/fgColor"></CheckBox>
+            android:textAppearance="@style/NameText"></CheckBox>
 
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="fill_parent"
@@ -54,8 +56,9 @@
                 android:id="@+id/Button01"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
+                android:layout_marginLeft="20dp"
                 android:layout_marginTop="25dp"
+                android:textAppearance="@style/NameText"
                 android:onClick="@string/ButtonHandler"
                 android:text="@string/Take_Backup"></Button>
 
@@ -63,8 +66,9 @@
                 android:id="@+id/Restore"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="20dp"
                 android:layout_marginTop="25dp"
+                android:textAppearance="@style/NameText"
                 android:onClick="@string/RestoreButtonHandler"
                 android:text="@string/Restore"></Button>
         </LinearLayout>
