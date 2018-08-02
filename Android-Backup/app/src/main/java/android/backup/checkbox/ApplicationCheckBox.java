@@ -6,6 +6,9 @@ import android.backup.checkbox.iface.BaseCheckBoxIface;
 import android.backup.screens.ApplicationScreen;
 import android.backup.screens.R;
 
+import java.util.List;
+import java.util.Map;
+
 public class ApplicationCheckBox extends BaseCheckBox implements BaseCheckBoxIface {
 
     @Override
@@ -27,11 +30,11 @@ public class ApplicationCheckBox extends BaseCheckBox implements BaseCheckBoxIfa
         return ApplicationScreen.class;
     }
     
-    public Object restoreData(Activity acty, boolean restore) {
+    public List<Map<String, String>> restoreData(Activity acty, boolean restore) {
         return ApplicationBackupRestore.restoreData(acty, restore);
     }
 
-    public Object saveData(Activity acty) {
+    public List<Map<String, String>> saveData(Activity acty) {
         return ApplicationBackupRestore.saveData(acty);
     }
 }

@@ -32,7 +32,7 @@ public class ApplicationBackupRestore {
 
     public static final String PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=";  
 
-    public static final Object restoreData(Activity acty, boolean restore) {
+    public static final List<Map<String, String>>  restoreData(Activity acty, boolean restore) {
 
         Map<Integer, Set<String>> names = new HashMap<Integer, Set<String>>();
 
@@ -67,7 +67,7 @@ public class ApplicationBackupRestore {
                 installedApps.add(data);
             }
 
-            return (Object)installedApps;
+            return installedApps;
         } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
@@ -81,7 +81,7 @@ public class ApplicationBackupRestore {
         return null;
     }
 
-    public static final Object saveData(Activity acty) {
+    public static final List<Map<String, String>> saveData(Activity acty) {
 
         try {
 
@@ -110,7 +110,7 @@ public class ApplicationBackupRestore {
 
                 XMLDocumentWriter.writeDocument(APPLICATION_BACKUP_FILENAME, appXML);
 
-                return (Object)applications;
+                return applications;
             }
         } catch (Exception e) { 
             // TODO fix this
