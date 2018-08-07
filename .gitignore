@@ -10,3 +10,4 @@ MinnowRSS/build/**
 local.properties
 **/caches/**
 MinnowRSS/minnowRSS/build/intermediates/blame/**
+MinnowRSS/minnowRSS/build/intermediates/**
