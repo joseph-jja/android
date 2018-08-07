@@ -21,16 +21,16 @@ public class TabScreen extends Activity implements Runnable {
     public static final XMLToMap readData = new XMLToMap();
     private static final BackupRestoreProgressDialog progressBar = new BackupRestoreProgressDialog();
     private static final Map<String, Object> resultData = new HashMap<String, Object>();
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tab);
-        
+
         resultData.clear();
-        
+
         progressBar.renderProgressBar(this);
-        
+
         Thread thread = new Thread(this);
         thread.start();
     }
@@ -38,39 +38,39 @@ public class TabScreen extends Activity implements Runnable {
     public void run() {
 
         Message msg = new Message();
-        
+
         Bundle bundle = self.getIntent().getExtras();
         boolean restore = false;
         if (bundle.getBoolean(HomeScreen.restoreKey) == true) {
             restore = true;
         }
-        
-        for ( BaseCheckBoxIface item: HomeScreen.backupItems ) {
-            if ( bundle.getBoolean(item.getCheckBoxName()) ) {
+
+        for (BaseCheckBoxIface item : HomeScreen.backupItems) {
+            if (bundle.getBoolean(item.getCheckBoxName())) {
                 // save data first and then we can use the restore data in the view
                 Object restoreResult = null;
-                if ( restore ) {
+                if (restore) {
                     restoreResult = item.restoreData(self, true);
                 } else {
-                    item.saveData(self);          
+                    item.saveData(self);
                     restoreResult = item.restoreData(self, false);
                 }
                 resultData.put(item.getScreenClass().getName(), restoreResult);
             }
         }
-        
+
         msg.obj = self;
         msg.setTarget(spinner);
         msg.sendToTarget();
     }
-    
+
     private void decideWhatToShow(Activity self, TabHost tabHost) {
         Bundle bundle = self.getIntent().getExtras();
-        
+
         Intent intent;
-        for ( BaseCheckBoxIface item: HomeScreen.backupItems ) {
-            if ( bundle.getBoolean(item.getCheckBoxName()) ) {
-                if ( item.getScreenClass() != null ) {
+        for (BaseCheckBoxIface item : HomeScreen.backupItems) {
+            if (bundle.getBoolean(item.getCheckBoxName())) {
+                if (item.getScreenClass() != null) {
                     intent = new Intent().setClass(self, item.getScreenClass());
                     createTab(tabHost, intent, item.getTabTitle());
                 }
@@ -85,13 +85,13 @@ public class TabScreen extends Activity implements Runnable {
 
         // Initialize a TabSpec for each tab and add it to the TabHost
         if (bundle.getBoolean(HomeScreen.restoreKey) == true) {
-            intent.putExtra(HomeScreen.restoreKey,true);
+            intent.putExtra(HomeScreen.restoreKey, true);
         }
         spec = tabHost.newTabSpec(tabName).setIndicator(tabName).setContent(
                 intent);
         tabHost.addTab(spec);
     }
-    
+
     /**
      * @return the resultData
      */
@@ -101,13 +101,13 @@ public class TabScreen extends Activity implements Runnable {
 
     public static final Handler spinner = new Handler() {
 
-        public void handleMessage(Message msg) { 
+        public void handleMessage(Message msg) {
             ProgressDialog dlg = TabScreen.progressBar.getProgressBar();
-            if ( dlg != null && dlg.isShowing() ) { 
+            if (dlg != null && dlg.isShowing()) {
                 dlg.dismiss();
             }
-            if ( msg.obj != null ) {
-                TabScreen ts = (TabScreen)msg.obj;
+            if (msg.obj != null) {
+                TabScreen ts = (TabScreen) msg.obj;
                 //ts.decideWhatToShow(ts, ts.getTabHost());
             }
         }
