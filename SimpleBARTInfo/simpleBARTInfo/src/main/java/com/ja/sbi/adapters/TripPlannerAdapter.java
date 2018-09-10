@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.TableLayout;
 import android.widget.TextView;
 
 import com.ja.sbi.R;
@@ -94,8 +95,41 @@ public class TripPlannerAdapter extends ArrayAdapter<Trip> {
                 tripHolder.seniorDisabledClipper = (TextView) rView.findViewById(R.id.trip_senior_disabled_clipper_value);
                 //tripHolder.youthClipper = (TextView) rView.findViewById(R.id.trip.. youth);
 
+                tripHolder.tableView = (TableLayout) rView.findViewById(R.id.trip_leg_details);
+
             } else {
                 tripHolder = (TripPlannerViewHolder) rView.getTag();
+            }
+
+            // remove all child views
+            tripHolder.tableView.removeAllViews();
+            for (int i = 0; i < tripLegs.size(); i++) {
+                // create row and get current leg
+                final View detailRow = getInflator().inflate(R.layout.trip_legs, null);
+                TripLeg leg = tripLegs.get(i);
+
+                // fields
+                final String org = findStationLongName(leg.getOrigin());
+                TextView orgTV = (TextView) detailRow.findViewById(R.id.trip_leg_origin_name);
+                orgTV.setText("Stop Name: " + org);
+
+                final String dest = findStationLongName(leg.getDestination());
+                TextView destTV = (TextView) detailRow.findViewById(R.id.trip_leg_destination_name);
+                destTV.setText("Stop Name: " + dest);
+
+                final String origTime = leg.getOriginTime() + " " + leg.getOriginDate();
+                TextView orgTimeTV = (TextView) detailRow.findViewById(R.id.trip_leg_origin_time);
+                orgTimeTV.setText("Est Leave Time: " + origTime);
+
+                final String destTime = leg.getDestinationTime() + " " + leg.getDestinationDate();
+                TextView destTimeTV = (TextView) detailRow.findViewById(R.id.trip_leg_destination_time);
+                destTimeTV.setText("Est Arrive Time: " + destTime);
+
+                final String trainEndStationName = findStationLongName(leg.getTrainHeadStation());
+                TextView trainEndStationNameTV = (TextView) detailRow.findViewById(R.id.trip_leg_train_head_station_name);
+                trainEndStationNameTV.setText("Train Name: " + trainEndStationName);
+
+                tripHolder.tableView.addView(detailRow);
             }
 
             tripHolder.origin.setText(findStationLongName(origin));
@@ -125,5 +159,7 @@ public class TripPlannerAdapter extends ArrayAdapter<Trip> {
         public TextView clipperDiscount;
         public TextView seniorDisabledClipper;
         //public TextView youthClipper;
+
+        public TableLayout tableView;
     }
 }

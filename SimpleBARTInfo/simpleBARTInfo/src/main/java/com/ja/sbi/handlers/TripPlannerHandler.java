@@ -16,7 +16,6 @@ import com.ja.sbi.bart.api.StationDownloader;
 import com.ja.sbi.beans.Station;
 import com.ja.sbi.beans.StationData;
 import com.ja.sbi.beans.Trip;
-import com.ja.sbi.listeners.TripDetailsListener;
 import com.ja.sbi.utils.SimpleSpinner;
 import com.ja.sbi.utils.StationListSpinner;
 import com.ja.sbi.utils.StationListSpinnerIface;
@@ -256,11 +255,6 @@ public class TripPlannerHandler implements StationListSpinnerIface {
         TripPlannerAdapter adapter = new TripPlannerAdapter(sbiThread, R.layout.trip_data, TripPlannerHandler.trips);
         adapter.setStationData(TripPlannerHandler.trainStops);
         results.setAdapter(adapter);
-
-        TripDetailsListener listener = new TripDetailsListener();
-        listener.setTripList(TripPlannerHandler.trips);
-        listener.setStationData(TripPlannerHandler.trainStops);
-        results.setOnItemClickListener(listener);
     }
 
     private final Handler updateHandler = new Handler() {
