@@ -140,6 +140,7 @@ public class FareCalculatorHandler implements StationListSpinnerIface {
             ((TextView) sbiThread.findViewById(R.id.fareValue)).setText("Fare: " + currentFare.getFare());
             ((TextView) sbiThread.findViewById(R.id.clipperFare)).setText("Clipper Card Fare: " + currentFare.getClipperDiscount());
             ((TextView) sbiThread.findViewById(R.id.seniorDisabledClipper)).setText("Senior/Disabled Clipper Fare: " + currentFare.getSeniorDisabledClipper());
+            ((TextView) sbiThread.findViewById(R.id.youthClipper)).setText("Youth Clipper Fare: " + currentFare.getYouthClipper());
 
             Log.d(LOG_NAME, "Got something.");
             FareCalculatorHandler.dialog.dismiss();
