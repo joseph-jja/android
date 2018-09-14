@@ -8,6 +8,7 @@ import android.webkit.WebView;
 import android.widget.AdapterView;
 import android.widget.TextView;
 
+import com.ja.database.DatabaseAdapter;
 import com.ja.database.Table;
 import com.ja.minnow.Constants;
 import com.ja.minnow.MinnowRSS;
@@ -47,6 +48,21 @@ public class FeedDataWebViewListener implements AdapterView.OnItemClickListener 
 		Constants.getFeeddataservice().setFeedDataID(feedDataID);
 		
 		updateWebView(feedItem, false);
+
+		DatabaseAdapter dbAdapter = this.activity.getDbAdapter();
+		feedItem.setColumnValue(FeedDataTableData.ITEM_IS_READ, new Integer(1));
+		try {
+			if (!dbAdapter.isDbIsOpen()) {
+				dbAdapter.open();
+			}
+			dbAdapter.beginTransaction();
+			dbAdapter.update(FeedDataTableData.FEED_DATA_TABLE, feedItem.getInternalData());
+			dbAdapter.setTransactionSuccessful();
+		} catch (Exception ex) {
+			Log.d(WV_TAG, ex.getMessage());
+		} finally {
+			dbAdapter.endTransaction();
+		}
 
 		if ( this.activity.getRefreshThread() != null && this.activity.getLocalThread() != null & this.activity.getLocalThread().isAlive() ) {
 			this.activity.getRefreshThread().setSleepThread(false);

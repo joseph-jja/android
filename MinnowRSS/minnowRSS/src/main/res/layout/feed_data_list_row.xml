@@ -10,6 +10,7 @@
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
         android:paddingTop="5dp"
+        android:id="@+id/feed_data_list_row_is_read"
         android:orientation="vertical">
 
         <TextView
