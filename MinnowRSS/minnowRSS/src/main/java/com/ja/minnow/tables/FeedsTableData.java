@@ -7,6 +7,8 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+// this represents the feed list itself
+// NOT the individual feed
 public class FeedsTableData {
 
   public static final String FEEDS_TABLE = "feeds";

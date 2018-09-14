@@ -12,6 +12,8 @@ public final class R {
     public static final int accent=0x7f010000;
     public static final int primary=0x7f010001;
     public static final int primaryDark=0x7f010002;
+    public static final int textPrimary=0x7f010003;
+    public static final int textSecondary=0x7f010004;
   }
   public static final class drawable {
     public static final int default_feed_icon=0x7f020000;

@@ -60,7 +60,7 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="25dp"
             android:background="@color/primary"
-            android:textColor="#ffffff"
+            android:textColor="@color/textSecondary"
             android:text="   Save   "
             android:textAppearance="@style/GoButtonText"></Button>
 
@@ -70,7 +70,7 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="20dp"
             android:background="@color/accent"
-            android:textColor="#ffffff"
+            android:textColor="@color/textSecondary"
             android:text="   Cancel   "
             android:textAppearance="@style/StopButtonText"></Button>
     </LinearLayout>
