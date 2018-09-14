@@ -62,20 +62,11 @@ public class SimpleBARTInfo extends BaseActivity {
 
         Log.d(LOG_NAME, "In the key press event method " + keyCode);
         if (keyCode == 4) {
-            View res = this.findViewById(R.id.trip_leg_origin_name);
-            if (res != null) {
-                final List<Trip> trips = TripPlannerHandler.getTrips();
-                if (trips.size() > 0) {
-                    TripPlannerHandler.LoadInitialScreen(this);
-                    return true;
-                }
-            }
-            //final int viewID = getCurrentContentView();
-            //if ( viewID != R.layout.stations) {
+            if (getCurrentContentView() != R.layout.stations) {
                 setContentView(R.layout.stations);
                 stations.initializeActivity(this, true);
                 return true;
-            //}
+            }
         }
         return super.onKeyDown(keyCode, event);
     }

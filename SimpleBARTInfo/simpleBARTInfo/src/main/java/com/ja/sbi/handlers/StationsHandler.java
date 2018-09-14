@@ -112,7 +112,12 @@ public class StationsHandler {
      * @param viewStations the viewStations to set
      */
     public void setViewStations(boolean viewStations) {
+
         this.viewStations = viewStations;
+    }
+
+    public boolean getViewStations() {
+        return this.viewStations;
     }
 
     /**

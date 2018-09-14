@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: artifacts:database-debug">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/database-debug.aar/f93aab0f88e73096e94cfcd50a34f889/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/database-debug.aar/f93aab0f88e73096e94cfcd50a34f889/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/database-debug.aar/10d88d1e2b37723e8778902246e44d47/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/database-debug.aar/10d88d1e2b37723e8778902246e44d47/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
