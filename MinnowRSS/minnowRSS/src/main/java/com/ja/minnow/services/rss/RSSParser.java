@@ -78,10 +78,13 @@ public class RSSParser extends DefaultHandler {
                 storage.put(FeedDataTableData.LASTUPDATEDATE_COL, this.now);
                 final String data = (String) storage.get(FeedDataTableData.SUMMARY_COL);
                 storage.put(FeedDataTableData.SUMMARY_COL, data.trim());
+                storage.put(FeedDataTableData.ITEM_IS_READ, new Integer(0));
                 this.adapter.beginTransaction();
                 try {
                     this.adapter.insert(FeedDataTableData.FEED_DATA_TABLE, storage);
                     this.adapter.setTransactionSuccessful();
+                } catch (Exception ex) {
+                    Log.d(RSS_TAG, ex.getMessage());
                 } finally {
                     this.adapter.endTransaction();
                 }
