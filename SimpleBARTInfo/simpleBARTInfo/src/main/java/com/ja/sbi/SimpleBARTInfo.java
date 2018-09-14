@@ -62,10 +62,18 @@ public class SimpleBARTInfo extends BaseActivity {
 
         Log.d(LOG_NAME, "In the key press event method " + keyCode);
         if (keyCode == 4) {
-            if (getCurrentContentView() != R.layout.stations) {
+            if (getCurrentContentView() != R.layout.stations ) {
                 setContentView(R.layout.stations);
                 stations.initializeActivity(this, true);
                 return true;
+            } else {
+                final View currentView = findViewById(R.id.train_st_name);
+                // if this is the case we are looking at the train lists
+                if (currentView != null ) {
+                    setContentView(R.layout.stations);
+                    stations.initializeActivity(this, true);
+                    return true;
+                }
             }
         }
         return super.onKeyDown(keyCode, event);

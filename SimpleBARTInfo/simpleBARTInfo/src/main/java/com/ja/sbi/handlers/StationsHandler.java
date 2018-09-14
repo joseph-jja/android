@@ -88,7 +88,7 @@ public class StationsHandler {
         final ListView feedList = (ListView) context.findViewById(R.id.st_list_rows);
         Log.d(LOG_NAME, "Do we have any stations? " + stations);
 
-        final StationListAdapter adapter = new StationListAdapter(context, R.layout.data_row, stations);
+        final StationListAdapter adapter = new StationListAdapter(context, R.layout.stations_data_row, stations);
         feedList.setAdapter(adapter);
         feedList.setOnItemClickListener(new StationListener());
 

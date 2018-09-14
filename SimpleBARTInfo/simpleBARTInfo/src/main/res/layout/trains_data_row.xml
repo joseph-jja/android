@@ -12,7 +12,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/st_name"
+            android:id="@+id/train_st_name"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
@@ -26,33 +26,27 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/st_time"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:textAppearance="@style/DefaultText"></TextView>
-
-            <TextView
-                android:id="@+id/station_short_name"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
+                android:id="@+id/train_st_time"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:textAppearance="@style/DefaultText"></TextView>
 
             <TextView
                 android:id="@+id/train_length"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:textAppearance="@style/DefaultText"></TextView>
 
             <TextView
                 android:id="@+id/station_platform"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:textAppearance="@style/DefaultText"></TextView>
 
             <TextView
                 android:id="@+id/train_direction"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:textAppearance="@style/DefaultText"></TextView>
         </LinearLayout>
     </LinearLayout>

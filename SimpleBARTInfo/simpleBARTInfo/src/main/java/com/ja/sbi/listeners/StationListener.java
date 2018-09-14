@@ -1,7 +1,5 @@
 package com.ja.sbi.listeners;
 
-import android.app.ProgressDialog;
-import android.content.Context;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
@@ -87,7 +85,7 @@ public class StationListener implements AdapterView.OnItemClickListener {
                 final View view = StationListener.sbi.findViewById(R.id.st_list_rows);
                 if (view != null) {
                     final ListView feedList = (ListView) view;
-                    feedList.setAdapter(new TrainListAdapter(StationListener.sbi, R.layout.data_row, trains));
+                    feedList.setAdapter(new TrainListAdapter(StationListener.sbi, R.layout.trains_data_row, trains));
                     feedList.setOnItemClickListener(null);
                     final TextView tview = (TextView) StationListener.sbi.findViewById(R.id.simple_bart_info_title);
                     tview.setText("Trains: " + TrainDownloader.getSelectedStationName());

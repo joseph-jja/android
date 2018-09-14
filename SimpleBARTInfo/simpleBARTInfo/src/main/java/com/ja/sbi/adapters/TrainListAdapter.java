@@ -61,8 +61,8 @@ public class TrainListAdapter  extends ArrayAdapter<Train> {
 			TrainViewHolder holder = null;
 			if ( rView.getTag() == null ) {
 				holder = new TrainViewHolder(); 
-				holder.name = ((TextView)rView.findViewById(R.id.st_name));
-				holder.time = ((TextView)rView.findViewById(R.id.st_time));
+				holder.name = ((TextView)rView.findViewById(R.id.train_st_name));
+				holder.time = ((TextView)rView.findViewById(R.id.train_st_time));
 				holder.length = ((TextView)rView.findViewById(R.id.train_length));
 				holder.platform = ((TextView)rView.findViewById(R.id.station_platform));				
 				holder.direction = ((TextView)rView.findViewById(R.id.train_direction));				

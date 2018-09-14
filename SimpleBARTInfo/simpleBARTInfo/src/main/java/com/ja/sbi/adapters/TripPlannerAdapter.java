@@ -93,7 +93,7 @@ public class TripPlannerAdapter extends ArrayAdapter<Trip> {
                 tripHolder.fare = (TextView) rView.findViewById(R.id.trip_fare_value);
                 tripHolder.clipperDiscount = (TextView) rView.findViewById(R.id.trip_clipper_fare_value);
                 tripHolder.seniorDisabledClipper = (TextView) rView.findViewById(R.id.trip_senior_disabled_clipper_value);
-                //tripHolder.youthClipper = (TextView) rView.findViewById(R.id.trip.. youth);
+                tripHolder.youthClipper = (TextView) rView.findViewById(R.id.trip_youth_clipper_value);
 
                 tripHolder.tableView = (TableLayout) rView.findViewById(R.id.trip_leg_details);
 
@@ -111,19 +111,19 @@ public class TripPlannerAdapter extends ArrayAdapter<Trip> {
                 // fields
                 final String org = findStationLongName(leg.getOrigin());
                 TextView orgTV = (TextView) detailRow.findViewById(R.id.trip_leg_origin_name);
-                orgTV.setText("Stop Name: " + org);
+                orgTV.setText("From: " + org);
 
                 final String dest = findStationLongName(leg.getDestination());
                 TextView destTV = (TextView) detailRow.findViewById(R.id.trip_leg_destination_name);
-                destTV.setText("Stop Name: " + dest);
+                destTV.setText("To: " + dest);
 
                 final String origTime = leg.getOriginTime() + " " + leg.getOriginDate();
                 TextView orgTimeTV = (TextView) detailRow.findViewById(R.id.trip_leg_origin_time);
-                orgTimeTV.setText("Est Leave Time: " + origTime);
+                orgTimeTV.setText("Est Departure: " + origTime);
 
                 final String destTime = leg.getDestinationTime() + " " + leg.getDestinationDate();
                 TextView destTimeTV = (TextView) detailRow.findViewById(R.id.trip_leg_destination_time);
-                destTimeTV.setText("Est Arrive Time: " + destTime);
+                destTimeTV.setText("Est Arrival: " + destTime);
 
                 final String trainEndStationName = findStationLongName(leg.getTrainHeadStation());
                 TextView trainEndStationNameTV = (TextView) detailRow.findViewById(R.id.trip_leg_train_head_station_name);
@@ -132,16 +132,16 @@ public class TripPlannerAdapter extends ArrayAdapter<Trip> {
                 tripHolder.tableView.addView(detailRow);
             }
 
-            tripHolder.origin.setText(findStationLongName(origin));
-            tripHolder.destination.setText(findStationLongName(destination));
+            tripHolder.origin.setText("From: " + findStationLongName(origin));
+            tripHolder.destination.setText("To: " + findStationLongName(destination));
 
-            tripHolder.originDateTime.setText("Est Leave Time: " + originTime + " " + originDate);
-            tripHolder.destinationDateTime.setText("Est Arrive Time: " + destinationTime + " " + destinationDate);
+            tripHolder.originDateTime.setText("Est Departure: " + originTime + " " + originDate);
+            tripHolder.destinationDateTime.setText("Est Arrival: " + destinationTime + " " + destinationDate);
 
             tripHolder.fare.setText("Fare: " + fareDetails.getFare());
-            tripHolder.clipperDiscount.setText("Clipper: " + fareDetails.getClipperDiscount());
-            tripHolder.seniorDisabledClipper.setText("Senior/Disabled: " + fareDetails.getSeniorDisabledClipper());
-            //tripHolder.youthClipper.setText(fareDetails.getYouthClipper());
+            tripHolder.clipperDiscount.setText("Clipper Fare: " + fareDetails.getClipperDiscount());
+            tripHolder.seniorDisabledClipper.setText("Senior/Disabled Fare: " + fareDetails.getSeniorDisabledClipper());
+            tripHolder.youthClipper.setText("Youth Fare: " + fareDetails.getYouthClipper());
         }
 
         return rView;
@@ -158,7 +158,7 @@ public class TripPlannerAdapter extends ArrayAdapter<Trip> {
         public TextView fare;
         public TextView clipperDiscount;
         public TextView seniorDisabledClipper;
-        //public TextView youthClipper;
+        public TextView youthClipper;
 
         public TableLayout tableView;
     }

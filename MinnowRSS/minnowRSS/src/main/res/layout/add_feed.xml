@@ -59,7 +59,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="25dp"
-            android:background="#09af00"
+            android:background="@color/primary"
+            android:textColor="#ffffff"
             android:text="   Save   "
             android:textAppearance="@style/GoButtonText"></Button>
 
@@ -68,7 +69,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="20dp"
-            android:background="#b1006a"
+            android:background="@color/accent"
+            android:textColor="#ffffff"
             android:text="   Cancel   "
             android:textAppearance="@style/StopButtonText"></Button>
     </LinearLayout>

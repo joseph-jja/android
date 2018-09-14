@@ -9,8 +9,9 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <!-- this maps to trainHeadStation -->
         <TextView
-            android:text="Trip Details"
+            android:id="@+id/trip_leg_train_head_station_name"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
@@ -46,12 +47,6 @@
             android:layout_marginLeft="5dp"
             android:textAppearance="@style/DefaultText"></TextView>
 
-        <!-- this maps to trainHeadStation -->
-        <TextView
-            android:id="@+id/trip_leg_train_head_station_name"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:textAppearance="@style/NameText"></TextView>
+
     </LinearLayout>
 </TableRow>
