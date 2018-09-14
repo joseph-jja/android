@@ -118,7 +118,8 @@ public class FeedDataListAdapter {
             int isRead = Integer.parseInt((String) table.getColumnValue(FeedDataTableData.ITEM_IS_READ));
             holder.isReadView.setBackgroundColor(Color.rgb(255, 255, 255));
             if (isRead != 0) {
-                holder.isReadView.setBackgroundColor(Color.rgb(117, 117, 0));
+                // TODO pick color
+                //holder.isReadView.setBackgroundColor(Color.rgb(117, 117, 0));
             }
         }
     }
