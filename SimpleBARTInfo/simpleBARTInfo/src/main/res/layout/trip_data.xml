@@ -58,6 +58,7 @@
             android:layout_marginLeft="8dp"
             android:textAppearance="@style/DefaultText"></TextView>
 
+            <!--
         <TextView
             android:id="@+id/trip_clipper_fare_value"
             android:layout_width="fill_parent"
@@ -77,7 +78,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
-            android:textAppearance="@style/DefaultText" />
+            android:textAppearance="@style/DefaultText" />-->
 
         <TableLayout
             android:layout_width="fill_parent"

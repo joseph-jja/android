@@ -91,9 +91,9 @@ public class TripPlannerAdapter extends ArrayAdapter<Trip> {
                 tripHolder.destinationDateTime = (TextView) rView.findViewById(R.id.trip_estimate_arrival_time);
 
                 tripHolder.fare = (TextView) rView.findViewById(R.id.trip_fare_value);
-                tripHolder.clipperDiscount = (TextView) rView.findViewById(R.id.trip_clipper_fare_value);
-                tripHolder.seniorDisabledClipper = (TextView) rView.findViewById(R.id.trip_senior_disabled_clipper_value);
-                tripHolder.youthClipper = (TextView) rView.findViewById(R.id.trip_youth_clipper_value);
+                //tripHolder.clipperDiscount = (TextView) rView.findViewById(R.id.trip_clipper_fare_value);
+                //tripHolder.seniorDisabledClipper = (TextView) rView.findViewById(R.id.trip_senior_disabled_clipper_value);
+                //tripHolder.youthClipper = (TextView) rView.findViewById(R.id.trip_youth_clipper_value);
 
                 tripHolder.tableView = (TableLayout) rView.findViewById(R.id.trip_leg_details);
 
@@ -139,9 +139,9 @@ public class TripPlannerAdapter extends ArrayAdapter<Trip> {
             tripHolder.destinationDateTime.setText("Est Arrival: " + destinationTime + " " + destinationDate);
 
             tripHolder.fare.setText("Fare: " + fareDetails.getFare());
-            tripHolder.clipperDiscount.setText("Clipper Fare: " + fareDetails.getClipperDiscount());
-            tripHolder.seniorDisabledClipper.setText("Senior/Disabled Fare: " + fareDetails.getSeniorDisabledClipper());
-            tripHolder.youthClipper.setText("Youth Fare: " + fareDetails.getYouthClipper());
+            //tripHolder.clipperDiscount.setText("Clipper Fare: " + fareDetails.getClipperDiscount());
+            //tripHolder.seniorDisabledClipper.setText("Senior/Disabled Fare: " + fareDetails.getSeniorDisabledClipper());
+            //tripHolder.youthClipper.setText("Youth Fare: " + fareDetails.getYouthClipper());
         }
 
         return rView;
@@ -156,9 +156,9 @@ public class TripPlannerAdapter extends ArrayAdapter<Trip> {
         public TextView destinationDateTime;
 
         public TextView fare;
-        public TextView clipperDiscount;
-        public TextView seniorDisabledClipper;
-        public TextView youthClipper;
+        //public TextView clipperDiscount;
+        //public TextView seniorDisabledClipper;
+        //public TextView youthClipper;
 
         public TableLayout tableView;
     }
