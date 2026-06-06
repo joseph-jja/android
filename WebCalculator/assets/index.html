@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta name="viewport" content="width=device-width, height=device-height">
+<style type="text/css">
+body { font-size: 1em; }
+#xcalc div { 
+	border: none;
+	font-size: 1em; 
+	text-align: right;
+	overflow: hidden;
+        width: 95%;
+}
+#xcalc table { 
+	border: 5px groove #4682B4; 
+	-webkit-border-radius: 25px; 
+	margin: 0 auto;
+        width: 98%; 
+}
+/* min device width is 300 px if the width and height are set to 50px */
+#xcalc td { 
+	border: 5px groove #4682B4; 
+	-webkit-border-radius: 25px; 
+	text-align: center; 
+	font-size: 1.25em;
+	height: 25px;
+        width: 15%;
+}
+#xcalc tr:first-child td { 
+    border-color: red;
+}
+
+#scroller { 
+   display: auto;
+}
+@media (min-height:150px) {
+    #xcalc td { 
+        height: auto; 
+    }
+}
+@media (min-height:250px) {
+   #xcalc table { 
+        height: auto; 
+    }
+}
+</style>
+</head>
+<body>
+<div id="xcalc"></div>
+<div id="scroller">&nbsp;&nbsp;<br>&nbsp;&nbsp;</div>
+<script type="text/javascript" src="WebCalculator.js"></script>
+<script type="text/javascript">
+function renderCalculator() {
+    var webCalc = new WebCalculator.GUICalculator("xcalc");
+    webCalc.render();
+}
+WebCalculator.events.addOnLoad(renderCalculator);
+</script>
+</body>
+</html>
